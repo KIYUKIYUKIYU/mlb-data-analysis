@@ -1,0 +1,61 @@
+{
+  "teamId": 120,
+  "teamName": "Washington Nationals",
+  "season": 2024,
+  "analyzedAt": "2025-06-20T05:40:11.711788",
+  "pitching": {
+    "teamId": 120,
+    "season": 2024,
+    "starters": [
+      {
+        "id": 571578,
+        "name": "Patrick Corbin",
+        "handedness": "L",
+        "era": "5.62",
+        "whip": "1.50",
+        "fip": 4.451,
+        "strikeouts": 139,
+        "innings": "174.2",
+        "gamesStarted": 32,
+        "strikeoutRate": 0.182,
+        "groundBallRate": 0.544,
+        "flyBallRate": 0.456,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      },
+      {
+        "id": 669022,
+        "name": "MacKenzie Gore",
+        "handedness": "L",
+        "era": "3.90",
+        "whip": "1.42",
+        "fip": 3.567,
+        "strikeouts": 181,
+        "innings": "166.1",
+        "gamesStarted": 32,
+        "strikeoutRate": 0.248,
+        "groundBallRate": 0.47,
+        "flyBallRate": 0.53,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      }
+    ],
+    "bullpenAggregate": {
+      "era": 4.317,
+      "whip": 1.269,
+      "totalInnings": 317.1,
+      "pitcherCount": 8
+    }
+  },
+  "batting": {
+    "teamId": 120,
+    "season": 2024,
+    "avg": ".243",
+    "ops": ".684",
+    "hits": 1306,
+    "runs": 660,
+    "rbi": 621
+  }
+}

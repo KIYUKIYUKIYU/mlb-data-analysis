@@ -1,0 +1,78 @@
+{
+  "teamId": 115,
+  "teamName": "Colorado Rockies",
+  "season": 2024,
+  "analyzedAt": "2025-06-20T05:39:55.980069",
+  "pitching": {
+    "teamId": 115,
+    "season": 2024,
+    "starters": [
+      {
+        "id": 621389,
+        "name": "Ty Blach",
+        "handedness": "L",
+        "era": "6.94",
+        "whip": "1.70",
+        "fip": 6.308,
+        "strikeouts": 36,
+        "innings": "71.1",
+        "gamesStarted": 12,
+        "strikeoutRate": 0.109,
+        "groundBallRate": 0.491,
+        "flyBallRate": 0.509,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      },
+      {
+        "id": 687134,
+        "name": "Bradley Blalock",
+        "handedness": "R",
+        "era": "5.87",
+        "whip": "1.79",
+        "fip": 5.683,
+        "strikeouts": 20,
+        "innings": "30.2",
+        "gamesStarted": 6,
+        "strikeoutRate": 0.136,
+        "groundBallRate": 0.423,
+        "flyBallRate": 0.577,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      },
+      {
+        "id": 663372,
+        "name": "Ryan Feltner",
+        "handedness": "R",
+        "era": "4.49",
+        "whip": "1.34",
+        "fip": 4.193,
+        "strikeouts": 138,
+        "innings": "162.1",
+        "gamesStarted": 30,
+        "strikeoutRate": 0.199,
+        "groundBallRate": 0.503,
+        "flyBallRate": 0.497,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      }
+    ],
+    "bullpenAggregate": {
+      "era": 4.837,
+      "whip": 1.581,
+      "totalInnings": 190.8,
+      "pitcherCount": 7
+    }
+  },
+  "batting": {
+    "teamId": 115,
+    "season": 2024,
+    "avg": ".242",
+    "ops": ".704",
+    "hits": 1319,
+    "runs": 682,
+    "rbi": 655
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "teamId": 142,
+  "teamName": "Minnesota Twins",
+  "season": 2024,
+  "analyzedAt": "2025-06-20T05:39:24.067592",
+  "pitching": {
+    "teamId": 142,
+    "season": 2024,
+    "starters": [
+      {
+        "id": 701581,
+        "name": "David Festa",
+        "handedness": "R",
+        "era": "4.90",
+        "whip": "1.32",
+        "fip": 3.793,
+        "strikeouts": 77,
+        "innings": "64.1",
+        "gamesStarted": 13,
+        "strikeoutRate": 0.278,
+        "groundBallRate": 0.469,
+        "flyBallRate": 0.531,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      }
+    ],
+    "bullpenAggregate": {
+      "era": 3.935,
+      "whip": 1.266,
+      "totalInnings": 223.9,
+      "pitcherCount": 9
+    }
+  },
+  "batting": {
+    "teamId": 142,
+    "season": 2024,
+    "avg": ".246",
+    "ops": ".726",
+    "hits": 1352,
+    "runs": 742,
+    "rbi": 702
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "teamId": 108,
+  "teamName": "Los Angeles Angels",
+  "season": 2024,
+  "analyzedAt": "2025-06-20T05:40:28.164870",
+  "pitching": {
+    "teamId": 108,
+    "season": 2024,
+    "starters": [
+      {
+        "id": 542881,
+        "name": "Tyler Anderson",
+        "handedness": "L",
+        "era": "3.81",
+        "whip": "1.29",
+        "fip": 4.696,
+        "strikeouts": 142,
+        "innings": "179.1",
+        "gamesStarted": 31,
+        "strikeoutRate": 0.186,
+        "groundBallRate": 0.423,
+        "flyBallRate": 0.577,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      },
+      {
+        "id": 656288,
+        "name": "Griffin Canning",
+        "handedness": "R",
+        "era": "5.19",
+        "whip": "1.40",
+        "fip": 5.297,
+        "strikeouts": 130,
+        "innings": "171.2",
+        "gamesStarted": 31,
+        "strikeoutRate": 0.176,
+        "groundBallRate": 0.449,
+        "flyBallRate": 0.551,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      }
+    ],
+    "bullpenAggregate": {
+      "era": 5.245,
+      "whip": 1.467,
+      "totalInnings": 248.7,
+      "pitcherCount": 8
+    }
+  },
+  "batting": {
+    "teamId": 108,
+    "season": 2024,
+    "avg": ".229",
+    "ops": ".670",
+    "hits": 1227,
+    "runs": 635,
+    "rbi": 596
+  }
+}

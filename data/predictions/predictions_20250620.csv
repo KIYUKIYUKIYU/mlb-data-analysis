@@ -1,0 +1,4 @@
+﻿game_id,game_date,away_team,home_team,away_team_id,home_team_id,away_starter,home_starter,away_points,home_points,prediction,confidence
+777452,2025-06-19T16:40:00Z,Minnesota Twins,Cincinnati Reds,142,113,未定,未定,7,0,away,7
+777445,2025-06-19T17:05:00Z,Colorado Rockies,Washington Nationals,115,120,未定,未定,2,5,home,3
+777449,2025-06-19T17:05:00Z,Los Angeles Angels,New York Yankees,108,147,未定,未定,0,5,home,5
