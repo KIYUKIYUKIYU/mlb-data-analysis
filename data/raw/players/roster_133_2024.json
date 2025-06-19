@@ -1,0 +1,449 @@
+{
+  "team_id": 133,
+  "team_name": "Oakland Athletics",
+  "season": 2024,
+  "collected_at": "2025-06-20T05:05:12.952641",
+  "total_players": 55,
+  "roster": [
+    {
+      "id": 613534,
+      "fullName": "Austin Adams",
+      "jerseyNumber": "29",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 518397,
+      "fullName": "Scott Alexander",
+      "jerseyNumber": "54",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 669397,
+      "fullName": "Nick Allen",
+      "jerseyNumber": "10",
+      "position": "Shortstop",
+      "positionType": "Infielder",
+      "positionAbbreviation": "SS"
+    },
+    {
+      "id": 669137,
+      "fullName": "Armando Alvarez",
+      "jerseyNumber": "50",
+      "position": "Third Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "3B"
+    },
+    {
+      "id": 609280,
+      "fullName": "Miguel Andujar",
+      "jerseyNumber": "22",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "LF"
+    },
+    {
+      "id": 669620,
+      "fullName": "Brady Basso",
+      "jerseyNumber": "66",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 674370,
+      "fullName": "Osvaldo Bido",
+      "jerseyNumber": "45",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 656232,
+      "fullName": "Brandon Bielak",
+      "jerseyNumber": "62",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 621112,
+      "fullName": "Paul Blackburn",
+      "jerseyNumber": "58",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 668709,
+      "fullName": "JJ Bleday",
+      "jerseyNumber": "33",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "CF"
+    },
+    {
+      "id": 671212,
+      "fullName": "Joe Boyle",
+      "jerseyNumber": "35",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 605156,
+      "fullName": "Aaron Brooks",
+      "jerseyNumber": "53",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 664913,
+      "fullName": "Seth Brown",
+      "jerseyNumber": "15",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "LF"
+    },
+    {
+      "id": 671732,
+      "fullName": "Lawrence Butler",
+      "jerseyNumber": "4",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "RF"
+    },
+    {
+      "id": 663662,
+      "fullName": "Daz Cameron",
+      "jerseyNumber": "28",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "LF"
+    },
+    {
+      "id": 605204,
+      "fullName": "J.D. Davis",
+      "jerseyNumber": "5",
+      "position": "First Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "1B"
+    },
+    {
+      "id": 649557,
+      "fullName": "Aledmys Díaz",
+      "jerseyNumber": "6",
+      "position": "First Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "1B"
+    },
+    {
+      "id": 668674,
+      "fullName": "Lucas Erceg",
+      "jerseyNumber": "70",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 683155,
+      "fullName": "Joey Estes",
+      "jerseyNumber": "68",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 621053,
+      "fullName": "Tyler Ferguson",
+      "jerseyNumber": "65",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 680869,
+      "fullName": "Zack Gelof",
+      "jerseyNumber": "20",
+      "position": "Second Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "2B"
+    },
+    {
+      "id": 669372,
+      "fullName": "J.T. Ginn",
+      "jerseyNumber": "70",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 656484,
+      "fullName": "Tristan Gray",
+      "jerseyNumber": "16",
+      "position": "Third Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "3B"
+    },
+    {
+      "id": 695391,
+      "fullName": "Brett Harris",
+      "jerseyNumber": "77",
+      "position": "Third Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "3B"
+    },
+    {
+      "id": 663687,
+      "fullName": "Hogan Harris",
+      "jerseyNumber": "63",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 687231,
+      "fullName": "Darell Hernaiz",
+      "jerseyNumber": "2",
+      "position": "Third Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "3B"
+    },
+    {
+      "id": 680880,
+      "fullName": "Grant Holman",
+      "jerseyNumber": "67",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 666204,
+      "fullName": "Dany Jiménez",
+      "jerseyNumber": "56",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 676083,
+      "fullName": "Janson Junk",
+      "jerseyNumber": "60",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 547184,
+      "fullName": "Michael Kelly",
+      "jerseyNumber": "47",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 694361,
+      "fullName": "Will Klein",
+      "jerseyNumber": "64",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 669127,
+      "fullName": "Shea Langeliers",
+      "jerseyNumber": "23",
+      "position": "Catcher",
+      "positionType": "Catcher",
+      "positionAbbreviation": "C"
+    },
+    {
+      "id": 687922,
+      "fullName": "Easton Lucas",
+      "jerseyNumber": "67",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 668832,
+      "fullName": "Kyle McCann",
+      "jerseyNumber": "52",
+      "position": "Catcher",
+      "positionType": "Catcher",
+      "positionAbbreviation": "C"
+    },
+    {
+      "id": 519008,
+      "fullName": "T.J. McFarland",
+      "jerseyNumber": "48",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 665622,
+      "fullName": "Luis Medina",
+      "jerseyNumber": "46",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 695243,
+      "fullName": "Mason Miller",
+      "jerseyNumber": "19",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 666205,
+      "fullName": "Kyle Muller",
+      "jerseyNumber": "39",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 663527,
+      "fullName": "Tyler Nevin",
+      "jerseyNumber": "26",
+      "position": "First Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "1B"
+    },
+    {
+      "id": 656794,
+      "fullName": "Sean Newcomb",
+      "jerseyNumber": "16",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 657697,
+      "fullName": "Vinny Nittoli",
+      "jerseyNumber": "64",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 676116,
+      "fullName": "Ryan Noda",
+      "jerseyNumber": "49",
+      "position": "First Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "1B"
+    },
+    {
+      "id": 672552,
+      "fullName": "Jack O'Loughlin",
+      "jerseyNumber": "37",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 671305,
+      "fullName": "Michel Otañez",
+      "jerseyNumber": "47",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 622103,
+      "fullName": "Gerardo Reyes",
+      "jerseyNumber": "92",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 667670,
+      "fullName": "Brent Rooker",
+      "jerseyNumber": "25",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "LF"
+    },
+    {
+      "id": 665923,
+      "fullName": "Esteury Ruiz",
+      "jerseyNumber": "1",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "LF"
+    },
+    {
+      "id": 680474,
+      "fullName": "Max Schuemann",
+      "jerseyNumber": "12",
+      "position": "Shortstop",
+      "positionType": "Infielder",
+      "positionAbbreviation": "SS"
+    },
+    {
+      "id": 676664,
+      "fullName": "JP Sears",
+      "jerseyNumber": "38",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 691016,
+      "fullName": "Tyler Soderstrom",
+      "jerseyNumber": "21",
+      "position": "First Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "1B"
+    },
+    {
+      "id": 687765,
+      "fullName": "Mitch Spence",
+      "jerseyNumber": "40",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 548389,
+      "fullName": "Ross Stripling",
+      "jerseyNumber": "36",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 647351,
+      "fullName": "Abraham Toro",
+      "jerseyNumber": "31",
+      "position": "Third Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "3B"
+    },
+    {
+      "id": 805779,
+      "fullName": "Jacob Wilson",
+      "jerseyNumber": "5",
+      "position": "Shortstop",
+      "positionType": "Infielder",
+      "positionAbbreviation": "SS"
+    },
+    {
+      "id": 622072,
+      "fullName": "Alex Wood",
+      "jerseyNumber": "57",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    }
+  ]
+}
