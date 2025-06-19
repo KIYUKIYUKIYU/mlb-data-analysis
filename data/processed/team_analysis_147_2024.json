@@ -1,0 +1,61 @@
+{
+  "teamId": 147,
+  "teamName": "New York Yankees",
+  "season": 2024,
+  "analyzedAt": "2025-06-20T05:20:28.927456",
+  "pitching": {
+    "teamId": 147,
+    "season": 2024,
+    "starters": [
+      {
+        "id": 543037,
+        "name": "Gerrit Cole",
+        "handedness": "R",
+        "era": "3.41",
+        "whip": "1.13",
+        "fip": 3.726,
+        "strikeouts": 99,
+        "innings": "95.0",
+        "gamesStarted": 17,
+        "strikeoutRate": 0.254,
+        "groundBallRate": 0.404,
+        "flyBallRate": 0.596,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      },
+      {
+        "id": 641482,
+        "name": "Nestor Cortes",
+        "handedness": "L",
+        "era": "3.77",
+        "whip": "1.15",
+        "fip": 3.872,
+        "strikeouts": 162,
+        "innings": "174.1",
+        "gamesStarted": 30,
+        "strikeoutRate": 0.228,
+        "groundBallRate": 0.356,
+        "flyBallRate": 0.644,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      }
+    ],
+    "bullpenAggregate": {
+      "era": 4.428,
+      "whip": 1.358,
+      "totalInnings": 179.8,
+      "pitcherCount": 8
+    }
+  },
+  "batting": {
+    "teamId": 147,
+    "season": 2024,
+    "avg": ".248",
+    "ops": ".762",
+    "hits": 1352,
+    "runs": 815,
+    "rbi": 782
+  }
+}

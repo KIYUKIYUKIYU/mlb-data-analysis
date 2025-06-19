@@ -1,0 +1,78 @@
+{
+  "teamId": 111,
+  "teamName": "Boston Red Sox",
+  "season": 2024,
+  "analyzedAt": "2025-06-20T05:24:21.143790",
+  "pitching": {
+    "teamId": 111,
+    "season": 2024,
+    "starters": [
+      {
+        "id": 678394,
+        "name": "Brayan Bello",
+        "handedness": "R",
+        "era": "4.49",
+        "whip": "1.36",
+        "fip": 4.224,
+        "strikeouts": 153,
+        "innings": "162.1",
+        "gamesStarted": 30,
+        "strikeoutRate": 0.218,
+        "groundBallRate": 0.612,
+        "flyBallRate": 0.388,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      },
+      {
+        "id": 676710,
+        "name": "Kutter Crawford",
+        "handedness": "R",
+        "era": "4.36",
+        "whip": "1.12",
+        "fip": 4.685,
+        "strikeouts": 175,
+        "innings": "183.2",
+        "gamesStarted": 33,
+        "strikeoutRate": 0.231,
+        "groundBallRate": 0.379,
+        "flyBallRate": 0.621,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      },
+      {
+        "id": 681867,
+        "name": "Cooper Criswell",
+        "handedness": "R",
+        "era": "4.08",
+        "whip": "1.35",
+        "fip": 4.189,
+        "strikeouts": 73,
+        "innings": "99.1",
+        "gamesStarted": 18,
+        "strikeoutRate": 0.172,
+        "groundBallRate": 0.519,
+        "flyBallRate": 0.481,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      }
+    ],
+    "bullpenAggregate": {
+      "era": 4.406,
+      "whip": 1.331,
+      "totalInnings": 246.7,
+      "pitcherCount": 7
+    }
+  },
+  "batting": {
+    "teamId": 111,
+    "season": 2024,
+    "avg": ".252",
+    "ops": ".742",
+    "hits": 1404,
+    "runs": 751,
+    "rbi": 724
+  }
+}
