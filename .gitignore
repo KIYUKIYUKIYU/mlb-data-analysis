@@ -11,3 +11,21 @@ data/*.json
 # IDE
 .vscode/
 .idea/
+
+# 重要：認証情報を除外
+credentials/
+*base64.txt
+
+# キャッシュとログ
+cache/
+logs/
+daily_reports/
+
+# 生成されたレポート
+MLB_Report_*.txt
+oauth_test.txt
+test_upload.txt
+
+# Python仮想環境
+venv/
+env/
