@@ -30,7 +30,7 @@ def main():
             [sys.executable, "scripts/mlb_complete_report_real.py"],
             capture_output=True,
             text=True,
-            encoding='cp932'  # Windows日本語環境用
+            encoding='utf-8'  # Windows日本語環境用
         )
         
         if result.returncode != 0:
