@@ -40,6 +40,18 @@ jobs:
           "keep_days": 30
         }' > config/auto_report_config.json
     
+    - name: Create necessary directories
+      run: |
+        mkdir -p cache
+        mkdir -p cache/splits_data
+        mkdir -p cache/advanced_stats
+        mkdir -p cache/bullpen_stats
+        mkdir -p cache/batting_quality
+        mkdir -p cache/recent_ops
+        mkdir -p cache/statcast_data
+        mkdir -p logs
+        mkdir -p daily_reports
+    
     - name: Generate and upload report
       run: |
         python mlb_report_with_drive.py
