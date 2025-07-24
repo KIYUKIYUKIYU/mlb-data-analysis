@@ -26,11 +26,14 @@ def main():
         report_filename = f"MLB_Report_{report_date}.txt"
         
         # レポート生成コマンド実行
+        import platform
+        encoding = 'cp932' if platform.system() == 'Windows' else 'utf-8'
+        
         result = subprocess.run(
             [sys.executable, "scripts/mlb_complete_report_real.py"],
             capture_output=True,
             text=True,
-            encoding='utf-8'  # Windows日本語環境用
+            encoding=encoding
         )
         
         if result.returncode != 0:
