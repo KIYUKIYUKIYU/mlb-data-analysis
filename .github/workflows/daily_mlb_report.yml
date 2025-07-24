@@ -28,8 +28,22 @@ jobs:
     - name: Create credentials
       run: |
         mkdir -p credentials
-        echo '${{ secrets.GOOGLE_OAUTH_CREDENTIALS }}' | base64 -d > credentials/oauth_credentials.json
-        echo '${{ secrets.GOOGLE_TOKEN_PICKLE }}' | base64 -d > credentials/token.pickle
+        echo '${{ secrets.GOOGLE_OAUTH_CREDENTIALS }}' > credentials/oauth_credentials.json
+        # Pythonを使って安全にデコード
+        python -c "
+import base64
+import sys
+try:
+    # base64文字列から改行や空白を除去
+    token_b64 = '''${{ secrets.GOOGLE_TOKEN_PICKLE }}'''.strip().replace('\n', '').replace(' ', '')
+    token_data = base64.b64decode(token_b64)
+    with open('credentials/token.pickle', 'wb') as f:
+        f.write(token_data)
+    print('Token pickle created successfully')
+except Exception as e:
+    print(f'Error creating token pickle: {e}')
+    sys.exit(1)
+        "
     
     - name: Create config
       run: |
