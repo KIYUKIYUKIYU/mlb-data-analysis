@@ -95,8 +95,8 @@ def main():
         # Google Driveアップローダーを初期化
         uploader = OAuthDriveUploader()
         
-        # ファイルをアップロード
-        file_id = uploader.upload_file(filename)
+        # ファイルをアップロード（日本語ファイル名を明示的に指定）
+        file_id = uploader.upload_file(filename, display_name=filename)
         
         if file_id:
             print(f"✅ アップロード成功！")
