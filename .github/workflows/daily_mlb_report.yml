@@ -53,10 +53,14 @@ jobs:
         mkdir -p daily_reports
     
     - name: Generate and upload report
+      env:
+        GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        PYTHONIOENCODING: utf-8
       run: |
         python mlb_report_with_drive.py
     
     - name: Send notification (optional)
       if: success()
       run: |
-        echo "レポート生成成功！"s
+        echo "レポート生成成功！"
