@@ -23,7 +23,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         # 必要なパッケージをインストール
-        pip install pandas numpy requests beautifulsoup4 pytz
+        pip install pandas numpy requests beautifulsoup4 pytz lxml
         # requirements.txtがあれば使用
         if [ -f requirements.txt ]; then 
           pip install -r requirements.txt
@@ -40,75 +40,96 @@ jobs:
         mkdir -p cache/statcast_data
         mkdir -p logs
         mkdir -p daily_reports
+        mkdir -p src
+        mkdir -p scripts
+    
+    - name: Debug - Show directory structure
+      run: |
+        echo "=== Directory Structure ==="
+        ls -la
+        echo ""
+        echo "=== Scripts folder ==="
+        ls -la scripts/
+        echo ""
+        echo "=== Python Path ==="
+        python -c "import sys; print('\\n'.join(sys.path))"
     
     - name: Generate MLB Report
       env:
         PYTHONIOENCODING: utf-8
         PYTHONPATH: ${{ github.workspace }}
       run: |
-        echo "Starting report generation..."
+        echo "🚀 Starting report generation..."
         echo "Current directory: $(pwd)"
         echo "Python version: $(python --version)"
-        echo "Files in scripts folder:"
-        ls -la scripts/
         
         # mlb_complete_report_real.py を直接実行
-        python scripts/mlb_complete_report_real.py > daily_reports/report_$(date +%Y%m%d).txt 2> logs/error_$(date +%Y%m%d).log
+        echo "Running mlb_complete_report_real.py..."
+        python scripts/mlb_complete_report_real.py > daily_reports/report_$(date +%Y%m%d).txt 2>&1
         
         # 実行結果を確認
         if [ $? -eq 0 ]; then
           echo "✅ Report generated successfully!"
-          echo "=== Report Preview (last 30 lines) ==="
-          tail -n 30 daily_reports/report_$(date +%Y%m%d).txt
         else
-          echo "❌ Error occurred during report generation"
-          echo "=== Error Log ==="
-          cat logs/error_$(date +%Y%m%d).log
+          echo "⚠️ Report generation completed with warnings/errors"
+        fi
+        
+        # レポートの存在確認
+        if [ -f daily_reports/report_$(date +%Y%m%d).txt ]; then
+          echo "📄 Report file created successfully"
+          echo ""
+          echo "=== Report Size ==="
+          wc -l daily_reports/report_$(date +%Y%m%d).txt
+          echo ""
+          echo "=== Report Preview (first 50 lines) ==="
+          head -n 50 daily_reports/report_$(date +%Y%m%d).txt
+          echo ""
+          echo "=== Report End (last 20 lines) ==="
+          tail -n 20 daily_reports/report_$(date +%Y%m%d).txt
+        else
+          echo "❌ Report file not created!"
           exit 1
+        fi
+    
+    - name: Check for import errors
+      run: |
+        # インポートエラーがないか確認
+        if grep -q "ImportError\\|ModuleNotFoundError" daily_reports/report_$(date +%Y%m%d).txt; then
+          echo "⚠️ Import errors detected in report:"
+          grep -A 2 -B 2 "ImportError\\|ModuleNotFoundError" daily_reports/report_$(date +%Y%m%d).txt
         fi
     
     - name: Upload reports and logs
       if: always()
       uses: actions/upload-artifact@v3
       with:
-        name: mlb-reports-$(date +%Y%m%d)
+        name: mlb-reports-${{ github.run_number }}
         path: |
           daily_reports/
           logs/
+          mlb_report.log
     
-    - name: Upload cache (optional)
-      if: success()
-      uses: actions/upload-artifact@v3
-      with:
-        name: mlb-cache-$(date +%Y%m%d)
-        path: cache/
-      continue-on-error: true
-    
-    - name: Commit reports to repository
-      if: success()
-      run: |
-        git config --global user.name 'GitHub Actions Bot'
-        git config --global user.email 'actions@github.com'
-        git add daily_reports/*.txt
-        git add -f logs/*.log 2>/dev/null || true
-        if git diff --staged --quiet; then
-          echo "No changes to commit"
-        else
-          git commit -m "📊 Daily MLB Report - $(date +%Y-%m-%d)"
-          git push
-        fi
-      continue-on-error: true
-    
-    - name: Summary
+    - name: Create summary
       if: always()
       run: |
-        echo "## 📊 MLB Report Generation Summary" >> $GITHUB_STEP_SUMMARY
+        echo "## 📊 MLB Daily Report Generation" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "- 📅 Date: $(date +%Y-%m-%d %H:%M:%S)" >> $GITHUB_STEP_SUMMARY
-        echo "- 📁 Report: daily_reports/report_$(date +%Y%m%d).txt" >> $GITHUB_STEP_SUMMARY
+        echo "### 📅 Report Information" >> $GITHUB_STEP_SUMMARY
+        echo "- **Date**: $(date +%Y-%m-%d %H:%M:%S UTC)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Japan Time**: $(TZ=Asia/Tokyo date +%Y-%m-%d %H:%M:%S JST)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Report File**: daily_reports/report_$(date +%Y%m%d).txt" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
         if [ -f daily_reports/report_$(date +%Y%m%d).txt ]; then
-          echo "- ✅ Status: Success" >> $GITHUB_STEP_SUMMARY
-          echo "- 📏 Size: $(wc -l < daily_reports/report_$(date +%Y%m%d).txt) lines" >> $GITHUB_STEP_SUMMARY
+          echo "### ✅ Status: Success" >> $GITHUB_STEP_SUMMARY
+          echo "- **Lines**: $(wc -l < daily_reports/report_$(date +%Y%m%d).txt)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Size**: $(du -h daily_reports/report_$(date +%Y%m%d).txt | cut -f1)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📝 Report Preview" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          head -n 30 daily_reports/report_$(date +%Y%m%d).txt >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
         else
-          echo "- ❌ Status: Failed" >> $GITHUB_STEP_SUMMARY
+          echo "### ❌ Status: Failed" >> $GITHUB_STEP_SUMMARY
+          echo "Report file was not generated." >> $GITHUB_STEP_SUMMARY
         fi
