@@ -289,9 +289,6 @@ class MLBCompleteReport:
             babip = self._safe_float(enhanced_stats.get('babip', '0'))
             
             # デバッグ出力を削除（コメントアウト）
-            # print(f"Debug - Advanced stats for pitcher {pitcher_id}: qualityStarts={enhanced_stats.get('quality_starts', 0)}")
-            # print(f"Debug - Pitcher {pitcher_id}: GS={enhanced_stats.get('games_started', 0)}, QS={enhanced_stats.get('quality_starts', 0)}")
-            # print(f"Debug - Using API QS rate: {qs_rate:.1f}%")
             
             print(f"ERA: {era:.2f} | FIP: {fip:.2f} | "
                   f"xFIP: {xfip:.2f} | WHIP: {whip:.2f} | "
