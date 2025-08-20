@@ -22,12 +22,12 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        # 基本パッケージのインストール
+        # 必要なパッケージをインストール
         pip install pandas numpy requests beautifulsoup4 pytz
-        # Google Drive用（オプション）
-        pip install google-api-python-client google-auth-oauthlib google-auth-httplib2
-        # もしrequirements.txtがあれば使用
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        # requirements.txtがあれば使用
+        if [ -f requirements.txt ]; then 
+          pip install -r requirements.txt
+        fi
     
     - name: Create necessary directories
       run: |
@@ -40,56 +40,75 @@ jobs:
         mkdir -p cache/statcast_data
         mkdir -p logs
         mkdir -p daily_reports
-        mkdir -p scripts
     
     - name: Generate MLB Report
       env:
         PYTHONIOENCODING: utf-8
         PYTHONPATH: ${{ github.workspace }}
       run: |
-        # scriptsフォルダにファイルがある場合
-        if [ -f scripts/mlb_complete_report_real.py ]; then
-          echo "Running from scripts folder..."
-          python scripts/mlb_complete_report_real.py > daily_reports/report_$(date +%Y%m%d).txt 2>&1
-        # ルートフォルダにファイルがある場合  
-        elif [ -f mlb_complete_report_real.py ]; then
-          echo "Running from root folder..."
-          python mlb_complete_report_real.py > daily_reports/report_$(date +%Y%m%d).txt 2>&1
+        echo "Starting report generation..."
+        echo "Current directory: $(pwd)"
+        echo "Python version: $(python --version)"
+        echo "Files in scripts folder:"
+        ls -la scripts/
+        
+        # mlb_complete_report_real.py を直接実行
+        python scripts/mlb_complete_report_real.py > daily_reports/report_$(date +%Y%m%d).txt 2> logs/error_$(date +%Y%m%d).log
+        
+        # 実行結果を確認
+        if [ $? -eq 0 ]; then
+          echo "✅ Report generated successfully!"
+          echo "=== Report Preview (last 30 lines) ==="
+          tail -n 30 daily_reports/report_$(date +%Y%m%d).txt
         else
-          echo "Error: mlb_complete_report_real.py not found!"
+          echo "❌ Error occurred during report generation"
+          echo "=== Error Log ==="
+          cat logs/error_$(date +%Y%m%d).log
           exit 1
         fi
-        
-        # レポートの内容を表示（デバッグ用）
-        echo "=== Report Generated ==="
-        tail -n 50 daily_reports/report_$(date +%Y%m%d).txt
     
-    - name: Upload report as artifact
+    - name: Upload reports and logs
       if: always()
       uses: actions/upload-artifact@v3
       with:
-        name: mlb-daily-report
-        path: daily_reports/
+        name: mlb-reports-$(date +%Y%m%d)
+        path: |
+          daily_reports/
+          logs/
     
-    - name: Check for errors
-      run: |
-        # エラーログがあれば表示
-        if [ -f logs/error.log ]; then
-          echo "=== Error Log ==="
-          cat logs/error.log
-        fi
-    
-    - name: Commit reports to repository (optional)
-      run: |
-        git config --global user.name 'GitHub Actions'
-        git config --global user.email 'actions@github.com'
-        git add daily_reports/
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Add daily MLB report $(date +%Y-%m-%d)" && git push)
+    - name: Upload cache (optional)
+      if: success()
+      uses: actions/upload-artifact@v3
+      with:
+        name: mlb-cache-$(date +%Y%m%d)
+        path: cache/
       continue-on-error: true
     
-    - name: Send success notification
+    - name: Commit reports to repository
       if: success()
       run: |
-        echo "✅ レポート生成成功！"
-        echo "📅 Date: $(date +%Y-%m-%d)"
-        echo "📄 Report saved to: daily_reports/report_$(date +%Y%m%d).txt"
+        git config --global user.name 'GitHub Actions Bot'
+        git config --global user.email 'actions@github.com'
+        git add daily_reports/*.txt
+        git add -f logs/*.log 2>/dev/null || true
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "📊 Daily MLB Report - $(date +%Y-%m-%d)"
+          git push
+        fi
+      continue-on-error: true
+    
+    - name: Summary
+      if: always()
+      run: |
+        echo "## 📊 MLB Report Generation Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "- 📅 Date: $(date +%Y-%m-%d %H:%M:%S)" >> $GITHUB_STEP_SUMMARY
+        echo "- 📁 Report: daily_reports/report_$(date +%Y%m%d).txt" >> $GITHUB_STEP_SUMMARY
+        if [ -f daily_reports/report_$(date +%Y%m%d).txt ]; then
+          echo "- ✅ Status: Success" >> $GITHUB_STEP_SUMMARY
+          echo "- 📏 Size: $(wc -l < daily_reports/report_$(date +%Y%m%d).txt) lines" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- ❌ Status: Failed" >> $GITHUB_STEP_SUMMARY
+        fi
