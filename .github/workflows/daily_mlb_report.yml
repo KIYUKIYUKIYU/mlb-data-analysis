@@ -12,10 +12,10 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.10'
     
@@ -44,38 +44,33 @@ jobs:
         PYTHONIOENCODING: utf-8
         PYTHONPATH: ${{ github.workspace }}
       run: |
-        echo "🚀 Starting report generation..."
-        # mlb_complete_report_real.py を直接実行（mlb_report_with_drive.pyは使わない）
+        echo "Starting report generation..."
         python scripts/mlb_complete_report_real.py > daily_reports/report_$(date +%Y%m%d).txt 2>&1 || true
         
-        # レポートファイルの確認
         if [ -f daily_reports/report_$(date +%Y%m%d).txt ]; then
-          echo "✅ Report file created"
-          echo "📏 Report size: $(wc -l < daily_reports/report_$(date +%Y%m%d).txt) lines"
+          echo "Report file created"
+          echo "Report size: $(wc -l < daily_reports/report_$(date +%Y%m%d).txt) lines"
+          echo "=== First 50 lines of report ==="
+          head -n 50 daily_reports/report_$(date +%Y%m%d).txt
         else
-          echo "❌ Report file not found"
+          echo "Report file not found"
+          # エラーログを表示
+          ls -la daily_reports/
           exit 1
-        fi
-    
-    - name: Display Report Preview
-      if: always()
-      run: |
-        if [ -f daily_reports/report_$(date +%Y%m%d).txt ]; then
-          echo "=== First 100 lines of report ==="
-          head -n 100 daily_reports/report_$(date +%Y%m%d).txt
         fi
     
     - name: Upload Report
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-        name: mlb-report-$(date +%Y%m%d-%H%M%S)
+        name: mlb-report-${{ github.run_number }}
         path: |
           daily_reports/
           logs/
-          *.log
+        retention-days: 30
     
     - name: Send notification
       if: success()
       run: |
         echo "✅ レポート生成成功！"
+        echo "Report saved to: daily_reports/report_$(date +%Y%m%d).txt"
