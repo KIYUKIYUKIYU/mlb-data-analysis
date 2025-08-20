@@ -126,12 +126,10 @@ class EnhancedStatsCollector:
             quality_starts = advanced_stats.get('quality_starts', None)
             
             # デバッグ出力
-            print(f"Debug - Pitcher {pitcher_id}: GS={games_started}, QS={quality_starts}")
             
             if games_started > 0 and quality_starts is not None:
                 # APIから直接取得したQSデータを使用
                 qs_rate = (quality_starts / games_started * 100)
-                print(f"Debug - Using API QS rate: {qs_rate:.1f}%")
             elif games_started > 0:
                 # フォールバック: 推定計算（APIからQSが取得できない場合）
                 avg_innings_per_start = innings_pitched / games_started
@@ -153,7 +151,6 @@ class EnhancedStatsCollector:
                 else:
                     qs_rate = max(15.0, min(30.0, avg_innings_per_start / 20.0 * 100))
                 
-                print(f"Debug - Using estimated QS rate: {qs_rate:.1f}%")
             else:
                 qs_rate = 0.0
 
@@ -209,7 +206,6 @@ class EnhancedStatsCollector:
                             quality_starts = advanced.get('qualityStarts', None)
                             
                             # デバッグ出力
-                            print(f"Debug - Advanced stats for pitcher {pitcher_id}: qualityStarts={quality_starts}")
                             
                             # 打球データ
                             balls_in_play = int(advanced.get('ballsInPlay', 0))
