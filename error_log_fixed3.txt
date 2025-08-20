@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 13, in <module>
+    from scripts.enhanced_stats_collector import EnhancedStatsCollector
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\enhanced_stats_collector.py", line 1, in <module>
+    def get_pitcher_enhanced_stats(self, pitcher_id: int) -> Dict:
+                                                             ^^^^
+NameError: name 'Dict' is not defined. Did you mean: 'dict'?

@@ -1,0 +1,26 @@
+{
+  "teamId": 110,
+  "teamName": "Orioles",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:30:43.719619",
+  "pitching": {
+    "teamId": 110,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 4.899,
+      "whip": 1.691,
+      "totalInnings": 12.3,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 110,
+    "season": 2025,
+    "avg": ".240",
+    "ops": ".703",
+    "hits": 592,
+    "runs": 297,
+    "rbi": 278
+  }
+}

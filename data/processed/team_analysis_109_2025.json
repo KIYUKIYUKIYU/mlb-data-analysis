@@ -1,0 +1,26 @@
+{
+  "teamId": 109,
+  "teamName": "Diamondbacks",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:30:04.676404",
+  "pitching": {
+    "teamId": 109,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 3.38,
+      "whip": 1.25,
+      "totalInnings": 8.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 109,
+    "season": 2025,
+    "avg": ".252",
+    "ops": ".772",
+    "hits": 630,
+    "runs": 375,
+    "rbi": 367
+  }
+}

@@ -1,0 +1,95 @@
+# update_workflow.py として保存して実行
+
+workflow_content = """name: Daily MLB Report
+
+on:
+  schedule:
+    # 毎日日本時間18:30に実行（UTCで09:30）
+    - cron: '30 9 * * *'
+  workflow_dispatch:  # 手動実行も可能
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas numpy requests beautifulsoup4 pytz lxml
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    
+    - name: Create necessary directories
+      run: |
+        mkdir -p cache
+        mkdir -p cache/splits_data
+        mkdir -p cache/advanced_stats
+        mkdir -p cache/bullpen_stats
+        mkdir -p cache/batting_quality
+        mkdir -p cache/recent_ops
+        mkdir -p cache/statcast_data
+        mkdir -p logs
+        mkdir -p daily_reports
+        mkdir -p src
+        mkdir -p scripts
+    
+    - name: Generate MLB Report Directly
+      env:
+        PYTHONIOENCODING: utf-8
+        PYTHONPATH: ${{ github.workspace }}
+      run: |
+        echo "🚀 Starting report generation..."
+        # mlb_complete_report_real.py を直接実行（mlb_report_with_drive.pyは使わない）
+        python scripts/mlb_complete_report_real.py > daily_reports/report_$(date +%Y%m%d).txt 2>&1 || true
+        
+        # レポートファイルの確認
+        if [ -f daily_reports/report_$(date +%Y%m%d).txt ]; then
+          echo "✅ Report file created"
+          echo "📏 Report size: $(wc -l < daily_reports/report_$(date +%Y%m%d).txt) lines"
+        else
+          echo "❌ Report file not found"
+          exit 1
+        fi
+    
+    - name: Display Report Preview
+      if: always()
+      run: |
+        if [ -f daily_reports/report_$(date +%Y%m%d).txt ]; then
+          echo "=== First 100 lines of report ==="
+          head -n 100 daily_reports/report_$(date +%Y%m%d).txt
+        fi
+    
+    - name: Upload Report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: mlb-report-$(date +%Y%m%d-%H%M%S)
+        path: |
+          daily_reports/
+          logs/
+          *.log
+    
+    - name: Send notification
+      if: success()
+      run: |
+        echo "✅ レポート生成成功！"
+"""
+
+# ファイルを保存
+import os
+workflow_path = r"C:\\Users\\yfuku\\Desktop\\mlb-data-analysis\\.github\\workflows\\daily_mlb_report.yml"
+os.makedirs(os.path.dirname(workflow_path), exist_ok=True)
+
+with open(workflow_path, 'w', encoding='utf-8') as f:
+    f.write(workflow_content)
+
+print("✅ ワークフローファイルを更新しました！")
+print(f"📄 {workflow_path}")

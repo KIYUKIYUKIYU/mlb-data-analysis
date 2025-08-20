@@ -1,0 +1,124 @@
+{
+  "team_id": 146,
+  "games": 5,
+  "timestamp": "20250620_074426",
+  "players": [
+    {
+      "player_id": 667472,
+      "name": "Dane Myers",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.556,
+      "slg": 0.765,
+      "ops": 1.32
+    },
+    {
+      "player_id": 669364,
+      "name": "Xavier Edwards",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.5,
+      "slg": 0.455,
+      "ops": 0.955
+    },
+    {
+      "player_id": 663743,
+      "name": "Nick Fortes",
+      "position": "C",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 0.5,
+      "ops": 0.929
+    },
+    {
+      "player_id": 681393,
+      "name": "Connor Norby",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.375,
+      "slg": 0.462,
+      "ops": 0.837
+    },
+    {
+      "player_id": 660821,
+      "name": "Jesús Sánchez",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.188,
+      "slg": 0.625,
+      "ops": 0.812
+    },
+    {
+      "player_id": 669065,
+      "name": "Kyle Stowers",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.286,
+      "slg": 0.385,
+      "ops": 0.67
+    },
+    {
+      "player_id": 689414,
+      "name": "Liam Hicks",
+      "position": "C",
+      "games": 5,
+      "obp": 0.421,
+      "slg": 0.214,
+      "ops": 0.635
+    },
+    {
+      "player_id": 676572,
+      "name": "Eric Wagaman",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.222,
+      "slg": 0.4,
+      "ops": 0.622
+    },
+    {
+      "player_id": 681715,
+      "name": "Heriberto Hernandez",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.312,
+      "slg": 0.286,
+      "ops": 0.598
+    },
+    {
+      "player_id": 682663,
+      "name": "Agustín Ramírez",
+      "position": "C",
+      "games": 5,
+      "obp": 0.304,
+      "slg": 0.25,
+      "ops": 0.554
+    },
+    {
+      "player_id": 691594,
+      "name": "Javier Sanoja",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.2,
+      "slg": 0.333,
+      "ops": 0.533
+    },
+    {
+      "player_id": 672640,
+      "name": "Otto Lopez",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.261,
+      "slg": 0.2,
+      "ops": 0.461
+    },
+    {
+      "player_id": 676466,
+      "name": "Jack Winkler",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.143,
+      "slg": 0.143,
+      "ops": 0.286
+    }
+  ]
+}

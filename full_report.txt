@@ -1,0 +1,35 @@
+DEBUG: Player info for 605488: Jeffrey Springs
+DEBUG: Season stats response type: <class 'dict'>
+DEBUG: Found stats in splits: ERA=4.24, W-L=6-5
+Error processing game: Unknown format code 'f' for object of type 'str'
+DEBUG: Player info for 592332: Kevin Gausman
+DEBUG: Season stats response type: <class 'dict'>
+DEBUG: Found stats in splits: ERA=4.60, W-L=5-6
+Error processing game: Unknown format code 'f' for object of type 'str'
+DEBUG: Player info for 676106: Emerson Hancock
+DEBUG: Season stats response type: <class 'dict'>
+DEBUG: Found stats in splits: ERA=5.43, W-L=3-3
+Error processing game: Unknown format code 'f' for object of type 'str'
+DEBUG: Player info for 669358: Shane Baz
+DEBUG: Season stats response type: <class 'dict'>
+DEBUG: Found stats in splits: ERA=4.79, W-L=7-3
+Error processing game: Unknown format code 'f' for object of type 'str'
+Error getting enhanced stats for pitcher 650911: 'cp932' codec can't encode character '\xe1' in position 43: illegal multibyte sequence
+Error processing game: Unknown format code 'f' for object of type 'str'
+DEBUG: Player info for 684007: Shota Imanaga
+DEBUG: Season stats response type: <class 'dict'>
+DEBUG: Found stats in splits: ERA=2.82, W-L=3-2
+Error processing game: Unknown format code 'f' for object of type 'str'
+DEBUG: Player info for 477132: Clayton Kershaw
+DEBUG: Season stats response type: <class 'dict'>
+DEBUG: Found stats in splits: ERA=3.31, W-L=3-0
+Error processing game: Unknown format code 'f' for object of type 'str'
+DEBUG: Player info for 676083: Janson Junk
+DEBUG: Season stats response type: <class 'dict'>
+DEBUG: Found stats in splits: ERA=2.60, W-L=2-0
+Error processing game: Unknown format code 'f' for object of type 'str'
+DEBUG: Player info for 656550: Grant Holmes
+DEBUG: Season stats response type: <class 'dict'>
+DEBUG: Found stats in splits: ERA=3.71, W-L=4-6
+Error processing game: Unknown format code 'f' for object of type 'str'
+Discord送信メソッドが見つかりません

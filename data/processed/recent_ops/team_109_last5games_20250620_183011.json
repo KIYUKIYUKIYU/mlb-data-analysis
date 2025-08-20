@@ -1,0 +1,124 @@
+{
+  "team_id": 109,
+  "games": 5,
+  "timestamp": "20250620_183011",
+  "players": [
+    {
+      "player_id": 553993,
+      "name": "Eugenio Suárez",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 0.889,
+      "ops": 1.317
+    },
+    {
+      "player_id": 682998,
+      "name": "Corbin Carroll",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.364,
+      "slg": 0.529,
+      "ops": 0.893
+    },
+    {
+      "player_id": 656976,
+      "name": "Pavin Smith",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.389,
+      "slg": 0.462,
+      "ops": 0.85
+    },
+    {
+      "player_id": 647304,
+      "name": "Josh Naylor",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.391,
+      "slg": 0.381,
+      "ops": 0.772
+    },
+    {
+      "player_id": 666971,
+      "name": "Lourdes Gurriel Jr.",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.316,
+      "slg": 0.294,
+      "ops": 0.61
+    },
+    {
+      "player_id": 606466,
+      "name": "Ketel Marte",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.261,
+      "slg": 0.273,
+      "ops": 0.534
+    },
+    {
+      "player_id": 672695,
+      "name": "Geraldo Perdomo",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.261,
+      "slg": 0.25,
+      "ops": 0.511
+    },
+    {
+      "player_id": 645444,
+      "name": "Jose Herrera",
+      "position": "C",
+      "games": 5,
+      "obp": 0.188,
+      "slg": 0.133,
+      "ops": 0.321
+    },
+    {
+      "player_id": 545341,
+      "name": "Randal Grichuk",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.182,
+      "slg": 0.111,
+      "ops": 0.293
+    },
+    {
+      "player_id": 677950,
+      "name": "Alek Thomas",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.143,
+      "slg": 0.077,
+      "ops": 0.22
+    },
+    {
+      "player_id": 545121,
+      "name": "Ildemaro Vargas",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.091,
+      "slg": 0.091,
+      "ops": 0.182
+    },
+    {
+      "player_id": 605244,
+      "name": "Aramis Garcia",
+      "position": "C",
+      "games": 1,
+      "obp": 0,
+      "slg": 0,
+      "ops": 0
+    },
+    {
+      "player_id": 694374,
+      "name": "Tim Tawa",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.0,
+      "slg": 0.0,
+      "ops": 0.0
+    }
+  ]
+}

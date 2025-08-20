@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB Matchup Analysis: {{ away_team }} vs {{ home_team }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* A4サイズ (210mm x 297mm) のアスペクト比を維持 */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            #a4-page {
+                margin: 0;
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+            }
+        }
+        
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #e2e8f0; /* bg-slate-200 */
+        }
+
+        #a4-page {
+            width: 8.5in;
+            min-height: 11in;
+            background-color: white;
+            margin: 2rem auto;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            border-radius: 0.25rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* チームカラーの動的設定 */
+        {% for team_id, colors in team_colors.items() %}
+        .team-{{ team_id }}-bg { background-color: {{ colors.primary }}; }
+        .team-{{ team_id }}-text { color: {{ colors.secondary }}; }
+        {% endfor %}
+        
+        .stat-bar-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            position: relative;
+        }
+
+        .stat-bar {
+            height: 24px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: width 0.5s ease-in-out;
+            border-radius: 0.25rem;
+        }
+        .stat-label {
+            width: 60px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+        .stat-value {
+            position: absolute;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .away-value { left: 5px; color: white; }
+        .home-value { right: 5px; color: white; }
+    </style>
+</head>
+<body class="bg-slate-200">
+
+    <!-- A4 Page Container -->
+    <div id="a4-page">
+        <!-- Header Section -->
+        <header class="text-center border-b-2 pb-4 mb-6 border-slate-200">
+            <h1 class="text-3xl font-bold text-slate-800 tracking-wider">MLB MATCHUP ANALYSIS</h1>
+            <p class="text-slate-500 mt-1">{{ game_date }} {{ game_time }} (日本時間)</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow">
+            <!-- Team Headers -->
+            <div class="grid grid-cols-2 gap-8 items-center mb-6">
+                <div class="flex items-center gap-4">
+                    <img src="{{ away_logo }}" alt="{{ away_team }} Logo" class="h-20 w-20" onerror="this.onerror=null;this.src='https://placehold.co/80x80/{{ away_color_primary }}/FFFFFF?text={{ away_abbr }}';">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800">{{ away_team }}</h2>
+                        <p class="text-slate-500">Away Team</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-end gap-4">
+                     <div>
+                        <h2 class="text-2xl font-bold text-slate-800 text-right">{{ home_team }}</h2>
+                        <p class="text-slate-500 text-right">Home Team</p>
+                    </div>
+                    <img src="{{ home_logo }}" alt="{{ home_team }} Logo" class="h-20 w-20" onerror="this.onerror=null;this.src='https://placehold.co/80x80/{{ home_color_primary }}/FFFFFF?text={{ home_abbr }}';">
+                </div>
+            </div>
+
+            <!-- Starting Pitcher Section -->
+            <section class="mb-8">
+                <h3 class="text-xl font-bold text-slate-700 mb-4 text-center border-t border-b py-2 bg-slate-50">先発投手 比較 (Starting Pitcher)</h3>
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <p class="text-lg font-bold">{{ away_pitcher.name }}</p>
+                        <p class="text-sm text-slate-500">{{ away_pitcher.wins }}勝 {{ away_pitcher.losses }}敗</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-right">
+                        <p class="text-lg font-bold">{{ home_pitcher.name }}</p>
+                        <p class="text-sm text-slate-500">{{ home_pitcher.wins }}勝 {{ home_pitcher.losses }}敗</p>
+                    </div>
+                </div>
+                
+                <!-- Stat Comparison Graph -->
+                <div class="mt-4 space-y-3">
+                    <!-- ERA -->
+                    <div class="stat-bar-container">
+                        <div class="stat-bar team-{{ away_abbr }}-bg" style="width: calc(100% * {{ away_pitcher.era }} / ({{ away_pitcher.era }} + {{ home_pitcher.era }}));"><span class="stat-value away-value">{{ away_pitcher.era }}</span></div>
+                        <div class="stat-label">ERA</div>
+                        <div class="stat-bar team-{{ home_abbr }}-bg" style="width: calc(100% * {{ home_pitcher.era }} / ({{ away_pitcher.era }} + {{ home_pitcher.era }}));"><span class="stat-value home-value">{{ home_pitcher.era }}</span></div>
+                    </div>
+                    <!-- WHIP -->
+                    <div class="stat-bar-container">
+                        <div class="stat-bar team-{{ away_abbr }}-bg" style="width: calc(100% * (2 - {{ away_pitcher.whip }}) / ((2 - {{ away_pitcher.whip }}) + (2 - {{ home_pitcher.whip }})));"><span class="stat-value away-value">{{ away_pitcher.whip }}</span></div>
+                        <div class="stat-label">WHIP</div>
+                        <div class="stat-bar team-{{ home_abbr }}-bg" style="width: calc(100% * (2 - {{ home_pitcher.whip }}) / ((2 - {{ away_pitcher.whip }}) + (2 - {{ home_pitcher.whip }})));"><span class="stat-value home-value">{{ home_pitcher.whip }}</span></div>
+                    </div>
+                     <!-- K-BB% -->
+                    <div class="stat-bar-container">
+                        <div class="stat-bar team-{{ away_abbr }}-bg" style="width: calc(100% * {{ away_pitcher.k_bb_percent }} / ({{ away_pitcher.k_bb_percent }} + {{ home_pitcher.k_bb_percent }}));"><span class="stat-value away-value">{{ away_pitcher.k_bb_percent }}%</span></div>
+                        <div class="stat-label">K-BB%</div>
+                        <div class="stat-bar team-{{ home_abbr }}-bg" style="width: calc(100% * {{ home_pitcher.k_bb_percent }} / ({{ away_pitcher.k_bb_percent }} + {{ home_pitcher.k_bb_percent }}));"><span class="stat-value home-value">{{ home_pitcher.k_bb_percent }}%</span></div>
+                    </div>
+                </div>
+                <p class="text-xs text-center text-slate-400 mt-2">ERA, WHIPは数値が低いほど優れています。</p>
+            </section>
+            
+            <!-- Bullpen & Batting Section -->
+            <section>
+                <div class="grid grid-cols-2 gap-8">
+                    <!-- Bullpen -->
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-700 mb-3 border-b pb-1">中継ぎ陣 (Bullpen)</h3>
+                        <table class="w-full text-sm text-slate-600">
+                            <tbody>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-2">ERA</td>
+                                    <td class="text-right font-semibold">{{ away_bullpen.era }}</td>
+                                </tr>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-2">WHIP</td>
+                                    <td class="text-right font-semibold">{{ away_bullpen.whip }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2">投手人数</td>
+                                    <td class="text-right font-semibold">{{ away_bullpen.count }}名{% if away_bullpen.closer %} (CL: {{ away_bullpen.closer }}){% endif %}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-700 mb-3 border-b pb-1 text-right">中継ぎ陣 (Bullpen)</h3>
+                         <table class="w-full text-sm text-slate-600">
+                            <tbody>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-2">ERA</td>
+                                    <td class="text-right font-semibold">{{ home_bullpen.era }}</td>
+                                </tr>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-2">WHIP</td>
+                                    <td class="text-right font-semibold">{{ home_bullpen.whip }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2">投手人数</td>
+                                    <td class="text-right font-semibold">{{ home_bullpen.count }}名{% if home_bullpen.closer %} (CL: {{ home_bullpen.closer }}){% endif %}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Batting -->
+                    <div class="mt-6 col-span-2">
+                        <h3 class="text-xl font-bold text-slate-700 mb-4 text-center border-t border-b py-2 bg-slate-50">チーム打撃 比較 (Team Batting)</h3>
+                    </div>
+                    <div>
+                        <table class="w-full text-sm text-slate-600">
+                            <tbody>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-2">チーム打率 (AVG)</td>
+                                    <td class="text-right font-semibold">{{ away_batting.avg }}</td>
+                                </tr>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-2">OPS</td>
+                                    <td class="text-right font-semibold">{{ away_batting.ops }}</td>
+                                </tr>
+                                 <tr class="border-b border-slate-100">
+                                    <td class="py-2">本塁打 (HR)</td>
+                                    <td class="text-right font-semibold">{{ away_batting.home_runs }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2">総得点 (Runs)</td>
+                                    <td class="text-right font-semibold">{{ away_batting.runs }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                     <div>
+                        <table class="w-full text-sm text-slate-600">
+                            <tbody>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-2">チーム打率 (AVG)</td>
+                                    <td class="text-right font-semibold">{{ home_batting.avg }}</td>
+                                </tr>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-2">OPS</td>
+                                    <td class="text-right font-semibold">{{ home_batting.ops }}</td>
+                                </tr>
+                                 <tr class="border-b border-slate-100">
+                                    <td class="py-2">本塁打 (HR)</td>
+                                    <td class="text-right font-semibold">{{ home_batting.home_runs }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2">総得点 (Runs)</td>
+                                    <td class="text-right font-semibold">{{ home_batting.runs }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                     <!-- Recent Form -->
+                    <div class="mt-6 col-span-2">
+                        <h3 class="text-xl font-bold text-slate-700 mb-4 text-center border-t border-b py-2 bg-slate-50">最近の打撃調子 (Recent OPS)</h3>
+                         <div class="space-y-3">
+                            <!-- Last 5 games -->
+                            <div class="stat-bar-container">
+                                <div class="stat-bar team-{{ away_abbr }}-bg" style="width: calc(100% * {{ away_recent.last5 }} / ({{ away_recent.last5 }} + {{ home_recent.last5 }}));"><span class="stat-value away-value">{{ away_recent.last5 }}</span></div>
+                                <div class="stat-label">Last 5</div>
+                                <div class="stat-bar team-{{ home_abbr }}-bg" style="width: calc(100% * {{ home_recent.last5 }} / ({{ away_recent.last5 }} + {{ home_recent.last5 }}));"><span class="stat-value home-value">{{ home_recent.last5 }}</span></div>
+                            </div>
+                            <!-- Last 10 games -->
+                            <div class="stat-bar-container">
+                                <div class="stat-bar team-{{ away_abbr }}-bg" style="width: calc(100% * {{ away_recent.last10 }} / ({{ away_recent.last10 }} + {{ home_recent.last10 }}));"><span class="stat-value away-value">{{ away_recent.last10 }}</span></div>
+                                <div class="stat-label">Last 10</div>
+                                <div class="stat-bar team-{{ home_abbr }}-bg" style="width: calc(100% * {{ home_recent.last10 }} / ({{ away_recent.last10 }} + {{ home_recent.last10 }}));"><span class="stat-value home-value">{{ home_recent.last10 }}</span></div>
+                            </div>
+                        </div>
+                         <p class="text-xs text-center text-slate-400 mt-2">OPSは数値が高いほど優れています。</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center text-xs text-slate-400 mt-auto pt-4 border-t border-slate-200">
+            <p>This is a data-driven matchup preview. All stats are for illustrative purposes.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

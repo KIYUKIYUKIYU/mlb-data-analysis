@@ -1,0 +1,110 @@
+{
+  "games": [
+    {
+      "favorite": "ヤンキース",
+      "favorite_code": "NYY",
+      "handicap": 1.8,
+      "underdog": "オリオールズ",
+      "underdog_code": "BAL"
+    },
+    {
+      "favorite": "レイズ",
+      "favorite_code": "TB",
+      "handicap": 0.1,
+      "underdog": "タイガース",
+      "underdog_code": "DET"
+    },
+    {
+      "favorite": "レンジャーズ",
+      "favorite_code": "TEX",
+      "handicap": 0.2,
+      "underdog": "パイレーツ",
+      "underdog_code": "PIT"
+    },
+    {
+      "favorite": "ブルージェイズ",
+      "favorite_code": "TOR",
+      "handicap": 1.8,
+      "underdog": "ホワイトソックス",
+      "underdog_code": "CWS"
+    },
+    {
+      "favorite": "ブレーブス",
+      "favorite_code": "ATL",
+      "handicap": 0.8,
+      "underdog": "マーリンズ",
+      "underdog_code": "MIA"
+    },
+    {
+      "favorite": "ツインズ",
+      "favorite_code": "MIN",
+      "handicap": 0.7,
+      "underdog": "ブリュワーズ",
+      "underdog_code": "MIL"
+    },
+    {
+      "favorite": "レッズ",
+      "favorite_code": "CIN",
+      "handicap": 0.2,
+      "underdog": "カージナルス",
+      "underdog_code": "STL"
+    },
+    {
+      "favorite": "マリナーズ",
+      "favorite_code": "SEA",
+      "handicap": 0.2,
+      "underdog": "カブス",
+      "underdog_code": "CHC"
+    },
+    {
+      "favorite": "ダイヤモンドバックス",
+      "favorite_code": "ARI",
+      "handicap": 2.9,
+      "underdog": "ロッキーズ",
+      "underdog_code": "COL"
+    },
+    {
+      "favorite": "ガーディアンズ",
+      "favorite_code": "CLE",
+      "handicap": 0.4,
+      "underdog": "アスレチックス",
+      "underdog_code": "OAK"
+    },
+    {
+      "favorite": "ジャイアンツ",
+      "favorite_code": "SF",
+      "handicap": 1,
+      "underdog": "レッドソックス",
+      "underdog_code": "BOS"
+    },
+    {
+      "favorite": "アストロズ",
+      "favorite_code": "HOU",
+      "handicap": 0.9,
+      "underdog": "エンゼルス",
+      "underdog_code": "LAA"
+    },
+    {
+      "favorite": "パドレス",
+      "favorite_code": "SD",
+      "handicap": 0,
+      "underdog": "ロイヤルズ",
+      "underdog_code": "KC"
+    },
+    {
+      "favorite": "ドジャース",
+      "favorite_code": "LAD",
+      "handicap": 2.4,
+      "underdog": "ナショナルズ",
+      "underdog_code": "WSH"
+    },
+    {
+      "favorite": "メッツ",
+      "favorite_code": "NYM",
+      "handicap": 0.1,
+      "underdog": "フィリーズ",
+      "underdog_code": "PHI"
+    }
+  ],
+  "timestamp": "20250624_031241"
+}

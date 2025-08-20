@@ -1,0 +1,124 @@
+{
+  "team_id": 115,
+  "games": 5,
+  "timestamp": "20250620_073155",
+  "players": [
+    {
+      "player_id": 666160,
+      "name": "Mickey Moniak",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.421,
+      "slg": 0.882,
+      "ops": 1.303
+    },
+    {
+      "player_id": 669911,
+      "name": "Michael Toglia",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.318,
+      "slg": 0.714,
+      "ops": 1.032
+    },
+    {
+      "player_id": 641857,
+      "name": "Ryan McMahon",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.316,
+      "slg": 0.667,
+      "ops": 0.982
+    },
+    {
+      "player_id": 671289,
+      "name": "Tyler Freeman",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.55,
+      "slg": 0.429,
+      "ops": 0.979
+    },
+    {
+      "player_id": 571657,
+      "name": "Kyle Farmer",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.357,
+      "slg": 0.615,
+      "ops": 0.973
+    },
+    {
+      "player_id": 642731,
+      "name": "Thairo Estrada",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.381,
+      "slg": 0.55,
+      "ops": 0.931
+    },
+    {
+      "player_id": 687597,
+      "name": "Jordan Beck",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.316,
+      "slg": 0.588,
+      "ops": 0.904
+    },
+    {
+      "player_id": 696100,
+      "name": "Hunter Goodman",
+      "position": "C",
+      "games": 5,
+      "obp": 0.261,
+      "slg": 0.636,
+      "ops": 0.897
+    },
+    {
+      "player_id": 690924,
+      "name": "Braxton Fulford",
+      "position": "C",
+      "games": 5,
+      "obp": 0.312,
+      "slg": 0.429,
+      "ops": 0.741
+    },
+    {
+      "player_id": 606115,
+      "name": "Orlando Arcia",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.267,
+      "slg": 0.4,
+      "ops": 0.667
+    },
+    {
+      "player_id": 656541,
+      "name": "Sam Hilliard",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.235,
+      "slg": 0.333,
+      "ops": 0.569
+    },
+    {
+      "player_id": 690022,
+      "name": "Ryan Ritter",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.235,
+      "slg": 0.188,
+      "ops": 0.423
+    },
+    {
+      "player_id": 686668,
+      "name": "Brenton Doyle",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.13,
+      "slg": 0.095,
+      "ops": 0.226
+    }
+  ]
+}

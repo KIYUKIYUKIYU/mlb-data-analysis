@@ -1,0 +1,217 @@
+{
+  "team_id": 137,
+  "team_name": "San Francisco Giants",
+  "season": 2025,
+  "collected_at": "2025-06-20T06:46:45.694847",
+  "total_players": 26,
+  "roster": [
+    {
+      "id": 668800,
+      "fullName": "Andrew Knizner",
+      "jerseyNumber": "21",
+      "position": "Catcher",
+      "positionType": "Catcher",
+      "positionAbbreviation": "C"
+    },
+    {
+      "id": 666808,
+      "fullName": "Camilo Doval",
+      "jerseyNumber": "75",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 669477,
+      "fullName": "Casey Schmitt",
+      "jerseyNumber": "10",
+      "position": "First Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "1B"
+    },
+    {
+      "id": 683766,
+      "fullName": "Christian Koss",
+      "jerseyNumber": "50",
+      "position": "Second Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "2B"
+    },
+    {
+      "id": 669288,
+      "fullName": "Daniel Johnson",
+      "jerseyNumber": "56",
+      "position": "Outfield",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "OF"
+    },
+    {
+      "id": 642086,
+      "fullName": "Dominic Smith",
+      "jerseyNumber": "7",
+      "position": "First Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "1B"
+    },
+    {
+      "id": 669062,
+      "fullName": "Erik Miller",
+      "jerseyNumber": "68",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 806185,
+      "fullName": "Hayden Birdsong",
+      "jerseyNumber": "60",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 671218,
+      "fullName": "Heliot Ramos",
+      "jerseyNumber": "17",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "LF"
+    },
+    {
+      "id": 664192,
+      "fullName": "Joey Lucchesi",
+      "jerseyNumber": "57",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 808982,
+      "fullName": "Jung Hoo Lee",
+      "jerseyNumber": "51",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "CF"
+    },
+    {
+      "id": 434378,
+      "fullName": "Justin Verlander",
+      "jerseyNumber": "35",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 694738,
+      "fullName": "Landen Roupp",
+      "jerseyNumber": "65",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 657277,
+      "fullName": "Logan Webb",
+      "jerseyNumber": "62",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 573262,
+      "fullName": "Mike Yastrzemski",
+      "jerseyNumber": "5",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "RF"
+    },
+    {
+      "id": 672275,
+      "fullName": "Patrick Bailey",
+      "jerseyNumber": "14",
+      "position": "Catcher",
+      "positionType": "Catcher",
+      "positionAbbreviation": "C"
+    },
+    {
+      "id": 646240,
+      "fullName": "Rafael Devers",
+      "jerseyNumber": "16",
+      "position": "Designated Hitter",
+      "positionType": "Hitter",
+      "positionAbbreviation": "DH"
+    },
+    {
+      "id": 678495,
+      "fullName": "Randy Rodríguez",
+      "jerseyNumber": "73",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 592662,
+      "fullName": "Robbie Ray",
+      "jerseyNumber": "38",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 676254,
+      "fullName": "Ryan Walker",
+      "jerseyNumber": "74",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 663546,
+      "fullName": "Sean Hjelle",
+      "jerseyNumber": "64",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 702352,
+      "fullName": "Spencer Bivens",
+      "jerseyNumber": "76",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 666149,
+      "fullName": "Tyler Fitzgerald",
+      "jerseyNumber": "49",
+      "position": "Second Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "2B"
+    },
+    {
+      "id": 643511,
+      "fullName": "Tyler Rogers",
+      "jerseyNumber": "71",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 642715,
+      "fullName": "Willy Adames",
+      "jerseyNumber": "2",
+      "position": "Shortstop",
+      "positionType": "Infielder",
+      "positionAbbreviation": "SS"
+    },
+    {
+      "id": 527038,
+      "fullName": "Wilmer Flores",
+      "jerseyNumber": "41",
+      "position": "First Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "1B"
+    }
+  ]
+}

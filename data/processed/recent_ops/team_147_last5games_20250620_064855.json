@@ -1,0 +1,214 @@
+{
+  "team_id": 147,
+  "games": 5,
+  "timestamp": "20250620_064855",
+  "players": [
+    {
+      "player_id": 668752,
+      "name": "Duke Ellis",
+      "position": "CF",
+      "games": 5,
+      "obp": 1.0,
+      "slg": 1.0,
+      "ops": 2.0
+    },
+    {
+      "player_id": 666211,
+      "name": "Taylor Trammell",
+      "position": "LF",
+      "games": 5,
+      "obp": 1.0,
+      "slg": 1.0,
+      "ops": 2.0
+    },
+    {
+      "player_id": 592450,
+      "name": "Aaron Judge",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.522,
+      "slg": 1.118,
+      "ops": 1.639
+    },
+    {
+      "player_id": 519203,
+      "name": "Anthony Rizzo",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.55,
+      "slg": 0.467,
+      "ops": 1.017
+    },
+    {
+      "player_id": 665742,
+      "name": "Juan Soto",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.455,
+      "slg": 0.5,
+      "ops": 0.955
+    },
+    {
+      "player_id": 650402,
+      "name": "Gleyber Torres",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.409,
+      "slg": 0.5,
+      "ops": 0.909
+    },
+    {
+      "player_id": 672724,
+      "name": "Oswald Peraza",
+      "position": "3B",
+      "games": 4,
+      "obp": 0.273,
+      "slg": 0.5,
+      "ops": 0.773
+    },
+    {
+      "player_id": 542932,
+      "name": "Jon Berti",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.462,
+      "slg": 0.3,
+      "ops": 0.762
+    },
+    {
+      "player_id": 665862,
+      "name": "Jazz Chisholm Jr.",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.5,
+      "ops": 0.75
+    },
+    {
+      "player_id": 518934,
+      "name": "DJ LeMahieu",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.375,
+      "ops": 0.708
+    },
+    {
+      "player_id": 663757,
+      "name": "Trent Grisham",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.231,
+      "slg": 0.462,
+      "ops": 0.692
+    },
+    {
+      "player_id": 519317,
+      "name": "Giancarlo Stanton",
+      "position": "DH",
+      "games": 5,
+      "obp": 0.263,
+      "slg": 0.412,
+      "ops": 0.675
+    },
+    {
+      "player_id": 657077,
+      "name": "Alex Verdugo",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.214,
+      "slg": 0.429,
+      "ops": 0.643
+    },
+    {
+      "player_id": 691176,
+      "name": "Jasson Domínguez",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.35,
+      "slg": 0.133,
+      "ops": 0.483
+    },
+    {
+      "player_id": 665828,
+      "name": "Oswaldo Cabrera",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.231,
+      "slg": 0.25,
+      "ops": 0.481
+    },
+    {
+      "player_id": 665966,
+      "name": "Carlos Narváez",
+      "position": "C",
+      "games": 5,
+      "obp": 0.286,
+      "slg": 0.167,
+      "ops": 0.452
+    },
+    {
+      "player_id": 605204,
+      "name": "J.D. Davis",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.2,
+      "slg": 0.214,
+      "ops": 0.414
+    },
+    {
+      "player_id": 624431,
+      "name": "Jose Trevino",
+      "position": "C",
+      "games": 5,
+      "obp": 0.211,
+      "slg": 0.118,
+      "ops": 0.328
+    },
+    {
+      "player_id": 663330,
+      "name": "Jahmai Jones",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.125,
+      "slg": 0.125,
+      "ops": 0.25
+    },
+    {
+      "player_id": 669224,
+      "name": "Austin Wells",
+      "position": "C",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.0,
+      "ops": 0.25
+    },
+    {
+      "player_id": 683011,
+      "name": "Anthony Volpe",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.176,
+      "slg": 0.067,
+      "ops": 0.243
+    },
+    {
+      "player_id": 700250,
+      "name": "Ben Rice",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.077,
+      "slg": 0.077,
+      "ops": 0.154
+    },
+    {
+      "player_id": 675656,
+      "name": "Kevin Smith",
+      "position": "3B",
+      "games": 2,
+      "obp": 0,
+      "slg": 0,
+      "ops": 0
+    }
+  ]
+}

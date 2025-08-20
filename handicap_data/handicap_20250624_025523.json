@@ -1,0 +1,26 @@
+{
+  "games": [
+    {
+      "favorite": "オリオールズ",
+      "favorite_code": "BAL",
+      "handicap": 0.4,
+      "underdog": "レンジャーズ",
+      "underdog_code": "TEX"
+    },
+    {
+      "favorite": "ブリュワーズ",
+      "favorite_code": "MIL",
+      "handicap": 1.8,
+      "underdog": "パイレーツ",
+      "underdog_code": "PIT"
+    },
+    {
+      "favorite": "パドレス",
+      "favorite_code": "SD",
+      "handicap": 1.1,
+      "underdog": "ナショナルズ",
+      "underdog_code": "WSH"
+    }
+  ],
+  "timestamp": "20250624_025523"
+}

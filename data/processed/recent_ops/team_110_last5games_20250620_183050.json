@@ -1,0 +1,124 @@
+{
+  "team_id": 110,
+  "games": 5,
+  "timestamp": "20250620_183050",
+  "players": [
+    {
+      "player_id": 681297,
+      "name": "Colton Cowser",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.875,
+      "ops": 1.208
+    },
+    {
+      "player_id": 683002,
+      "name": "Gunnar Henderson",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.524,
+      "slg": 0.529,
+      "ops": 1.053
+    },
+    {
+      "player_id": 596142,
+      "name": "Gary Sánchez",
+      "position": "C",
+      "games": 5,
+      "obp": 0.368,
+      "slg": 0.625,
+      "ops": 0.993
+    },
+    {
+      "player_id": 676059,
+      "name": "Jordan Westburg",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.381,
+      "slg": 0.526,
+      "ops": 0.907
+    },
+    {
+      "player_id": 657656,
+      "name": "Ramón Laureano",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.4,
+      "slg": 0.471,
+      "ops": 0.871
+    },
+    {
+      "player_id": 656811,
+      "name": "Ryan O'Hearn",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.278,
+      "slg": 0.471,
+      "ops": 0.748
+    },
+    {
+      "player_id": 668939,
+      "name": "Adley Rutschman",
+      "position": "C",
+      "games": 5,
+      "obp": 0.316,
+      "slg": 0.412,
+      "ops": 0.728
+    },
+    {
+      "player_id": 602104,
+      "name": "Ramón Urías",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.467,
+      "ops": 0.717
+    },
+    {
+      "player_id": 666185,
+      "name": "Dylan Carlson",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.333,
+      "ops": 0.667
+    },
+    {
+      "player_id": 691723,
+      "name": "Coby Mayo",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.294,
+      "slg": 0.333,
+      "ops": 0.627
+    },
+    {
+      "player_id": 656775,
+      "name": "Cedric Mullins",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.158,
+      "slg": 0.278,
+      "ops": 0.436
+    },
+    {
+      "player_id": 702616,
+      "name": "Jackson Holliday",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.208,
+      "slg": 0.217,
+      "ops": 0.426
+    },
+    {
+      "player_id": 676679,
+      "name": "Luis Vázquez",
+      "position": "SS",
+      "games": 2,
+      "obp": 0.0,
+      "slg": 0.0,
+      "ops": 0.0
+    }
+  ]
+}

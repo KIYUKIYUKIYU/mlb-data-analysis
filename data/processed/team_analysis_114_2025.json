@@ -1,0 +1,26 @@
+{
+  "teamId": 114,
+  "teamName": "Guardians",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:33:22.158665",
+  "pitching": {
+    "teamId": 114,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 0.0,
+      "whip": 0.0,
+      "totalInnings": 0.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 114,
+    "season": 2025,
+    "avg": ".231",
+    "ops": ".673",
+    "hits": 548,
+    "runs": 278,
+    "rbi": 263
+  }
+}

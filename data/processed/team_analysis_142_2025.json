@@ -1,0 +1,26 @@
+{
+  "teamId": 142,
+  "teamName": "Twins",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:44:31.844509",
+  "pitching": {
+    "teamId": 142,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 0.0,
+      "whip": 0.0,
+      "totalInnings": 0.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 142,
+    "season": 2025,
+    "avg": ".243",
+    "ops": ".710",
+    "hits": 605,
+    "runs": 314,
+    "rbi": 302
+  }
+}

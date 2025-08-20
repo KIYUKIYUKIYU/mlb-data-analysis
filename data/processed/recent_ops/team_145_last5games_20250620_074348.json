@@ -1,0 +1,124 @@
+{
+  "team_id": 145,
+  "games": 5,
+  "timestamp": "20250620_074348",
+  "players": [
+    {
+      "player_id": 572191,
+      "name": "Michael A. Taylor",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.636,
+      "ops": 0.97
+    },
+    {
+      "player_id": 678246,
+      "name": "Miguel Vargas",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.3,
+      "slg": 0.526,
+      "ops": 0.826
+    },
+    {
+      "player_id": 700337,
+      "name": "Edgar Quero",
+      "position": "C",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 0.385,
+      "ops": 0.813
+    },
+    {
+      "player_id": 676116,
+      "name": "Ryan Noda",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.3,
+      "slg": 0.5,
+      "ops": 0.8
+    },
+    {
+      "player_id": 643217,
+      "name": "Andrew Benintendi",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.263,
+      "slg": 0.474,
+      "ops": 0.737
+    },
+    {
+      "player_id": 673357,
+      "name": "Luis Robert Jr.",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.312,
+      "slg": 0.333,
+      "ops": 0.646
+    },
+    {
+      "player_id": 805367,
+      "name": "Chase Meidroth",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.25,
+      "ops": 0.5
+    },
+    {
+      "player_id": 691019,
+      "name": "Kyle Teel",
+      "position": "C",
+      "games": 5,
+      "obp": 0.278,
+      "slg": 0.2,
+      "ops": 0.478
+    },
+    {
+      "player_id": 596103,
+      "name": "Austin Slater",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.143,
+      "ops": 0.476
+    },
+    {
+      "player_id": 668942,
+      "name": "Josh Rojas",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.182,
+      "slg": 0.182,
+      "ops": 0.364
+    },
+    {
+      "player_id": 672820,
+      "name": "Lenyn Sosa",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.143,
+      "slg": 0.214,
+      "ops": 0.357
+    },
+    {
+      "player_id": 681962,
+      "name": "Vinny Capra",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.182,
+      "ops": 0.348
+    },
+    {
+      "player_id": 643565,
+      "name": "Mike Tauchman",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.143,
+      "slg": 0.143,
+      "ops": 0.286
+    }
+  ]
+}

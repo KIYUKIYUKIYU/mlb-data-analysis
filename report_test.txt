@@ -1,0 +1,213 @@
+2025-06-26 06:18:38,132 - __main__ - INFO - Generating report for date: 2025-06-26
+
+============================================================
+MLB試合予想レポート - 2025-06-26 (MLB時間)
+============================================================
+
+
+============================================================
+**Athletics @ Detroit Tigers**
+開始時刻: 06/27 02:10 (日本時間)
+==================================================
+
+【Athletics】
+**先発**: 未定
+2025-06-26 06:18:38,918 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:39,210 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/133/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+【Detroit Tigers】
+**先発**: 未定
+2025-06-26 06:18:39,218 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:39,639 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/116/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+============================================================
+
+============================================================
+**Toronto Blue Jays @ Cleveland Guardians**
+開始時刻: 06/27 02:10 (日本時間)
+==================================================
+
+【Toronto Blue Jays】
+**先発**: 未定
+2025-06-26 06:18:39,684 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:39,972 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/141/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+【Cleveland Guardians】
+**先発**: 未定
+2025-06-26 06:18:39,981 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:40,262 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/114/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+============================================================
+
+============================================================
+**Seattle Mariners @ Minnesota Twins**
+開始時刻: 06/27 02:10 (日本時間)
+==================================================
+
+【Seattle Mariners】
+**先発**: 未定
+2025-06-26 06:18:40,269 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:40,691 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/136/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+【Minnesota Twins】
+**先発**: 未定
+2025-06-26 06:18:40,699 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:41,011 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/142/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+============================================================
+
+============================================================
+**Tampa Bay Rays @ Kansas City Royals**
+開始時刻: 06/27 03:10 (日本時間)
+==================================================
+
+【Tampa Bay Rays】
+**先発**: 未定
+2025-06-26 06:18:41,019 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:41,308 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/139/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+【Kansas City Royals】
+**先発**: 未定
+2025-06-26 06:18:41,315 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:41,616 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/118/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+============================================================
+
+============================================================
+**Philadelphia Phillies @ Houston Astros**
+開始時刻: 06/27 03:10 (日本時間)
+==================================================
+
+【Philadelphia Phillies】
+**先発**: 未定
+2025-06-26 06:18:41,624 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:41,949 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/143/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+【Houston Astros】
+**先発**: 未定
+2025-06-26 06:18:41,956 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:42,288 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/117/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+============================================================
+
+============================================================
+**Chicago Cubs @ St. Louis Cardinals**
+開始時刻: 06/27 03:15 (日本時間)
+==================================================
+
+【Chicago Cubs】
+**先発**: 未定
+2025-06-26 06:18:42,296 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:42,577 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/112/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+【St. Louis Cardinals】
+**先発**: 未定
+2025-06-26 06:18:42,584 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:42,930 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/138/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+============================================================
+
+============================================================
+**Los Angeles Dodgers @ Colorado Rockies**
+開始時刻: 06/27 04:10 (日本時間)
+==================================================
+
+【Los Angeles Dodgers】
+**先発**: 未定
+2025-06-26 06:18:42,937 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:43,234 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/119/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+【Colorado Rockies】
+**先発**: 未定
+2025-06-26 06:18:43,243 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:43,598 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/115/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+============================================================
+
+============================================================
+**Miami Marlins @ San Francisco Giants**
+開始時刻: 06/27 04:45 (日本時間)
+==================================================
+
+【Miami Marlins】
+**先発**: 未定
+2025-06-26 06:18:43,606 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:43,909 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/146/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+【San Francisco Giants】
+**先発**: 未定
+2025-06-26 06:18:43,917 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:44,236 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/137/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+============================================================
+
+============================================================
+**Atlanta Braves @ New York Mets**
+開始時刻: 06/27 08:10 (日本時間)
+==================================================
+
+【Atlanta Braves】
+**先発**: 未定
+2025-06-26 06:18:44,245 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:44,536 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/144/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+【New York Mets】
+**先発**: 未定
+2025-06-26 06:18:44,544 - __main__ - ERROR - Error displaying bullpen stats: 'total_relievers'
+ブルペン統計の表示エラー: 'total_relievers'
+2025-06-26 06:18:44,847 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/121/stats?stats=season&season=2025&gameType=R
+
+**チーム打撃**: データ取得エラー
+
+============================================================

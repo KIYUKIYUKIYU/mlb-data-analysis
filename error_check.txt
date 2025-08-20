@@ -1,0 +1,116 @@
+Traceback (most recent call last):
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 248, in generate_full_report
+    print(game_report)
+    ~~~~~^^^^^^^^^^^^^
+UnicodeEncodeError: 'cp932' codec can't encode character '\xed' in position 580: illegal multibyte sequence
+============================================================
+**Athletics @ Detroit Tigers**
+ŠJn: 06/27 02:10 (“ú–{ŠÔ)
+==================================================
+yAthleticsz
+**æ”­**: Jeffrey Springs (6Ÿ5”s)
+ERA: 4.24 | FIP: 4.53 | xFIP: 4.63 | WHIP: 1.23 | K-BB%: 10.8% | GB%: 31.1% | FB%: 29.9% | QS—¦: 28.6%
+SwStr%: 27.1% | BABIP: .248
+‘Î¶: 0.237 (OPS 0.723) | ‘Î‰E: 0.217 (OPS 0.663)
+**’†Œp‚¬w** (8–¼):
+ERA: 4.24 | FIP: 3.68 | xFIP: 3.01 | WHIP: 1.45 | K-BB%: 12.8% | WAR: 4.7
+CL: Mason Miller (FIP: 3.62)
+SU: T.J. McFarland (FIP: 8.52), Tyler Ferguson (FIP: 6.79)
+”æ˜J“x: å—Í1–¼‚ª˜A“Š’†
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: .252 | OPS: .732 | “¾“_: 339 | –{—Û‘Å: 100
+wOBA: 0.321 | xwOBA: 0.326
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+‘Î¶“Šè: .254 (OPS .717) | ‘Î‰E“Šè: .252 (OPS .737)
+‰ß‹5‡OPS: 0.700 | ‰ß‹10‡OPS: 0.700
+yDetroit Tigersz
+**æ”­**: –¢’è
+**’†Œp‚¬w** (10–¼):
+ERA: 3.21 | FIP: 3.68 | xFIP: 2.86 | WHIP: 1.20 | K-BB%: 13.8% | WAR: 5.3
+CL: Tommy Kahnle (FIP: 5.78)
+SU: Brenan Hanifee (FIP: 3.48), Tyler Holton (FIP: 7.36)
+”æ˜J“x: å—Í4–¼‚ª˜A“Š’†
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: .254 | OPS: .746 | “¾“_: 402 | –{—Û‘Å: 98
+wOBA: 0.326 | xwOBA: 0.331
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+‘Î¶“Šè: .276 (OPS .801) | ‘Î‰E“Šè: .245 (OPS .725)
+‰ß‹5‡OPS: 0.700 | ‰ß‹10‡OPS: 0.700
+==================================================
+
+Error processing game: 'cp932' codec can't encode character '\xed' in position 580: illegal multibyte sequence
+Traceback (most recent call last):
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 272, in <module>
+    reporter.generate_full_report()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 246, in generate_full_report
+    game_report = self.format_game_stats(game)
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 71, in format_game_stats
+    output += self._format_team_stats(home_team)
+              ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 166, in _format_team_stats
+    quality_stats = self.batting_quality.get_team_quality_stats(team_id)
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\batting_quality_stats.py", line 89, in get_team_quality_stats
+    team_stats = client.get_team_stats(team_id, 2025)
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\src\mlb_api_client.py", line 44, in get_team_stats
+    response = self.session.get(url, params=params)
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\urllib3\connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\urllib3\connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\urllib3\util\ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\urllib3\util\ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yfuku\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\yfuku\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yfuku\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+KeyboardInterrupt
+^C

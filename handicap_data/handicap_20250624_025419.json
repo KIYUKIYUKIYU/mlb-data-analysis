@@ -1,0 +1,54 @@
+{
+  "games": [
+    {
+      "favorite": "ヤンキース",
+      "favorite_code": "NYY",
+      "handicap": 1.8,
+      "underdog": "オリオールズ",
+      "underdog_code": "BAL"
+    },
+    {
+      "favorite": "レイズ",
+      "favorite_code": "TB",
+      "handicap": 0.1,
+      "underdog": "タイガース",
+      "underdog_code": "DET"
+    },
+    {
+      "favorite": "ブルージェイズ",
+      "favorite_code": "TOR",
+      "handicap": 1.8,
+      "underdog": "ホワイトソックス",
+      "underdog_code": "CWS"
+    },
+    {
+      "favorite": "ツインズ",
+      "favorite_code": "MIN",
+      "handicap": 0.7,
+      "underdog": "ブリュワーズ",
+      "underdog_code": "MIL"
+    },
+    {
+      "favorite": "ジャイアンツ",
+      "favorite_code": "SF",
+      "handicap": 1,
+      "underdog": "レッドソックス",
+      "underdog_code": "BOS"
+    },
+    {
+      "favorite": "パドレス",
+      "favorite_code": "SD",
+      "handicap": 0,
+      "underdog": "ロイヤルズ",
+      "underdog_code": "KC"
+    },
+    {
+      "favorite": "ドジャース",
+      "favorite_code": "LAD",
+      "handicap": 2.4,
+      "underdog": "ナショナルズ",
+      "underdog_code": "WSH"
+    }
+  ],
+  "timestamp": "20250624_025419"
+}

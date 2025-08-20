@@ -1,0 +1,217 @@
+{
+  "team_id": 136,
+  "team_name": "Seattle Mariners",
+  "season": 2025,
+  "collected_at": "2025-06-20T06:46:44.901115",
+  "total_players": 26,
+  "roster": [
+    {
+      "id": 662253,
+      "fullName": "Andrés Muñoz",
+      "jerseyNumber": "75",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 810938,
+      "fullName": "Ben Williamson",
+      "jerseyNumber": "9",
+      "position": "Third Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "3B"
+    },
+    {
+      "id": 693433,
+      "fullName": "Bryan Woo",
+      "jerseyNumber": "22",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 663728,
+      "fullName": "Cal Raleigh",
+      "jerseyNumber": "29",
+      "position": "Catcher",
+      "positionType": "Catcher",
+      "positionAbbreviation": "C"
+    },
+    {
+      "id": 672841,
+      "fullName": "Carlos Vargas",
+      "jerseyNumber": "54",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 668984,
+      "fullName": "Casey Legumina",
+      "jerseyNumber": "64",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 702284,
+      "fullName": "Cole Young",
+      "jerseyNumber": "2",
+      "position": "Second Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "2B"
+    },
+    {
+      "id": 686527,
+      "fullName": "Dominic Canzone",
+      "jerseyNumber": "8",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "RF"
+    },
+    {
+      "id": 456781,
+      "fullName": "Donovan Solano",
+      "jerseyNumber": "39",
+      "position": "First Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "1B"
+    },
+    {
+      "id": 664238,
+      "fullName": "Dylan Moore",
+      "jerseyNumber": "25",
+      "position": "Second Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "2B"
+    },
+    {
+      "id": 660825,
+      "fullName": "Eduard Bazardo",
+      "jerseyNumber": "83",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 676106,
+      "fullName": "Emerson Hancock",
+      "jerseyNumber": "26",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 642100,
+      "fullName": "Gabe Speier",
+      "jerseyNumber": "55",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 669923,
+      "fullName": "George Kirby",
+      "jerseyNumber": "68",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 641487,
+      "fullName": "J.P. Crawford",
+      "jerseyNumber": "3",
+      "position": "Shortstop",
+      "positionType": "Infielder",
+      "positionAbbreviation": "SS"
+    },
+    {
+      "id": 593871,
+      "fullName": "Jorge Polanco",
+      "jerseyNumber": "7",
+      "position": "Third Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "3B"
+    },
+    {
+      "id": 677594,
+      "fullName": "Julio Rodríguez",
+      "jerseyNumber": "44",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "CF"
+    },
+    {
+      "id": 669302,
+      "fullName": "Logan Gilbert",
+      "jerseyNumber": "36",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 622491,
+      "fullName": "Luis Castillo",
+      "jerseyNumber": "58",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 666374,
+      "fullName": "Matt Brash",
+      "jerseyNumber": "47",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 670156,
+      "fullName": "Miles Mastrobuoni",
+      "jerseyNumber": "21",
+      "position": "Second Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "2B"
+    },
+    {
+      "id": 641598,
+      "fullName": "Mitch Garver",
+      "jerseyNumber": "18",
+      "position": "Catcher",
+      "positionType": "Catcher",
+      "positionAbbreviation": "C"
+    },
+    {
+      "id": 668227,
+      "fullName": "Randy Arozarena",
+      "jerseyNumber": "56",
+      "position": "Outfielder",
+      "positionType": "Outfielder",
+      "positionAbbreviation": "LF"
+    },
+    {
+      "id": 642133,
+      "fullName": "Rowdy Tellez",
+      "jerseyNumber": "23",
+      "position": "First Base",
+      "positionType": "Infielder",
+      "positionAbbreviation": "1B"
+    },
+    {
+      "id": 663423,
+      "fullName": "Trent Thornton",
+      "jerseyNumber": "46",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    },
+    {
+      "id": 647315,
+      "fullName": "Zach Pop",
+      "jerseyNumber": "35",
+      "position": "Pitcher",
+      "positionType": "Pitcher",
+      "positionAbbreviation": "P"
+    }
+  ]
+}

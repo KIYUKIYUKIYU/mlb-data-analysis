@@ -1,0 +1,124 @@
+{
+  "team_id": 121,
+  "games": 5,
+  "timestamp": "20250620_073538",
+  "players": [
+    {
+      "player_id": 682668,
+      "name": "Luisangel Acuña",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.5,
+      "slg": 0.4,
+      "ops": 0.9
+    },
+    {
+      "player_id": 516782,
+      "name": "Starling Marte",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 0.421,
+      "ops": 0.85
+    },
+    {
+      "player_id": 621438,
+      "name": "Tyrone Taylor",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.294,
+      "slg": 0.5,
+      "ops": 0.794
+    },
+    {
+      "player_id": 682626,
+      "name": "Francisco Alvarez",
+      "position": "C",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.389,
+      "ops": 0.722
+    },
+    {
+      "player_id": 665742,
+      "name": "Juan Soto",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.364,
+      "slg": 0.353,
+      "ops": 0.717
+    },
+    {
+      "player_id": 676724,
+      "name": "Jared Young",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.4,
+      "ops": 0.65
+    },
+    {
+      "player_id": 683146,
+      "name": "Brett Baty",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.357,
+      "ops": 0.607
+    },
+    {
+      "player_id": 643446,
+      "name": "Jeff McNeil",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.35,
+      "slg": 0.235,
+      "ops": 0.585
+    },
+    {
+      "player_id": 607043,
+      "name": "Brandon Nimmo",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.318,
+      "slg": 0.25,
+      "ops": 0.568
+    },
+    {
+      "player_id": 624413,
+      "name": "Pete Alonso",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.238,
+      "slg": 0.25,
+      "ops": 0.488
+    },
+    {
+      "player_id": 596019,
+      "name": "Francisco Lindor",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.273,
+      "slg": 0.211,
+      "ops": 0.483
+    },
+    {
+      "player_id": 677595,
+      "name": "Ronny Mauricio",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.294,
+      "ops": 0.461
+    },
+    {
+      "player_id": 620443,
+      "name": "Luis Torrens",
+      "position": "C",
+      "games": 5,
+      "obp": 0.059,
+      "slg": 0.059,
+      "ops": 0.118
+    }
+  ]
+}

@@ -1,0 +1,917 @@
+=== 投手統計の確認 ===
+
+1. Sabermetrics Stats (xFIP確認)
+xFIP: 3.83022
+FIP: 3.71214
+fip: 3.71214
+xfip: 3.83022
+fipMinus: 91.232
+
+==================================================
+=== チーム打撃統計の確認 ===
+
+2. Team Sabermetrics Stats (xwOBA確認)
+{
+  "copyright": "Copyright 2025 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "stats": [
+    {
+      "type": {
+        "displayName": "sabermetrics"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.34614,
+            "wRaa": 7.16874,
+            "wRc": 39.3282,
+            "wRcPlus": 124.981,
+            "rar": 6.76956,
+            "war": 0.70476,
+            "batting": 7.92948,
+            "fielding": -6.63008,
+            "baseRunning": 0.69348,
+            "positional": -4.49588,
+            "wLeague": 0.919698,
+            "replacement": 8.35287,
+            "spd": 5.65565,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": 0.956606
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 543807,
+            "link": "/api/v1/people/543807"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "wRaa": 0.0,
+            "wRc": 0.0,
+            "rar": 0.0,
+            "war": 0.0,
+            "batting": 0.0,
+            "fielding": 0.0,
+            "baseRunning": 0.0,
+            "positional": 0.0,
+            "wLeague": 0.0,
+            "replacement": 0.0,
+            "spd": 0.142857,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": 0.0
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 554340,
+            "link": "/api/v1/people/554340"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.418501,
+            "wRaa": 6.09156,
+            "wRc": 14.506,
+            "wRcPlus": 175.743,
+            "rar": 15.6786,
+            "war": 1.63226,
+            "batting": 6.29061,
+            "fielding": 2.60607,
+            "baseRunning": 0.898245,
+            "positional": 1.5575,
+            "wLeague": 0.240638,
+            "replacement": 2.18552,
+            "spd": 5.72352,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": 0.250029
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 623168,
+            "link": "/api/v1/people/623168"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.260661,
+            "wRaa": -8.88809,
+            "wRc": 15.2027,
+            "wRcPlus": 65.0169,
+            "rar": -7.63719,
+            "war": -0.79509,
+            "batting": -8.31821,
+            "fielding": -1.40121,
+            "baseRunning": -0.878976,
+            "positional": -3.98491,
+            "wLeague": 0.688949,
+            "replacement": 6.25717,
+            "spd": 0.498249,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -0.293422
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 623993,
+            "link": "/api/v1/people/623993"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.195613,
+            "wRaa": -1.03886,
+            "wRc": 0.229072,
+            "wRcPlus": 19.3847,
+            "rar": -0.279188,
+            "war": -0.02907,
+            "batting": -1.00887,
+            "fielding": 0.0948559,
+            "baseRunning": -0.0065205,
+            "positional": 0.205761,
+            "wLeague": 0.0362605,
+            "replacement": 0.329325,
+            "spd": 0.142857,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -0.0065205
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 645305,
+            "link": "/api/v1/people/645305"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "wRaa": 0.0,
+            "wRc": 0.0,
+            "rar": 0.0,
+            "war": 0.0,
+            "batting": 0.0,
+            "fielding": 0.0,
+            "baseRunning": 0.0,
+            "positional": 0.0,
+            "wLeague": 0.0,
+            "replacement": 0.0,
+            "spd": 0.142857,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": 0.0
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 656546,
+            "link": "/api/v1/people/656546"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.320005,
+            "wRaa": 0.483584,
+            "wRc": 12.0103,
+            "wRcPlus": 106.647,
+            "rar": 6.41735,
+            "war": 0.6681,
+            "batting": 0.756253,
+            "fielding": 2.25566,
+            "baseRunning": -0.132401,
+            "positional": 0.214335,
+            "wLeague": 0.329641,
+            "replacement": 2.99386,
+            "spd": 6.30967,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": 0.141316
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 662139,
+            "link": "/api/v1/people/662139"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.278505,
+            "wRaa": -3.81853,
+            "wRc": 11.7425,
+            "wRcPlus": 77.5346,
+            "rar": 5.79436,
+            "war": 0.60324,
+            "batting": -3.45043,
+            "fielding": 3.67354,
+            "baseRunning": 0.907341,
+            "positional": 0.177183,
+            "wLeague": 0.445015,
+            "replacement": 4.04171,
+            "spd": 5.56372,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": 0.39667
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 664702,
+            "link": "/api/v1/people/664702"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.334121,
+            "wRaa": 2.43135,
+            "wRc": 19.8366,
+            "wRcPlus": 116.55,
+            "rar": 5.55271,
+            "war": 0.57808,
+            "batting": 2.84308,
+            "fielding": -0.288514,
+            "baseRunning": -0.82692,
+            "positional": -1.19342,
+            "wLeague": 0.497758,
+            "replacement": 4.52073,
+            "spd": 2.30224,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -0.895811
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 664770,
+            "link": "/api/v1/people/664770"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.360688,
+            "wRaa": 12.3107,
+            "wRc": 50.3487,
+            "wRcPlus": 135.187,
+            "rar": 18.8851,
+            "war": 1.96608,
+            "batting": 13.2105,
+            "fielding": 1.74541,
+            "baseRunning": -1.23703,
+            "positional": -5.80133,
+            "wLeague": 1.08781,
+            "replacement": 9.87974,
+            "spd": 2.32618,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -1.02184
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 665489,
+            "link": "/api/v1/people/665489"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.264234,
+            "wRaa": -7.81596,
+            "wRc": 14.8916,
+            "wRcPlus": 67.5236,
+            "rar": 5.05761,
+            "war": 0.52654,
+            "batting": -7.2788,
+            "fielding": 3.66011,
+            "baseRunning": 1.40141,
+            "positional": 0.727595,
+            "wLeague": 0.649393,
+            "replacement": 5.8979,
+            "spd": 5.90747,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": 1.10538
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 665926,
+            "link": "/api/v1/people/665926"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.33178,
+            "wRaa": 4.89626,
+            "wRc": 44.5481,
+            "wRcPlus": 114.907,
+            "rar": 14.8114,
+            "war": 1.54198,
+            "batting": 5.83424,
+            "fielding": -3.70268,
+            "baseRunning": -1.67311,
+            "positional": 2.9201,
+            "wLeague": 1.13396,
+            "replacement": 10.2989,
+            "spd": 3.47394,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -0.912182
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 666182,
+            "link": "/api/v1/people/666182"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.344505,
+            "wRaa": 6.02415,
+            "wRc": 34.4951,
+            "wRcPlus": 123.834,
+            "rar": 27.3055,
+            "war": 2.84271,
+            "batting": 6.69764,
+            "fielding": 5.74185,
+            "baseRunning": -3.66387,
+            "positional": 3.4808,
+            "wLeague": 0.814213,
+            "replacement": 7.39483,
+            "spd": 0.467224,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -0.462955
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 672386,
+            "link": "/api/v1/people/672386"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.330352,
+            "wRaa": 3.36518,
+            "wRc": 32.9888,
+            "wRcPlus": 113.906,
+            "rar": 22.0425,
+            "war": 2.2948,
+            "batting": 4.06594,
+            "fielding": 8.35569,
+            "baseRunning": 0.331925,
+            "positional": 0.747599,
+            "wLeague": 0.847177,
+            "replacement": 7.69422,
+            "spd": 2.6143,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -1.22742
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 676391,
+            "link": "/api/v1/people/676391"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.307956,
+            "wRaa": -0.253358,
+            "wRc": 5.85579,
+            "wRcPlus": 98.1949,
+            "rar": 1.5154,
+            "war": 0.15776,
+            "batting": -0.108843,
+            "fielding": 0.0433926,
+            "baseRunning": 0.158903,
+            "positional": -0.339506,
+            "wLeague": 0.17471,
+            "replacement": 1.58675,
+            "spd": 1.72374,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -0.110848
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 676914,
+            "link": "/api/v1/people/676914"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "wRaa": 0.0,
+            "wRc": 0.0,
+            "rar": 0.0,
+            "war": 0.0,
+            "batting": 0.0,
+            "fielding": 0.0,
+            "baseRunning": 0.0,
+            "positional": 0.0,
+            "wLeague": 0.0,
+            "replacement": 0.0,
+            "spd": 0.142857,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": 0.0
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 680704,
+            "link": "/api/v1/people/680704"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.356019,
+            "wRaa": 6.37994,
+            "wRc": 28.2806,
+            "wRcPlus": 131.911,
+            "rar": 16.166,
+            "war": 1.68301,
+            "batting": 6.89801,
+            "fielding": 2.97919,
+            "baseRunning": 0.229088,
+            "positional": -0.254915,
+            "wLeague": 0.626318,
+            "replacement": 5.68833,
+            "spd": 2.95304,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -0.0412584
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 680718,
+            "link": "/api/v1/people/680718"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.26265,
+            "wRaa": -3.80736,
+            "wRc": 6.91246,
+            "wRcPlus": 66.4122,
+            "rar": -0.352908,
+            "war": -0.03674,
+            "batting": -3.55377,
+            "fielding": 0.258518,
+            "baseRunning": 0.60938,
+            "positional": -0.757887,
+            "wLeague": 0.306566,
+            "replacement": 2.78429,
+            "spd": 4.73981,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": 0.46959
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 682729,
+            "link": "/api/v1/people/682729"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.225314,
+            "wRaa": -1.76844,
+            "wRc": 1.11324,
+            "wRcPlus": 40.2205,
+            "rar": -0.35714,
+            "war": -0.03718,
+            "batting": -1.70027,
+            "fielding": 0.572307,
+            "baseRunning": -0.16122,
+            "positional": 0.101166,
+            "wLeague": 0.0824102,
+            "replacement": 0.748465,
+            "spd": 0.410714,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -0.0456435
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 683021,
+            "link": "/api/v1/people/683021"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.192224,
+            "wRaa": -1.16577,
+            "wRc": 0.217436,
+            "wRcPlus": 17.007,
+            "rar": -0.667162,
+            "war": -0.06946,
+            "batting": -1.13305,
+            "fielding": 0.179099,
+            "baseRunning": 0.00799264,
+            "positional": -0.120027,
+            "wLeague": 0.0395569,
+            "replacement": 0.359263,
+            "spd": 0.142857,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -0.0195615
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 683770,
+            "link": "/api/v1/people/683770"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.239831,
+            "wRaa": -4.02228,
+            "wRc": 3.81587,
+            "wRcPlus": 50.4045,
+            "rar": -3.52739,
+            "war": -0.36723,
+            "batting": -3.83686,
+            "fielding": -1.53377,
+            "baseRunning": 0.180549,
+            "positional": -0.597279,
+            "wLeague": 0.224156,
+            "replacement": 2.03582,
+            "spd": 3.29305,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": 0.0891515
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 695238,
+            "link": "/api/v1/people/695238"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        },
+        {
+          "season": "2025",
+          "stat": {
+            "woba": 0.25653,
+            "wRaa": -4.71986,
+            "wRc": 7.15262,
+            "wRcPlus": 62.1187,
+            "rar": 1.03946,
+            "war": 0.10822,
+            "batting": -4.43902,
+            "fielding": 3.30295,
+            "baseRunning": -0.0188266,
+            "positional": -1.22885,
+            "wLeague": 0.33953,
+            "replacement": 3.08368,
+            "spd": 2.12202,
+            "ubr": 0.0,
+            "wGdp": 0.0,
+            "wSb": -0.156492
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 702176,
+            "link": "/api/v1/people/702176"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball"
+          }
+        }
+      ]
+    }
+  ]
+}
+
+3. Team Expected Stats
+
+4. Team Season Advanced Stats
+利用可能な高度な打撃統計:
+
+全ての統計項目:
+
+==================================================
+=== 利用可能な統計タイプ一覧 ===
+
+投手統計タイプ:
+
+打撃統計タイプ:

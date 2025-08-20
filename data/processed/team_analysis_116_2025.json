@@ -1,0 +1,26 @@
+{
+  "teamId": 116,
+  "teamName": "Tigers",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:34:39.207870",
+  "pitching": {
+    "teamId": 116,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 0.0,
+      "whip": 0.0,
+      "totalInnings": 0.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 116,
+    "season": 2025,
+    "avg": ".252",
+    "ops": ".739",
+    "hits": 648,
+    "runs": 371,
+    "rbi": 357
+  }
+}

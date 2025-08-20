@@ -1,0 +1,26 @@
+{
+  "teamId": 136,
+  "teamName": "Mariners",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:40:34.755528",
+  "pitching": {
+    "teamId": 136,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 1.26,
+      "whip": 0.84,
+      "totalInnings": 28.2,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 136,
+    "season": 2025,
+    "avg": ".242",
+    "ops": ".716",
+    "hits": 600,
+    "runs": 317,
+    "rbi": 306
+  }
+}

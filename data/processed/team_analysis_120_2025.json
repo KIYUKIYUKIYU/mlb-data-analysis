@@ -1,0 +1,26 @@
+{
+  "teamId": 120,
+  "teamName": "Nationals",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:37:16.037073",
+  "pitching": {
+    "teamId": 120,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 3.18,
+      "whip": 2.03,
+      "totalInnings": 11.1,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 120,
+    "season": 2025,
+    "avg": ".239",
+    "ops": ".689",
+    "hits": 595,
+    "runs": 310,
+    "rbi": 294
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "team_id": 114,
+  "games": 5,
+  "timestamp": "20250620_183328",
+  "players": [
+    {
+      "player_id": 666134,
+      "name": "Nolan Jones",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.389,
+      "slg": 0.562,
+      "ops": 0.951
+    },
+    {
+      "player_id": 682657,
+      "name": "Angel Martínez",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.389,
+      "slg": 0.5,
+      "ops": 0.889
+    },
+    {
+      "player_id": 682177,
+      "name": "Daniel Schneemann",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.312,
+      "slg": 0.467,
+      "ops": 0.779
+    },
+    {
+      "player_id": 671286,
+      "name": "Johnathan Rodríguez",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.267,
+      "slg": 0.429,
+      "ops": 0.695
+    },
+    {
+      "player_id": 700932,
+      "name": "Kyle Manzardo",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.235,
+      "slg": 0.412,
+      "ops": 0.647
+    },
+    {
+      "player_id": 608070,
+      "name": "José Ramírez",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.368,
+      "ops": 0.618
+    },
+    {
+      "player_id": 672356,
+      "name": "Gabriel Arias",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.188,
+      "slg": 0.4,
+      "ops": 0.588
+    },
+    {
+      "player_id": 681807,
+      "name": "David Fry",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.2,
+      "ops": 0.45
+    },
+    {
+      "player_id": 680757,
+      "name": "Steven Kwan",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.263,
+      "slg": 0.176,
+      "ops": 0.44
+    },
+    {
+      "player_id": 657041,
+      "name": "Lane Thomas",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.143,
+      "ops": 0.393
+    },
+    {
+      "player_id": 467793,
+      "name": "Carlos Santana",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.211,
+      "slg": 0.167,
+      "ops": 0.377
+    },
+    {
+      "player_id": 666310,
+      "name": "Bo Naylor",
+      "position": "C",
+      "games": 5,
+      "obp": 0.067,
+      "slg": 0.0,
+      "ops": 0.067
+    },
+    {
+      "player_id": 595978,
+      "name": "Austin Hedges",
+      "position": "C",
+      "games": 5,
+      "obp": 0.0,
+      "slg": 0.0,
+      "ops": 0.0
+    }
+  ]
+}

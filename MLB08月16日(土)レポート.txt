@@ -1,0 +1,804 @@
+2025-08-15 20:41:55,346 - __main__ - INFO - Generating report for date: 2025-08-15
+
+============================================================
+MLB試合予想レポート - 日本時間 2025/08/16 の試合
+============================================================
+
+
+============================================================
+**Pittsburgh Pirates @ Chicago Cubs**
+開始時刻: 08/16 03:20 (日本時間)
+==================================================
+
+【Pittsburgh Pirates】
+**先発**: 未定
+
+**中継ぎ陣** (9名):
+ERA: 3.80 | FIP: 3.41 | xFIP: 2.76 | WHIP: 1.26 | K-BB%: 13.9%
+CL: Dennis Santana (FIP: 3.00)
+SU: Ryan Borucki (FIP: 3.98)
+疲労度: 主力2名が連投中
+
+**チーム打撃**:
+2025-08-15 20:42:01,179 - src.mlb_api_client - INFO - Team 134 last 5 games: OPS=0.626 (OBP=0.299, SLG=0.327)
+2025-08-15 20:42:05,855 - src.mlb_api_client - INFO - Team 134 last 10 games: OPS=0.626 (OBP=0.297, SLG=0.329)
+AVG: 0.232 | OPS: 0.650 | 得点: 432 | 本塁打: 86
+wOBA: 0.289 | xwOBA: 0.304
+Barrel%: 7.9% | Hard-Hit%: 25.2%
+対左投手: 0.218 (OPS 0.625) | 対右投手: 0.237 (OPS 0.657)
+過去5試合OPS: 0.626 | 過去10試合OPS: 0.626
+
+【Chicago Cubs】
+Debug - Advanced stats for pitcher 607067: qualityStarts=6
+Debug - Pitcher 607067: GS=20, QS=6
+Debug - Using API QS rate: 30.0%
+**先発**: Colin Rea (9勝5敗)
+ERA: 4.09 | FIP: 4.66 | xFIP: 4.49 | WHIP: 1.29 | K-BB%: 11.0% | GB%: 38.6% | FB%: 25.4% | QS率: 30.0%
+SwStr%: 19.8% | BABIP: 0.290
+対左: 0.304 (OPS 0.888) | 対右: 0.229 (OPS 0.628)
+
+**中継ぎ陣** (7名):
+ERA: 2.60 | FIP: 3.01 | xFIP: 2.53 | WHIP: 1.08 | K-BB%: 17.3%
+CL: Daniel Palencia (FIP: 2.50)
+SU: Andrew Kittredge (FIP: 3.56), Brad Keller (FIP: 3.10)
+疲労度: 主力6名が連投中
+
+**チーム打撃**:
+2025-08-15 20:42:11,250 - src.mlb_api_client - INFO - Team 112 last 5 games: OPS=0.657 (OBP=0.290, SLG=0.367)
+2025-08-15 20:42:15,914 - src.mlb_api_client - INFO - Team 112 last 10 games: OPS=0.636 (OBP=0.279, SLG=0.356)
+AVG: 0.252 | OPS: 0.755 | 得点: 605 | 本塁打: 170
+wOBA: 0.327 | xwOBA: 0.318
+Barrel%: 10.6% | Hard-Hit%: 24.1%
+対左投手: 0.248 (OPS 0.742) | 対右投手: 0.253 (OPS 0.760)
+過去5試合OPS: 0.657 | 過去10試合OPS: 0.636
+
+============================================================
+
+============================================================
+**Milwaukee Brewers @ Cincinnati Reds**
+開始時刻: 08/16 07:40 (日本時間)
+==================================================
+
+【Milwaukee Brewers】
+**先発**: 未定
+
+**中継ぎ陣** (8名):
+ERA: 2.57 | FIP: 3.11 | xFIP: 2.62 | WHIP: 1.09 | K-BB%: 16.6%
+CL: Shelby Miller (FIP: 3.07)
+SU: Abner Uribe (FIP: 3.01), Grant Anderson (FIP: 3.66)
+疲労度: 主力6名が連投中
+
+**チーム打撃**:
+2025-08-15 20:42:18,949 - src.mlb_api_client - INFO - Team 158 last 5 games: OPS=0.992 (OBP=0.389, SLG=0.603)
+2025-08-15 20:42:23,185 - src.mlb_api_client - INFO - Team 158 last 10 games: OPS=0.883 (OBP=0.369, SLG=0.514)
+AVG: 0.259 | OPS: 0.737 | 得点: 620 | 本塁打: 127
+wOBA: 0.324 | xwOBA: 0.316
+Barrel%: 11.1% | Hard-Hit%: 27.1%
+対左投手: 0.270 (OPS 0.742) | 対右投手: 0.254 (OPS 0.736)
+過去5試合OPS: 0.992 | 過去10試合OPS: 0.883
+
+【Cincinnati Reds】
+Debug - Advanced stats for pitcher 607259: qualityStarts=10
+Debug - Pitcher 607259: GS=23, QS=10
+Debug - Using API QS rate: 43.5%
+**先発**: Nick Martinez (10勝9敗)
+ERA: 4.49 | FIP: 4.11 | xFIP: 4.40 | WHIP: 1.19 | K-BB%: 11.5% | GB%: 39.0% | FB%: 28.1% | QS率: 43.5%
+SwStr%: 19.7% | BABIP: 0.278
+対左: 0.234 (OPS 0.696) | 対右: 0.268 (OPS 0.754)
+
+**中継ぎ陣** (7名):
+ERA: 3.58 | FIP: 3.71 | xFIP: 2.92 | WHIP: 1.23 | K-BB%: 13.2%
+CL: Emilio Pagán (FIP: 3.73)
+SU: Graham Ashcraft (FIP: 2.98), Scott Barlow (FIP: 3.95)
+疲労度: 主力5名が連投中
+
+**チーム打撃**:
+2025-08-15 20:42:28,517 - src.mlb_api_client - INFO - Team 113 last 5 games: OPS=0.769 (OBP=0.333, SLG=0.436)
+2025-08-15 20:42:32,167 - src.mlb_api_client - INFO - Team 113 last 10 games: OPS=0.663 (OBP=0.287, SLG=0.376)
+AVG: 0.247 | OPS: 0.709 | 得点: 554 | 本塁打: 122
+wOBA: 0.312 | xwOBA: 0.312
+Barrel%: 10.1% | Hard-Hit%: 25.6%
+対左投手: 0.226 (OPS 0.654) | 対右投手: 0.254 (OPS 0.728)
+過去5試合OPS: 0.769 | 過去10試合OPS: 0.663
+
+============================================================
+
+============================================================
+**Philadelphia Phillies @ Washington Nationals**
+開始時刻: 08/16 07:45 (日本時間)
+==================================================
+
+【Philadelphia Phillies】
+Debug - Advanced stats for pitcher 554430: qualityStarts=16
+Debug - Pitcher 554430: GS=23, QS=16
+Debug - Using API QS rate: 69.6%
+**先発**: Zack Wheeler (10勝5敗)
+ERA: 2.68 | FIP: 2.91 | xFIP: 2.66 | WHIP: 0.93 | K-BB%: 28.0% | GB%: 41.2% | FB%: 28.5% | QS率: 69.6%
+SwStr%: 32.1% | BABIP: 0.266
+対左: 0.195 (OPS 0.630) | 対右: 0.198 (OPS 0.554)
+
+**中継ぎ陣** (7名):
+ERA: 3.75 | FIP: 3.60 | xFIP: 2.63 | WHIP: 1.23 | K-BB%: 15.5%
+CL: Jhoan Duran (FIP: 2.43)
+SU: Jordan Romano (FIP: 4.63), Matt Strahm (FIP: 3.21)
+疲労度: 主力6名が連投中
+
+**チーム打撃**:
+2025-08-15 20:42:36,908 - src.mlb_api_client - INFO - Team 143 last 5 games: OPS=0.552 (OBP=0.229, SLG=0.323)
+2025-08-15 20:42:45,229 - src.mlb_api_client - INFO - Team 143 last 10 games: OPS=0.738 (OBP=0.295, SLG=0.443)
+AVG: 0.253 | OPS: 0.737 | 得点: 558 | 本塁打: 143
+wOBA: 0.322 | xwOBA: 0.316
+Barrel%: 11.7% | Hard-Hit%: 26.8%
+対左投手: 0.250 (OPS 0.725) | 対右投手: 0.255 (OPS 0.743)
+過去5試合OPS: 0.552 | 過去10試合OPS: 0.738
+
+【Washington Nationals】
+Debug - Advanced stats for pitcher 669022: qualityStarts=13
+Debug - Pitcher 669022: GS=24, QS=13
+Debug - Using API QS rate: 54.2%
+**先発**: MacKenzie Gore (5勝12敗)
+ERA: 4.09 | FIP: 3.54 | xFIP: 3.49 | WHIP: 1.33 | K-BB%: 19.9% | GB%: 37.4% | FB%: 31.4% | QS率: 54.2%
+SwStr%: 30.6% | BABIP: 0.338
+対左: 0.241 (OPS 0.690) | 対右: 0.264 (OPS 0.744)
+
+**中継ぎ陣** (9名):
+ERA: 4.60 | FIP: 4.15 | xFIP: 2.92 | WHIP: 1.35 | K-BB%: 12.0%
+SU: Brad Lord (FIP: 3.62), Jose A. Ferrer (FIP: 2.99)
+疲労度: 主力4名が連投中
+
+**チーム打撃**:
+2025-08-15 20:42:51,057 - src.mlb_api_client - INFO - Team 120 last 5 games: OPS=0.805 (OBP=0.343, SLG=0.462)
+2025-08-15 20:42:56,831 - src.mlb_api_client - INFO - Team 120 last 10 games: OPS=0.700 (OBP=0.301, SLG=0.398)
+AVG: 0.244 | OPS: 0.697 | 得点: 518 | 本塁打: 116
+wOBA: 0.305 | xwOBA: 0.311
+Barrel%: 9.3% | Hard-Hit%: 23.7%
+対左投手: 0.236 (OPS 0.668) | 対右投手: 0.247 (OPS 0.708)
+過去5試合OPS: 0.805 | 過去10試合OPS: 0.700
+
+============================================================
+
+============================================================
+**Texas Rangers @ Toronto Blue Jays**
+開始時刻: 08/16 08:07 (日本時間)
+==================================================
+
+【Texas Rangers】
+Debug - Advanced stats for pitcher 594798: qualityStarts=13
+Debug - Pitcher 594798: GS=23, QS=13
+Debug - Using API QS rate: 56.5%
+**先発**: Jacob deGrom (10勝5敗)
+ERA: 2.86 | FIP: 3.52 | xFIP: 3.29 | WHIP: 0.95 | K-BB%: 21.5% | GB%: 40.3% | FB%: 30.9% | QS率: 56.5%
+SwStr%: 30.4% | BABIP: 0.239
+対左: 0.202 (OPS 0.636) | 対右: 0.198 (OPS 0.564)
+
+**中継ぎ陣** (8名):
+ERA: 2.49 | FIP: 2.90 | xFIP: 2.64 | WHIP: 1.07 | K-BB%: 16.3%
+CL: Robert Garcia (FIP: 3.72)
+SU: Danny Coulombe (FIP: 2.15), Hoby Milner (FIP: 2.42)
+疲労度: 主力5名が連投中
+
+**チーム打撃**:
+2025-08-15 20:43:02,103 - src.mlb_api_client - INFO - Team 140 last 5 games: OPS=0.633 (OBP=0.274, SLG=0.358)
+2025-08-15 20:43:05,970 - src.mlb_api_client - INFO - Team 140 last 10 games: OPS=0.659 (OBP=0.295, SLG=0.364)
+AVG: 0.232 | OPS: 0.674 | 得点: 495 | 本塁打: 126
+wOBA: 0.297 | xwOBA: 0.308
+Barrel%: 9.4% | Hard-Hit%: 22.9%
+対左投手: 0.225 (OPS 0.631) | 対右投手: 0.234 (OPS 0.691)
+過去5試合OPS: 0.633 | 過去10試合OPS: 0.659
+
+【Toronto Blue Jays】
+Debug - Advanced stats for pitcher 605135: qualityStarts=10
+Debug - Pitcher 605135: GS=24, QS=10
+Debug - Using API QS rate: 41.7%
+**先発**: Chris Bassitt (11勝6敗)
+ERA: 4.17 | FIP: 4.16 | xFIP: 3.75 | WHIP: 1.32 | K-BB%: 16.1% | GB%: 45.0% | FB%: 21.0% | QS率: 41.7%
+SwStr%: 22.5% | BABIP: 0.318
+対左: 0.291 (OPS 0.839) | 対右: 0.239 (OPS 0.654)
+
+**中継ぎ陣** (8名):
+ERA: 3.34 | FIP: 3.25 | xFIP: 2.51 | WHIP: 1.14 | K-BB%: 18.4%
+CL: Jeff Hoffman (FIP: 4.27)
+SU: Braydon Fisher (FIP: 2.16), Brendon Little (FIP: 2.69)
+疲労度: 主力7名が連投中
+
+**チーム打撃**:
+2025-08-15 20:43:10,932 - src.mlb_api_client - INFO - Team 141 last 5 games: OPS=0.655 (OBP=0.269, SLG=0.386)
+2025-08-15 20:43:16,788 - src.mlb_api_client - INFO - Team 141 last 10 games: OPS=0.912 (OBP=0.363, SLG=0.548)
+AVG: 0.268 | OPS: 0.763 | 得点: 591 | 本塁打: 140
+wOBA: 0.334 | xwOBA: 0.319
+Barrel%: 10.8% | Hard-Hit%: 27.0%
+対左投手: 0.261 (OPS 0.747) | 対右投手: 0.270 (OPS 0.769)
+過去5試合OPS: 0.655 | 過去10試合OPS: 0.912
+
+============================================================
+
+============================================================
+**Seattle Mariners @ New York Mets**
+開始時刻: 08/16 08:10 (日本時間)
+==================================================
+
+【Seattle Mariners】
+Debug - Advanced stats for pitcher 622491: qualityStarts=14
+Debug - Pitcher 622491: GS=24, QS=14
+Debug - Using API QS rate: 58.3%
+**先発**: Luis Castillo (8勝6敗)
+ERA: 3.19 | FIP: 3.71 | xFIP: 4.12 | WHIP: 1.19 | K-BB%: 14.5% | GB%: 41.2% | FB%: 28.5% | QS率: 58.3%
+SwStr%: 23.5% | BABIP: 0.284
+対左: 0.270 (OPS 0.774) | 対右: 0.213 (OPS 0.584)
+
+**中継ぎ陣** (8名):
+ERA: 2.95 | FIP: 3.45 | xFIP: 2.73 | WHIP: 1.11 | K-BB%: 15.3%
+CL: Andrés Muñoz (FIP: 2.67)
+SU: Caleb Ferguson (FIP: 3.30), Carlos Vargas (FIP: 4.61)
+疲労度: 主力7名が連投中
+
+**チーム打撃**:
+2025-08-15 20:43:25,546 - src.mlb_api_client - INFO - Team 136 last 5 games: OPS=0.684 (OBP=0.309, SLG=0.376)
+2025-08-15 20:43:31,242 - src.mlb_api_client - INFO - Team 136 last 10 games: OPS=0.707 (OBP=0.306, SLG=0.401)
+AVG: 0.243 | OPS: 0.727 | 得点: 554 | 本塁打: 172
+wOBA: 0.319 | xwOBA: 0.315
+Barrel%: 13.0% | Hard-Hit%: 27.9%
+対左投手: 0.238 (OPS 0.709) | 対右投手: 0.245 (OPS 0.734)
+過去5試合OPS: 0.684 | 過去10試合OPS: 0.707
+
+【New York Mets】
+Debug - Advanced stats for pitcher 640455: qualityStarts=0
+Debug - Pitcher 640455: GS=5, QS=0
+Debug - Using API QS rate: 0.0%
+**先発**: Sean Manaea (1勝1敗)
+ERA: 4.33 | FIP: 3.80 | xFIP: 3.56 | WHIP: 1.11 | K-BB%: 21.1% | GB%: 41.3% | FB%: 24.0% | QS率: 0.0%
+SwStr%: 23.1% | BABIP: 0.286
+対左: 0.278 (OPS 0.594) | 対右: 0.221 (OPS 0.694)
+
+**中継ぎ陣** (8名):
+ERA: 2.89 | FIP: 2.96 | xFIP: 2.45 | WHIP: 1.17 | K-BB%: 18.0%
+CL: Edwin Díaz (FIP: 2.59)
+SU: Gregory Soto (FIP: 3.12), Reed Garrett (FIP: 2.92)
+疲労度: 主力6名が連投中
+
+**チーム打撃**:
+2025-08-15 20:43:36,804 - src.mlb_api_client - INFO - Team 121 last 5 games: OPS=0.945 (OBP=0.366, SLG=0.578)
+2025-08-15 20:43:42,270 - src.mlb_api_client - INFO - Team 121 last 10 games: OPS=0.754 (OBP=0.311, SLG=0.443)
+AVG: 0.241 | OPS: 0.732 | 得点: 535 | 本塁打: 155
+wOBA: 0.320 | xwOBA: 0.315
+Barrel%: 11.2% | Hard-Hit%: 25.7%
+対左投手: 0.226 (OPS 0.664) | 対右投手: 0.247 (OPS 0.757)
+過去5試合OPS: 0.945 | 過去10試合OPS: 0.754
+
+============================================================
+
+============================================================
+**Atlanta Braves @ Cleveland Guardians**
+開始時刻: 08/16 08:10 (日本時間)
+==================================================
+
+【Atlanta Braves】
+Debug - Advanced stats for pitcher 694462: qualityStarts=1
+Debug - Pitcher 694462: GS=1, QS=1
+Debug - Using API QS rate: 100.0%
+**先発**: Hurston Waldrep (2勝0敗)
+ERA: 1.54 | FIP: 2.16 | xFIP: 3.72 | WHIP: 0.86 | K-BB%: 15.9% | GB%: 45.2% | FB%: 22.6% | QS率: 100.0%
+SwStr%: 26.8% | BABIP: 0.226
+対左: 0.278 (OPS 0.628) | 対右: 0.091 (OPS 0.261)
+
+**中継ぎ陣** (8名):
+ERA: 3.90 | FIP: 3.59 | xFIP: 2.76 | WHIP: 1.24 | K-BB%: 14.7%
+CL: Raisel Iglesias (FIP: 3.81)
+SU: Daysbel Hernández (FIP: 3.86), Dylan Lee (FIP: 3.88)
+疲労度: 主力7名が連投中
+
+**チーム打撃**:
+2025-08-15 20:43:49,433 - src.mlb_api_client - INFO - Team 144 last 5 games: OPS=0.819 (OBP=0.358, SLG=0.462)
+2025-08-15 20:43:54,920 - src.mlb_api_client - INFO - Team 144 last 10 games: OPS=0.761 (OBP=0.329, SLG=0.432)
+AVG: 0.242 | OPS: 0.711 | 得点: 519 | 本塁打: 136
+wOBA: 0.313 | xwOBA: 0.312
+Barrel%: 10.1% | Hard-Hit%: 24.1%
+対左投手: 0.235 (OPS 0.691) | 対右投手: 0.244 (OPS 0.716)
+過去5試合OPS: 0.819 | 過去10試合OPS: 0.761
+
+【Cleveland Guardians】
+Debug - Advanced stats for pitcher 676282: qualityStarts=0
+Debug - Pitcher 676282: GS=7, QS=0
+Debug - Using API QS rate: 0.0%
+**先発**: Joey Cantillo (3勝2敗)
+ERA: 4.11 | FIP: 3.92 | xFIP: 3.58 | WHIP: 1.40 | K-BB%: 16.0% | GB%: 42.9% | FB%: 28.0% | QS率: 0.0%
+SwStr%: 31.7% | BABIP: 0.301
+対左: 0.250 (OPS 0.760) | 対右: 0.222 (OPS 0.687)
+
+**中継ぎ陣** (9名):
+ERA: 3.53 | FIP: 3.32 | xFIP: 2.70 | WHIP: 1.27 | K-BB%: 15.0%
+CL: Cade Smith (FIP: 2.01)
+SU: Erik Sabrowski (FIP: 2.72), Hunter Gaddis (FIP: 3.62)
+疲労度: 主力5名が連投中
+
+**チーム打撃**:
+2025-08-15 20:44:00,092 - src.mlb_api_client - INFO - Team 114 last 5 games: OPS=0.694 (OBP=0.280, SLG=0.414)
+2025-08-15 20:44:04,081 - src.mlb_api_client - INFO - Team 114 last 10 games: OPS=0.672 (OBP=0.283, SLG=0.389)
+AVG: 0.229 | OPS: 0.679 | 得点: 483 | 本塁打: 128
+wOBA: 0.299 | xwOBA: 0.308
+Barrel%: 9.6% | Hard-Hit%: 23.0%
+対左投手: 0.226 (OPS 0.649) | 対右投手: 0.230 (OPS 0.691)
+過去5試合OPS: 0.694 | 過去10試合OPS: 0.672
+
+============================================================
+
+============================================================
+**Miami Marlins @ Boston Red Sox**
+開始時刻: 08/16 08:10 (日本時間)
+==================================================
+
+【Miami Marlins】
+Debug - Advanced stats for pitcher 645261: qualityStarts=5
+Debug - Pitcher 645261: GS=23, QS=5
+Debug - Using API QS rate: 21.7%
+**先発**: Sandy Alcantara (6勝11敗)
+ERA: 6.55 | FIP: 4.54 | xFIP: 4.54 | WHIP: 1.45 | K-BB%: 8.0% | GB%: 45.7% | FB%: 24.7% | QS率: 21.7%
+SwStr%: 19.4% | BABIP: 0.302
+対左: 0.243 (OPS 0.743) | 対右: 0.298 (OPS 0.798)
+
+**中継ぎ陣** (7名):
+ERA: 3.64 | FIP: 3.79 | xFIP: 2.79 | WHIP: 1.26 | K-BB%: 14.2%
+CL: Calvin Faucher (FIP: 3.90)
+SU: Lake Bachar (FIP: 3.32), Ronny Henriquez (FIP: 3.52)
+疲労度: 主力4名が連投中
+
+**チーム打撃**:
+2025-08-15 20:44:09,226 - src.mlb_api_client - INFO - Team 146 last 5 games: OPS=0.717 (OBP=0.338, SLG=0.379)
+2025-08-15 20:44:15,619 - src.mlb_api_client - INFO - Team 146 last 10 games: OPS=0.710 (OBP=0.323, SLG=0.387)
+AVG: 0.252 | OPS: 0.712 | 得点: 525 | 本塁打: 117
+wOBA: 0.311 | xwOBA: 0.313
+Barrel%: 10.9% | Hard-Hit%: 25.4%
+対左投手: 0.228 (OPS 0.642) | 対右投手: 0.261 (OPS 0.739)
+過去5試合OPS: 0.717 | 過去10試合OPS: 0.710
+
+【Boston Red Sox】
+Debug - Advanced stats for pitcher 608337: qualityStarts=11
+Debug - Pitcher 608337: GS=18, QS=11
+Debug - Using API QS rate: 61.1%
+**先発**: Lucas Giolito (8勝2敗)
+ERA: 3.77 | FIP: 4.43 | xFIP: 4.41 | WHIP: 1.25 | K-BB%: 11.8% | GB%: 37.3% | FB%: 27.7% | QS率: 61.1%
+SwStr%: 22.6% | BABIP: 0.272
+対左: 0.221 (OPS 0.708) | 対右: 0.263 (OPS 0.708)
+
+**中継ぎ陣** (8名):
+ERA: 3.35 | FIP: 3.05 | xFIP: 2.60 | WHIP: 1.20 | K-BB%: 16.1%
+CL: Aroldis Chapman (FIP: 1.96)
+SU: Garrett Whitlock (FIP: 2.48), Greg Weissert (FIP: 4.02)
+疲労度: 主力5名が連投中
+
+**チーム打撃**:
+2025-08-15 20:44:20,728 - src.mlb_api_client - INFO - Team 111 last 5 games: OPS=0.743 (OBP=0.337, SLG=0.407)
+2025-08-15 20:44:26,190 - src.mlb_api_client - INFO - Team 111 last 10 games: OPS=0.738 (OBP=0.343, SLG=0.395)
+AVG: 0.254 | OPS: 0.755 | 得点: 614 | 本塁打: 149
+wOBA: 0.329 | xwOBA: 0.318
+Barrel%: 11.4% | Hard-Hit%: 26.3%
+対左投手: 0.267 (OPS 0.777) | 対右投手: 0.248 (OPS 0.745)
+過去5試合OPS: 0.743 | 過去10試合OPS: 0.738
+
+============================================================
+
+============================================================
+**Baltimore Orioles @ Houston Astros**
+開始時刻: 08/16 09:10 (日本時間)
+==================================================
+
+【Baltimore Orioles】
+Debug - Advanced stats for pitcher 687064: qualityStarts=1
+Debug - Pitcher 687064: GS=10, QS=1
+Debug - Using API QS rate: 10.0%
+**先発**: Brandon Young (0勝6敗)
+ERA: 6.70 | FIP: 5.58 | xFIP: 4.53 | WHIP: 1.74 | K-BB%: 9.8% | GB%: 41.7% | FB%: 28.5% | QS率: 10.0%
+SwStr%: 23.2% | BABIP: 0.356
+対左: 0.319 (OPS 0.973) | 対右: 0.313 (OPS 0.918)
+
+**中継ぎ陣** (8名):
+ERA: 4.58 | FIP: 3.98 | xFIP: 2.75 | WHIP: 1.43 | K-BB%: 14.5%
+SU: Keegan Akin (FIP: 4.59), Yennier Cano (FIP: 3.92)
+疲労度: 主力2名が連投中
+
+**チーム打撃**:
+2025-08-15 20:44:30,956 - src.mlb_api_client - INFO - Team 110 last 5 games: OPS=0.575 (OBP=0.267, SLG=0.307)
+2025-08-15 20:44:34,901 - src.mlb_api_client - INFO - Team 110 last 10 games: OPS=0.563 (OBP=0.247, SLG=0.316)
+AVG: 0.239 | OPS: 0.707 | 得点: 514 | 本塁打: 145
+wOBA: 0.308 | xwOBA: 0.312
+Barrel%: 11.8% | Hard-Hit%: 25.9%
+対左投手: 0.231 (OPS 0.658) | 対右投手: 0.242 (OPS 0.727)
+過去5試合OPS: 0.575 | 過去10試合OPS: 0.563
+
+【Houston Astros】
+Debug - Advanced stats for pitcher 664285: qualityStarts=16
+Debug - Pitcher 664285: GS=23, QS=16
+Debug - Using API QS rate: 69.6%
+**先発**: Framber Valdez (11勝5敗)
+ERA: 2.97 | FIP: 2.96 | xFIP: 3.09 | WHIP: 1.16 | K-BB%: 16.1% | GB%: 62.0% | FB%: 14.7% | QS率: 69.6%
+SwStr%: 26.2% | BABIP: 0.292
+対左: 0.222 (OPS 0.594) | 対右: 0.226 (OPS 0.639)
+
+**中継ぎ陣** (8名):
+ERA: 3.17 | FIP: 3.13 | xFIP: 2.26 | WHIP: 1.08 | K-BB%: 20.9%
+CL: Josh Hader (FIP: 3.21)
+SU: Bennett Sousa (FIP: 2.57), Bryan Abreu (FIP: 2.45)
+疲労度: 主力8名が連投中
+
+**チーム打撃**:
+2025-08-15 20:44:39,800 - src.mlb_api_client - INFO - Team 117 last 5 games: OPS=0.744 (OBP=0.315, SLG=0.429)
+2025-08-15 20:44:43,836 - src.mlb_api_client - INFO - Team 117 last 10 games: OPS=0.755 (OBP=0.312, SLG=0.443)
+AVG: 0.258 | OPS: 0.730 | 得点: 525 | 本塁打: 135
+wOBA: 0.319 | xwOBA: 0.315
+Barrel%: 10.3% | Hard-Hit%: 22.9%
+対左投手: 0.264 (OPS 0.777) | 対右投手: 0.256 (OPS 0.719)
+過去5試合OPS: 0.744 | 過去10試合OPS: 0.755
+
+============================================================
+
+============================================================
+**Detroit Tigers @ Minnesota Twins**
+開始時刻: 08/16 09:10 (日本時間)
+==================================================
+
+【Detroit Tigers】
+Debug - Advanced stats for pitcher 450203: qualityStarts=7
+Debug - Pitcher 450203: GS=19, QS=7
+Debug - Using API QS rate: 36.8%
+**先発**: Charlie Morton (7勝10敗)
+ERA: 5.48 | FIP: 4.74 | xFIP: 4.19 | WHIP: 1.53 | K-BB%: 13.2% | GB%: 43.3% | FB%: 25.8% | QS率: 36.8%
+SwStr%: 27.3% | BABIP: 0.332
+対左: 0.267 (OPS 0.836) | 対右: 0.285 (OPS 0.801)
+
+**中継ぎ陣** (7名):
+ERA: 3.90 | FIP: 3.94 | xFIP: 2.82 | WHIP: 1.20 | K-BB%: 13.8%
+CL: Kyle Finnegan (FIP: 3.34)
+SU: Brant Hurter (FIP: 3.66), Rafael Montero (FIP: 4.34)
+疲労度: 主力6名が連投中
+
+**チーム打撃**:
+2025-08-15 20:44:48,888 - src.mlb_api_client - INFO - Team 116 last 5 games: OPS=0.663 (OBP=0.290, SLG=0.373)
+2025-08-15 20:44:53,581 - src.mlb_api_client - INFO - Team 116 last 10 games: OPS=0.734 (OBP=0.304, SLG=0.431)
+AVG: 0.249 | OPS: 0.737 | 得点: 588 | 本塁打: 158
+wOBA: 0.320 | xwOBA: 0.316
+Barrel%: 11.2% | Hard-Hit%: 25.6%
+対左投手: 0.262 (OPS 0.767) | 対右投手: 0.244 (OPS 0.726)
+過去5試合OPS: 0.663 | 過去10試合OPS: 0.734
+
+【Minnesota Twins】
+Debug - Advanced stats for pitcher 701487: qualityStarts=0
+Debug - Pitcher 701487: GS=2, QS=0
+Debug - Using API QS rate: 0.0%
+**先発**: Pierson Ohl (0勝2敗)
+ERA: 7.15 | FIP: 6.89 | xFIP: 4.71 | WHIP: 1.50 | K-BB%: 12.0% | GB%: 26.3% | FB%: 28.9% | QS率: 0.0%
+SwStr%: 19.1% | BABIP: 0.294
+対左: 0.323 (OPS 0.957) | 対右: 0.250 (OPS 1.146)
+
+**中継ぎ陣** (9名):
+ERA: 4.52 | FIP: 3.98 | xFIP: 2.98 | WHIP: 1.40 | K-BB%: 10.6%
+SU: Cole Sands (FIP: 3.92)
+疲労度: 主力2名が連投中
+
+**チーム打撃**:
+2025-08-15 20:44:59,350 - src.mlb_api_client - INFO - Team 142 last 5 games: OPS=0.497 (OBP=0.201, SLG=0.296)
+2025-08-15 20:45:03,774 - src.mlb_api_client - INFO - Team 142 last 10 games: OPS=0.672 (OBP=0.270, SLG=0.402)
+AVG: 0.239 | OPS: 0.706 | 得点: 504 | 本塁打: 141
+wOBA: 0.309 | xwOBA: 0.312
+Barrel%: 10.2% | Hard-Hit%: 28.2%
+対左投手: 0.234 (OPS 0.688) | 対右投手: 0.240 (OPS 0.713)
+過去5試合OPS: 0.497 | 過去10試合OPS: 0.672
+
+============================================================
+
+============================================================
+**Chicago White Sox @ Kansas City Royals**
+開始時刻: 08/16 09:10 (日本時間)
+==================================================
+
+【Chicago White Sox】
+Debug - Advanced stats for pitcher 650644: qualityStarts=2
+Debug - Pitcher 650644: GS=15, QS=2
+Debug - Using API QS rate: 13.3%
+**先発**: Aaron Civale (3勝7敗)
+ERA: 4.91 | FIP: 4.41 | xFIP: 4.83 | WHIP: 1.34 | K-BB%: 11.1% | GB%: 34.4% | FB%: 33.0% | QS率: 13.3%
+SwStr%: 21.8% | BABIP: 0.286
+対左: 0.239 (OPS 0.775) | 対右: 0.262 (OPS 0.736)
+
+**中継ぎ陣** (9名):
+ERA: 3.65 | FIP: 3.82 | xFIP: 3.01 | WHIP: 1.29 | K-BB%: 12.1%
+SU: Brandon Eisert (FIP: 3.84), Cam Booser (FIP: 5.32)
+疲労度: 主力7名が連投中
+
+**チーム打撃**:
+2025-08-15 20:45:08,825 - src.mlb_api_client - INFO - Team 145 last 5 games: OPS=0.597 (OBP=0.284, SLG=0.312)
+2025-08-15 20:45:12,996 - src.mlb_api_client - INFO - Team 145 last 10 games: OPS=0.674 (OBP=0.292, SLG=0.382)
+AVG: 0.228 | OPS: 0.667 | 得点: 462 | 本塁打: 118
+wOBA: 0.294 | xwOBA: 0.307
+Barrel%: 11.4% | Hard-Hit%: 26.1%
+対左投手: 0.241 (OPS 0.701) | 対右投手: 0.224 (OPS 0.655)
+過去5試合OPS: 0.597 | 過去10試合OPS: 0.674
+
+【Kansas City Royals】
+Debug - Advanced stats for pitcher 702070: qualityStarts=7
+Debug - Pitcher 702070: GS=16, QS=7
+Debug - Using API QS rate: 43.8%
+**先発**: Noah Cameron (6勝5敗)
+ERA: 2.52 | FIP: 3.66 | xFIP: 4.10 | WHIP: 1.03 | K-BB%: 13.4% | GB%: 43.1% | FB%: 28.8% | QS率: 43.8%
+SwStr%: 26.7% | BABIP: 0.237
+対左: 0.170 (OPS 0.556) | 対右: 0.217 (OPS 0.595)
+
+**中継ぎ陣** (8名):
+ERA: 3.35 | FIP: 3.80 | xFIP: 2.92 | WHIP: 1.21 | K-BB%: 12.4%
+CL: Carlos Estévez (FIP: 3.97)
+SU: Angel Zerpa (FIP: 3.60), Hunter Harvey (FIP: 1.32)
+疲労度: 主力6名が連投中
+
+**チーム打撃**:
+2025-08-15 20:45:17,612 - src.mlb_api_client - INFO - Team 118 last 5 games: OPS=0.780 (OBP=0.372, SLG=0.407)
+2025-08-15 20:45:23,316 - src.mlb_api_client - INFO - Team 118 last 10 games: OPS=0.744 (OBP=0.336, SLG=0.408)
+AVG: 0.245 | OPS: 0.691 | 得点: 456 | 本塁打: 108
+wOBA: 0.303 | xwOBA: 0.310
+Barrel%: 11.3% | Hard-Hit%: 27.2%
+対左投手: 0.235 (OPS 0.658) | 対右投手: 0.248 (OPS 0.701)
+過去5試合OPS: 0.780 | 過去10試合OPS: 0.744
+
+============================================================
+
+============================================================
+**New York Yankees @ St. Louis Cardinals**
+開始時刻: 08/16 09:15 (日本時間)
+==================================================
+
+【New York Yankees】
+Debug - Advanced stats for pitcher 661563: qualityStarts=0
+Debug - Pitcher 661563: GS=2, QS=0
+Debug - Using API QS rate: 0.0%
+**先発**: Luis Gil (0勝1敗)
+ERA: 7.27 | FIP: 4.02 | xFIP: 4.62 | WHIP: 1.85 | K-BB%: 12.2% | GB%: 26.9% | FB%: 23.1% | QS率: 0.0%
+SwStr%: 28.6% | BABIP: 0.400
+対左: 0.357 (OPS 0.944) | 対右: 0.286 (OPS 0.824)
+
+**中継ぎ陣** (8名):
+ERA: 3.34 | FIP: 3.29 | xFIP: 2.58 | WHIP: 1.17 | K-BB%: 16.7%
+CL: Camilo Doval (FIP: 3.30)
+SU: Devin Williams (FIP: 3.46), Luke Weaver (FIP: 3.95)
+疲労度: 主力6名が連投中
+
+**チーム打撃**:
+2025-08-15 20:45:28,830 - src.mlb_api_client - INFO - Team 147 last 5 games: OPS=0.806 (OBP=0.344, SLG=0.462)
+2025-08-15 20:45:33,493 - src.mlb_api_client - INFO - Team 147 last 10 games: OPS=0.685 (OBP=0.298, SLG=0.386)
+AVG: 0.249 | OPS: 0.774 | 得点: 612 | 本塁打: 191
+wOBA: 0.337 | xwOBA: 0.321
+Barrel%: 11.9% | Hard-Hit%: 27.9%
+対左投手: 0.261 (OPS 0.790) | 対右投手: 0.245 (OPS 0.769)
+過去5試合OPS: 0.806 | 過去10試合OPS: 0.685
+
+【St. Louis Cardinals】
+Debug - Advanced stats for pitcher 669467: qualityStarts=8
+Debug - Pitcher 669467: GS=23, QS=8
+Debug - Using API QS rate: 34.8%
+**先発**: Andre Pallante (6勝9敗)
+ERA: 4.95 | FIP: 4.51 | xFIP: 3.93 | WHIP: 1.37 | K-BB%: 7.3% | GB%: 60.2% | FB%: 17.8% | QS率: 34.8%
+SwStr%: 23.5% | BABIP: 0.286
+対左: 0.244 (OPS 0.716) | 対右: 0.281 (OPS 0.774)
+
+**中継ぎ陣** (8名):
+ERA: 3.75 | FIP: 3.80 | xFIP: 2.92 | WHIP: 1.28 | K-BB%: 12.9%
+SU: JoJo Romero (FIP: 3.03), Kyle Leahy (FIP: 3.13)
+疲労度: 主力3名が連投中
+
+**チーム打撃**:
+2025-08-15 20:45:38,870 - src.mlb_api_client - INFO - Team 138 last 5 games: OPS=0.585 (OBP=0.271, SLG=0.314)
+2025-08-15 20:45:43,297 - src.mlb_api_client - INFO - Team 138 last 10 games: OPS=0.649 (OBP=0.297, SLG=0.352)
+AVG: 0.249 | OPS: 0.704 | 得点: 526 | 本塁打: 115
+wOBA: 0.310 | xwOBA: 0.312
+Barrel%: 9.0% | Hard-Hit%: 26.0%
+対左投手: 0.248 (OPS 0.689) | 対右投手: 0.250 (OPS 0.711)
+過去5試合OPS: 0.585 | 過去10試合OPS: 0.649
+
+============================================================
+
+============================================================
+**Arizona Diamondbacks @ Colorado Rockies**
+開始時刻: 08/16 09:40 (日本時間)
+==================================================
+
+【Arizona Diamondbacks】
+Debug - Advanced stats for pitcher 694297: qualityStarts=8
+Debug - Pitcher 694297: GS=24, QS=8
+Debug - Using API QS rate: 33.3%
+**先発**: Brandon Pfaadt (12勝7敗)
+ERA: 5.03 | FIP: 4.41 | xFIP: 4.09 | WHIP: 1.35 | K-BB%: 13.7% | GB%: 41.5% | FB%: 24.8% | QS率: 33.3%
+SwStr%: 21.4% | BABIP: 0.315
+対左: 0.279 (OPS 0.829) | 対右: 0.278 (OPS 0.768)
+
+**中継ぎ陣** (9名):
+ERA: 4.31 | FIP: 3.98 | xFIP: 3.02 | WHIP: 1.38 | K-BB%: 10.7%
+SU: Jalen Beeks (FIP: 3.80), Kyle Backhus (FIP: 4.20)
+疲労度: 主力1名が連投中
+
+**チーム打撃**:
+2025-08-15 20:45:48,296 - src.mlb_api_client - INFO - Team 109 last 5 games: OPS=0.890 (OBP=0.338, SLG=0.551)
+2025-08-15 20:45:53,556 - src.mlb_api_client - INFO - Team 109 last 10 games: OPS=0.838 (OBP=0.328, SLG=0.510)
+AVG: 0.251 | OPS: 0.768 | 得点: 603 | 本塁打: 173
+wOBA: 0.332 | xwOBA: 0.320
+Barrel%: 10.6% | Hard-Hit%: 27.0%
+対左投手: 0.244 (OPS 0.714) | 対右投手: 0.254 (OPS 0.791)
+過去5試合OPS: 0.890 | 過去10試合OPS: 0.838
+
+【Colorado Rockies】
+Debug - Advanced stats for pitcher 685299: qualityStarts=2
+Debug - Pitcher 685299: GS=7, QS=2
+Debug - Using API QS rate: 28.6%
+**先発**: Tanner Gordon (2勝5敗)
+ERA: 8.37 | FIP: 4.54 | xFIP: 4.77 | WHIP: 1.89 | K-BB%: 8.8% | GB%: 38.3% | FB%: 25.8% | QS率: 28.6%
+SwStr%: 16.1% | BABIP: 0.407
+対左: 0.300 (OPS 0.846) | 対右: 0.443 (OPS 1.109)
+
+**中継ぎ陣** (8名):
+ERA: 4.75 | FIP: 4.66 | xFIP: 3.10 | WHIP: 1.47 | K-BB%: 10.2%
+SU: Juan Mejia (FIP: 3.29), Victor Vodnik (FIP: 4.44)
+疲労度: 主力3名が連投中
+
+**チーム打撃**:
+2025-08-15 20:45:59,479 - src.mlb_api_client - INFO - Team 115 last 5 games: OPS=0.699 (OBP=0.291, SLG=0.408)
+2025-08-15 20:46:04,201 - src.mlb_api_client - INFO - Team 115 last 10 games: OPS=0.644 (OBP=0.291, SLG=0.352)
+AVG: 0.238 | OPS: 0.688 | 得点: 449 | 本塁打: 125
+wOBA: 0.299 | xwOBA: 0.309
+Barrel%: 10.5% | Hard-Hit%: 23.9%
+対左投手: 0.234 (OPS 0.678) | 対右投手: 0.239 (OPS 0.692)
+過去5試合OPS: 0.699 | 過去10試合OPS: 0.644
+
+============================================================
+
+============================================================
+**Los Angeles Angels @ Athletics**
+開始時刻: 08/16 11:05 (日本時間)
+==================================================
+
+【Los Angeles Angels】
+Debug - Advanced stats for pitcher 579328: qualityStarts=9
+Debug - Pitcher 579328: GS=25, QS=9
+Debug - Using API QS rate: 36.0%
+**先発**: Yusei Kikuchi (6勝7敗)
+ERA: 3.37 | FIP: 3.88 | xFIP: 4.05 | WHIP: 1.42 | K-BB%: 14.6% | GB%: 38.7% | FB%: 28.6% | QS率: 36.0%
+SwStr%: 24.2% | BABIP: 0.325
+対左: 0.252 (OPS 0.627) | 対右: 0.264 (OPS 0.762)
+
+**中継ぎ陣** (8名):
+ERA: 3.81 | FIP: 4.08 | xFIP: 2.85 | WHIP: 1.30 | K-BB%: 14.0%
+CL: Kenley Jansen (FIP: 3.87)
+SU: Brock Burke (FIP: 4.24), Luis García (FIP: 3.30)
+疲労度: 主力6名が連投中
+
+**チーム打撃**:
+2025-08-15 20:46:09,434 - src.mlb_api_client - INFO - Team 108 last 5 games: OPS=0.830 (OBP=0.342, SLG=0.488)
+2025-08-15 20:46:14,764 - src.mlb_api_client - INFO - Team 108 last 10 games: OPS=0.787 (OBP=0.323, SLG=0.464)
+AVG: 0.233 | OPS: 0.715 | 得点: 535 | 本塁打: 173
+wOBA: 0.312 | xwOBA: 0.313
+Barrel%: 10.3% | Hard-Hit%: 24.4%
+対左投手: 0.225 (OPS 0.693) | 対右投手: 0.235 (OPS 0.721)
+過去5試合OPS: 0.830 | 過去10試合OPS: 0.787
+
+【Athletics】
+Debug - Advanced stats for pitcher 678022: qualityStarts=1
+Debug - Pitcher 678022: GS=2, QS=1
+Debug - Using API QS rate: 50.0%
+**先発**: Jack Perkins (1勝2敗)
+ERA: 4.08 | FIP: 3.76 | xFIP: 4.20 | WHIP: 1.05 | K-BB%: 14.7% | GB%: 44.7% | FB%: 32.9% | QS率: 50.0%
+SwStr%: 32.9% | BABIP: 0.219
+対左: 0.190 (OPS 0.624) | 対右: 0.178 (OPS 0.519)
+
+**中継ぎ陣** (8名):
+ERA: 3.86 | FIP: 3.77 | xFIP: 2.98 | WHIP: 1.35 | K-BB%: 12.5%
+SU: Justin Sterner (FIP: 4.84), Michael Kelly (FIP: 3.55)
+疲労度: 主力4名が連投中
+
+**チーム打撃**:
+2025-08-15 20:46:20,578 - src.mlb_api_client - INFO - Team 133 last 5 games: OPS=0.679 (OBP=0.292, SLG=0.387)
+2025-08-15 20:46:24,697 - src.mlb_api_client - INFO - Team 133 last 10 games: OPS=0.798 (OBP=0.333, SLG=0.465)
+AVG: 0.253 | OPS: 0.748 | 得点: 544 | 本塁打: 166
+wOBA: 0.324 | xwOBA: 0.317
+Barrel%: 10.9% | Hard-Hit%: 25.4%
+対左投手: 0.261 (OPS 0.746) | 対右投手: 0.250 (OPS 0.748)
+過去5試合OPS: 0.679 | 過去10試合OPS: 0.798
+
+============================================================
+
+============================================================
+**San Diego Padres @ Los Angeles Dodgers**
+開始時刻: 08/16 11:10 (日本時間)
+==================================================
+
+【San Diego Padres】
+**先発**: 未定
+
+**中継ぎ陣** (8名):
+ERA: 2.87 | FIP: 2.94 | xFIP: 2.47 | WHIP: 1.12 | K-BB%: 18.5%
+CL: Mason Miller (FIP: 2.91)
+SU: Adrian Morejon (FIP: 1.95), Jason Adam (FIP: 3.05)
+疲労度: 主力7名が連投中
+
+**チーム打撃**:
+2025-08-15 20:46:29,535 - src.mlb_api_client - INFO - Team 135 last 5 games: OPS=0.830 (OBP=0.379, SLG=0.451)
+2025-08-15 20:46:34,614 - src.mlb_api_client - INFO - Team 135 last 10 games: OPS=0.793 (OBP=0.364, SLG=0.429)
+AVG: 0.252 | OPS: 0.706 | 得点: 509 | 本塁打: 103
+wOBA: 0.311 | xwOBA: 0.312
+Barrel%: 10.5% | Hard-Hit%: 25.6%
+対左投手: 0.250 (OPS 0.691) | 対右投手: 0.253 (OPS 0.713)
+過去5試合OPS: 0.830 | 過去10試合OPS: 0.793
+
+【Los Angeles Dodgers】
+Debug - Advanced stats for pitcher 477132: qualityStarts=5
+Debug - Pitcher 477132: GS=14, QS=5
+Debug - Using API QS rate: 35.7%
+**先発**: Clayton Kershaw (6勝2敗)
+ERA: 3.14 | FIP: 3.78 | xFIP: 4.26 | WHIP: 1.26 | K-BB%: 9.1% | GB%: 49.8% | FB%: 21.8% | QS率: 35.7%
+SwStr%: 23.6% | BABIP: 0.293
+対左: 0.302 (OPS 0.797) | 対右: 0.249 (OPS 0.683)
+
+**中継ぎ陣** (8名):
+ERA: 3.71 | FIP: 3.60 | xFIP: 2.52 | WHIP: 1.20 | K-BB%: 16.9%
+SU: Alex Vesia (FIP: 3.58), Anthony Banda (FIP: 4.53)
+疲労度: 主力5名が連投中
+
+**チーム打撃**:
+2025-08-15 20:46:41,538 - src.mlb_api_client - INFO - Team 119 last 5 games: OPS=0.832 (OBP=0.379, SLG=0.453)
+2025-08-15 20:46:50,530 - src.mlb_api_client - INFO - Team 119 last 10 games: OPS=0.814 (OBP=0.358, SLG=0.455)
+AVG: 0.255 | OPS: 0.773 | 得点: 626 | 本塁打: 180
+wOBA: 0.336 | xwOBA: 0.320
+Barrel%: 11.0% | Hard-Hit%: 23.5%
+対左投手: 0.254 (OPS 0.768) | 対右投手: 0.255 (OPS 0.774)
+過去5試合OPS: 0.832 | 過去10試合OPS: 0.814
+
+============================================================
+
+============================================================
+**Tampa Bay Rays @ San Francisco Giants**
+開始時刻: 08/16 11:15 (日本時間)
+==================================================
+
+【Tampa Bay Rays】
+Debug - Advanced stats for pitcher 671212: qualityStarts=0
+Debug - Pitcher 671212: GS=4, QS=0
+Debug - Using API QS rate: 0.0%
+**先発**: Joe Boyle (1勝2敗)
+ERA: 3.82 | FIP: 4.96 | xFIP: 4.87 | WHIP: 1.08 | K-BB%: 11.8% | GB%: 35.9% | FB%: 33.3% | QS率: 0.0%
+SwStr%: 30.1% | BABIP: 0.164
+対左: 0.145 (OPS 0.639) | 対右: 0.170 (OPS 0.562)
+
+**中継ぎ陣** (8名):
+ERA: 3.79 | FIP: 3.22 | xFIP: 2.12 | WHIP: 1.20 | K-BB%: 21.8%
+CL: Pete Fairbanks (FIP: 2.89)
+SU: Bryan Baker (FIP: 4.24), Edwin Uceta (FIP: 3.79)
+疲労度: 主力6名が連投中
+
+**チーム打撃**:
+2025-08-15 20:46:56,534 - src.mlb_api_client - INFO - Team 139 last 5 games: OPS=0.776 (OBP=0.305, SLG=0.471)
+2025-08-15 20:47:02,029 - src.mlb_api_client - INFO - Team 139 last 10 games: OPS=0.699 (OBP=0.275, SLG=0.424)
+AVG: 0.251 | OPS: 0.716 | 得点: 546 | 本塁打: 136
+wOBA: 0.312 | xwOBA: 0.313
+Barrel%: 7.8% | Hard-Hit%: 21.5%
+対左投手: 0.229 (OPS 0.653) | 対右投手: 0.261 (OPS 0.742)
+過去5試合OPS: 0.776 | 過去10試合OPS: 0.699
+
+【San Francisco Giants】
+Debug - Advanced stats for pitcher 694738: qualityStarts=8
+Debug - Pitcher 694738: GS=20, QS=8
+Debug - Using API QS rate: 40.0%
+**先発**: Landen Roupp (7勝6敗)
+ERA: 3.11 | FIP: 3.58 | xFIP: 4.04 | WHIP: 1.43 | K-BB%: 11.9% | GB%: 46.6% | FB%: 24.1% | QS率: 40.0%
+SwStr%: 25.2% | BABIP: 0.320
+対左: 0.254 (OPS 0.719) | 対右: 0.266 (OPS 0.689)
+
+**中継ぎ陣** (8名):
+ERA: 3.40 | FIP: 3.12 | xFIP: 2.70 | WHIP: 1.18 | K-BB%: 14.7%
+CL: Ryan Walker (FIP: 3.19)
+SU: Randy Rodríguez (FIP: 2.11)
+疲労度: 主力4名が連投中
+
+**チーム打撃**:
+2025-08-15 20:47:08,703 - src.mlb_api_client - INFO - Team 137 last 5 games: OPS=0.481 (OBP=0.226, SLG=0.255)
+2025-08-15 20:47:12,925 - src.mlb_api_client - INFO - Team 137 last 10 games: OPS=0.646 (OBP=0.286, SLG=0.360)
+AVG: 0.232 | OPS: 0.682 | 得点: 491 | 本塁打: 113
+wOBA: 0.301 | xwOBA: 0.309
+Barrel%: 11.0% | Hard-Hit%: 25.0%
+対左投手: 0.211 (OPS 0.607) | 対右投手: 0.240 (OPS 0.709)
+過去5試合OPS: 0.481 | 過去10試合OPS: 0.646
+
+============================================================

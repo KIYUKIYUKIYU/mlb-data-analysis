@@ -1,0 +1,26 @@
+{
+  "teamId": 147,
+  "teamName": "Yankees",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:47:48.671396",
+  "pitching": {
+    "teamId": 147,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 0.0,
+      "whip": 0.0,
+      "totalInnings": 0.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 147,
+    "season": 2025,
+    "avg": ".253",
+    "ops": ".785",
+    "hits": 633,
+    "runs": 379,
+    "rbi": 365
+  }
+}

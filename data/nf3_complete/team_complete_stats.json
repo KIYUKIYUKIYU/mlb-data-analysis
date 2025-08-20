@@ -1,0 +1,358 @@
+{
+  "central": {
+    "batting": {
+      "阪神": {
+        "batting_avg": ".246",
+        "games": "92",
+        "plate_appearances": "3475",
+        "at_bats": "3056",
+        "runs": "315",
+        "hits": "751",
+        "home_runs": "292"
+      },
+      "巨人": {
+        "batting_avg": ".242",
+        "games": "91",
+        "plate_appearances": "3416",
+        "at_bats": "3055",
+        "runs": "255",
+        "hits": "740",
+        "home_runs": "245"
+      },
+      "ＤｅＮＡ": {
+        "batting_avg": ".226",
+        "games": "90",
+        "plate_appearances": "3263",
+        "at_bats": "2966",
+        "runs": "266",
+        "hits": "671",
+        "home_runs": "261"
+      },
+      "中日": {
+        "batting_avg": ".225",
+        "games": "90",
+        "plate_appearances": "3277",
+        "at_bats": "2932",
+        "runs": "231",
+        "hits": "661",
+        "home_runs": "219"
+      },
+      "広島": {
+        "batting_avg": ".241",
+        "games": "90",
+        "plate_appearances": "3368",
+        "at_bats": "3052",
+        "runs": "271",
+        "hits": "736",
+        "home_runs": "258"
+      },
+      "ヤクルト": {
+        "batting_avg": ".229",
+        "games": "85",
+        "plate_appearances": "3174",
+        "at_bats": "2821",
+        "runs": "236",
+        "hits": "645",
+        "home_runs": "219"
+      },
+      "リーグ平均": {
+        "batting_avg": ".235",
+        "games": "89",
+        "plate_appearances": "3328",
+        "at_bats": "2980",
+        "runs": "262",
+        "hits": "700",
+        "home_runs": "249"
+      }
+    },
+    "batting_advanced": {
+      "阪神": {
+        "obp": ".313",
+        "slg": ".349",
+        "ops": ".662"
+      },
+      "巨人": {
+        "obp": ".305",
+        "slg": ".341",
+        "ops": ".646"
+      },
+      "ＤｅＮＡ": {
+        "obp": ".281",
+        "slg": ".323",
+        "ops": ".603"
+      },
+      "中日": {
+        "obp": ".284",
+        "slg": ".323",
+        "ops": ".607"
+      },
+      "広島": {
+        "obp": ".297",
+        "slg": ".335",
+        "ops": ".632"
+      },
+      "ヤクルト": {
+        "obp": ".293",
+        "slg": ".314",
+        "ops": ".608"
+      },
+      "リーグ平均": {
+        "obp": ".296",
+        "slg": ".331",
+        "ops": ".627"
+      }
+    },
+    "pitching": {
+      "阪神": {
+        "era": "1.95",
+        "games": "92",
+        "wins": "55",
+        "losses": "35"
+      },
+      "巨人": {
+        "era": "2.59",
+        "games": "91",
+        "wins": "44",
+        "losses": "44"
+      },
+      "ＤｅＮＡ": {
+        "era": "2.70",
+        "games": "90",
+        "wins": "41",
+        "losses": "44"
+      },
+      "中日": {
+        "era": "2.83",
+        "games": "90",
+        "wins": "40",
+        "losses": "48"
+      },
+      "広島": {
+        "era": "2.91",
+        "games": "90",
+        "wins": "38",
+        "losses": "47"
+      },
+      "ヤクルト": {
+        "era": "3.51",
+        "games": "85",
+        "wins": "30",
+        "losses": "50"
+      },
+      "リーグ平均": {
+        "era": "2.74",
+        "games": "89",
+        "wins": "-",
+        "losses": "-"
+      }
+    },
+    "pitching_advanced": {
+      "阪神": {
+        "whip": "1.05",
+        "qs_rate": "53.3%"
+      },
+      "巨人": {
+        "whip": "1.15",
+        "qs_rate": "54.9%"
+      },
+      "ＤｅＮＡ": {
+        "whip": "1.16",
+        "qs_rate": "67.8%"
+      },
+      "中日": {
+        "whip": "1.21",
+        "qs_rate": "58.9%"
+      },
+      "広島": {
+        "whip": "1.17",
+        "qs_rate": "58.9%"
+      },
+      "ヤクルト": {
+        "whip": "1.32",
+        "qs_rate": "44.7%"
+      },
+      "リーグ平均": {
+        "whip": "1.17",
+        "qs_rate": "56.5%"
+      }
+    }
+  },
+  "pacific": {
+    "batting": {
+      "日本ハム": {
+        "batting_avg": ".246",
+        "games": "91",
+        "plate_appearances": "3440",
+        "at_bats": "3103",
+        "runs": "341",
+        "hits": "762",
+        "home_runs": "331"
+      },
+      "ソフトバンク": {
+        "batting_avg": ".247",
+        "games": "91",
+        "plate_appearances": "3412",
+        "at_bats": "3028",
+        "runs": "339",
+        "hits": "749",
+        "home_runs": "326"
+      },
+      "オリックス": {
+        "batting_avg": ".257",
+        "games": "89",
+        "plate_appearances": "3419",
+        "at_bats": "3075",
+        "runs": "315",
+        "hits": "791",
+        "home_runs": "308"
+      },
+      "西武": {
+        "batting_avg": ".228",
+        "games": "90",
+        "plate_appearances": "3280",
+        "at_bats": "2945",
+        "runs": "227",
+        "hits": "670",
+        "home_runs": "211"
+      },
+      "楽天": {
+        "batting_avg": ".244",
+        "games": "89",
+        "plate_appearances": "3357",
+        "at_bats": "3009",
+        "runs": "252",
+        "hits": "734",
+        "home_runs": "243"
+      },
+      "ロッテ": {
+        "batting_avg": ".230",
+        "games": "88",
+        "plate_appearances": "3231",
+        "at_bats": "2915",
+        "runs": "257",
+        "hits": "670",
+        "home_runs": "248"
+      },
+      "リーグ平均": {
+        "batting_avg": ".242",
+        "games": "89",
+        "plate_appearances": "3356",
+        "at_bats": "3012",
+        "runs": "288",
+        "hits": "729",
+        "home_runs": "277"
+      }
+    },
+    "batting_advanced": {
+      "日本ハム": {
+        "obp": ".309",
+        "slg": ".381",
+        "ops": ".690"
+      },
+      "ソフトバンク": {
+        "obp": ".313",
+        "slg": ".351",
+        "ops": ".665"
+      },
+      "オリックス": {
+        "obp": ".317",
+        "slg": ".366",
+        "ops": ".684"
+      },
+      "西武": {
+        "obp": ".286",
+        "slg": ".312",
+        "ops": ".598"
+      },
+      "楽天": {
+        "obp": ".306",
+        "slg": ".326",
+        "ops": ".632"
+      },
+      "ロッテ": {
+        "obp": ".288",
+        "slg": ".320",
+        "ops": ".608"
+      },
+      "リーグ平均": {
+        "obp": ".304",
+        "slg": ".343",
+        "ops": ".647"
+      }
+    },
+    "pitching": {
+      "日本ハム": {
+        "era": "2.25",
+        "games": "91",
+        "wins": "55",
+        "losses": "34"
+      },
+      "ソフトバンク": {
+        "era": "2.43",
+        "games": "91",
+        "wins": "53",
+        "losses": "34"
+      },
+      "オリックス": {
+        "era": "3.42",
+        "games": "89",
+        "wins": "46",
+        "losses": "40"
+      },
+      "西武": {
+        "era": "2.66",
+        "games": "90",
+        "wins": "42",
+        "losses": "47"
+      },
+      "楽天": {
+        "era": "3.10",
+        "games": "89",
+        "wins": "41",
+        "losses": "46"
+      },
+      "ロッテ": {
+        "era": "3.56",
+        "games": "88",
+        "wins": "35",
+        "losses": "51"
+      },
+      "リーグ平均": {
+        "era": "2.90",
+        "games": "89",
+        "wins": "-",
+        "losses": "-"
+      }
+    },
+    "pitching_advanced": {
+      "日本ハム": {
+        "whip": "1.05",
+        "qs_rate": "63.7%"
+      },
+      "ソフトバンク": {
+        "whip": "1.11",
+        "qs_rate": "61.5%"
+      },
+      "オリックス": {
+        "whip": "1.31",
+        "qs_rate": "53.9%"
+      },
+      "西武": {
+        "whip": "1.14",
+        "qs_rate": "61.1%"
+      },
+      "楽天": {
+        "whip": "1.31",
+        "qs_rate": "42.7%"
+      },
+      "ロッテ": {
+        "whip": "1.24",
+        "qs_rate": "44.3%"
+      },
+      "リーグ平均": {
+        "whip": "1.19",
+        "qs_rate": "54.6%"
+      }
+    }
+  }
+}

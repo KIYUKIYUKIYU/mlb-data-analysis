@@ -1,0 +1,124 @@
+{
+  "team_id": 138,
+  "games": 5,
+  "timestamp": "20250620_184200",
+  "players": [
+    {
+      "player_id": 676475,
+      "name": "Alec Burleson",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.478,
+      "slg": 0.773,
+      "ops": 1.251
+    },
+    {
+      "player_id": 671056,
+      "name": "Iván Herrera",
+      "position": "C",
+      "games": 5,
+      "obp": 0.455,
+      "slg": 0.55,
+      "ops": 1.005
+    },
+    {
+      "player_id": 663457,
+      "name": "Lars Nootbaar",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 0.5,
+      "ops": 0.929
+    },
+    {
+      "player_id": 575929,
+      "name": "Willson Contreras",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.556,
+      "ops": 0.889
+    },
+    {
+      "player_id": 650968,
+      "name": "Yohel Pozo",
+      "position": "C",
+      "games": 5,
+      "obp": 0.222,
+      "slg": 0.625,
+      "ops": 0.847
+    },
+    {
+      "player_id": 571448,
+      "name": "Nolan Arenado",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.391,
+      "slg": 0.45,
+      "ops": 0.841
+    },
+    {
+      "player_id": 669357,
+      "name": "Nolan Gorman",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.35,
+      "slg": 0.471,
+      "ops": 0.821
+    },
+    {
+      "player_id": 680977,
+      "name": "Brendan Donovan",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.348,
+      "slg": 0.364,
+      "ops": 0.711
+    },
+    {
+      "player_id": 686780,
+      "name": "Pedro Pagés",
+      "position": "C",
+      "games": 5,
+      "obp": 0.294,
+      "slg": 0.353,
+      "ops": 0.647
+    },
+    {
+      "player_id": 691023,
+      "name": "Jordan Walker",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.273,
+      "ops": 0.606
+    },
+    {
+      "player_id": 687363,
+      "name": "Victor Scott II",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.333,
+      "ops": 0.583
+    },
+    {
+      "player_id": 691026,
+      "name": "Masyn Winn",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.182,
+      "slg": 0.15,
+      "ops": 0.332
+    },
+    {
+      "player_id": 676480,
+      "name": "Jose Barrero",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.111,
+      "slg": 0.111,
+      "ops": 0.222
+    }
+  ]
+}

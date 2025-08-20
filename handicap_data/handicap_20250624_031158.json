@@ -1,0 +1,68 @@
+{
+  "games": [
+    {
+      "favorite": "オリオールズ",
+      "favorite_code": "BAL",
+      "handicap": 0.4,
+      "underdog": "レンジャーズ",
+      "underdog_code": "TEX"
+    },
+    {
+      "favorite": "ブレーブス",
+      "favorite_code": "ATL",
+      "handicap": 0.7,
+      "underdog": "メッツ",
+      "underdog_code": "NYM"
+    },
+    {
+      "favorite": "ヤンキース",
+      "favorite_code": "NYY",
+      "handicap": 0.7,
+      "underdog": "レッズ",
+      "underdog_code": "CIN"
+    },
+    {
+      "favorite": "ダイヤモンドバックス",
+      "favorite_code": "ARI",
+      "handicap": 0.9,
+      "underdog": "ホワイトソックス",
+      "underdog_code": "CWS"
+    },
+    {
+      "favorite": "ブリュワーズ",
+      "favorite_code": "MIL",
+      "handicap": 1.8,
+      "underdog": "パイレーツ",
+      "underdog_code": "PIT"
+    },
+    {
+      "favorite": "マリナーズ",
+      "favorite_code": "SEA",
+      "handicap": 0.6,
+      "underdog": "ツインズ",
+      "underdog_code": "MIN"
+    },
+    {
+      "favorite": "カブス",
+      "favorite_code": "CHC",
+      "handicap": 0.1,
+      "underdog": "カージナルス",
+      "underdog_code": "STL"
+    },
+    {
+      "favorite": "レッドソックス",
+      "favorite_code": "BOS",
+      "handicap": 0.3,
+      "underdog": "エンゼルス",
+      "underdog_code": "LAA"
+    },
+    {
+      "favorite": "パドレス",
+      "favorite_code": "SD",
+      "handicap": 1.1,
+      "underdog": "ナショナルズ",
+      "underdog_code": "WSH"
+    }
+  ],
+  "timestamp": "20250624_031158"
+}

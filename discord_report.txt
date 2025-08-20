@@ -1,0 +1,357 @@
+=== Part 1/7 ===
+MLB試合レポート - 2025年06月27日（日本時間）
+全9試合
+
+============================================================
+**Athletics @ Detroit Tigers**
+開始時刻: 06/27 02:10 (日本時間)
+==================================================
+【Athletics】
+**先発**: Jeffrey Springs (6勝5敗)
+ERA: 4.24 | FIP: 4.53 | xFIP: 4.63 | WHIP: 1.23 | K-BB%: 10.8% | GB%: 31.1% | FB%: 29.9% | QS率: 28.6%
+SwStr%: 27.1% | BABIP: .248
+対左: 0.237 (OPS 0.723) | 対右: 0.217 (OPS 0.663)
+**中継ぎ陣** (8名):
+ERA: 4.24 | FIP: 3.68 | xFIP: 3.01 | WHIP: 1.45 | K-BB%: 12.8% | WAR: 0.0
+CL: Mason Miller (FIP: 3.62)
+SU: T.J. McFarland (FIP: 8.52), Tyler Ferguson (FIP: 6.79)
+疲労度: 主力1名が連投中
+**チーム打撃**:
+AVG: .252 | OPS: .732 | 得点: 339 | 本塁打: 100
+wOBA: 0.321 | xwOBA: 0.326
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .254 (OPS .717) | 対右投手: .252 (OPS .737)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+【Detroit Tigers】
+**先発**: 未定
+**中継ぎ陣** (10名):
+ERA: 3.21 | FIP: 3.68 | xFIP: 2.86 | WHIP: 1.20 | K-BB%: 13.8% | WAR: 0.0
+CL: Tommy Kahnle (FIP: 5.78)
+SU: Brenan Hanifee (FIP: 3.48), Tyler Holton (FIP: 7.36)
+疲労度: 主力4名が連投中
+**チーム打撃**:
+AVG: .254 | OPS: .746 | 得点: 402 | 本塁打: 98
+wOBA: 0.326 | xwOBA: 0.331
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .276 (OPS .801) | 対右投手: .245 (OPS .725)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+==================================================
+
+============================================================
+**Toronto Blue Jays @ Cleveland Guardians**
+開始時刻: 06/27 02:10 (日本時間)
+==================================================
+【Toronto Blue Jays】
+**先発**: Kevin Gausman (5勝6敗)
+ERA: 4.60 | FIP: 3.87 | xFIP: 3.80 | WHIP: 1.13 | K-BB%: 17.2% | GB%: 36.1% | FB%: 31.9% | QS率: 26.7%
+SwStr%: 26.2% | BABIP: .271
+対左: 0.240 (OPS 0.714) | 対右: 0.220 (OPS 0.654)
+**中継ぎ陣** (9名):
+ERA: 3.40 | FIP: 3.79 | xFIP: 2.46 | WHIP: 1.11 | K-BB%: 19.7% | WAR: 0.0
+CL: Jeff Hoffman (FIP: 6.91)
+SU: Brendon Little (FIP: 1.77), Yariel Rodríguez (FIP: 7.33)
+疲労度: 主力5名が連投中
+**チーム打撃**:
+
+=== Part 2/7 ===
+AVG: .257 | OPS: .728 | 得点: 340 | 本塁打: 80
+wOBA: 0.319 | xwOBA: 0.324
+Barrel%: 10.2% | Hard-Hit%: 44.8%
+対左投手: .275 (OPS .753) | 対右投手: .251 (OPS .719)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+【Cleveland Guardians】
+**先発**: Tanner Bibee (4勝7敗)
+ERA: 3.86 | FIP: 4.62 | xFIP: 4.13 | WHIP: 1.23 | K-BB%: 13.3% | GB%: 44.3% | FB%: 29.5% | QS率: 26.7%
+SwStr%: 23.1% | BABIP: .273
+対左: 0.256 (OPS 0.757) | 対右: 0.236 (OPS 0.697)
+**中継ぎ陣** (8名):
+ERA: 3.27 | FIP: 3.10 | xFIP: 2.82 | WHIP: 1.34 | K-BB%: 14.4% | WAR: 0.0
+CL: Emmanuel Clase (FIP: 0.68)
+SU: Cade Smith (FIP: 1.42), Hunter Gaddis (FIP: 0.85)
+疲労度: 主力4名が連投中
+**チーム打撃**:
+AVG: .230 | OPS: .673 | 得点: 292 | 本塁打: 78
+wOBA: 0.297 | xwOBA: 0.302
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .224 (OPS .623) | 対右投手: .233 (OPS .695)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+==================================================
+
+============================================================
+**Seattle Mariners @ Minnesota Twins**
+開始時刻: 06/27 02:10 (日本時間)
+==================================================
+【Seattle Mariners】
+**先発**: Emerson Hancock (3勝3敗)
+ERA: 5.43 | FIP: 5.51 | xFIP: 4.37 | WHIP: 1.43 | K-BB%: 9.2% | GB%: 44.4% | FB%: 26.1% | QS率: 23.1%
+SwStr%: 20.8% | BABIP: .297
+対左: 0.288 (OPS 0.860) | 対右: 0.268 (OPS 0.800)
+**中継ぎ陣** (8名):
+ERA: 2.95 | FIP: 3.72 | xFIP: 2.84 | WHIP: 1.16 | K-BB%: 15.0% | WAR: 0.0
+CL: Andrés Muñoz (FIP: 2.05)
+SU: Carlos Vargas (FIP: 3.36), Gabe Speier (FIP: 4.61)
+疲労度: 主力3名が連投中
+**チーム打撃**:
+AVG: .248 | OPS: .735 | 得点: 364 | 本塁打: 105
+wOBA: 0.324 | xwOBA: 0.329
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .252 (OPS .726) | 対右投手: .247 (OPS .740)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+【Minnesota Twins】
+**先発**: Simeon Woods Richardson (2勝4敗)
+ERA: 5.06 | FIP: 4.62 | xFIP: 4.75 | WHIP: 1.46 | K-BB%: 10.6% | GB%: 32.5% | FB%: 30.7% | QS率: 20.0%
+SwStr%: 22.7% | BABIP: .310
+対左: 0.283 (OPS 0.801) | 対右: 0.263 (OPS 0.741)
+**中継ぎ陣** (8名):
+
+=== Part 3/7 ===
+ERA: 3.46 | FIP: 2.88 | xFIP: 2.46 | WHIP: 1.21 | K-BB%: 18.4% | WAR: 0.0
+CL: Jhoan Duran (FIP: 0.57)
+SU: Brock Stewart (FIP: 3.02), Cole Sands (FIP: 3.53)
+疲労度: 主力4名が連投中
+**チーム打撃**:
+AVG: .243 | OPS: .711 | 得点: 335 | 本塁打: 89
+wOBA: 0.313 | xwOBA: 0.318
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .233 (OPS .680) | 対右投手: .247 (OPS .722)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+==================================================
+
+============================================================
+**Tampa Bay Rays @ Kansas City Royals**
+開始時刻: 06/27 03:10 (日本時間)
+==================================================
+【Tampa Bay Rays】
+**先発**: Shane Baz (7勝3敗)
+ERA: 4.79 | FIP: 4.85 | xFIP: 4.15 | WHIP: 1.33 | K-BB%: 12.2% | GB%: 49.6% | FB%: 22.9% | QS率: 26.7%
+SwStr%: 24.5% | BABIP: .281
+対左: 0.254 (OPS 0.779) | 対右: 0.234 (OPS 0.719)
+**中継ぎ陣** (8名):
+ERA: 3.87 | FIP: 4.19 | xFIP: 2.80 | WHIP: 1.26 | K-BB%: 15.1% | WAR: 0.0
+CL: Pete Fairbanks (FIP: 9.23)
+SU: Edwin Uceta (FIP: 6.04), Garrett Cleavinger (FIP: 8.37)
+疲労度: 主力3名が連投中
+**チーム打撃**:
+AVG: .256 | OPS: .728 | 得点: 376 | 本塁打: 85
+wOBA: 0.320 | xwOBA: 0.325
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .237 (OPS .675) | 対右投手: .264 (OPS .749)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+【Kansas City Royals】
+**先発**: Michael Lorenzen (4勝7敗)
+ERA: 4.81 | FIP: 4.73 | xFIP: 4.54 | WHIP: 1.37 | K-BB%: 11.5% | GB%: 37.6% | FB%: 29.8% | QS率: 26.7%
+SwStr%: 22.3% | BABIP: .291
+対左: 0.272 (OPS 0.809) | 対右: 0.252 (OPS 0.749)
+**中継ぎ陣** (8名):
+ERA: 3.16 | FIP: 3.96 | xFIP: 3.08 | WHIP: 1.20 | K-BB%: 11.7% | WAR: 0.0
+CL: Carlos Estévez (FIP: 4.57)
+SU: Angel Zerpa (FIP: 4.22), John Schreiber (FIP: 7.20)
+疲労度: 主力4名が連投中
+**チーム打撃**:
+AVG: .245 | OPS: .668 | 得点: 263 | 本塁打: 56
+wOBA: 0.293 | xwOBA: 0.298
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .237 (OPS .624) | 対右投手: .248 (OPS .681)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+==================================================
+
+
+=== Part 4/7 ===
+============================================================
+**Philadelphia Phillies @ Houston Astros**
+開始時刻: 06/27 03:10 (日本時間)
+==================================================
+【Philadelphia Phillies】
+**先発**: Cristopher Sánchez (6勝2敗)
+ERA: 2.87 | FIP: 3.17 | xFIP: 3.13 | WHIP: 1.19 | K-BB%: 17.6% | GB%: 55.9% | FB%: 18.1% | QS率: 26.7%
+SwStr%: 28.7% | BABIP: .299
+対左: 0.240 (OPS 0.666) | 対右: 0.220 (OPS 0.606)
+**中継ぎ陣** (8名):
+ERA: 4.24 | FIP: 4.17 | xFIP: 2.90 | WHIP: 1.31 | K-BB%: 13.7% | WAR: 0.0
+CL: Jordan Romano (FIP: 7.54)
+SU: Matt Strahm (FIP: 6.55), Orion Kerkering (FIP: 8.12)
+疲労度: 主力4名が連投中
+**チーム打撃**:
+AVG: .256 | OPS: .735 | 得点: 369 | 本塁打: 83
+wOBA: 0.324 | xwOBA: 0.329
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .259 (OPS .739) | 対右投手: .255 (OPS .734)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+【Houston Astros】
+**先発**: Hunter Brown (8勝3敗)
+ERA: 1.88 | FIP: 2.87 | xFIP: 2.84 | WHIP: 0.92 | K-BB%: 23.5% | GB%: 46.3% | FB%: 22.0% | QS率: 73.3%
+SwStr%: 28.2% | BABIP: .244
+対左: 0.188 (OPS 0.565) | 対右: 0.168 (OPS 0.505)
+**中継ぎ陣** (7名):
+ERA: 2.62 | FIP: 2.88 | xFIP: 2.07 | WHIP: 0.96 | K-BB%: 24.5% | WAR: 0.0
+CL: Josh Hader (FIP: 0.88)
+SU: Bryan Abreu (FIP: 1.81), Bryan King (FIP: 1.50)
+疲労度: 主力3名が連投中
+**チーム打撃**:
+AVG: .257 | OPS: .723 | 得点: 334 | 本塁打: 85
+wOBA: 0.318 | xwOBA: 0.323
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .257 (OPS .793) | 対右投手: .257 (OPS .711)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+==================================================
+
+============================================================
+**Chicago Cubs @ St. Louis Cardinals**
+開始時刻: 06/27 03:15 (日本時間)
+==================================================
+【Chicago Cubs】
+**先発**: Shota Imanaga (3勝2敗)
+ERA: 2.82 | FIP: 4.56 | xFIP: 4.84 | WHIP: 1.10 | K-BB%: 11.0% | GB%: 27.1% | FB%: 38.3% | QS率: 25.0%
+SwStr%: 25.3% | BABIP: .224
+対左: 0.221 (OPS 0.688) | 対右: 0.201 (OPS 0.628)
+**中継ぎ陣** (9名):
+
+=== Part 5/7 ===
+ERA: 2.31 | FIP: 3.11 | xFIP: 3.03 | WHIP: 1.12 | K-BB%: 12.8% | WAR: 0.0
+CL: Daniel Palencia (FIP: 1.49)
+SU: Brad Keller (FIP: 2.37), Caleb Thielbar (FIP: 1.45)
+疲労度: 主力3名が連投中
+**チーム打撃**:
+AVG: .255 | OPS: .768 | 得点: 426 | 本塁打: 115
+wOBA: 0.334 | xwOBA: 0.339
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .252 (OPS .762) | 対右投手: .256 (OPS .771)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+【St. Louis Cardinals】
+**先発**: Andre Pallante (5勝3敗)
+ERA: 4.48 | FIP: 4.45 | xFIP: 3.57 | WHIP: 1.31 | K-BB%: 8.8% | GB%: 64.3% | FB%: 15.8% | QS率: 26.7%
+SwStr%: 22.9% | BABIP: .277
+対左: 0.262 (OPS 0.765) | 対右: 0.242 (OPS 0.705)
+**中継ぎ陣** (8名):
+ERA: 3.19 | FIP: 3.52 | xFIP: 2.97 | WHIP: 1.26 | K-BB%: 12.8% | WAR: 0.0
+CL: Ryan Helsley (FIP: 6.70)
+SU: JoJo Romero (FIP: 4.43), Kyle Leahy (FIP: 5.43)
+疲労度: 主力2名が連投中
+**チーム打撃**:
+AVG: .256 | OPS: .726 | 得点: 382 | 本塁打: 81
+wOBA: 0.320 | xwOBA: 0.325
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .242 (OPS .694) | 対右投手: .262 (OPS .740)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+==================================================
+
+============================================================
+**Los Angeles Dodgers @ Colorado Rockies**
+開始時刻: 06/27 04:10 (日本時間)
+==================================================
+【Los Angeles Dodgers】
+**先発**: Clayton Kershaw (3勝0敗)
+ERA: 3.31 | FIP: 4.32 | xFIP: 4.33 | WHIP: 1.32 | K-BB%: 8.8% | GB%: 45.0% | FB%: 26.0% | QS率: 14.3%
+SwStr%: 24.9% | BABIP: .281
+対左: 0.262 (OPS 0.777) | 対右: 0.242 (OPS 0.717)
+**中継ぎ陣** (10名):
+ERA: 3.69 | FIP: 3.60 | xFIP: 2.56 | WHIP: 1.16 | K-BB%: 17.8% | WAR: 0.0
+CL: Tanner Scott (FIP: 6.34)
+SU: Alex Vesia (FIP: 4.34), Ben Casparius (FIP: 4.55)
+疲労度: 主力4名が連投中
+**チーム打撃**:
+AVG: .265 | OPS: .802 | 得点: 451 | 本塁打: 125
+wOBA: 0.347 | xwOBA: 0.352
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .263 (OPS .788) | 対右投手: .266 (OPS .807)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+【Colorado Rockies】
+**先発**: Austin Gomber (0勝1敗)
+
+=== Part 6/7 ===
+ERA: 8.38 | FIP: 6.93 | xFIP: 6.22 | WHIP: 1.66 | K-BB%: 4.5% | GB%: 26.3% | FB%: 44.7% | QS率: 0.0%
+SwStr%: 17.8% | BABIP: .324
+対左: 0.351 (OPS 1.061) | 対右: 0.331 (OPS 1.001)
+**中継ぎ陣** (9名):
+ERA: 4.46 | FIP: 4.32 | xFIP: 3.21 | WHIP: 1.42 | K-BB%: 10.8% | WAR: 0.0
+CL: Seth Halvorsen (FIP: 9.97)
+SU: Jake Bird (FIP: 4.55), Tyler Kinley (FIP: 10.82)
+疲労度: 主力3名が連投中
+**チーム打撃**:
+AVG: .230 | OPS: .677 | 得点: 283 | 本塁打: 77
+wOBA: 0.297 | xwOBA: 0.302
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .216 (OPS .629) | 対右投手: .235 (OPS .694)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+==================================================
+
+============================================================
+**Miami Marlins @ San Francisco Giants**
+開始時刻: 06/27 04:45 (日本時間)
+==================================================
+【Miami Marlins】
+**先発**: Janson Junk (2勝0敗)
+ERA: 2.60 | FIP: 1.51 | xFIP: 2.77 | WHIP: 1.01 | K-BB%: 21.1% | GB%: 46.3% | FB%: 18.3% | QS率: 0.0%
+SwStr%: 22.2% | BABIP: .317
+対左: 0.258 (OPS 0.573) | 対右: 0.238 (OPS 0.513)
+**中継ぎ陣** (9名):
+ERA: 3.35 | FIP: 3.79 | xFIP: 3.07 | WHIP: 1.23 | K-BB%: 11.9% | WAR: 0.0
+CL: Calvin Faucher (FIP: 4.60)
+SU: Anthony Bender (FIP: 4.42), Ronny Henriquez (FIP: 5.14)
+疲労度: 主力3名が連投中
+**チーム打撃**:
+AVG: .252 | OPS: .698 | 得点: 310 | 本塁打: 66
+wOBA: 0.307 | xwOBA: 0.312
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .249 (OPS .676) | 対右投手: .253 (OPS .706)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+【San Francisco Giants】
+**先発**: Hayden Birdsong (3勝1敗)
+ERA: 3.25 | FIP: 3.80 | xFIP: 4.06 | WHIP: 1.33 | K-BB%: 15.2% | GB%: 38.2% | FB%: 28.3% | QS率: 50.0%
+SwStr%: 28.9% | BABIP: .303
+対左: 0.256 (OPS 0.748) | 対右: 0.236 (OPS 0.688)
+**中継ぎ陣** (9名):
+ERA: 2.51 | FIP: 3.17 | xFIP: 2.85 | WHIP: 1.11 | K-BB%: 14.6% | WAR: 0.0
+CL: Camilo Doval (FIP: 3.06)
+SU: Erik Miller (FIP: 4.04), Randy Rodríguez (FIP: 2.46)
+疲労度: 主力5名が連投中
+**チーム打撃**:
+AVG: .232 | OPS: .686 | 得点: 334 | 本塁打: 77
+wOBA: 0.305 | xwOBA: 0.310
+
+=== Part 7/7 ===
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .215 (OPS .633) | 対右投手: .238 (OPS .706)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+==================================================
+
+============================================================
+**Atlanta Braves @ New York Mets**
+開始時刻: 06/27 08:10 (日本時間)
+==================================================
+【Atlanta Braves】
+**先発**: Grant Holmes (4勝6敗)
+ERA: 3.71 | FIP: 4.44 | xFIP: 3.63 | WHIP: 1.22 | K-BB%: 16.5% | GB%: 47.4% | FB%: 28.6% | QS率: 26.7%
+SwStr%: 29.1% | BABIP: .256
+対左: 0.222 (OPS 0.725) | 対右: 0.202 (OPS 0.665)
+**中継ぎ陣** (8名):
+ERA: 3.44 | FIP: 3.32 | xFIP: 2.58 | WHIP: 1.15 | K-BB%: 17.8% | WAR: 0.0
+CL: Raisel Iglesias (FIP: 4.11)
+SU: Dylan Lee (FIP: 2.67), Pierce Johnson (FIP: 2.40)
+疲労度: 主力3名が連投中
+**チーム打撃**:
+AVG: .245 | OPS: .704 | 得点: 329 | 本塁打: 81
+wOBA: 0.311 | xwOBA: 0.316
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .224 (OPS .663) | 対右投手: .251 (OPS .718)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+【New York Mets】
+**先発**: Griffin Canning (7勝3敗)
+ERA: 3.91 | FIP: 4.12 | xFIP: 4.05 | WHIP: 1.41 | K-BB%: 10.0% | GB%: 51.6% | FB%: 21.7% | QS率: 20.0%
+SwStr%: 25.6% | BABIP: .293
+対左: 0.254 (OPS 0.728) | 対右: 0.234 (OPS 0.668)
+**中継ぎ陣** (7名):
+ERA: 2.94 | FIP: 3.33 | xFIP: 3.00 | WHIP: 1.23 | K-BB%: 14.0% | WAR: 0.0
+CL: Edwin Díaz (FIP: 3.07)
+SU: Huascar Brazobán (FIP: 3.91), Reed Garrett (FIP: 3.78)
+疲労度: 主力3名が連投中
+**チーム打撃**:
+AVG: .243 | OPS: .741 | 得点: 353 | 本塁打: 104
+wOBA: 0.325 | xwOBA: 0.330
+Barrel%: 8.0% | Hard-Hit%: 40.0%
+対左投手: .230 (OPS .671) | 対右投手: .247 (OPS .763)
+過去5試合OPS: 0.700 | 過去10試合OPS: 0.700
+==================================================
+
+
+

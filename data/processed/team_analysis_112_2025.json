@@ -1,0 +1,26 @@
+{
+  "teamId": 112,
+  "teamName": "Cubs",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:32:02.841273",
+  "pitching": {
+    "teamId": 112,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 0.0,
+      "whip": 0.0,
+      "totalInnings": 0.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 112,
+    "season": 2025,
+    "avg": ".254",
+    "ops": ".761",
+    "hits": 649,
+    "runs": 397,
+    "rbi": 389
+  }
+}

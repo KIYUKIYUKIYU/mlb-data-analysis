@@ -1,0 +1,124 @@
+{
+  "team_id": 118,
+  "games": 5,
+  "timestamp": "20250620_183605",
+  "players": [
+    {
+      "player_id": 677951,
+      "name": "Bobby Witt Jr.",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.476,
+      "slg": 0.722,
+      "ops": 1.198
+    },
+    {
+      "player_id": 521692,
+      "name": "Salvador Perez",
+      "position": "C",
+      "games": 5,
+      "obp": 0.35,
+      "slg": 0.722,
+      "ops": 1.072
+    },
+    {
+      "player_id": 672580,
+      "name": "Maikel Garcia",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.368,
+      "slg": 0.684,
+      "ops": 1.053
+    },
+    {
+      "player_id": 695506,
+      "name": "Jac Caglianone",
+      "position": "OF",
+      "games": 5,
+      "obp": 0.263,
+      "slg": 0.556,
+      "ops": 0.819
+    },
+    {
+      "player_id": 686475,
+      "name": "Tyler Tolbert",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.333,
+      "ops": 0.667
+    },
+    {
+      "player_id": 686469,
+      "name": "Vinnie Pasquantino",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.3,
+      "slg": 0.353,
+      "ops": 0.653
+    },
+    {
+      "player_id": 666023,
+      "name": "Freddy Fermin",
+      "position": "C",
+      "games": 5,
+      "obp": 0.353,
+      "slg": 0.267,
+      "ops": 0.62
+    },
+    {
+      "player_id": 679845,
+      "name": "Nick Loftin",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.211,
+      "slg": 0.353,
+      "ops": 0.563
+    },
+    {
+      "player_id": 664728,
+      "name": "Kyle Isbel",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.222,
+      "slg": 0.25,
+      "ops": 0.472
+    },
+    {
+      "player_id": 671221,
+      "name": "Drew Waters",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.091,
+      "ops": 0.258
+    },
+    {
+      "player_id": 670231,
+      "name": "John Rave",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.111,
+      "slg": 0.125,
+      "ops": 0.236
+    },
+    {
+      "player_id": 592192,
+      "name": "Mark Canha",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.133,
+      "slg": 0.071,
+      "ops": 0.205
+    },
+    {
+      "player_id": 663697,
+      "name": "Jonathan India",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.056,
+      "slg": 0.056,
+      "ops": 0.111
+    }
+  ]
+}

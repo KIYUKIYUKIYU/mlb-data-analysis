@@ -1,0 +1,124 @@
+{
+  "team_id": 112,
+  "games": 5,
+  "timestamp": "20250620_183209",
+  "players": [
+    {
+      "player_id": 663656,
+      "name": "Kyle Tucker",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.474,
+      "slg": 0.562,
+      "ops": 1.036
+    },
+    {
+      "player_id": 691718,
+      "name": "Pete Crow-Armstrong",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.368,
+      "slg": 0.625,
+      "ops": 0.993
+    },
+    {
+      "player_id": 621020,
+      "name": "Dansby Swanson",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.316,
+      "slg": 0.611,
+      "ops": 0.927
+    },
+    {
+      "player_id": 624512,
+      "name": "Reese McGuire",
+      "position": "C",
+      "games": 5,
+      "obp": 0.357,
+      "slg": 0.385,
+      "ops": 0.742
+    },
+    {
+      "player_id": 663538,
+      "name": "Nico Hoerner",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.389,
+      "ops": 0.722
+    },
+    {
+      "player_id": 664023,
+      "name": "Ian Happ",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.348,
+      "slg": 0.353,
+      "ops": 0.701
+    },
+    {
+      "player_id": 683737,
+      "name": "Michael Busch",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.316,
+      "slg": 0.353,
+      "ops": 0.669
+    },
+    {
+      "player_id": 673548,
+      "name": "Seiya Suzuki",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.136,
+      "slg": 0.273,
+      "ops": 0.409
+    },
+    {
+      "player_id": 608348,
+      "name": "Carson Kelly",
+      "position": "C",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.222,
+      "ops": 0.389
+    },
+    {
+      "player_id": 457759,
+      "name": "Justin Turner",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.143,
+      "slg": 0.143,
+      "ops": 0.286
+    },
+    {
+      "player_id": 807713,
+      "name": "Matt Shaw",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.118,
+      "slg": 0.125,
+      "ops": 0.243
+    },
+    {
+      "player_id": 542932,
+      "name": "Jon Berti",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.0,
+      "slg": 0.0,
+      "ops": 0.0
+    },
+    {
+      "player_id": 660644,
+      "name": "Vidal Bruján",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.0,
+      "slg": 0.0,
+      "ops": 0.0
+    }
+  ]
+}

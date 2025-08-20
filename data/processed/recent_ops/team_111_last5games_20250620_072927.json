@@ -1,0 +1,124 @@
+{
+  "team_id": 111,
+  "games": 5,
+  "timestamp": "20250620_072927",
+  "players": [
+    {
+      "player_id": 681987,
+      "name": "Nate Eaton",
+      "position": "RF",
+      "games": 1,
+      "obp": 1.0,
+      "slg": 1.0,
+      "ops": 2.0
+    },
+    {
+      "player_id": 608701,
+      "name": "Rob Refsnyder",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.462,
+      "slg": 0.455,
+      "ops": 0.916
+    },
+    {
+      "player_id": 663853,
+      "name": "Romy Gonzalez",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.529,
+      "ops": 0.863
+    },
+    {
+      "player_id": 596115,
+      "name": "Trevor Story",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.278,
+      "slg": 0.529,
+      "ops": 0.807
+    },
+    {
+      "player_id": 665966,
+      "name": "Carlos Narváez",
+      "position": "C",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 0.375,
+      "ops": 0.804
+    },
+    {
+      "player_id": 691785,
+      "name": "Marcelo Mayer",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.2,
+      "slg": 0.385,
+      "ops": 0.585
+    },
+    {
+      "player_id": 701350,
+      "name": "Roman Anthony",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.214,
+      "slg": 0.333,
+      "ops": 0.548
+    },
+    {
+      "player_id": 657136,
+      "name": "Connor Wong",
+      "position": "C",
+      "games": 5,
+      "obp": 0.294,
+      "slg": 0.143,
+      "ops": 0.437
+    },
+    {
+      "player_id": 692225,
+      "name": "Kristian Campbell",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.308,
+      "slg": 0.1,
+      "ops": 0.408
+    },
+    {
+      "player_id": 647351,
+      "name": "Abraham Toro",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.211,
+      "slg": 0.118,
+      "ops": 0.328
+    },
+    {
+      "player_id": 680776,
+      "name": "Jarren Duran",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.111,
+      "slg": 0.176,
+      "ops": 0.288
+    },
+    {
+      "player_id": 678882,
+      "name": "Ceddanne Rafaela",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.091,
+      "slg": 0.091,
+      "ops": 0.182
+    },
+    {
+      "player_id": 666152,
+      "name": "David Hamilton",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.111,
+      "slg": 0.0,
+      "ops": 0.111
+    }
+  ]
+}

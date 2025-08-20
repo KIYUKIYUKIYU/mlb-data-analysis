@@ -1,0 +1,44 @@
+{
+  "teamId": 138,
+  "teamName": "Cardinals",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:41:53.470028",
+  "pitching": {
+    "teamId": 138,
+    "season": 2025,
+    "starters": [
+      {
+        "id": 669467,
+        "name": "Andre Pallante",
+        "handedness": "R",
+        "era": "4.83",
+        "whip": "1.38",
+        "fip": 4.724,
+        "strikeouts": 54,
+        "innings": "76.1",
+        "gamesStarted": 14,
+        "strikeoutRate": 0.163,
+        "groundBallRate": 0.759,
+        "flyBallRate": 0.241,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      }
+    ],
+    "bullpenAggregate": {
+      "era": 0.0,
+      "whip": 0.6,
+      "totalInnings": 5.0,
+      "pitcherCount": 9
+    }
+  },
+  "batting": {
+    "teamId": 138,
+    "season": 2025,
+    "avg": ".257",
+    "ops": ".724",
+    "hits": 657,
+    "runs": 353,
+    "rbi": 335
+  }
+}

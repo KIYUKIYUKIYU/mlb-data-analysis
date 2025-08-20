@@ -1,0 +1,61 @@
+{
+  "teamId": 145,
+  "teamName": "White Sox",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:46:30.270954",
+  "pitching": {
+    "teamId": 145,
+    "season": 2025,
+    "starters": [
+      {
+        "id": 650644,
+        "name": "Aaron Civale",
+        "handedness": "R",
+        "era": "4.67",
+        "whip": "1.48",
+        "fip": 5.348,
+        "strikeouts": 23,
+        "innings": "27.0",
+        "gamesStarted": 6,
+        "strikeoutRate": 0.195,
+        "groundBallRate": 0.245,
+        "flyBallRate": 0.755,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      },
+      {
+        "id": 605288,
+        "name": "Adrian Houser",
+        "handedness": "R",
+        "era": "2.15",
+        "whip": "1.19",
+        "fip": 3.612,
+        "strikeouts": 22,
+        "innings": "29.1",
+        "gamesStarted": 5,
+        "strikeoutRate": 0.188,
+        "groundBallRate": 0.517,
+        "flyBallRate": 0.483,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      }
+    ],
+    "bullpenAggregate": {
+      "era": 0.0,
+      "whip": 0.0,
+      "totalInnings": 0.0,
+      "pitcherCount": 8
+    }
+  },
+  "batting": {
+    "teamId": 145,
+    "season": 2025,
+    "avg": ".222",
+    "ops": ".637",
+    "hits": 546,
+    "runs": 260,
+    "rbi": 249
+  }
+}

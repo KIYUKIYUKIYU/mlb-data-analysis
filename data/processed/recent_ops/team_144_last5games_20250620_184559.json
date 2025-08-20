@@ -1,0 +1,124 @@
+{
+  "team_id": 144,
+  "games": 5,
+  "timestamp": "20250620_184559",
+  "players": [
+    {
+      "player_id": 660670,
+      "name": "Ronald Acuña Jr.",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.619,
+      "slg": 0.846,
+      "ops": 1.465
+    },
+    {
+      "player_id": 621566,
+      "name": "Matt Olson",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.5,
+      "slg": 0.667,
+      "ops": 1.167
+    },
+    {
+      "player_id": 656413,
+      "name": "Stuart Fairchild",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.556,
+      "slg": 0.429,
+      "ops": 0.984
+    },
+    {
+      "player_id": 669397,
+      "name": "Nick Allen",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.375,
+      "slg": 0.308,
+      "ops": 0.683
+    },
+    {
+      "player_id": 645277,
+      "name": "Ozzie Albies",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.263,
+      "slg": 0.389,
+      "ops": 0.652
+    },
+    {
+      "player_id": 642201,
+      "name": "Eli White",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.308,
+      "slg": 0.308,
+      "ops": 0.615
+    },
+    {
+      "player_id": 669221,
+      "name": "Sean Murphy",
+      "position": "C",
+      "games": 5,
+      "obp": 0.3,
+      "slg": 0.278,
+      "ops": 0.578
+    },
+    {
+      "player_id": 657077,
+      "name": "Alex Verdugo",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.312,
+      "slg": 0.214,
+      "ops": 0.527
+    },
+    {
+      "player_id": 542303,
+      "name": "Marcell Ozuna",
+      "position": "DH",
+      "games": 5,
+      "obp": 0.238,
+      "slg": 0.263,
+      "ops": 0.501
+    },
+    {
+      "player_id": 663897,
+      "name": "Luke Williams",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.5,
+      "slg": 0.0,
+      "ops": 0.5
+    },
+    {
+      "player_id": 663586,
+      "name": "Austin Riley",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.273,
+      "slg": 0.211,
+      "ops": 0.483
+    },
+    {
+      "player_id": 686948,
+      "name": "Drake Baldwin",
+      "position": "C",
+      "games": 5,
+      "obp": 0.278,
+      "slg": 0.188,
+      "ops": 0.465
+    },
+    {
+      "player_id": 671739,
+      "name": "Michael Harris II",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.056,
+      "slg": 0.056,
+      "ops": 0.111
+    }
+  ]
+}

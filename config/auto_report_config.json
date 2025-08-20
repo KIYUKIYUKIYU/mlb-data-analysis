@@ -1,0 +1,18 @@
+{
+  "enable_email": false,
+  "email_to": [],
+  "email_from": "",
+  "email_password": "",
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587,
+  
+  "enable_discord": false,
+  "discord_webhook": "",
+  
+  "enable_google_drive": true,
+  "google_drive_folder_id": "16vrCXsZbIbmZmHNFLxQZ0CjZzwMKmCQw",
+  
+  "keep_days": 30,
+  
+  "comment": "google_drive_folder_idにGoogle DriveのフォルダIDを入力してください"
+}

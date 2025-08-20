@@ -1,0 +1,124 @@
+{
+  "team_id": 116,
+  "games": 5,
+  "timestamp": "20250620_183446",
+  "players": [
+    {
+      "player_id": 595879,
+      "name": "Javier Báez",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.571,
+      "slg": 1.111,
+      "ops": 1.683
+    },
+    {
+      "player_id": 663330,
+      "name": "Jahmai Jones",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.5,
+      "slg": 0.8,
+      "ops": 1.3
+    },
+    {
+      "player_id": 672761,
+      "name": "Wenceel Pérez",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.4,
+      "slg": 0.824,
+      "ops": 1.224
+    },
+    {
+      "player_id": 690993,
+      "name": "Colt Keith",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.471,
+      "slg": 0.692,
+      "ops": 1.163
+    },
+    {
+      "player_id": 700242,
+      "name": "Trey Sweeney",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 0.667,
+      "ops": 1.095
+    },
+    {
+      "player_id": 650402,
+      "name": "Gleyber Torres",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.455,
+      "slg": 0.556,
+      "ops": 1.01
+    },
+    {
+      "player_id": 668670,
+      "name": "Jake Rogers",
+      "position": "C",
+      "games": 5,
+      "obp": 0.438,
+      "slg": 0.462,
+      "ops": 0.899
+    },
+    {
+      "player_id": 682985,
+      "name": "Riley Greene",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.304,
+      "slg": 0.524,
+      "ops": 0.828
+    },
+    {
+      "player_id": 656716,
+      "name": "Zach McKinstry",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.238,
+      "slg": 0.35,
+      "ops": 0.588
+    },
+    {
+      "player_id": 693307,
+      "name": "Dillon Dingler",
+      "position": "C",
+      "games": 5,
+      "obp": 0.2,
+      "slg": 0.316,
+      "ops": 0.516
+    },
+    {
+      "player_id": 678009,
+      "name": "Parker Meadows",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.294,
+      "ops": 0.461
+    },
+    {
+      "player_id": 679529,
+      "name": "Spencer Torkelson",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.273,
+      "slg": 0.176,
+      "ops": 0.449
+    },
+    {
+      "player_id": 681481,
+      "name": "Kerry Carpenter",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.214,
+      "slg": 0.083,
+      "ops": 0.298
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "team_id": 134,
+  "games": 5,
+  "timestamp": "20250620_183922",
+  "players": [
+    {
+      "player_id": 457705,
+      "name": "Andrew McCutchen",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.381,
+      "slg": 0.75,
+      "ops": 1.131
+    },
+    {
+      "player_id": 693304,
+      "name": "Nick Gonzales",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.318,
+      "slg": 0.5,
+      "ops": 0.818
+    },
+    {
+      "player_id": 687462,
+      "name": "Spencer Horwitz",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.35,
+      "slg": 0.368,
+      "ops": 0.718
+    },
+    {
+      "player_id": 669707,
+      "name": "Jared Triolo",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.364,
+      "ops": 0.697
+    },
+    {
+      "player_id": 672744,
+      "name": "Alexander Canario",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.364,
+      "slg": 0.222,
+      "ops": 0.586
+    },
+    {
+      "player_id": 695257,
+      "name": "Billy Cook",
+      "position": "OF",
+      "games": 2,
+      "obp": 0.25,
+      "slg": 0.25,
+      "ops": 0.5
+    },
+    {
+      "player_id": 680779,
+      "name": "Henry Davis",
+      "position": "C",
+      "games": 5,
+      "obp": 0.278,
+      "slg": 0.2,
+      "ops": 0.478
+    },
+    {
+      "player_id": 643396,
+      "name": "Isiah Kiner-Falefa",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.222,
+      "slg": 0.222,
+      "ops": 0.444
+    },
+    {
+      "player_id": 624428,
+      "name": "Adam Frazier",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.158,
+      "slg": 0.158,
+      "ops": 0.316
+    },
+    {
+      "player_id": 665833,
+      "name": "Oneil Cruz",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.174,
+      "slg": 0.136,
+      "ops": 0.31
+    },
+    {
+      "player_id": 663698,
+      "name": "Joey Bart",
+      "position": "C",
+      "games": 5,
+      "obp": 0.214,
+      "slg": 0.083,
+      "ops": 0.298
+    },
+    {
+      "player_id": 502054,
+      "name": "Tommy Pham",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.273,
+      "slg": 0.0,
+      "ops": 0.273
+    },
+    {
+      "player_id": 663647,
+      "name": "Ke'Bryan Hayes",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.125,
+      "slg": 0.125,
+      "ops": 0.25
+    },
+    {
+      "player_id": 669261,
+      "name": "Jack Suwinski",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.0,
+      "ops": 0.167
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "team_id": 136,
+  "games": 5,
+  "timestamp": "20250620_184042",
+  "players": [
+    {
+      "player_id": 641487,
+      "name": "J.P. Crawford",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.652,
+      "slg": 0.75,
+      "ops": 1.402
+    },
+    {
+      "player_id": 456781,
+      "name": "Donovan Solano",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 0.615,
+      "ops": 1.044
+    },
+    {
+      "player_id": 663728,
+      "name": "Cal Raleigh",
+      "position": "C",
+      "games": 5,
+      "obp": 0.381,
+      "slg": 0.632,
+      "ops": 1.013
+    },
+    {
+      "player_id": 702284,
+      "name": "Cole Young",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.444,
+      "slg": 0.5,
+      "ops": 0.944
+    },
+    {
+      "player_id": 642133,
+      "name": "Rowdy Tellez",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.211,
+      "slg": 0.474,
+      "ops": 0.684
+    },
+    {
+      "player_id": 810938,
+      "name": "Ben Williamson",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.312,
+      "ops": 0.646
+    },
+    {
+      "player_id": 668227,
+      "name": "Randy Arozarena",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.421,
+      "slg": 0.167,
+      "ops": 0.588
+    },
+    {
+      "player_id": 686527,
+      "name": "Dominic Canzone",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.267,
+      "ops": 0.517
+    },
+    {
+      "player_id": 641598,
+      "name": "Mitch Garver",
+      "position": "C",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.263,
+      "ops": 0.513
+    },
+    {
+      "player_id": 664238,
+      "name": "Dylan Moore",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.222,
+      "slg": 0.125,
+      "ops": 0.347
+    },
+    {
+      "player_id": 670156,
+      "name": "Miles Mastrobuoni",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.2,
+      "slg": 0.111,
+      "ops": 0.311
+    },
+    {
+      "player_id": 593871,
+      "name": "Jorge Polanco",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.19,
+      "slg": 0.118,
+      "ops": 0.308
+    },
+    {
+      "player_id": 677594,
+      "name": "Julio Rodríguez",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.19,
+      "slg": 0.105,
+      "ops": 0.296
+    }
+  ]
+}

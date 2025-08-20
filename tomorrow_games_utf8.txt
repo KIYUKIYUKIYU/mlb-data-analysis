@@ -1,0 +1,375 @@
+Error getting enhanced stats for pitcher 668678: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 680732: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Arizona Diamondbacks @ Chicago White Sox**
+開始時刻: 06/26 03:10 (日本時間)
+==================================================
+【Arizona Diamondbacks】
+**先発**: Zac Gallen (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【Chicago White Sox】
+**先発**: Sean Burke (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 694973: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 694819: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Pittsburgh Pirates @ Milwaukee Brewers**
+開始時刻: 06/26 03:10 (日本時間)
+==================================================
+【Pittsburgh Pirates】
+**先発**: Paul Skenes (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【Milwaukee Brewers】
+**先発**: Jacob Misiorowski (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 690916: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 579328: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Boston Red Sox @ Los Angeles Angels**
+開始時刻: 06/26 05:07 (日本時間)
+==================================================
+【Boston Red Sox】
+**先発**: Richard Fitts (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【Los Angeles Angels】
+**先発**: Yusei Kikuchi (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 669022: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Washington Nationals @ San Diego Padres**
+開始時刻: 06/26 05:10 (日本時間)
+==================================================
+【Washington Nationals】
+**先発**: MacKenzie Gore (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【San Diego Padres】
+**先発**: 未定
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Texas Rangers @ Baltimore Orioles**
+開始時刻: 06/26 07:35 (日本時間)
+==================================================
+【Texas Rangers】
+**先発**: 未定
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【Baltimore Orioles】 ハンデ: +0.4 (出し)
+**先発**: 未定
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 682052: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 656427: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Athletics @ Detroit Tigers**
+開始時刻: 06/26 07:40 (日本時間)
+==================================================
+【Athletics】
+**先発**: Jacob Lopez (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【Detroit Tigers】
+**先発**: Jack Flaherty (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 453286: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 668909: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Toronto Blue Jays @ Cleveland Guardians**
+開始時刻: 06/26 07:40 (日本時間)
+==================================================
+【Toronto Blue Jays】
+**先発**: Max Scherzer (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【Cleveland Guardians】
+**先発**: Gavin Williams (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 800311: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 605280: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Atlanta Braves @ New York Mets**
+開始時刻: 06/26 08:10 (日本時間)
+==================================================
+【Atlanta Braves】
+**先発**: Didier Fuentes (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【New York Mets】
+**先発**: Clay Holmes (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 608331: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 663903: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**New York Yankees @ Cincinnati Reds**
+開始時刻: 06/26 08:10 (日本時間)
+==================================================
+【New York Yankees】 ハンデ: +0.4 (もらい)
+**先発**: Max Fried (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【Cincinnati Reds】
+**先発**: Brady Singer (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 656876: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 608379: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Tampa Bay Rays @ Kansas City Royals**
+開始時刻: 06/26 08:40 (日本時間)
+==================================================
+【Tampa Bay Rays】
+**先発**: Drew Rasmussen (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【Kansas City Royals】
+**先発**: Michael Wacha (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 669923: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 657746: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Seattle Mariners @ Minnesota Twins**
+開始時刻: 06/26 08:40 (日本時間)
+==================================================
+【Seattle Mariners】
+**先発**: George Kirby (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【Minnesota Twins】
+**先発**: Joe Ryan (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 571510: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Chicago Cubs @ St. Louis Cardinals**
+開始時刻: 06/26 08:45 (日本時間)
+==================================================
+【Chicago Cubs】
+**先発**: Matthew Boyd (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【St. Louis Cardinals】
+**先発**: 未定
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 554430: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 676467: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Philadelphia Phillies @ Houston Astros**
+開始時刻: 06/26 09:10 (日本時間)
+==================================================
+【Philadelphia Phillies】
+**先発**: Zack Wheeler (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【Houston Astros】
+**先発**: Colton Gordon (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 808967: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 801403: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Los Angeles Dodgers @ Colorado Rockies**
+開始時刻: 06/26 09:40 (日本時間)
+==================================================
+【Los Angeles Dodgers】
+**先発**: Yoshinobu Yamamoto (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【Colorado Rockies】
+**先発**: Chase Dollander (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Error getting enhanced stats for pitcher 665795: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+Error getting enhanced stats for pitcher 657277: 'MLBApiClient' object has no attribute 'get_player_info'
+Error getting team stats: MLBApiClient.get_team_stats() missing 1 required positional argument: 'season'
+============================================================
+**Miami Marlins @ San Francisco Giants**
+開始時刻: 06/26 10:45 (日本時間)
+==================================================
+【Miami Marlins】
+**先発**: Edward Cabrera (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+【San Francisco Giants】
+**先発**: Logan Webb (0勝0敗)
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | GB%: 0.0% | FB%: 0.0% | QS率: 0.0%
+SwStr%: 0.0% | BABIP: 0.300
+対左: .000 (OPS .000) | 対右: .000 (OPS .000)
+**中継ぎ陣** (0名):
+ERA: 0.00 | FIP: 0.00 | xFIP: 0.00 | WHIP: 0.00 | K-BB%: 0.0% | WAR: 0.0
+**チーム打撃**: データ取得エラー
+==================================================
+
+Discord送信メソッドが見つかりません

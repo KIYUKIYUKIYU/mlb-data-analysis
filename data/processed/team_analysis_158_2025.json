@@ -1,0 +1,26 @@
+{
+  "teamId": 158,
+  "teamName": "Brewers",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:48:28.206325",
+  "pitching": {
+    "teamId": 158,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 1.76,
+      "whip": 1.11,
+      "totalInnings": 45.3,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 158,
+    "season": 2025,
+    "avg": ".238",
+    "ops": ".683",
+    "hits": 593,
+    "runs": 327,
+    "rbi": 303
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "teamId": 140,
+  "teamName": "Rangers",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:43:12.832094",
+  "pitching": {
+    "teamId": 140,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 0.0,
+      "whip": 0.0,
+      "totalInnings": 0.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 140,
+    "season": 2025,
+    "avg": ".228",
+    "ops": ".662",
+    "hits": 560,
+    "runs": 270,
+    "rbi": 261
+  }
+}

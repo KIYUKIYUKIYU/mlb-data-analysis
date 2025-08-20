@@ -1,0 +1,44 @@
+{
+  "teamId": 143,
+  "teamName": "Phillies",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:45:10.894184",
+  "pitching": {
+    "teamId": 143,
+    "season": 2025,
+    "starters": [
+      {
+        "id": 605400,
+        "name": "Aaron Nola",
+        "handedness": "R",
+        "era": "6.16",
+        "whip": "1.51",
+        "fip": 5.151,
+        "strikeouts": 52,
+        "innings": "49.2",
+        "gamesStarted": 9,
+        "strikeoutRate": 0.236,
+        "groundBallRate": 0.522,
+        "flyBallRate": 0.478,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      }
+    ],
+    "bullpenAggregate": {
+      "era": 6.0,
+      "whip": 1.67,
+      "totalInnings": 3.0,
+      "pitcherCount": 9
+    }
+  },
+  "batting": {
+    "teamId": 143,
+    "season": 2025,
+    "avg": ".256",
+    "ops": ".736",
+    "hits": 653,
+    "runs": 348,
+    "rbi": 332
+  }
+}

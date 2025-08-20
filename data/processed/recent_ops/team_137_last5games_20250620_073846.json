@@ -1,0 +1,124 @@
+{
+  "team_id": 137,
+  "games": 5,
+  "timestamp": "20250620_073846",
+  "players": [
+    {
+      "player_id": 573262,
+      "name": "Mike Yastrzemski",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.6,
+      "slg": 0.625,
+      "ops": 1.225
+    },
+    {
+      "player_id": 669288,
+      "name": "Daniel Johnson",
+      "position": "OF",
+      "games": 5,
+      "obp": 0.375,
+      "slg": 0.667,
+      "ops": 1.042
+    },
+    {
+      "player_id": 646240,
+      "name": "Rafael Devers",
+      "position": "DH",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.444,
+      "ops": 0.778
+    },
+    {
+      "player_id": 669477,
+      "name": "Casey Schmitt",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.294,
+      "slg": 0.438,
+      "ops": 0.732
+    },
+    {
+      "player_id": 668800,
+      "name": "Andrew Knizner",
+      "position": "C",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.417,
+      "ops": 0.583
+    },
+    {
+      "player_id": 683766,
+      "name": "Christian Koss",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.286,
+      "slg": 0.286,
+      "ops": 0.571
+    },
+    {
+      "player_id": 671218,
+      "name": "Heliot Ramos",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.286,
+      "slg": 0.25,
+      "ops": 0.536
+    },
+    {
+      "player_id": 642715,
+      "name": "Willy Adames",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.286,
+      "slg": 0.211,
+      "ops": 0.496
+    },
+    {
+      "player_id": 642086,
+      "name": "Dominic Smith",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.278,
+      "slg": 0.2,
+      "ops": 0.478
+    },
+    {
+      "player_id": 527038,
+      "name": "Wilmer Flores",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.286,
+      "slg": 0.182,
+      "ops": 0.468
+    },
+    {
+      "player_id": 808982,
+      "name": "Jung Hoo Lee",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.227,
+      "slg": 0.211,
+      "ops": 0.438
+    },
+    {
+      "player_id": 672275,
+      "name": "Patrick Bailey",
+      "position": "C",
+      "games": 5,
+      "obp": 0.188,
+      "slg": 0.25,
+      "ops": 0.438
+    },
+    {
+      "player_id": 666149,
+      "name": "Tyler Fitzgerald",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.25,
+      "ops": 0.417
+    }
+  ]
+}

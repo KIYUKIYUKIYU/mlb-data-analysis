@@ -1,0 +1,26 @@
+{
+  "teamId": 135,
+  "teamName": "Padres",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:39:54.413136",
+  "pitching": {
+    "teamId": 135,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 4.339,
+      "whip": 1.278,
+      "totalInnings": 53.3,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 135,
+    "season": 2025,
+    "avg": ".249",
+    "ops": ".694",
+    "hits": 614,
+    "runs": 312,
+    "rbi": 288
+  }
+}

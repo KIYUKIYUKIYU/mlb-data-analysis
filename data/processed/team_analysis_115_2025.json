@@ -1,0 +1,26 @@
+{
+  "teamId": 115,
+  "teamName": "Rockies",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:34:00.500521",
+  "pitching": {
+    "teamId": 115,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 6.581,
+      "whip": 1.587,
+      "totalInnings": 33.3,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 115,
+    "season": 2025,
+    "avg": ".227",
+    "ops": ".672",
+    "hits": 568,
+    "runs": 261,
+    "rbi": 257
+  }
+}

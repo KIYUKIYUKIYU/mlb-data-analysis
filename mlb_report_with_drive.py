@@ -1,134 +1,98 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-MLBレポート生成＆Google Driveアップロード統合スクリプト（Discord通知付き）
+MLBレポート生成＆Google Drive自動アップロード
 """
 
-import os
 import sys
-from datetime import datetime, timedelta
-import pytz
-import requests
+import os
+from pathlib import Path
+from datetime import datetime
+import subprocess
 
-# プロジェクトのルートディレクトリをパスに追加
-project_root = os.path.dirname(os.path.abspath(__file__))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
+sys.path.append(str(Path(__file__).parent))
 
-from scripts.mlb_complete_report_real import generate_report
 from scripts.oauth_drive_uploader import OAuthDriveUploader
 
-def send_discord_notification(webhook_url, title, message, success=True):
-    """Discord通知を送信"""
-    if not webhook_url:
-        return False
-    
-    # 成功は緑、失敗は赤
-    color = 0x00ff00 if success else 0xff0000
-    
-    data = {
-        "embeds": [{
-            "title": title,
-            "description": message,
-            "color": color,
-            "timestamp": datetime.utcnow().isoformat(),
-            "footer": {
-                "text": "MLB Report System"
-            }
-        }]
-    }
-    
-    try:
-        response = requests.post(webhook_url, json=data)
-        return response.status_code == 204
-    except Exception as e:
-        print(f"Discord通知エラー: {e}")
-        return False
-
 def main():
-    print("=" * 60)
+    print("="*60)
     print("MLBレポート生成＆Google Driveアップロード")
-    print("=" * 60)
-    
-    # Discord Webhook URL（環境変数から取得）
-    webhook_url = os.environ.get('DISCORD_WEBHOOK_URL')
-    
-    # 日本時間で翌日の日付を取得
-    jst = pytz.timezone('Asia/Tokyo')
-    now_jst = datetime.now(jst)
-    game_date = now_jst + timedelta(days=1)
-    
-    # 曜日を日本語で
-    weekdays = ['月', '火', '水', '木', '金', '土', '日']
-    weekday = weekdays[game_date.weekday()]
-    
-    # ファイル名を日本語形式に（曜日付き）
-    filename = f"MLB{game_date.strftime('%m月%d日')}({weekday})レポート.txt"
-    
-    # 処理開始通知
-    start_message = f"🚀 MLBレポート生成を開始します\n📅 対象日: {game_date.strftime('%Y年%m月%d日')}({weekday})"
-    send_discord_notification(webhook_url, "処理開始", start_message, True)
-    
-    print("1. MLBレポートを生成中...")
+    print("="*60)
     
     try:
-        # レポートを生成してファイルに保存
-        report_content = generate_report()
+        # 1. MLBレポート生成
+        print("\n1. MLBレポートを生成中...")
+        report_date = datetime.now().strftime("%Y%m%d_%H%M%S")
+        report_filename = f"MLB_Report_{report_date}.txt"
         
-        # ファイルに保存（UTF-8エンコーディング）
-        with open(filename, 'w', encoding='utf-8') as f:
-            f.write(report_content)
+        # レポート生成コマンド実行
+        result = subprocess.run(
+            [sys.executable, "scripts/mlb_complete_report_real.py"],
+            capture_output=True,
+            text=True,
+            encoding='cp932'  # Windows日本語環境用
+        )
         
-        print(f"✅ レポート生成完了: {filename}")
+        if result.returncode != 0:
+            print(f"❌ レポート生成エラー")
+            if result.stderr:
+                print(f"エラー内容: {result.stderr}")
+            return
         
-    except Exception as e:
-        error_message = f"❌ レポート生成エラー: {str(e)}"
-        print(error_message)
+        # 出力が空でないか確認
+        if not result.stdout:
+            print("❌ レポート生成結果が空です")
+            return
         
-        # エラー通知
-        send_discord_notification(webhook_url, "⚠️ エラー発生", error_message, False)
-        return 1
-    
-    print("\n2. Google Driveにアップロード中...")
-    
-    try:
-        # Google Driveアップローダーを初期化
+        # クリーンなレポートを保存
+        clean_content = result.stdout
+        # ログ行を除去
+        lines = clean_content.split('\n')
+        clean_lines = []
+        for line in lines:
+            if ' - INFO - ' not in line and ' - DEBUG - ' not in line and not (line.strip().startswith('20') and ' - ' in line):
+                clean_lines.append(line)
+        clean_content = '\n'.join(clean_lines).strip()
+        
+        with open(report_filename, 'w', encoding='utf-8') as f:
+            f.write(clean_content)
+        
+        print(f"✅ レポート生成完了: {report_filename}")
+        
+        # レポートの最初の数行を表示
+        preview_lines = clean_content.split('\n')[:10]
+        print("\n--- レポートプレビュー ---")
+        for line in preview_lines:
+            print(line)
+        print("...\n")
+        
+        # 2. Google Driveにアップロード
+        print("2. Google Driveにアップロード中...")
         uploader = OAuthDriveUploader()
         
-        # ファイルをアップロード（日本語ファイル名を明示的に指定）
-        file_id = uploader.upload_file(filename, display_name=filename)
+        # 設定からフォルダID取得
+        import json
+        with open('config/auto_report_config.json', 'r', encoding='utf-8') as f:
+            config = json.load(f)
+            folder_id = config.get('google_drive_folder_id')
         
-        if file_id:
-            print(f"✅ アップロード成功！")
-            print(f"📁 ファイル名: {filename}")
-            print(f"🔗 ファイルID: {file_id}")
-            
-            # 成功通知
-            success_message = f"✅ レポート生成・アップロード完了！\n\n"
-            success_message += f"📁 **ファイル名**: {filename}\n"
-            success_message += f"📍 **保存先**: Google Drive/MLB_Reports/\n"
-            success_message += f"🔗 **表示リンク**: [Google Driveで開く](https://drive.google.com/file/d/{file_id}/view)"
-            
-            send_discord_notification(webhook_url, "✨ 処理完了", success_message, True)
-        else:
-            raise Exception("アップロードに失敗しました")
-            
+        result = uploader.upload_file(report_filename, folder_id=folder_id)
+        
+        print("✅ アップロード成功！")
+        print(f"   ファイル名: {result['name']}")
+        print(f"   閲覧リンク: {result['webViewLink']}")
+        
+        # 3. ローカルファイルを保持（後で確認できるように）
+        print(f"\n📁 ローカルファイル: {report_filename}")
+        print("   （確認後、手動で削除してください）")
+        
+        print("\n✅ 全ての処理が完了しました！")
+        print("Google Driveで確認してください。")
+        
     except Exception as e:
-        error_message = f"❌ アップロードエラー: {str(e)}"
-        print(error_message)
-        
-        # トークンエラーの場合は詳細なメッセージ
-        if 'token' in str(e).lower() or 'invalid_grant' in str(e).lower():
-            error_message += "\n\n⚠️ **認証トークンの更新が必要です**"
-            error_message += "\n1. ローカルで `python mlb_report_with_drive.py` を実行"
-            error_message += "\n2. ブラウザで再認証"
-            error_message += "\n3. 新しいtoken.pickleをGitHub Secretsに更新"
-        
-        send_discord_notification(webhook_url, "⚠️ エラー発生", error_message, False)
-        return 1
-    
-    print("\n✨ 処理完了！")
-    return 0
+        print(f"\n❌ エラー: {e}")
+        import traceback
+        traceback.print_exc()
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()

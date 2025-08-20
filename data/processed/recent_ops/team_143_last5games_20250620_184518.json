@@ -1,0 +1,115 @@
+{
+  "team_id": 143,
+  "games": 5,
+  "timestamp": "20250620_184518",
+  "players": [
+    {
+      "player_id": 664761,
+      "name": "Alec Bohm",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.522,
+      "slg": 0.7,
+      "ops": 1.222
+    },
+    {
+      "player_id": 607208,
+      "name": "Trea Turner",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.348,
+      "slg": 0.636,
+      "ops": 0.984
+    },
+    {
+      "player_id": 596146,
+      "name": "Max Kepler",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 0.471,
+      "ops": 0.899
+    },
+    {
+      "player_id": 681082,
+      "name": "Bryson Stott",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.35,
+      "slg": 0.5,
+      "ops": 0.85
+    },
+    {
+      "player_id": 592663,
+      "name": "J.T. Realmuto",
+      "position": "C",
+      "games": 5,
+      "obp": 0.381,
+      "slg": 0.421,
+      "ops": 0.802
+    },
+    {
+      "player_id": 656941,
+      "name": "Kyle Schwarber",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.391,
+      "slg": 0.389,
+      "ops": 0.78
+    },
+    {
+      "player_id": 805249,
+      "name": "Otto Kemp",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.4,
+      "slg": 0.353,
+      "ops": 0.753
+    },
+    {
+      "player_id": 669016,
+      "name": "Brandon Marsh",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.316,
+      "slg": 0.412,
+      "ops": 0.728
+    },
+    {
+      "player_id": 592206,
+      "name": "Nick Castellanos",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.227,
+      "slg": 0.381,
+      "ops": 0.608
+    },
+    {
+      "player_id": 665561,
+      "name": "Rafael Marchán",
+      "position": "C",
+      "games": 5,
+      "obp": 0.214,
+      "slg": 0.357,
+      "ops": 0.571
+    },
+    {
+      "player_id": 679032,
+      "name": "Johan Rojas",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.125,
+      "slg": 0.125,
+      "ops": 0.25
+    },
+    {
+      "player_id": 624641,
+      "name": "Edmundo Sosa",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.143,
+      "slg": 0.077,
+      "ops": 0.22
+    }
+  ]
+}

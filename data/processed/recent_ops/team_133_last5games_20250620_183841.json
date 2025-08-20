@@ -1,0 +1,124 @@
+{
+  "team_id": 133,
+  "games": 5,
+  "timestamp": "20250620_183841",
+  "players": [
+    {
+      "player_id": 701762,
+      "name": "Nick Kurtz",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 1.1,
+      "ops": 1.529
+    },
+    {
+      "player_id": 642851,
+      "name": "Austin Wynns",
+      "position": "C",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.688,
+      "ops": 0.938
+    },
+    {
+      "player_id": 680862,
+      "name": "Willie MacIver",
+      "position": "C",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.562,
+      "ops": 0.812
+    },
+    {
+      "player_id": 671732,
+      "name": "Lawrence Butler",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.227,
+      "slg": 0.524,
+      "ops": 0.751
+    },
+    {
+      "player_id": 805779,
+      "name": "Jacob Wilson",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.389,
+      "ops": 0.722
+    },
+    {
+      "player_id": 667670,
+      "name": "Brent Rooker",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.409,
+      "slg": 0.294,
+      "ops": 0.703
+    },
+    {
+      "player_id": 649966,
+      "name": "Luis Urías",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.312,
+      "ops": 0.646
+    },
+    {
+      "player_id": 668709,
+      "name": "JJ Bleday",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.154,
+      "slg": 0.462,
+      "ops": 0.615
+    },
+    {
+      "player_id": 570482,
+      "name": "Gio Urshela",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.286,
+      "slg": 0.308,
+      "ops": 0.593
+    },
+    {
+      "player_id": 691777,
+      "name": "Max Muncy",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.2,
+      "ops": 0.533
+    },
+    {
+      "player_id": 680474,
+      "name": "Max Schuemann",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.143,
+      "ops": 0.476
+    },
+    {
+      "player_id": 672016,
+      "name": "Denzel Clarke",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.211,
+      "slg": 0.222,
+      "ops": 0.433
+    },
+    {
+      "player_id": 691016,
+      "name": "Tyler Soderstrom",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.222,
+      "slg": 0.067,
+      "ops": 0.289
+    }
+  ]
+}

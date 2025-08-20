@@ -1,0 +1,124 @@
+{
+  "team_id": 119,
+  "games": 5,
+  "timestamp": "20250620_073422",
+  "players": [
+    {
+      "player_id": 681624,
+      "name": "Andy Pages",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.476,
+      "slg": 1.118,
+      "ops": 1.594
+    },
+    {
+      "player_id": 500743,
+      "name": "Miguel Rojas",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.4,
+      "slg": 1.0,
+      "ops": 1.4
+    },
+    {
+      "player_id": 669257,
+      "name": "Will Smith",
+      "position": "C",
+      "games": 5,
+      "obp": 0.444,
+      "slg": 0.938,
+      "ops": 1.382
+    },
+    {
+      "player_id": 571970,
+      "name": "Max Muncy",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.556,
+      "slg": 0.667,
+      "ops": 1.222
+    },
+    {
+      "player_id": 669242,
+      "name": "Tommy Edman",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.571,
+      "ops": 0.905
+    },
+    {
+      "player_id": 660271,
+      "name": "Shohei Ohtani",
+      "position": "TWP",
+      "games": 1,
+      "obp": 0.4,
+      "slg": 0.5,
+      "ops": 0.9
+    },
+    {
+      "player_id": 808975,
+      "name": "Hyeseong Kim",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.357,
+      "slg": 0.417,
+      "ops": 0.774
+    },
+    {
+      "player_id": 518692,
+      "name": "Freddie Freeman",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.35,
+      "slg": 0.278,
+      "ops": 0.628
+    },
+    {
+      "player_id": 606192,
+      "name": "Teoscar Hernández",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.333,
+      "ops": 0.583
+    },
+    {
+      "player_id": 687221,
+      "name": "Dalton Rushing",
+      "position": "C",
+      "games": 5,
+      "obp": 0.357,
+      "slg": 0.182,
+      "ops": 0.539
+    },
+    {
+      "player_id": 624424,
+      "name": "Michael Conforto",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.353,
+      "ops": 0.52
+    },
+    {
+      "player_id": 605141,
+      "name": "Mookie Betts",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.273,
+      "slg": 0.211,
+      "ops": 0.483
+    },
+    {
+      "player_id": 571771,
+      "name": "Enrique Hernández",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.0,
+      "slg": 0.0,
+      "ops": 0.0
+    }
+  ]
+}

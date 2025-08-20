@@ -1,0 +1,26 @@
+{
+  "teamId": 119,
+  "teamName": "Dodgers",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:36:36.636954",
+  "pitching": {
+    "teamId": 119,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 4.191,
+      "whip": 1.202,
+      "totalInnings": 36.2,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 119,
+    "season": 2025,
+    "avg": ".264",
+    "ops": ".797",
+    "hits": 685,
+    "runs": 420,
+    "rbi": 403
+  }
+}

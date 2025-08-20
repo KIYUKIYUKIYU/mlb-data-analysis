@@ -1,0 +1,76 @@
+2025-06-25 00:09:25,278 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:28,772 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:31,323 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:33,879 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:36,121 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:37,718 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:40,014 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:42,241 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:45,082 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:47,318 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:48,236 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:51,027 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:53,723 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:56,281 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:09:59,182 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:01,724 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:04,498 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:05,407 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:07,801 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:09,454 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:11,737 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:14,391 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:17,353 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:19,460 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:22,059 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:25,080 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:27,964 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+2025-06-25 00:10:31,044 - ERROR - ブルペン統計の計算中にエラーが発生: 'MLBApiClient' object has no attribute 'get_bullpen_stats'
+Traceback (most recent call last):
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 257, in <module>
+    reporter.generate_full_report()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 233, in generate_full_report
+    game_report = self.format_game_stats(game)
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 52, in format_game_stats
+    output += self._format_team_stats(home_team)
+              ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 155, in _format_team_stats
+    quality_stats = self.batting_quality.get_team_quality_stats(team_id)
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\batting_quality_stats.py", line 118, in get_team_quality_stats
+    return self.calculate_team_quality_stats(team_id, date)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\batting_quality_stats.py", line 52, in calculate_team_quality_stats
+    statcast_data = self.statcast_fetcher.get_team_statcast_by_id(team_id)
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\statcast_team_fetcher.py", line 124, in get_team_statcast_by_id
+    web_data = self.get_team_statcast_from_web()
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\statcast_team_fetcher.py", line 36, in get_team_statcast_from_web
+    soup = BeautifulSoup(response.text, 'html.parser')
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\bs4\__init__.py", line 473, in __init__
+    self._feed()
+    ~~~~~~~~~~^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\bs4\__init__.py", line 658, in _feed
+    self.builder.feed(self.markup)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\bs4\builder\_htmlparser.py", line 467, in feed
+    parser.feed(markup)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\yfuku\AppData\Local\Programs\Python\Python313\Lib\html\parser.py", line 129, in feed
+    self.goahead(0)
+    ~~~~~~~~~~~~^^^
+  File "C:\Users\yfuku\AppData\Local\Programs\Python\Python313\Lib\html\parser.py", line 191, in goahead
+    k = self.parse_endtag(i)
+  File "C:\Users\yfuku\AppData\Local\Programs\Python\Python313\Lib\html\parser.py", line 432, in parse_endtag
+    self.handle_endtag(elem)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\bs4\builder\_htmlparser.py", line 220, in handle_endtag
+    self.soup.handle_endtag(name)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\bs4\__init__.py", line 1063, in handle_endtag
+    self._popToTag(name, nsprefix)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\venv\Lib\site-packages\bs4\__init__.py", line 950, in _popToTag
+    def _popToTag(
+    
+KeyboardInterrupt
+^C

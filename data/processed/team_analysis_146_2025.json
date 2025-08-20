@@ -1,0 +1,26 @@
+{
+  "teamId": 146,
+  "teamName": "Marlins",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:47:09.625020",
+  "pitching": {
+    "teamId": 146,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 6.35,
+      "whip": 1.59,
+      "totalInnings": 5.2,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 146,
+    "season": 2025,
+    "avg": ".251",
+    "ops": ".696",
+    "hits": 627,
+    "runs": 295,
+    "rbi": 284
+  }
+}

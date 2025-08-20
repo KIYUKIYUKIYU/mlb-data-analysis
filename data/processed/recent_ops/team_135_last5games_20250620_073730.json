@@ -1,0 +1,124 @@
+{
+  "team_id": 135,
+  "games": 5,
+  "timestamp": "20250620_073730",
+  "players": [
+    {
+      "player_id": 657757,
+      "name": "Gavin Sheets",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.545,
+      "slg": 0.765,
+      "ops": 1.31
+    },
+    {
+      "player_id": 669369,
+      "name": "Bryce Johnson",
+      "position": "RF",
+      "games": 2,
+      "obp": 0.5,
+      "slg": 0.75,
+      "ops": 1.25
+    },
+    {
+      "player_id": 455117,
+      "name": "Martín Maldonado",
+      "position": "C",
+      "games": 5,
+      "obp": 0.417,
+      "slg": 0.7,
+      "ops": 1.117
+    },
+    {
+      "player_id": 553869,
+      "name": "Elias Díaz",
+      "position": "C",
+      "games": 5,
+      "obp": 0.385,
+      "slg": 0.636,
+      "ops": 1.021
+    },
+    {
+      "player_id": 670092,
+      "name": "Trenton Brooks",
+      "position": "1B",
+      "games": 3,
+      "obp": 0.2,
+      "slg": 0.8,
+      "ops": 1.0
+    },
+    {
+      "player_id": 665487,
+      "name": "Fernando Tatis Jr.",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.478,
+      "slg": 0.5,
+      "ops": 0.978
+    },
+    {
+      "player_id": 650333,
+      "name": "Luis Arraez",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.391,
+      "slg": 0.435,
+      "ops": 0.826
+    },
+    {
+      "player_id": 630105,
+      "name": "Jake Cronenworth",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.3,
+      "slg": 0.471,
+      "ops": 0.771
+    },
+    {
+      "player_id": 592518,
+      "name": "Manny Machado",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.304,
+      "slg": 0.421,
+      "ops": 0.725
+    },
+    {
+      "player_id": 663604,
+      "name": "Brandon Lockridge",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.222,
+      "slg": 0.222,
+      "ops": 0.444
+    },
+    {
+      "player_id": 593428,
+      "name": "Xander Bogaerts",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.13,
+      "slg": 0.273,
+      "ops": 0.403
+    },
+    {
+      "player_id": 642180,
+      "name": "Tyler Wade",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.111,
+      "slg": 0.0,
+      "ops": 0.111
+    },
+    {
+      "player_id": 578428,
+      "name": "Jose Iglesias",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.083,
+      "slg": 0.0,
+      "ops": 0.083
+    }
+  ]
+}

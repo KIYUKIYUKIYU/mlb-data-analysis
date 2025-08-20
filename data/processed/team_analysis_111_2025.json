@@ -1,0 +1,26 @@
+{
+  "teamId": 111,
+  "teamName": "Red Sox",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:31:23.413054",
+  "pitching": {
+    "teamId": 111,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 1.45,
+      "whip": 0.81,
+      "totalInnings": 31.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 111,
+    "season": 2025,
+    "avg": ".248",
+    "ops": ".739",
+    "hits": 651,
+    "runs": 358,
+    "rbi": 343
+  }
+}

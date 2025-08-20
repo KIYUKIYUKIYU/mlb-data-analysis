@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 454, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 451, in main
+    report.generate_report()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 159, in generate_report
+    self.reliability_checker.display_simple_reliability()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 73, in display_simple_reliability
+    print(f"{status} ({fresh_count}/{total_count}データが本日更新) | {self.now.strftime('%H:%M')}時点")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'cp932' codec can't encode character '\u2705' in position 0: illegal multibyte sequence

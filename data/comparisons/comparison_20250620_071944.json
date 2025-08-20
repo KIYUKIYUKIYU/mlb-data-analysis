@@ -1,0 +1,423 @@
+{
+  "date": "2025-06-19",
+  "total_games": 3,
+  "comparisons": [
+    {
+      "game_info": {
+        "date": "2025-06-19T16:40:00Z",
+        "venue": "Great American Ball Park",
+        "away_team": "Minnesota Twins",
+        "home_team": "Cincinnati Reds"
+      },
+      "team_stats": {
+        "Minnesota Twins": {
+          "打撃": {
+            "打率": "0.243",
+            "OPS": "0.710",
+            "直近10試合OPS": "N/A",
+            "得点/試合": "4.49",
+            "本塁打": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ISO": "N/A"
+          },
+          "投手": {
+            "防御率": "0.00",
+            "WHIP": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ゴロ率": "N/A",
+            "QS率": "N/A"
+          }
+        },
+        "Cincinnati Reds": {
+          "打撃": {
+            "打率": "0.248",
+            "OPS": "0.726",
+            "直近10試合OPS": "N/A",
+            "得点/試合": "5.00",
+            "本塁打": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ISO": "N/A"
+          },
+          "投手": {
+            "防御率": "0.00",
+            "WHIP": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ゴロ率": "N/A",
+            "QS率": "N/A"
+          }
+        }
+      },
+      "comparison_data": [
+        {
+          "category": "打撃指標",
+          "metrics": [
+            {
+              "name": "打率",
+              "team1_value": "0.243",
+              "team2_value": "0.248",
+              "difference": -0.005
+            },
+            {
+              "name": "OPS",
+              "team1_value": "0.710",
+              "team2_value": "0.726",
+              "difference": -0.016
+            },
+            {
+              "name": "直近10試合OPS",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "得点/試合",
+              "team1_value": "4.49",
+              "team2_value": "5.00",
+              "difference": -0.514
+            },
+            {
+              "name": "本塁打",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            }
+          ]
+        },
+        {
+          "category": "投手指標",
+          "metrics": [
+            {
+              "name": "防御率",
+              "team1_value": "0.00",
+              "team2_value": "0.00",
+              "difference": 0.0
+            },
+            {
+              "name": "WHIP",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "QS率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            }
+          ]
+        },
+        {
+          "category": "率統計",
+          "metrics": [
+            {
+              "name": "打者三振率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "打者四球率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "投手三振率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "投手四球率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game_info": {
+        "date": "2025-06-19T17:05:00Z",
+        "venue": "Nationals Park",
+        "away_team": "Colorado Rockies",
+        "home_team": "Washington Nationals"
+      },
+      "team_stats": {
+        "Colorado Rockies": {
+          "打撃": {
+            "打率": "0.227",
+            "OPS": "0.672",
+            "直近10試合OPS": "N/A",
+            "得点/試合": "3.73",
+            "本塁打": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ISO": "N/A"
+          },
+          "投手": {
+            "防御率": "6.58",
+            "WHIP": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ゴロ率": "N/A",
+            "QS率": "N/A"
+          }
+        },
+        "Washington Nationals": {
+          "打撃": {
+            "打率": "0.239",
+            "OPS": "0.689",
+            "直近10試合OPS": "N/A",
+            "得点/試合": "4.43",
+            "本塁打": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ISO": "N/A"
+          },
+          "投手": {
+            "防御率": "3.18",
+            "WHIP": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ゴロ率": "N/A",
+            "QS率": "N/A"
+          }
+        }
+      },
+      "comparison_data": [
+        {
+          "category": "打撃指標",
+          "metrics": [
+            {
+              "name": "打率",
+              "team1_value": "0.227",
+              "team2_value": "0.239",
+              "difference": -0.012
+            },
+            {
+              "name": "OPS",
+              "team1_value": "0.672",
+              "team2_value": "0.689",
+              "difference": -0.017
+            },
+            {
+              "name": "直近10試合OPS",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "得点/試合",
+              "team1_value": "3.73",
+              "team2_value": "4.43",
+              "difference": -0.7
+            },
+            {
+              "name": "本塁打",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            }
+          ]
+        },
+        {
+          "category": "投手指標",
+          "metrics": [
+            {
+              "name": "防御率",
+              "team1_value": "6.58",
+              "team2_value": "3.18",
+              "difference": 3.401
+            },
+            {
+              "name": "WHIP",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "QS率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            }
+          ]
+        },
+        {
+          "category": "率統計",
+          "metrics": [
+            {
+              "name": "打者三振率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "打者四球率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "投手三振率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "投手四球率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game_info": {
+        "date": "2025-06-19T17:05:00Z",
+        "venue": "Yankee Stadium",
+        "away_team": "Los Angeles Angels",
+        "home_team": "New York Yankees"
+      },
+      "team_stats": {
+        "Los Angeles Angels": {
+          "打撃": {
+            "打率": "0.225",
+            "OPS": "0.685",
+            "直近10試合OPS": "N/A",
+            "得点/試合": "4.33",
+            "本塁打": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ISO": "N/A"
+          },
+          "投手": {
+            "防御率": "6.23",
+            "WHIP": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ゴロ率": "N/A",
+            "QS率": "N/A"
+          }
+        },
+        "New York Yankees": {
+          "打撃": {
+            "打率": "0.253",
+            "OPS": "0.785",
+            "直近10試合OPS": "N/A",
+            "得点/試合": "5.41",
+            "本塁打": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ISO": "N/A"
+          },
+          "投手": {
+            "防御率": "0.00",
+            "WHIP": "N/A",
+            "三振率": "N/A",
+            "四球率": "N/A",
+            "ゴロ率": "N/A",
+            "QS率": "N/A"
+          }
+        }
+      },
+      "comparison_data": [
+        {
+          "category": "打撃指標",
+          "metrics": [
+            {
+              "name": "打率",
+              "team1_value": "0.225",
+              "team2_value": "0.253",
+              "difference": -0.028
+            },
+            {
+              "name": "OPS",
+              "team1_value": "0.685",
+              "team2_value": "0.785",
+              "difference": -0.1
+            },
+            {
+              "name": "直近10試合OPS",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "得点/試合",
+              "team1_value": "4.33",
+              "team2_value": "5.41",
+              "difference": -1.086
+            },
+            {
+              "name": "本塁打",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            }
+          ]
+        },
+        {
+          "category": "投手指標",
+          "metrics": [
+            {
+              "name": "防御率",
+              "team1_value": "6.23",
+              "team2_value": "0.00",
+              "difference": 6.23
+            },
+            {
+              "name": "WHIP",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "QS率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            }
+          ]
+        },
+        {
+          "category": "率統計",
+          "metrics": [
+            {
+              "name": "打者三振率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "打者四球率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "投手三振率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            },
+            {
+              "name": "投手四球率",
+              "team1_value": "N/A",
+              "team2_value": "N/A",
+              "difference": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

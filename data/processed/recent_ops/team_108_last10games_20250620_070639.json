@@ -1,0 +1,124 @@
+{
+  "team_id": 108,
+  "games": 10,
+  "timestamp": "20250620_070639",
+  "players": [
+    {
+      "player_id": 545361,
+      "name": "Mike Trout",
+      "position": "RF",
+      "games": 10,
+      "obp": 0.395,
+      "slg": 0.472,
+      "ops": 0.868
+    },
+    {
+      "player_id": 666176,
+      "name": "Jo Adell",
+      "position": "CF",
+      "games": 10,
+      "obp": 0.289,
+      "slg": 0.571,
+      "ops": 0.861
+    },
+    {
+      "player_id": 694384,
+      "name": "Nolan Schanuel",
+      "position": "1B",
+      "games": 10,
+      "obp": 0.356,
+      "slg": 0.476,
+      "ops": 0.832
+    },
+    {
+      "player_id": 650859,
+      "name": "Luis Rengifo",
+      "position": "3B",
+      "games": 10,
+      "obp": 0.294,
+      "slg": 0.455,
+      "ops": 0.749
+    },
+    {
+      "player_id": 621493,
+      "name": "Taylor Ward",
+      "position": "LF",
+      "games": 10,
+      "obp": 0.317,
+      "slg": 0.4,
+      "ops": 0.717
+    },
+    {
+      "player_id": 518595,
+      "name": "Travis d'Arnaud",
+      "position": "C",
+      "games": 10,
+      "obp": 0.242,
+      "slg": 0.4,
+      "ops": 0.642
+    },
+    {
+      "player_id": 687263,
+      "name": "Zach Neto",
+      "position": "SS",
+      "games": 10,
+      "obp": 0.311,
+      "slg": 0.293,
+      "ops": 0.604
+    },
+    {
+      "player_id": 695681,
+      "name": "Christian Moore",
+      "position": "2B",
+      "games": 7,
+      "obp": 0.211,
+      "slg": 0.278,
+      "ops": 0.488
+    },
+    {
+      "player_id": 621028,
+      "name": "Kevin Newman",
+      "position": "SS",
+      "games": 10,
+      "obp": 0.217,
+      "slg": 0.261,
+      "ops": 0.478
+    },
+    {
+      "player_id": 664774,
+      "name": "LaMonte Wade Jr.",
+      "position": "1B",
+      "games": 10,
+      "obp": 0.222,
+      "slg": 0.167,
+      "ops": 0.389
+    },
+    {
+      "player_id": 664068,
+      "name": "Scott Kingery",
+      "position": "2B",
+      "games": 10,
+      "obp": 0.182,
+      "slg": 0.19,
+      "ops": 0.372
+    },
+    {
+      "player_id": 624585,
+      "name": "Jorge Soler",
+      "position": "RF",
+      "games": 10,
+      "obp": 0.194,
+      "slg": 0.138,
+      "ops": 0.331
+    },
+    {
+      "player_id": 681351,
+      "name": "Logan O'Hoppe",
+      "position": "C",
+      "games": 10,
+      "obp": 0.143,
+      "slg": 0.125,
+      "ops": 0.268
+    }
+  ]
+}

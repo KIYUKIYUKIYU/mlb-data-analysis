@@ -1,0 +1,26 @@
+{
+  "teamId": 118,
+  "teamName": "Royals",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:35:58.215052",
+  "pitching": {
+    "teamId": 118,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 9.0,
+      "whip": 1.5,
+      "totalInnings": 2.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 118,
+    "season": 2025,
+    "avg": ".248",
+    "ops": ".672",
+    "hits": 624,
+    "runs": 253,
+    "rbi": 249
+  }
+}

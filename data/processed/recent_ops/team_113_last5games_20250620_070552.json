@@ -1,0 +1,124 @@
+{
+  "team_id": 113,
+  "games": 5,
+  "timestamp": "20250620_070552",
+  "players": [
+    {
+      "player_id": 624431,
+      "name": "Jose Trevino",
+      "position": "C",
+      "games": 5,
+      "obp": 0.438,
+      "slg": 0.667,
+      "ops": 1.104
+    },
+    {
+      "player_id": 668715,
+      "name": "Spencer Steer",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.294,
+      "slg": 0.765,
+      "ops": 1.059
+    },
+    {
+      "player_id": 669289,
+      "name": "Santiago Espinal",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.462,
+      "slg": 0.538,
+      "ops": 1.0
+    },
+    {
+      "player_id": 680574,
+      "name": "Matt McLain",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.421,
+      "slg": 0.529,
+      "ops": 0.95
+    },
+    {
+      "player_id": 663886,
+      "name": "Tyler Stephenson",
+      "position": "C",
+      "games": 5,
+      "obp": 0.348,
+      "slg": 0.545,
+      "ops": 0.893
+    },
+    {
+      "player_id": 666158,
+      "name": "Gavin Lux",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.389,
+      "slg": 0.467,
+      "ops": 0.856
+    },
+    {
+      "player_id": 682829,
+      "name": "Elly De La Cruz",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.318,
+      "slg": 0.526,
+      "ops": 0.844
+    },
+    {
+      "player_id": 641584,
+      "name": "Jake Fraley",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.438,
+      "slg": 0.357,
+      "ops": 0.795
+    },
+    {
+      "player_id": 670770,
+      "name": "TJ Friedl",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.391,
+      "slg": 0.4,
+      "ops": 0.791
+    },
+    {
+      "player_id": 656582,
+      "name": "Connor Joe",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.286,
+      "slg": 0.417,
+      "ops": 0.702
+    },
+    {
+      "player_id": 641658,
+      "name": "Garrett Hampson",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.333,
+      "ops": 0.5
+    },
+    {
+      "player_id": 666181,
+      "name": "Will Benson",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.235,
+      "slg": 0.214,
+      "ops": 0.45
+    },
+    {
+      "player_id": 687952,
+      "name": "Christian Encarnacion-Strand",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.167,
+      "ops": 0.333
+    }
+  ]
+}

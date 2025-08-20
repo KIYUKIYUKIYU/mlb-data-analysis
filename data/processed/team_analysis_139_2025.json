@@ -1,0 +1,26 @@
+{
+  "teamId": 139,
+  "teamName": "Rays",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:42:33.474918",
+  "pitching": {
+    "teamId": 139,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 0.0,
+      "whip": 0.0,
+      "totalInnings": 0.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 139,
+    "season": 2025,
+    "avg": ".253",
+    "ops": ".718",
+    "hits": 638,
+    "runs": 346,
+    "rbi": 329
+  }
+}

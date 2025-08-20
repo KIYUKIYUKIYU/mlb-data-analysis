@@ -1,0 +1,124 @@
+{
+  "team_id": 158,
+  "games": 5,
+  "timestamp": "20250620_074601",
+  "players": [
+    {
+      "player_id": 686555,
+      "name": "Isaac Collins",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.4,
+      "slg": 0.833,
+      "ops": 1.233
+    },
+    {
+      "player_id": 661388,
+      "name": "William Contreras",
+      "position": "C",
+      "games": 5,
+      "obp": 0.478,
+      "slg": 0.625,
+      "ops": 1.103
+    },
+    {
+      "player_id": 702332,
+      "name": "Caleb Durbin",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.389,
+      "slg": 0.5,
+      "ops": 0.889
+    },
+    {
+      "player_id": 592885,
+      "name": "Christian Yelich",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.55,
+      "ops": 0.883
+    },
+    {
+      "player_id": 663662,
+      "name": "Daz Cameron",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.316,
+      "slg": 0.526,
+      "ops": 0.842
+    },
+    {
+      "player_id": 668930,
+      "name": "Brice Turang",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.381,
+      "slg": 0.421,
+      "ops": 0.802
+    },
+    {
+      "player_id": 694192,
+      "name": "Jackson Chourio",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.304,
+      "slg": 0.478,
+      "ops": 0.783
+    },
+    {
+      "player_id": 606992,
+      "name": "Eric Haase",
+      "position": "C",
+      "games": 5,
+      "obp": 0.286,
+      "slg": 0.357,
+      "ops": 0.643
+    },
+    {
+      "player_id": 686217,
+      "name": "Sal Frelick",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.261,
+      "slg": 0.318,
+      "ops": 0.579
+    },
+    {
+      "player_id": 641343,
+      "name": "Jake Bauers",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.4,
+      "ops": 0.567
+    },
+    {
+      "player_id": 656555,
+      "name": "Rhys Hoskins",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.294,
+      "ops": 0.544
+    },
+    {
+      "player_id": 687401,
+      "name": "Joey Ortiz",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.25,
+      "ops": 0.5
+    },
+    {
+      "player_id": 655316,
+      "name": "Andruw Monasterio",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.167,
+      "ops": 0.333
+    }
+  ]
+}

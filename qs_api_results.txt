@@ -1,0 +1,213 @@
+=== Season Stats ===
+{
+  "gamesPlayed": 16,
+  "gamesStarted": 16,
+  "groundOuts": 69,
+  "airOuts": 114,
+  "runs": 45,
+  "doubles": 17,
+  "triples": 1,
+  "homeRuns": 12,
+  "strikeOuts": 90,
+  "baseOnBalls": 25,
+  "intentionalWalks": 1,
+  "hits": 75,
+  "hitByPitch": 3,
+  "avg": ".218",
+  "atBats": 344,
+  "obp": ".275",
+  "slg": ".378",
+  "ops": ".653",
+  "caughtStealing": 0,
+  "stolenBases": 9,
+  "stolenBasePercentage": "1.000",
+  "groundIntoDoublePlay": 4,
+  "numberOfPitches": 1504,
+  "era": "4.21",
+  "inningsPitched": "94.0",
+  "wins": 6,
+  "losses": 6,
+  "saves": 0,
+  "saveOpportunities": 0,
+  "holds": 0,
+  "blownSaves": 0,
+  "earnedRuns": 44,
+  "whip": "1.06",
+  "battersFaced": 376,
+  "outs": 282,
+  "gamesPitched": 16,
+  "completeGames": 0,
+  "shutouts": 0,
+  "strikes": 1008,
+  "strikePercentage": ".670",
+  "hitBatsmen": 3,
+  "balks": 1,
+  "wildPitches": 0,
+  "pickoffs": 0,
+  "totalBases": 130,
+  "groundOutsToAirouts": "0.61",
+  "winPercentage": ".500",
+  "pitchesPerInning": "16.00",
+  "gamesFinished": 0,
+  "strikeoutWalkRatio": "3.60",
+  "strikeoutsPer9Inn": "8.62",
+  "walksPer9Inn": "2.39",
+  "hitsPer9Inn": "7.18",
+  "runsScoredPer9": "4.31",
+  "homeRunsPer9": "1.15",
+  "inheritedRunners": 0,
+  "inheritedRunnersScored": 0,
+  "catchersInterference": 0,
+  "sacBunts": 1,
+  "sacFlies": 3
+}
+
+=== Sabermetrics Stats ===
+{
+  "copyright": "Copyright 2025 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "stats": [
+    {
+      "type": {
+        "displayName": "sabermetrics"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2025",
+          "stat": {
+            "fip": 3.71214,
+            "xfip": 3.83022,
+            "fipMinus": 91.232,
+            "ra9War": 0.992502,
+            "rar": 13.3446,
+            "war": 1.39944,
+            "sd": 0.0,
+            "md": 0.0,
+            "pli": 0.948821,
+            "inli": 0.931643,
+            "gmli": 0.8853,
+            "exli": 0.849625,
+            "eraMinus": 106.789
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 592332,
+            "fullName": "Kevin Gausman",
+            "link": "/api/v1/people/592332"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ]
+}
+
+=== Season Advanced Stats ===
+{
+  "copyright": "Copyright 2025 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "stats": [
+    {
+      "type": {
+        "displayName": "seasonAdvanced"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2025",
+          "stat": {
+            "winningPercentage": ".500",
+            "runsScoredPer9": "4.31",
+            "battersFaced": 376,
+            "babip": ".257",
+            "obp": ".275",
+            "slg": ".378",
+            "ops": ".653",
+            "strikeoutsPer9": "8.62",
+            "baseOnBallsPer9": "2.39",
+            "homeRunsPer9": "1.15",
+            "hitsPer9": "7.18",
+            "strikesoutsToWalks": "3.60",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "bequeathedRunners": 9,
+            "bequeathedRunnersScored": 3,
+            "stolenBases": 9,
+            "caughtStealing": 0,
+            "qualityStarts": 8,
+            "gamesFinished": 0,
+            "doubles": 17,
+            "triples": 1,
+            "gidp": 4,
+            "gidpOpp": 41,
+            "wildPitches": 0,
+            "balks": 1,
+            "pickoffs": 0,
+            "totalSwings": 778,
+            "swingAndMisses": 202,
+            "ballsInPlay": 258,
+            "runSupport": 42,
+            "strikePercentage": ".670",
+            "pitchesPerInning": "16.00",
+            "pitchesPerPlateAppearance": "4.000",
+            "walksPerPlateAppearance": ".066",
+            "strikeoutsPerPlateAppearance": ".239",
+            "homeRunsPerPlateAppearance": ".032",
+            "walksPerStrikeout": ".278",
+            "iso": ".160",
+            "flyOuts": 68,
+            "popOuts": 16,
+            "lineOuts": 30,
+            "groundOuts": 69,
+            "flyHits": 15,
+            "popHits": 0,
+            "lineHits": 40,
+            "groundHits": 20
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 592332,
+            "fullName": "Kevin Gausman",
+            "link": "/api/v1/people/592332"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ]
+}
+
+=== Available Stat Types ===

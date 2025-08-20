@@ -1,0 +1,26 @@
+{
+  "teamId": 133,
+  "teamName": "Athletics",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:38:34.383555",
+  "pitching": {
+    "teamId": 133,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 9.752,
+      "whip": 2.159,
+      "totalInnings": 9.1,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 133,
+    "season": 2025,
+    "avg": ".252",
+    "ops": ".738",
+    "hits": 665,
+    "runs": 328,
+    "rbi": 317
+  }
+}

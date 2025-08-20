@@ -1,0 +1,44 @@
+{
+  "teamId": 144,
+  "teamName": "Braves",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:45:51.547948",
+  "pitching": {
+    "teamId": 144,
+    "season": 2025,
+    "starters": [
+      {
+        "id": 700363,
+        "name": "AJ Smith-Shawver",
+        "handedness": "R",
+        "era": "3.86",
+        "whip": "1.42",
+        "fip": 3.971,
+        "strikeouts": 42,
+        "innings": "44.1",
+        "gamesStarted": 9,
+        "strikeoutRate": 0.219,
+        "groundBallRate": 0.407,
+        "flyBallRate": 0.593,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      }
+    ],
+    "bullpenAggregate": {
+      "era": 2.86,
+      "whip": 1.2,
+      "totalInnings": 28.1,
+      "pitcherCount": 9
+    }
+  },
+  "batting": {
+    "teamId": 144,
+    "season": 2025,
+    "avg": ".245",
+    "ops": ".705",
+    "hits": 605,
+    "runs": 307,
+    "rbi": 294
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "team_id": 142,
+  "games": 10,
+  "timestamp": "20250620_070544",
+  "players": [
+    {
+      "player_id": 621439,
+      "name": "Byron Buxton",
+      "position": "CF",
+      "games": 10,
+      "obp": 0.5,
+      "slg": 0.909,
+      "ops": 1.409
+    },
+    {
+      "player_id": 686797,
+      "name": "Brooks Lee",
+      "position": "3B",
+      "games": 10,
+      "obp": 0.429,
+      "slg": 0.727,
+      "ops": 1.156
+    },
+    {
+      "player_id": 650489,
+      "name": "Willi Castro",
+      "position": "2B",
+      "games": 10,
+      "obp": 0.5,
+      "slg": 0.611,
+      "ops": 1.111
+    },
+    {
+      "player_id": 680777,
+      "name": "Ryan Jeffers",
+      "position": "C",
+      "games": 10,
+      "obp": 0.405,
+      "slg": 0.4,
+      "ops": 0.805
+    },
+    {
+      "player_id": 664056,
+      "name": "Harrison Bader",
+      "position": "LF",
+      "games": 10,
+      "obp": 0.333,
+      "slg": 0.455,
+      "ops": 0.788
+    },
+    {
+      "player_id": 663616,
+      "name": "Trevor Larnach",
+      "position": "RF",
+      "games": 10,
+      "obp": 0.297,
+      "slg": 0.387,
+      "ops": 0.684
+    },
+    {
+      "player_id": 621043,
+      "name": "Carlos Correa",
+      "position": "SS",
+      "games": 10,
+      "obp": 0.333,
+      "slg": 0.333,
+      "ops": 0.667
+    },
+    {
+      "player_id": 664034,
+      "name": "Ty France",
+      "position": "1B",
+      "games": 10,
+      "obp": 0.293,
+      "slg": 0.368,
+      "ops": 0.661
+    },
+    {
+      "player_id": 665019,
+      "name": "Kody Clemens",
+      "position": "2B",
+      "games": 10,
+      "obp": 0.16,
+      "slg": 0.375,
+      "ops": 0.535
+    },
+    {
+      "player_id": 543877,
+      "name": "Christian Vázquez",
+      "position": "C",
+      "games": 10,
+      "obp": 0.194,
+      "slg": 0.219,
+      "ops": 0.413
+    },
+    {
+      "player_id": 670242,
+      "name": "Matt Wallner",
+      "position": "RF",
+      "games": 10,
+      "obp": 0.139,
+      "slg": 0.235,
+      "ops": 0.374
+    },
+    {
+      "player_id": 680577,
+      "name": "DaShawn Keirsey Jr.",
+      "position": "RF",
+      "games": 10,
+      "obp": 0.133,
+      "slg": 0.071,
+      "ops": 0.205
+    },
+    {
+      "player_id": 681146,
+      "name": "Jonah Bride",
+      "position": "3B",
+      "games": 10,
+      "obp": 0.095,
+      "slg": 0.05,
+      "ops": 0.145
+    }
+  ]
+}

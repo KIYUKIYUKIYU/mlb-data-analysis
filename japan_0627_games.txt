@@ -1,0 +1,393 @@
+2025-06-26 17:43:20,158 - __main__ - INFO - Generating report for date: 2025-06-26
+
+============================================================
+MLB試合予想レポート - 日本時間 2025/06/27 の試合
+============================================================
+
+
+============================================================
+**Athletics @ Detroit Tigers**
+開始時刻: 06/27 02:10 (日本時間)
+==================================================
+
+【Athletics】
+**先発**: 未定
+
+**中継ぎ陣** (8名):
+ERA: 4.24 | FIP: 3.68 | xFIP: 3.01 | WHIP: 1.45 | K-BB%: 12.8%
+CL: Mason Miller (FIP: 3.62)
+SU: T.J. McFarland (FIP: 8.52), Tyler Ferguson (FIP: 6.79)
+疲労度: 主力1名が連投中
+2025-06-26 17:43:21,614 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/133/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:21,639 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 133
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 8.8% | Hard-Hit%: 22.9%
+2025-06-26 17:43:21,640 - src.mlb_api_client - INFO - Using cached OPS for team 133 last 5 games
+2025-06-26 17:43:21,641 - src.mlb_api_client - INFO - Using cached OPS for team 133 last 10 games
+過去5試合OPS: 0.631 | 過去10試合OPS: 0.688
+
+【Detroit Tigers】
+**先発**: 未定
+
+**中継ぎ陣** (10名):
+ERA: 3.21 | FIP: 3.68 | xFIP: 2.86 | WHIP: 1.20 | K-BB%: 13.8%
+CL: Tommy Kahnle (FIP: 5.78)
+SU: Brenan Hanifee (FIP: 3.48), Tyler Holton (FIP: 7.36)
+疲労度: 主力4名が連投中
+2025-06-26 17:43:21,935 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/116/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:21,936 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 116
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 10.3% | Hard-Hit%: 23.3%
+2025-06-26 17:43:21,937 - src.mlb_api_client - INFO - Using cached OPS for team 116 last 5 games
+2025-06-26 17:43:21,937 - src.mlb_api_client - INFO - Using cached OPS for team 116 last 10 games
+過去5試合OPS: 0.793 | 過去10試合OPS: 0.807
+
+============================================================
+
+============================================================
+**Toronto Blue Jays @ Cleveland Guardians**
+開始時刻: 06/27 02:10 (日本時間)
+==================================================
+
+【Toronto Blue Jays】
+**先発**: 未定
+
+**中継ぎ陣** (9名):
+ERA: 3.40 | FIP: 3.79 | xFIP: 2.46 | WHIP: 1.11 | K-BB%: 19.7%
+CL: Jeff Hoffman (FIP: 6.91)
+SU: Brendon Little (FIP: 1.77), Yariel Rodríguez (FIP: 7.33)
+疲労度: 主力5名が連投中
+2025-06-26 17:43:22,251 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/141/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:22,252 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 141
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 11.4% | Hard-Hit%: 27.8%
+2025-06-26 17:43:22,253 - src.mlb_api_client - INFO - Using cached OPS for team 141 last 5 games
+2025-06-26 17:43:22,253 - src.mlb_api_client - INFO - Using cached OPS for team 141 last 10 games
+過去5試合OPS: 0.706 | 過去10試合OPS: 0.721
+
+【Cleveland Guardians】
+**先発**: 未定
+
+**中継ぎ陣** (8名):
+ERA: 3.27 | FIP: 3.10 | xFIP: 2.82 | WHIP: 1.34 | K-BB%: 14.4%
+CL: Emmanuel Clase (FIP: 0.68)
+SU: Cade Smith (FIP: 1.42), Hunter Gaddis (FIP: 0.85)
+疲労度: 主力4名が連投中
+2025-06-26 17:43:22,575 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/114/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:22,576 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 114
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 9.5% | Hard-Hit%: 23.7%
+2025-06-26 17:43:22,576 - src.mlb_api_client - INFO - Using cached OPS for team 114 last 5 games
+2025-06-26 17:43:22,577 - src.mlb_api_client - INFO - Using cached OPS for team 114 last 10 games
+過去5試合OPS: 0.702 | 過去10試合OPS: 0.631
+
+============================================================
+
+============================================================
+**Seattle Mariners @ Minnesota Twins**
+開始時刻: 06/27 02:10 (日本時間)
+==================================================
+
+【Seattle Mariners】
+**先発**: 未定
+
+**中継ぎ陣** (8名):
+ERA: 2.95 | FIP: 3.72 | xFIP: 2.84 | WHIP: 1.16 | K-BB%: 15.0%
+CL: Andrés Muñoz (FIP: 2.05)
+SU: Carlos Vargas (FIP: 3.36), Gabe Speier (FIP: 4.61)
+疲労度: 主力3名が連投中
+2025-06-26 17:43:22,896 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/136/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:22,897 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 136
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 11.5% | Hard-Hit%: 27.0%
+2025-06-26 17:43:22,898 - src.mlb_api_client - INFO - Using cached OPS for team 136 last 5 games
+2025-06-26 17:43:22,898 - src.mlb_api_client - INFO - Using cached OPS for team 136 last 10 games
+過去5試合OPS: 0.829 | 過去10試合OPS: 0.773
+
+【Minnesota Twins】
+**先発**: 未定
+
+**中継ぎ陣** (8名):
+ERA: 3.46 | FIP: 2.88 | xFIP: 2.46 | WHIP: 1.21 | K-BB%: 18.4%
+CL: Jhoan Duran (FIP: 0.57)
+SU: Brock Stewart (FIP: 3.02), Cole Sands (FIP: 3.53)
+疲労度: 主力4名が連投中
+2025-06-26 17:43:23,223 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/142/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:23,224 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 142
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 11.9% | Hard-Hit%: 28.2%
+2025-06-26 17:43:23,225 - src.mlb_api_client - INFO - Using cached OPS for team 142 last 5 games
+2025-06-26 17:43:23,225 - src.mlb_api_client - INFO - Using cached OPS for team 142 last 10 games
+過去5試合OPS: 0.709 | 過去10試合OPS: 0.736
+
+============================================================
+
+============================================================
+**Tampa Bay Rays @ Kansas City Royals**
+開始時刻: 06/27 03:10 (日本時間)
+==================================================
+
+【Tampa Bay Rays】
+**先発**: 未定
+
+**中継ぎ陣** (8名):
+ERA: 3.87 | FIP: 4.19 | xFIP: 2.80 | WHIP: 1.26 | K-BB%: 15.1%
+CL: Pete Fairbanks (FIP: 9.23)
+SU: Edwin Uceta (FIP: 6.04), Garrett Cleavinger (FIP: 8.37)
+疲労度: 主力3名が連投中
+2025-06-26 17:43:23,535 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/139/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:23,535 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 139
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 11.4% | Hard-Hit%: 28.1%
+2025-06-26 17:43:23,536 - src.mlb_api_client - INFO - Using cached OPS for team 139 last 5 games
+2025-06-26 17:43:23,537 - src.mlb_api_client - INFO - Using cached OPS for team 139 last 10 games
+過去5試合OPS: 0.843 | 過去10試合OPS: 0.855
+
+【Kansas City Royals】
+**先発**: 未定
+
+**中継ぎ陣** (8名):
+ERA: 3.16 | FIP: 3.96 | xFIP: 3.08 | WHIP: 1.20 | K-BB%: 11.7%
+CL: Carlos Estévez (FIP: 4.57)
+SU: Angel Zerpa (FIP: 4.22), John Schreiber (FIP: 7.20)
+疲労度: 主力4名が連投中
+2025-06-26 17:43:23,862 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/118/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:23,863 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 118
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 11.7% | Hard-Hit%: 28.4%
+2025-06-26 17:43:23,864 - src.mlb_api_client - INFO - Using cached OPS for team 118 last 5 games
+2025-06-26 17:43:23,864 - src.mlb_api_client - INFO - Using cached OPS for team 118 last 10 games
+過去5試合OPS: 0.537 | 過去10試合OPS: 0.590
+
+============================================================
+
+============================================================
+**Philadelphia Phillies @ Houston Astros**
+開始時刻: 06/27 03:10 (日本時間)
+==================================================
+
+【Philadelphia Phillies】
+**先発**: 未定
+
+**中継ぎ陣** (8名):
+ERA: 4.24 | FIP: 4.17 | xFIP: 2.90 | WHIP: 1.31 | K-BB%: 13.7%
+CL: Jordan Romano (FIP: 7.54)
+SU: Matt Strahm (FIP: 6.55), Orion Kerkering (FIP: 8.12)
+疲労度: 主力4名が連投中
+2025-06-26 17:43:24,176 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/143/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:24,176 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 143
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 10.7% | Hard-Hit%: 26.3%
+2025-06-26 17:43:24,177 - src.mlb_api_client - INFO - Using cached OPS for team 143 last 5 games
+2025-06-26 17:43:24,177 - src.mlb_api_client - INFO - Using cached OPS for team 143 last 10 games
+過去5試合OPS: 0.665 | 過去10試合OPS: 0.745
+
+【Houston Astros】
+**先発**: 未定
+
+**中継ぎ陣** (7名):
+ERA: 2.62 | FIP: 2.88 | xFIP: 2.07 | WHIP: 0.96 | K-BB%: 24.5%
+CL: Josh Hader (FIP: 0.88)
+SU: Bryan Abreu (FIP: 1.81), Bryan King (FIP: 1.50)
+疲労度: 主力3名が連投中
+2025-06-26 17:43:24,468 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/117/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:24,468 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 117
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 12.1% | Hard-Hit%: 27.3%
+2025-06-26 17:43:24,469 - src.mlb_api_client - INFO - Using cached OPS for team 117 last 5 games
+2025-06-26 17:43:24,470 - src.mlb_api_client - INFO - Using cached OPS for team 117 last 10 games
+過去5試合OPS: 0.665 | 過去10試合OPS: 0.775
+
+============================================================
+
+============================================================
+**Chicago Cubs @ St. Louis Cardinals**
+開始時刻: 06/27 03:15 (日本時間)
+==================================================
+
+【Chicago Cubs】
+**先発**: 未定
+
+**中継ぎ陣** (9名):
+ERA: 2.31 | FIP: 3.11 | xFIP: 3.03 | WHIP: 1.12 | K-BB%: 12.8%
+CL: Daniel Palencia (FIP: 1.49)
+SU: Brad Keller (FIP: 2.37), Caleb Thielbar (FIP: 1.45)
+疲労度: 主力3名が連投中
+2025-06-26 17:43:24,816 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/112/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:24,816 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 112
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 10.3% | Hard-Hit%: 25.5%
+2025-06-26 17:43:24,817 - src.mlb_api_client - INFO - Using cached OPS for team 112 last 5 games
+2025-06-26 17:43:24,817 - src.mlb_api_client - INFO - Using cached OPS for team 112 last 10 games
+過去5試合OPS: 0.879 | 過去10試合OPS: 0.817
+
+【St. Louis Cardinals】
+**先発**: 未定
+
+**中継ぎ陣** (8名):
+ERA: 3.19 | FIP: 3.52 | xFIP: 2.97 | WHIP: 1.26 | K-BB%: 12.8%
+CL: Ryan Helsley (FIP: 6.70)
+SU: JoJo Romero (FIP: 4.43), Kyle Leahy (FIP: 5.43)
+疲労度: 主力2名が連投中
+2025-06-26 17:43:25,116 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/138/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:25,117 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 138
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 10.8% | Hard-Hit%: 25.7%
+2025-06-26 17:43:25,117 - src.mlb_api_client - INFO - Using cached OPS for team 138 last 5 games
+2025-06-26 17:43:25,118 - src.mlb_api_client - INFO - Using cached OPS for team 138 last 10 games
+過去5試合OPS: 0.694 | 過去10試合OPS: 0.777
+
+============================================================
+
+============================================================
+**Los Angeles Dodgers @ Colorado Rockies**
+開始時刻: 06/27 04:10 (日本時間)
+==================================================
+
+【Los Angeles Dodgers】
+**先発**: 未定
+
+**中継ぎ陣** (10名):
+ERA: 3.69 | FIP: 3.60 | xFIP: 2.56 | WHIP: 1.16 | K-BB%: 17.8%
+CL: Tanner Scott (FIP: 6.34)
+SU: Alex Vesia (FIP: 4.34), Ben Casparius (FIP: 4.55)
+疲労度: 主力4名が連投中
+2025-06-26 17:43:25,443 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/119/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:25,444 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 119
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 12.4% | Hard-Hit%: 26.2%
+2025-06-26 17:43:25,444 - src.mlb_api_client - INFO - Using cached OPS for team 119 last 5 games
+2025-06-26 17:43:25,445 - src.mlb_api_client - INFO - Using cached OPS for team 119 last 10 games
+過去5試合OPS: 0.874 | 過去10試合OPS: 0.822
+
+【Colorado Rockies】
+**先発**: 未定
+
+**中継ぎ陣** (9名):
+ERA: 4.46 | FIP: 4.32 | xFIP: 3.21 | WHIP: 1.42 | K-BB%: 10.8%
+CL: Seth Halvorsen (FIP: 9.97)
+SU: Jake Bird (FIP: 4.55), Tyler Kinley (FIP: 10.82)
+疲労度: 主力3名が連投中
+2025-06-26 17:43:25,720 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/115/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:25,720 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 115
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 10.7% | Hard-Hit%: 26.0%
+2025-06-26 17:43:25,721 - src.mlb_api_client - INFO - Using cached OPS for team 115 last 5 games
+2025-06-26 17:43:25,722 - src.mlb_api_client - INFO - Using cached OPS for team 115 last 10 games
+過去5試合OPS: 0.698 | 過去10試合OPS: 0.784
+
+============================================================
+
+============================================================
+**Miami Marlins @ San Francisco Giants**
+開始時刻: 06/27 04:45 (日本時間)
+==================================================
+
+【Miami Marlins】
+**先発**: 未定
+
+**中継ぎ陣** (9名):
+ERA: 3.35 | FIP: 3.79 | xFIP: 3.07 | WHIP: 1.23 | K-BB%: 11.9%
+CL: Calvin Faucher (FIP: 4.60)
+SU: Anthony Bender (FIP: 4.42), Ronny Henriquez (FIP: 5.14)
+疲労度: 主力3名が連投中
+2025-06-26 17:43:26,091 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/146/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:26,091 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 146
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 10.4% | Hard-Hit%: 27.2%
+2025-06-26 17:43:26,092 - src.mlb_api_client - INFO - Using cached OPS for team 146 last 5 games
+2025-06-26 17:43:26,093 - src.mlb_api_client - INFO - Using cached OPS for team 146 last 10 games
+過去5試合OPS: 0.771 | 過去10試合OPS: 0.715
+
+【San Francisco Giants】
+**先発**: 未定
+
+**中継ぎ陣** (9名):
+ERA: 2.51 | FIP: 3.17 | xFIP: 2.85 | WHIP: 1.11 | K-BB%: 14.6%
+CL: Camilo Doval (FIP: 3.06)
+SU: Erik Miller (FIP: 4.04), Randy Rodríguez (FIP: 2.46)
+疲労度: 主力5名が連投中
+2025-06-26 17:43:26,415 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/137/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:26,416 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 137
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 9.5% | Hard-Hit%: 24.2%
+2025-06-26 17:43:26,417 - src.mlb_api_client - INFO - Using cached OPS for team 137 last 5 games
+2025-06-26 17:43:26,417 - src.mlb_api_client - INFO - Using cached OPS for team 137 last 10 games
+過去5試合OPS: 0.663 | 過去10試合OPS: 0.640
+
+============================================================
+
+============================================================
+**Atlanta Braves @ New York Mets**
+開始時刻: 06/27 08:10 (日本時間)
+==================================================
+
+【Atlanta Braves】
+**先発**: 未定
+
+**中継ぎ陣** (8名):
+ERA: 3.44 | FIP: 3.32 | xFIP: 2.58 | WHIP: 1.15 | K-BB%: 17.8%
+CL: Raisel Iglesias (FIP: 4.11)
+SU: Dylan Lee (FIP: 2.67), Pierce Johnson (FIP: 2.40)
+疲労度: 主力3名が連投中
+2025-06-26 17:43:26,735 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/144/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:26,736 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 144
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 9.9% | Hard-Hit%: 24.3%
+2025-06-26 17:43:26,736 - src.mlb_api_client - INFO - Using cached OPS for team 144 last 5 games
+2025-06-26 17:43:26,737 - src.mlb_api_client - INFO - Using cached OPS for team 144 last 10 games
+過去5試合OPS: 0.688 | 過去10試合OPS: 0.666
+
+【New York Mets】
+**先発**: 未定
+
+**中継ぎ陣** (7名):
+ERA: 2.94 | FIP: 3.33 | xFIP: 3.00 | WHIP: 1.23 | K-BB%: 14.0%
+CL: Edwin Díaz (FIP: 3.07)
+SU: Huascar Brazobán (FIP: 3.91), Reed Garrett (FIP: 3.78)
+疲労度: 主力3名が連投中
+2025-06-26 17:43:27,055 - src.mlb_api_client - ERROR - Error fetching team stats: 400 Client Error: Bad Request for url: https://statsapi.mlb.com/api/v1/teams/121/stats?stats=season&season=2025&gameType=R
+2025-06-26 17:43:27,056 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 121
+
+**チーム打撃**:
+シーズン統計: データなし
+Barrel%: 13.0% | Hard-Hit%: 29.4%
+2025-06-26 17:43:27,057 - src.mlb_api_client - INFO - Using cached OPS for team 121 last 5 games
+2025-06-26 17:43:27,057 - src.mlb_api_client - INFO - Using cached OPS for team 121 last 10 games
+過去5試合OPS: 0.783 | 過去10試合OPS: 0.661
+
+============================================================

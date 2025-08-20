@@ -1,0 +1,124 @@
+{
+  "team_id": 117,
+  "games": 5,
+  "timestamp": "20250620_073309",
+  "players": [
+    {
+      "player_id": 701358,
+      "name": "Cam Smith",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.545,
+      "slg": 0.95,
+      "ops": 1.495
+    },
+    {
+      "player_id": 643289,
+      "name": "Mauricio Dubón",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.474,
+      "slg": 0.882,
+      "ops": 1.356
+    },
+    {
+      "player_id": 670623,
+      "name": "Isaac Paredes",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.458,
+      "slg": 0.632,
+      "ops": 1.09
+    },
+    {
+      "player_id": 514888,
+      "name": "Jose Altuve",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.3,
+      "slg": 0.579,
+      "ops": 0.879
+    },
+    {
+      "player_id": 676694,
+      "name": "Jake Meyers",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.455,
+      "slg": 0.421,
+      "ops": 0.876
+    },
+    {
+      "player_id": 605170,
+      "name": "Victor Caratini",
+      "position": "C",
+      "games": 5,
+      "obp": 0.316,
+      "slg": 0.556,
+      "ops": 0.871
+    },
+    {
+      "player_id": 669450,
+      "name": "Cooper Hummel",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.273,
+      "slg": 0.444,
+      "ops": 0.717
+    },
+    {
+      "player_id": 673237,
+      "name": "Yainer Diaz",
+      "position": "C",
+      "games": 5,
+      "obp": 0.25,
+      "slg": 0.391,
+      "ops": 0.641
+    },
+    {
+      "player_id": 572233,
+      "name": "Christian Walker",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.292,
+      "slg": 0.333,
+      "ops": 0.625
+    },
+    {
+      "player_id": 665161,
+      "name": "Jeremy Peña",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.261,
+      "slg": 0.15,
+      "ops": 0.411
+    },
+    {
+      "player_id": 663967,
+      "name": "César Salazar",
+      "position": "C",
+      "games": 5,
+      "obp": 0.167,
+      "slg": 0.167,
+      "ops": 0.333
+    },
+    {
+      "player_id": 641645,
+      "name": "Luis Guillorme",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.2,
+      "slg": 0.111,
+      "ops": 0.311
+    },
+    {
+      "player_id": 694376,
+      "name": "Shay Whitcomb",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.0,
+      "slg": 0.0,
+      "ops": 0.0
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "team_id": 141,
+  "games": 5,
+  "timestamp": "20250620_184400",
+  "players": [
+    {
+      "player_id": 665489,
+      "name": "Vladimir Guerrero Jr.",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.524,
+      "slg": 0.833,
+      "ops": 1.357
+    },
+    {
+      "player_id": 623168,
+      "name": "Tyler Heineman",
+      "position": "C",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 0.667,
+      "ops": 1.095
+    },
+    {
+      "player_id": 680718,
+      "name": "Addison Barger",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.409,
+      "slg": 0.65,
+      "ops": 1.059
+    },
+    {
+      "player_id": 702176,
+      "name": "Alan Roden",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.545,
+      "slg": 0.5,
+      "ops": 1.045
+    },
+    {
+      "player_id": 676391,
+      "name": "Ernie Clement",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.429,
+      "slg": 0.524,
+      "ops": 0.952
+    },
+    {
+      "player_id": 666182,
+      "name": "Bo Bichette",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.318,
+      "slg": 0.619,
+      "ops": 0.937
+    },
+    {
+      "player_id": 682729,
+      "name": "Jonatan Clase",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.231,
+      "slg": 0.417,
+      "ops": 0.647
+    },
+    {
+      "player_id": 672386,
+      "name": "Alejandro Kirk",
+      "position": "C",
+      "games": 5,
+      "obp": 0.19,
+      "slg": 0.45,
+      "ops": 0.64
+    },
+    {
+      "player_id": 665926,
+      "name": "Andrés Giménez",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.3,
+      "slg": 0.067,
+      "ops": 0.367
+    },
+    {
+      "player_id": 683770,
+      "name": "Will Robertson",
+      "position": "LF",
+      "games": 3,
+      "obp": 0.25,
+      "slg": 0.1,
+      "ops": 0.35
+    },
+    {
+      "player_id": 664702,
+      "name": "Myles Straw",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.154,
+      "slg": 0.154,
+      "ops": 0.308
+    },
+    {
+      "player_id": 676914,
+      "name": "Davis Schneider",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.143,
+      "slg": 0.077,
+      "ops": 0.22
+    },
+    {
+      "player_id": 543807,
+      "name": "George Springer",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.1,
+      "slg": 0.053,
+      "ops": 0.153
+    }
+  ]
+}

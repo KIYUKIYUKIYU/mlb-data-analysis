@@ -1,0 +1,1 @@
+python: can't open file 'C:\\Users\\yfuku\\Desktop\\mlb-data-analysis\\scripts\\check_mlb_api_detailed.py': [Errno 2] No such file or directory

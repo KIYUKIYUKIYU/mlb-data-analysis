@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-07-14T03:38:10.232331",
+  "base_url": "https://www.fangraphs.com/leaders/international/npb",
+  "status": "NPB International section found",
+  "notes": [
+    "メインURL: https://www.fangraphs.com/leaders/international/npb",
+    "データはおそらく動的に読み込まれている（React/Vue.js）",
+    "開発者ツールでのネットワーク分析が必要",
+    "APIエンドポイントの特定が次のステップ"
+  ]
+}

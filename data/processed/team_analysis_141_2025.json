@@ -1,0 +1,26 @@
+{
+  "teamId": 141,
+  "teamName": "Blue Jays",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:43:52.191381",
+  "pitching": {
+    "teamId": 141,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 0.0,
+      "whip": 0.0,
+      "totalInnings": 0.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 141,
+    "season": 2025,
+    "avg": ".255",
+    "ops": ".727",
+    "hits": 636,
+    "runs": 320,
+    "rbi": 308
+  }
+}

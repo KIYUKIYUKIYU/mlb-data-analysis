@@ -1,0 +1,26 @@
+{
+  "teamId": 121,
+  "teamName": "Mets",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:37:54.756465",
+  "pitching": {
+    "teamId": 121,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 1.64,
+      "whip": 1.0,
+      "totalInnings": 11.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 121,
+    "season": 2025,
+    "avg": ".245",
+    "ops": ".744",
+    "hits": 613,
+    "runs": 333,
+    "rbi": 324
+  }
+}

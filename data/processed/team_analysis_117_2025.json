@@ -1,0 +1,26 @@
+{
+  "teamId": 117,
+  "teamName": "Astros",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:35:19.217235",
+  "pitching": {
+    "teamId": 117,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 4.5,
+      "whip": 1.5,
+      "totalInnings": 4.0,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 117,
+    "season": 2025,
+    "avg": ".258",
+    "ops": ".726",
+    "hits": 649,
+    "runs": 321,
+    "rbi": 307
+  }
+}

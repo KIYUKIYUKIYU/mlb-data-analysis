@@ -20,7 +20,7 @@ class DataCollector:
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"✅ 保存完了: {filepath}")
         
-    def collect_teams(self, season=2024):
+    def collect_teams(self, season=2025):
         """チーム情報を収集"""
         print(f"\n🏟️  {season}年のチーム情報を収集中...")
         
@@ -60,7 +60,7 @@ class DataCollector:
         
         return formatted_teams
         
-    def collect_team_roster(self, team_id, team_name, season=2024):
+    def collect_team_roster(self, team_id, team_name, season=2025):
         """特定チームのロースター（選手一覧）を取得"""
         print(f"\n👥 {team_name}のロースターを取得中...")
         
@@ -115,7 +115,7 @@ class DataCollector:
             print(f"❌ エラー: {e}")
             return []
             
-    def collect_all_data(self, season=2024):
+    def collect_all_data(self, season=2025):
         """全データを収集するメイン関数"""
         print(f"\n{'='*50}")
         print(f"🚀 MLB {season}年シーズンデータ収集開始")
@@ -145,8 +145,8 @@ def main():
     """メイン実行関数"""
     collector = DataCollector()
     
-    # 2024年のデータを収集
-    collector.collect_all_data(2024)
+    # 2025年のデータを収集
+    collector.collect_all_data(2025)
     
     print("\n💡 ヒント:")
     print("- data/raw/teams/ フォルダにチーム情報が保存されています")

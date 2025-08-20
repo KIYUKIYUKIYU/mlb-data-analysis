@@ -1,0 +1,124 @@
+{
+  "team_id": 139,
+  "games": 5,
+  "timestamp": "20250620_184241",
+  "players": [
+    {
+      "player_id": 691406,
+      "name": "Junior Caminero",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.591,
+      "slg": 0.722,
+      "ops": 1.313
+    },
+    {
+      "player_id": 664040,
+      "name": "Brandon Lowe",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.45,
+      "slg": 0.778,
+      "ops": 1.228
+    },
+    {
+      "player_id": 666018,
+      "name": "Jonathan Aranda",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.524,
+      "slg": 0.579,
+      "ops": 1.103
+    },
+    {
+      "player_id": 678554,
+      "name": "Curtis Mead",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.455,
+      "slg": 0.6,
+      "ops": 1.055
+    },
+    {
+      "player_id": 666624,
+      "name": "Christopher Morel",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.4,
+      "slg": 0.6,
+      "ops": 1.0
+    },
+    {
+      "player_id": 650490,
+      "name": "Yandy Díaz",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.435,
+      "slg": 0.524,
+      "ops": 0.959
+    },
+    {
+      "player_id": 670764,
+      "name": "Taylor Walls",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.375,
+      "slg": 0.538,
+      "ops": 0.913
+    },
+    {
+      "player_id": 666139,
+      "name": "Josh Lowe",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.421,
+      "slg": 0.467,
+      "ops": 0.888
+    },
+    {
+      "player_id": 663968,
+      "name": "Jake Mangum",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.409,
+      "slg": 0.429,
+      "ops": 0.838
+    },
+    {
+      "player_id": 642136,
+      "name": "Matt Thaiss",
+      "position": "C",
+      "games": 5,
+      "obp": 0.294,
+      "slg": 0.294,
+      "ops": 0.588
+    },
+    {
+      "player_id": 676609,
+      "name": "José Caballero",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.333,
+      "slg": 0.143,
+      "ops": 0.476
+    },
+    {
+      "player_id": 643376,
+      "name": "Danny Jansen",
+      "position": "C",
+      "games": 5,
+      "obp": 0.211,
+      "slg": 0.167,
+      "ops": 0.377
+    },
+    {
+      "player_id": 670224,
+      "name": "Kameron Misner",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.1,
+      "slg": 0.1,
+      "ops": 0.2
+    }
+  ]
+}

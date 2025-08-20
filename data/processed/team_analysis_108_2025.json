@@ -1,0 +1,26 @@
+{
+  "teamId": 108,
+  "teamName": "Angels",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:29:24.041724",
+  "pitching": {
+    "teamId": 108,
+    "season": 2025,
+    "starters": [],
+    "bullpenAggregate": {
+      "era": 6.23,
+      "whip": 1.38,
+      "totalInnings": 4.1,
+      "pitcherCount": 10
+    }
+  },
+  "batting": {
+    "teamId": 108,
+    "season": 2025,
+    "avg": ".225",
+    "ops": ".685",
+    "hits": 553,
+    "runs": 303,
+    "rbi": 292
+  }
+}

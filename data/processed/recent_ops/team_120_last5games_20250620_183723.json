@@ -1,0 +1,124 @@
+{
+  "team_id": 120,
+  "games": 5,
+  "timestamp": "20250620_183723",
+  "players": [
+    {
+      "player_id": 695578,
+      "name": "James Wood",
+      "position": "LF",
+      "games": 5,
+      "obp": 0.5,
+      "slg": 1.0,
+      "ops": 1.5
+    },
+    {
+      "player_id": 671277,
+      "name": "Luis García Jr.",
+      "position": "2B",
+      "games": 5,
+      "obp": 0.389,
+      "slg": 0.588,
+      "ops": 0.977
+    },
+    {
+      "player_id": 682928,
+      "name": "CJ Abrams",
+      "position": "SS",
+      "games": 5,
+      "obp": 0.455,
+      "slg": 0.353,
+      "ops": 0.807
+    },
+    {
+      "player_id": 669743,
+      "name": "Alex Call",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.357,
+      "slg": 0.385,
+      "ops": 0.742
+    },
+    {
+      "player_id": 696285,
+      "name": "Jacob Young",
+      "position": "CF",
+      "games": 5,
+      "obp": 0.308,
+      "slg": 0.385,
+      "ops": 0.692
+    },
+    {
+      "player_id": 663993,
+      "name": "Nathaniel Lowe",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.222,
+      "slg": 0.412,
+      "ops": 0.634
+    },
+    {
+      "player_id": 691781,
+      "name": "Brady House",
+      "position": "3B",
+      "games": 4,
+      "obp": 0.353,
+      "slg": 0.267,
+      "ops": 0.62
+    },
+    {
+      "player_id": 605137,
+      "name": "Josh Bell",
+      "position": "1B",
+      "games": 5,
+      "obp": 0.235,
+      "slg": 0.353,
+      "ops": 0.588
+    },
+    {
+      "player_id": 665953,
+      "name": "Andrés Chaparro",
+      "position": "1B",
+      "games": 3,
+      "obp": 0.222,
+      "slg": 0.25,
+      "ops": 0.472
+    },
+    {
+      "player_id": 695734,
+      "name": "Daylen Lile",
+      "position": "RF",
+      "games": 5,
+      "obp": 0.067,
+      "slg": 0.267,
+      "ops": 0.333
+    },
+    {
+      "player_id": 642708,
+      "name": "Amed Rosario",
+      "position": "3B",
+      "games": 5,
+      "obp": 0.154,
+      "slg": 0.091,
+      "ops": 0.245
+    },
+    {
+      "player_id": 660688,
+      "name": "Keibert Ruiz",
+      "position": "C",
+      "games": 5,
+      "obp": 0.118,
+      "slg": 0.118,
+      "ops": 0.235
+    },
+    {
+      "player_id": 656180,
+      "name": "Riley Adams",
+      "position": "C",
+      "games": 5,
+      "obp": 0.077,
+      "slg": 0.0,
+      "ops": 0.077
+    }
+  ]
+}

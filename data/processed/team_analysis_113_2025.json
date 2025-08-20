@@ -1,0 +1,44 @@
+{
+  "teamId": 113,
+  "teamName": "Reds",
+  "season": 2025,
+  "analyzedAt": "2025-06-20T18:32:42.762434",
+  "pitching": {
+    "teamId": 113,
+    "season": 2025,
+    "starters": [
+      {
+        "id": 671096,
+        "name": "Andrew Abbott",
+        "handedness": "L",
+        "era": "1.84",
+        "whip": "1.01",
+        "fip": 3.626,
+        "strikeouts": 69,
+        "innings": "68.1",
+        "gamesStarted": 12,
+        "strikeoutRate": 0.255,
+        "groundBallRate": 0.311,
+        "flyBallRate": 0.689,
+        "qsRate": 0.0,
+        "vsLeftAvg": ".000",
+        "vsRightAvg": ".000"
+      }
+    ],
+    "bullpenAggregate": {
+      "era": 0.0,
+      "whip": 0.0,
+      "totalInnings": 0.0,
+      "pitcherCount": 9
+    }
+  },
+  "batting": {
+    "teamId": 113,
+    "season": 2025,
+    "avg": ".248",
+    "ops": ".726",
+    "hits": 625,
+    "runs": 350,
+    "rbi": 337
+  }
+}
