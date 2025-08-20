@@ -22,23 +22,12 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        # 基本パッケージのインストール
+        pip install pandas numpy requests beautifulsoup4 pytz
+        # Google Drive用（オプション）
         pip install google-api-python-client google-auth-oauthlib google-auth-httplib2
-    
-    - name: Create credentials
-      run: |
-        mkdir -p credentials
-        echo '${{ secrets.GOOGLE_OAUTH_CREDENTIALS }}' > credentials/oauth_credentials.json
-        python -c "import base64, sys; token_b64 = '''${{ secrets.GOOGLE_TOKEN_PICKLE }}'''.strip().replace('\n', '').replace(' ', ''); token_data = base64.b64decode(token_b64); open('credentials/token.pickle', 'wb').write(token_data); print('Token pickle created successfully')"
-    
-    - name: Create config
-      run: |
-        mkdir -p config
-        echo '{
-          "enable_google_drive": true,
-          "google_drive_folder_id": "${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}",
-          "keep_days": 30
-        }' > config/auto_report_config.json
+        # もしrequirements.txtがあれば使用
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: Create necessary directories
       run: |
@@ -51,16 +40,56 @@ jobs:
         mkdir -p cache/statcast_data
         mkdir -p logs
         mkdir -p daily_reports
+        mkdir -p scripts
     
-    - name: Generate and upload report
+    - name: Generate MLB Report
       env:
-        GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         PYTHONIOENCODING: utf-8
+        PYTHONPATH: ${{ github.workspace }}
       run: |
-        python mlb_report_with_drive.py
+        # scriptsフォルダにファイルがある場合
+        if [ -f scripts/mlb_complete_report_real.py ]; then
+          echo "Running from scripts folder..."
+          python scripts/mlb_complete_report_real.py > daily_reports/report_$(date +%Y%m%d).txt 2>&1
+        # ルートフォルダにファイルがある場合  
+        elif [ -f mlb_complete_report_real.py ]; then
+          echo "Running from root folder..."
+          python mlb_complete_report_real.py > daily_reports/report_$(date +%Y%m%d).txt 2>&1
+        else
+          echo "Error: mlb_complete_report_real.py not found!"
+          exit 1
+        fi
+        
+        # レポートの内容を表示（デバッグ用）
+        echo "=== Report Generated ==="
+        tail -n 50 daily_reports/report_$(date +%Y%m%d).txt
     
-    - name: Send notification (optional)
+    - name: Upload report as artifact
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: mlb-daily-report
+        path: daily_reports/
+    
+    - name: Check for errors
+      run: |
+        # エラーログがあれば表示
+        if [ -f logs/error.log ]; then
+          echo "=== Error Log ==="
+          cat logs/error.log
+        fi
+    
+    - name: Commit reports to repository (optional)
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add daily_reports/
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Add daily MLB report $(date +%Y-%m-%d)" && git push)
+      continue-on-error: true
+    
+    - name: Send success notification
       if: success()
       run: |
-        echo "レポート生成成功！"
+        echo "✅ レポート生成成功！"
+        echo "📅 Date: $(date +%Y-%m-%d)"
+        echo "📄 Report saved to: daily_reports/report_$(date +%Y%m%d).txt"
