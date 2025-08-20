@@ -1,4 +1,5 @@
-name: Daily MLB Report
+# fix_github_encoding.py
+workflow_content = """name: Daily MLB Report
 
 on:
   schedule:
@@ -83,3 +84,11 @@ jobs:
         if [ -f daily_reports/report_$(date +%Y%m%d).txt ]; then
           echo "- Lines: $(wc -l < daily_reports/report_$(date +%Y%m%d).txt)" >> $GITHUB_STEP_SUMMARY
         fi
+"""
+
+import os
+workflow_path = r"C:\Users\yfuku\Desktop\mlb-data-analysis\.github\workflows\daily_mlb_report.yml"
+with open(workflow_path, 'w', encoding='utf-8') as f:
+    f.write(workflow_content)
+
+print("✅ ワークフローを更新しました（日本語ロケール対応版）")
