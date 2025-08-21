@@ -4,6 +4,7 @@ MLBレポート生成スクリプト（実データ版）- 完全版
 - データ信頼性表示付き
 - ログ出力抑制（クリーンな出力）
 - エンコーディングエラー対策済み
+- 自動ファイル保存機能付き
 ※重要：必ず2025年のデータのみを使用すること
 """
 
@@ -288,8 +289,6 @@ class MLBCompleteReport:
             swstr_pct = self._safe_float(enhanced_stats.get('swstr_percent', '0'))
             babip = self._safe_float(enhanced_stats.get('babip', '0'))
             
-            # デバッグ出力を削除（コメントアウト）
-            
             print(f"ERA: {era:.2f} | FIP: {fip:.2f} | "
                   f"xFIP: {xfip:.2f} | WHIP: {whip:.2f} | "
                   f"K-BB%: {k_bb_percent:.1f}% | "
@@ -420,13 +419,16 @@ class MLBCompleteReport:
             print(f"チーム打撃統計の表示エラー: {str(e)}")
 
 def main():
-    """メイン関数"""
+    """メイン関数（自動ファイル保存機能付き）"""
     import argparse
     
-    parser = argparse.ArgumentParser(description='MLB試合予想レポート生成（データ信頼性表示付き）')
+    parser = argparse.ArgumentParser(description='MLB試合予想レポート生成（自動保存対応）')
     parser.add_argument('--date', type=str, help='対象日付 (YYYY-MM-DD形式)')
+    parser.add_argument('--output', type=str, help='出力ファイル名（指定しない場合は自動生成）')
     parser.add_argument('--check-data', action='store_true', 
                        help='データ信頼性の詳細チェック')
+    parser.add_argument('--console', action='store_true',
+                       help='コンソールにも出力（デバッグ用）')
     args = parser.parse_args()
     
     # データチェックモード
@@ -438,14 +440,76 @@ def main():
         checker.display_detailed_reliability()
         sys.exit(0)
     
-    # 通常のレポート生成
-    report = MLBCompleteReport()
-    
-    if args.date:
-        report.generate_report(args.date)
+    # 出力ファイル名を決定
+    if args.output:
+        output_file = args.output
     else:
-        # デフォルトは明日の試合
-        report.generate_report()
+        # daily_reportsディレクトリを作成
+        Path("daily_reports").mkdir(exist_ok=True)
+        
+        # 日本語の曜日
+        weekdays = ['月', '火', '水', '木', '金', '土', '日']
+        now = datetime.now()
+        tomorrow = now + timedelta(days=1)
+        weekday_jp = weekdays[tomorrow.weekday()]
+        
+        # ファイル名を生成（例：MLB08月21日(木)レポート.txt）
+        output_file = f"daily_reports/MLB{tomorrow.strftime('%m月%d日')}({weekday_jp})レポート.txt"
+    
+    # コンソール出力の処理
+    if args.console:
+        # コンソールとファイルの両方に出力
+        import io
+        
+        # StringIOでキャプチャ
+        string_buffer = io.StringIO()
+        original_stdout = sys.stdout
+        sys.stdout = string_buffer
+        
+        # レポート生成
+        report = MLBCompleteReport()
+        if args.date:
+            report.generate_report(args.date)
+        else:
+            report.generate_report()
+        
+        # 出力を取得
+        output_content = string_buffer.getvalue()
+        sys.stdout = original_stdout
+        
+        # コンソールに表示
+        print(output_content)
+        
+        # ファイルに保存
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(output_content)
+    else:
+        # ファイルのみに出力
+        original_stdout = sys.stdout
+        with open(output_file, 'w', encoding='utf-8') as f:
+            sys.stdout = f
+            
+            # レポート生成
+            report = MLBCompleteReport()
+            if args.date:
+                report.generate_report(args.date)
+            else:
+                report.generate_report()
+            
+            sys.stdout = original_stdout
+    
+    # 完了メッセージ
+    file_size = Path(output_file).stat().st_size / 1024  # KB単位
+    print(f"\n✅ レポートを生成しました:")
+    print(f"   ファイル: {output_file}")
+    print(f"   サイズ: {file_size:.1f} KB")
+    print(f"   時刻: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    
+    # HTML変換の提案
+    if output_file.endswith('.txt'):
+        html_file = output_file.replace('.txt', '.html')
+        print(f"\n💡 HTML変換するには:")
+        print(f"   python scripts/convert_to_html.py \"{output_file}\"")
 
 if __name__ == "__main__":
     main()

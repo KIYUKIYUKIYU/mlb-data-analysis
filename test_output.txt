@@ -1,449 +1,412 @@
-2025-08-21 02:22:47,618 - __main__ - INFO - Generating report for date: 2025-08-21
 
 ============================================================
-MLBè©¦åˆäºˆæƒ³ãƒ¬ãƒãƒ¼ãƒˆ - æ—¥æœ¬æ™‚é–“ 2025/08/22 ã®è©¦åˆ
+MLB‡—\‘zƒŒƒ|[ƒg - “ú–{ŠÔ 2025/08/22 ‚Ì‡
 ============================================================
+
+[‚] ƒf[ƒ^M—Š«: ‚ (4/4ƒf[ƒ^‚ª–{“úXV) | 11:37“_
+------------------------------------------------------------
 
 
 ============================================================
 **Athletics @ Minnesota Twins**
-é–‹å§‹æ™‚åˆ»: 08/22 02:10 (æ—¥æœ¬æ™‚é–“)
+ŠJn: 08/22 02:10 (“ú–{ŠÔ)
 ==================================================
 
-ã€Athleticsã€‘
-**å…ˆç™º**: Jack Perkins (1å‹2æ•—)
-ERA: 4.08 | FIP: 3.76 | xFIP: 4.20 | WHIP: 1.05 | K-BB%: 14.7% | GB%: 44.7% | FB%: 32.9% | QSç‡: 50.0%
+yAthleticsz
+**æ”­**: Jack Perkins (1Ÿ2”s)
+ERA: 4.08 | FIP: 3.76 | xFIP: 4.20 | WHIP: 1.05 | K-BB%: 14.7% | GB%: 44.7% | FB%: 32.9% | QS—¦: 50.0%
 SwStr%: 32.9% | BABIP: 0.219
-å¯¾å·¦: 0.190 (OPS 0.624) | å¯¾å³: 0.178 (OPS 0.519)
+‘Î¶: 0.190 (OPS 0.624) | ‘Î‰E: 0.178 (OPS 0.519)
 
-**ä¸­ç¶™ãé™£** (8å):
+**’†Œp‚¬w** (8–¼):
 ERA: 3.79 | FIP: 3.75 | xFIP: 2.97 | WHIP: 1.33 | K-BB%: 12.7%
 SU: Justin Sterner (FIP: 4.56), Michael Kelly (FIP: 3.74)
-ç–²åŠ´åº¦: ä¸»åŠ›4åãŒé€£æŠ•ä¸­
-2025-08-21 02:22:54,670 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 133
+”æ˜J“x: å—Í4–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:22:54,707 - src.mlb_api_client - INFO - Using cached OPS for team 133 last 5 games
-2025-08-21 02:22:54,708 - src.mlb_api_client - INFO - Using cached OPS for team 133 last 10 games
-AVG: 0.254 | OPS: 0.755 | å¾—ç‚¹: 572 | æœ¬å¡æ‰“: 175
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.254 | OPS: 0.755 | “¾“_: 576 | –{—Û‘Å: 177
 wOBA: 0.327 | xwOBA: 0.318
-Barrel%: 10.9% | Hard-Hit%: 25.4%
-å¯¾å·¦æŠ•æ‰‹: 0.261 (OPS 0.752) | å¯¾å³æŠ•æ‰‹: 0.252 (OPS 0.755)
-éå»5è©¦åˆOPS: 0.847 | éå»10è©¦åˆOPS: 0.780
+Barrel%: 10.9% | Hard-Hit%: 25.1%
+‘Î¶“Šè: 0.261 (OPS 0.752) | ‘Î‰E“Šè: 0.252 (OPS 0.755)
+‰ß‹5‡OPS: 0.847 | ‰ß‹10‡OPS: 0.780
 
-ã€Minnesota Twinsã€‘
-**å…ˆç™º**: æœªå®š
+yMinnesota Twinsz
+**æ”­**: –¢’è
 
-**ä¸­ç¶™ãé™£** (9å):
+**’†Œp‚¬w** (9–¼):
 ERA: 4.27 | FIP: 4.10 | xFIP: 3.06 | WHIP: 1.34 | K-BB%: 10.2%
 SU: Cole Sands (FIP: 3.77)
-ç–²åŠ´åº¦: ä¸»åŠ›2åãŒé€£æŠ•ä¸­
-2025-08-21 02:23:04,530 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 142
+”æ˜J“x: å—Í2–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:23:04,531 - src.mlb_api_client - INFO - Using cached OPS for team 142 last 5 games
-2025-08-21 02:23:04,531 - src.mlb_api_client - INFO - Using cached OPS for team 142 last 10 games
-AVG: 0.237 | OPS: 0.705 | å¾—ç‚¹: 520 | æœ¬å¡æ‰“: 146
-wOBA: 0.308 | xwOBA: 0.312
-Barrel%: 10.2% | Hard-Hit%: 28.2%
-å¯¾å·¦æŠ•æ‰‹: 0.230 (OPS 0.684) | å¯¾å³æŠ•æ‰‹: 0.240 (OPS 0.713)
-éå»5è©¦åˆOPS: 0.641 | éå»10è©¦åˆOPS: 0.566
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.238 | OPS: 0.705 | “¾“_: 522 | –{—Û‘Å: 146
+wOBA: 0.309 | xwOBA: 0.312
+Barrel%: 9.9% | Hard-Hit%: 24.7%
+‘Î¶“Šè: 0.230 (OPS 0.684) | ‘Î‰E“Šè: 0.240 (OPS 0.713)
+‰ß‹5‡OPS: 0.641 | ‰ß‹10‡OPS: 0.566
 
 ============================================================
 
 ============================================================
 **Texas Rangers @ Kansas City Royals**
-é–‹å§‹æ™‚åˆ»: 08/22 03:10 (æ—¥æœ¬æ™‚é–“)
+ŠJn: 08/22 03:10 (“ú–{ŠÔ)
 ==================================================
 
-ã€Texas Rangersã€‘
-**å…ˆç™º**: Patrick Corbin (6å‹8æ•—)
-ERA: 4.00 | FIP: 4.25 | xFIP: 4.21 | WHIP: 1.32 | K-BB%: 11.9% | GB%: 38.7% | FB%: 29.1% | QSç‡: 22.7%
+yTexas Rangersz
+**æ”­**: Patrick Corbin (6Ÿ8”s)
+ERA: 4.00 | FIP: 4.25 | xFIP: 4.21 | WHIP: 1.32 | K-BB%: 11.9% | GB%: 38.7% | FB%: 29.1% | QS—¦: 22.7%
 SwStr%: 25.7% | BABIP: 0.298
-å¯¾å·¦: 0.236 (OPS 0.699) | å¯¾å³: 0.269 (OPS 0.754)
+‘Î¶: 0.236 (OPS 0.699) | ‘Î‰E: 0.269 (OPS 0.754)
 
-**ä¸­ç¶™ãé™£** (8å):
+**’†Œp‚¬w** (8–¼):
 ERA: 2.98 | FIP: 3.11 | xFIP: 2.60 | WHIP: 1.11 | K-BB%: 16.6%
 CL: Robert Garcia (FIP: 3.95)
 SU: Danny Coulombe (FIP: 2.35), Hoby Milner (FIP: 2.64)
-ç–²åŠ´åº¦: ä¸»åŠ›5åãŒé€£æŠ•ä¸­
-2025-08-21 02:23:19,860 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 140
+”æ˜J“x: å—Í5–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:23:19,861 - src.mlb_api_client - INFO - Using cached OPS for team 140 last 5 games
-2025-08-21 02:23:19,862 - src.mlb_api_client - INFO - Using cached OPS for team 140 last 10 games
-AVG: 0.232 | OPS: 0.678 | å¾—ç‚¹: 517 | æœ¬å¡æ‰“: 134
-wOBA: 0.298 | xwOBA: 0.308
-Barrel%: 9.4% | Hard-Hit%: 22.9%
-å¯¾å·¦æŠ•æ‰‹: 0.224 (OPS 0.629) | å¯¾å³æŠ•æ‰‹: 0.235 (OPS 0.697)
-éå»5è©¦åˆOPS: 0.757 | éå»10è©¦åˆOPS: 0.694
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.233 | OPS: 0.680 | “¾“_: 523 | –{—Û‘Å: 135
+wOBA: 0.299 | xwOBA: 0.308
+Barrel%: 10.5% | Hard-Hit%: 24.0%
+‘Î¶“Šè: 0.224 (OPS 0.629) | ‘Î‰E“Šè: 0.235 (OPS 0.697)
+‰ß‹5‡OPS: 0.757 | ‰ß‹10‡OPS: 0.694
 
-ã€Kansas City Royalsã€‘
-**å…ˆç™º**: Michael Lorenzen (5å‹8æ•—)
-ERA: 4.61 | FIP: 4.54 | xFIP: 4.37 | WHIP: 1.30 | K-BB%: 13.2% | GB%: 38.0% | FB%: 27.9% | QSç‡: 38.9%
+yKansas City Royalsz
+**æ”­**: Michael Lorenzen (5Ÿ8”s)
+ERA: 4.61 | FIP: 4.54 | xFIP: 4.37 | WHIP: 1.30 | K-BB%: 13.2% | GB%: 38.0% | FB%: 27.9% | QS—¦: 38.9%
 SwStr%: 22.9% | BABIP: 0.289
-å¯¾å·¦: 0.250 (OPS 0.739) | å¯¾å³: 0.269 (OPS 0.820)
+‘Î¶: 0.250 (OPS 0.739) | ‘Î‰E: 0.269 (OPS 0.820)
 
-**ä¸­ç¶™ãé™£** (7å):
+**’†Œp‚¬w** (7–¼):
 ERA: 3.36 | FIP: 3.80 | xFIP: 2.95 | WHIP: 1.22 | K-BB%: 11.9%
-CL: Carlos EstÃ©vez (FIP: 3.86)
+CL: Carlos Estevez (FIP: 3.86)
 SU: Angel Zerpa (FIP: 3.48), John Schreiber (FIP: 4.06)
-ç–²åŠ´åº¦: ä¸»åŠ›6åãŒé€£æŠ•ä¸­
-2025-08-21 02:23:30,416 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 118
+”æ˜J“x: å—Í6–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:23:30,417 - src.mlb_api_client - INFO - Using cached OPS for team 118 last 5 games
-2025-08-21 02:23:30,418 - src.mlb_api_client - INFO - Using cached OPS for team 118 last 10 games
-AVG: 0.246 | OPS: 0.697 | å¾—ç‚¹: 480 | æœ¬å¡æ‰“: 119
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.246 | OPS: 0.698 | “¾“_: 483 | –{—Û‘Å: 120
 wOBA: 0.305 | xwOBA: 0.311
-Barrel%: 11.3% | Hard-Hit%: 27.2%
-å¯¾å·¦æŠ•æ‰‹: 0.239 (OPS 0.665) | å¯¾å³æŠ•æ‰‹: 0.248 (OPS 0.707)
-éå»5è©¦åˆOPS: 0.849 | éå»10è©¦åˆOPS: 0.814
+Barrel%: 11.1% | Hard-Hit%: 27.3%
+‘Î¶“Šè: 0.239 (OPS 0.665) | ‘Î‰E“Šè: 0.248 (OPS 0.707)
+‰ß‹5‡OPS: 0.849 | ‰ß‹10‡OPS: 0.814
 
 ============================================================
 
 ============================================================
 **Milwaukee Brewers @ Chicago Cubs**
-é–‹å§‹æ™‚åˆ»: 08/22 03:20 (æ—¥æœ¬æ™‚é–“)
+ŠJn: 08/22 03:20 (“ú–{ŠÔ)
 ==================================================
 
-ã€Milwaukee Brewersã€‘
-**å…ˆç™º**: Quinn Priester (11å‹2æ•—)
-ERA: 3.49 | FIP: 4.20 | xFIP: 3.80 | WHIP: 1.24 | K-BB%: 11.4% | GB%: 57.6% | FB%: 19.7% | QSç‡: 41.2%
+yMilwaukee Brewersz
+**æ”­**: Quinn Priester (11Ÿ2”s)
+ERA: 3.49 | FIP: 4.20 | xFIP: 3.80 | WHIP: 1.24 | K-BB%: 11.4% | GB%: 57.6% | FB%: 19.7% | QS—¦: 41.2%
 SwStr%: 23.6% | BABIP: 0.274
-å¯¾å·¦: 0.227 (OPS 0.687) | å¯¾å³: 0.254 (OPS 0.735)
+‘Î¶: 0.227 (OPS 0.687) | ‘Î‰E: 0.254 (OPS 0.735)
 
-**ä¸­ç¶™ãé™£** (7å):
+**’†Œp‚¬w** (7–¼):
 ERA: 2.55 | FIP: 3.12 | xFIP: 2.49 | WHIP: 1.09 | K-BB%: 18.0%
 CL: Shelby Miller (FIP: 3.49)
 SU: Abner Uribe (FIP: 2.88), Grant Anderson (FIP: 3.71)
-ç–²åŠ´åº¦: ä¸»åŠ›6åãŒé€£æŠ•ä¸­
-2025-08-21 02:23:36,393 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 158
+”æ˜J“x: å—Í6–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:23:36,394 - src.mlb_api_client - INFO - Using cached OPS for team 158 last 5 games
-2025-08-21 02:23:36,395 - src.mlb_api_client - INFO - Using cached OPS for team 158 last 10 games
-AVG: 0.258 | OPS: 0.738 | å¾—ç‚¹: 650 | æœ¬å¡æ‰“: 135
-wOBA: 0.324 | xwOBA: 0.316
-Barrel%: 11.1% | Hard-Hit%: 27.1%
-å¯¾å·¦æŠ•æ‰‹: 0.268 (OPS 0.738) | å¯¾å³æŠ•æ‰‹: 0.254 (OPS 0.738)
-éå»5è©¦åˆOPS: 0.674 | éå»10è©¦åˆOPS: 0.841
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.258 | OPS: 0.737 | “¾“_: 653 | –{—Û‘Å: 135
+wOBA: 0.323 | xwOBA: 0.316
+Barrel%: 10.8% | Hard-Hit%: 25.8%
+‘Î¶“Šè: 0.268 (OPS 0.737) | ‘Î‰E“Šè: 0.254 (OPS 0.737)
+‰ß‹5‡OPS: 0.674 | ‰ß‹10‡OPS: 0.841
 
-ã€Chicago Cubsã€‘
-**å…ˆç™º**: Shota Imanaga (8å‹5æ•—)
-ERA: 3.19 | FIP: 4.32 | xFIP: 4.45 | WHIP: 0.97 | K-BB%: 16.4% | GB%: 28.9% | FB%: 39.6% | QSç‡: 41.2%
+yChicago Cubsz
+**æ”­**: Shota Imanaga (8Ÿ5”s)
+ERA: 3.19 | FIP: 4.32 | xFIP: 4.45 | WHIP: 0.97 | K-BB%: 16.4% | GB%: 28.9% | FB%: 39.6% | QS—¦: 41.2%
 SwStr%: 24.1% | BABIP: 0.225
-å¯¾å·¦: 0.157 (OPS 0.482) | å¯¾å³: 0.232 (OPS 0.705)
+‘Î¶: 0.157 (OPS 0.482) | ‘Î‰E: 0.232 (OPS 0.705)
 
-**ä¸­ç¶™ãé™£** (7å):
+**’†Œp‚¬w** (7–¼):
 ERA: 2.49 | FIP: 2.99 | xFIP: 2.48 | WHIP: 1.05 | K-BB%: 17.8%
 CL: Daniel Palencia (FIP: 2.81)
 SU: Andrew Kittredge (FIP: 3.30), Brad Keller (FIP: 2.99)
-ç–²åŠ´åº¦: ä¸»åŠ›6åãŒé€£æŠ•ä¸­
-2025-08-21 02:23:41,857 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 112
+”æ˜J“x: å—Í6–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:23:41,858 - src.mlb_api_client - INFO - Using cached OPS for team 112 last 5 games
-2025-08-21 02:23:41,859 - src.mlb_api_client - INFO - Using cached OPS for team 112 last 10 games
-AVG: 0.250 | OPS: 0.748 | å¾—ç‚¹: 624 | æœ¬å¡æ‰“: 172
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.249 | OPS: 0.747 | “¾“_: 628 | –{—Û‘Å: 173
 wOBA: 0.324 | xwOBA: 0.317
-Barrel%: 10.6% | Hard-Hit%: 24.1%
-å¯¾å·¦æŠ•æ‰‹: 0.249 (OPS 0.739) | å¯¾å³æŠ•æ‰‹: 0.251 (OPS 0.752)
-éå»5è©¦åˆOPS: 0.637 | éå»10è©¦åˆOPS: 0.603
+Barrel%: 10.0% | Hard-Hit%: 22.3%
+‘Î¶“Šè: 0.250 (OPS 0.743) | ‘Î‰E“Šè: 0.249 (OPS 0.749)
+‰ß‹5‡OPS: 0.637 | ‰ß‹10‡OPS: 0.603
 
 ============================================================
 
 ============================================================
 **Los Angeles Dodgers @ Colorado Rockies**
-é–‹å§‹æ™‚åˆ»: 08/22 04:10 (æ—¥æœ¬æ™‚é–“)
+ŠJn: 08/22 04:10 (“ú–{ŠÔ)
 ==================================================
 
-ã€Los Angeles Dodgersã€‘
-**å…ˆç™º**: Clayton Kershaw (6å‹2æ•—)
-ERA: 3.14 | FIP: 3.78 | xFIP: 4.26 | WHIP: 1.26 | K-BB%: 9.1% | GB%: 49.8% | FB%: 21.8% | QSç‡: 35.7%
+yLos Angeles Dodgersz
+**æ”­**: Clayton Kershaw (6Ÿ2”s)
+ERA: 3.14 | FIP: 3.78 | xFIP: 4.26 | WHIP: 1.26 | K-BB%: 9.1% | GB%: 49.8% | FB%: 21.8% | QS—¦: 35.7%
 SwStr%: 23.6% | BABIP: 0.293
-å¯¾å·¦: 0.302 (OPS 0.797) | å¯¾å³: 0.249 (OPS 0.683)
+‘Î¶: 0.302 (OPS 0.797) | ‘Î‰E: 0.249 (OPS 0.683)
 
-**ä¸­ç¶™ãé™£** (8å):
+**’†Œp‚¬w** (8–¼):
 ERA: 3.74 | FIP: 3.67 | xFIP: 2.62 | WHIP: 1.19 | K-BB%: 15.8%
 SU: Alex Vesia (FIP: 3.86), Anthony Banda (FIP: 4.46)
-ç–²åŠ´åº¦: ä¸»åŠ›4åãŒé€£æŠ•ä¸­
-2025-08-21 02:23:47,401 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 119
+”æ˜J“x: å—Í4–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:23:47,402 - src.mlb_api_client - INFO - Using cached OPS for team 119 last 5 games
-2025-08-21 02:23:47,402 - src.mlb_api_client - INFO - Using cached OPS for team 119 last 10 games
-AVG: 0.255 | OPS: 0.772 | å¾—ç‚¹: 654 | æœ¬å¡æ‰“: 187
-wOBA: 0.336 | xwOBA: 0.320
-Barrel%: 11.0% | Hard-Hit%: 23.5%
-å¯¾å·¦æŠ•æ‰‹: 0.256 (OPS 0.772) | å¯¾å³æŠ•æ‰‹: 0.254 (OPS 0.773)
-éå»5è©¦åˆOPS: 0.769 | éå»10è©¦åˆOPS: 0.803
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.254 | OPS: 0.771 | “¾“_: 655 | –{—Û‘Å: 188
+wOBA: 0.335 | xwOBA: 0.320
+Barrel%: 10.1% | Hard-Hit%: 23.0%
+‘Î¶“Šè: 0.256 (OPS 0.772) | ‘Î‰E“Šè: 0.254 (OPS 0.773)
+‰ß‹5‡OPS: 0.769 | ‰ß‹10‡OPS: 0.803
 
-ã€Colorado Rockiesã€‘
-**å…ˆç™º**: Chase Dollander (2å‹9æ•—)
-ERA: 6.35 | FIP: 5.75 | xFIP: 4.89 | WHIP: 1.56 | K-BB%: 6.3% | GB%: 43.0% | FB%: 25.7% | QSç‡: 18.8%
+yColorado Rockiesz
+**æ”­**: Chase Dollander (2Ÿ9”s)
+ERA: 6.35 | FIP: 5.75 | xFIP: 4.89 | WHIP: 1.56 | K-BB%: 6.3% | GB%: 43.0% | FB%: 25.7% | QS—¦: 18.8%
 SwStr%: 22.3% | BABIP: 0.290
-å¯¾å·¦: 0.272 (OPS 0.816) | å¯¾å³: 0.273 (OPS 0.800)
+‘Î¶: 0.272 (OPS 0.816) | ‘Î‰E: 0.273 (OPS 0.800)
 
-**ä¸­ç¶™ãé™£** (8å):
+**’†Œp‚¬w** (8–¼):
 ERA: 4.20 | FIP: 4.02 | xFIP: 2.89 | WHIP: 1.38 | K-BB%: 12.5%
 CL: Victor Vodnik (FIP: 3.89)
 SU: Jimmy Herget (FIP: 3.71), Juan Mejia (FIP: 3.23)
-ç–²åŠ´åº¦: ä¸»åŠ›3åãŒé€£æŠ•ä¸­
-2025-08-21 02:23:52,807 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 115
+”æ˜J“x: å—Í3–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:23:52,807 - src.mlb_api_client - INFO - Using cached OPS for team 115 last 5 games
-2025-08-21 02:23:52,808 - src.mlb_api_client - INFO - Using cached OPS for team 115 last 10 games
-AVG: 0.239 | OPS: 0.692 | å¾—ç‚¹: 477 | æœ¬å¡æ‰“: 131
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.240 | OPS: 0.694 | “¾“_: 483 | –{—Û‘Å: 131
 wOBA: 0.301 | xwOBA: 0.310
-Barrel%: 10.5% | Hard-Hit%: 23.9%
-å¯¾å·¦æŠ•æ‰‹: 0.236 (OPS 0.681) | å¯¾å³æŠ•æ‰‹: 0.240 (OPS 0.695)
-éå»5è©¦åˆOPS: 0.777 | éå»10è©¦åˆOPS: 0.736
+Barrel%: 10.2% | Hard-Hit%: 23.8%
+‘Î¶“Šè: 0.236 (OPS 0.681) | ‘Î‰E“Šè: 0.240 (OPS 0.695)
+‰ß‹5‡OPS: 0.777 | ‰ß‹10‡OPS: 0.736
 
 ============================================================
 
 ============================================================
 **New York Mets @ Washington Nationals**
-é–‹å§‹æ™‚åˆ»: 08/22 05:05 (æ—¥æœ¬æ™‚é–“)
+ŠJn: 08/22 05:05 (“ú–{ŠÔ)
 ==================================================
 
-ã€New York Metsã€‘
-**å…ˆç™º**: Sean Manaea (1å‹1æ•—)
-ERA: 4.33 | FIP: 3.80 | xFIP: 3.56 | WHIP: 1.11 | K-BB%: 21.1% | GB%: 41.3% | FB%: 24.0% | QSç‡: 0.0%
+yNew York Metsz
+**æ”­**: Sean Manaea (1Ÿ1”s)
+ERA: 4.33 | FIP: 3.80 | xFIP: 3.56 | WHIP: 1.11 | K-BB%: 21.1% | GB%: 41.3% | FB%: 24.0% | QS—¦: 0.0%
 SwStr%: 23.1% | BABIP: 0.286
-å¯¾å·¦: 0.278 (OPS 0.594) | å¯¾å³: 0.221 (OPS 0.694)
+‘Î¶: 0.278 (OPS 0.594) | ‘Î‰E: 0.221 (OPS 0.694)
 
-**ä¸­ç¶™ãé™£** (7å):
+**’†Œp‚¬w** (7–¼):
 ERA: 3.00 | FIP: 3.02 | xFIP: 2.51 | WHIP: 1.20 | K-BB%: 17.3%
-CL: Edwin DÃ­az (FIP: 2.77)
+CL: Edwin Diaz (FIP: 2.77)
 SU: Gregory Soto (FIP: 3.03), Reed Garrett (FIP: 3.38)
-ç–²åŠ´åº¦: ä¸»åŠ›6åãŒé€£æŠ•ä¸­
-2025-08-21 02:23:58,231 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 121
+”æ˜J“x: å—Í6–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:23:58,232 - src.mlb_api_client - INFO - Using cached OPS for team 121 last 5 games
-2025-08-21 02:23:58,233 - src.mlb_api_client - INFO - Using cached OPS for team 121 last 10 games
-AVG: 0.244 | OPS: 0.740 | å¾—ç‚¹: 562 | æœ¬å¡æ‰“: 164
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.244 | OPS: 0.739 | “¾“_: 566 | –{—Û‘Å: 165
 wOBA: 0.323 | xwOBA: 0.316
-Barrel%: 11.2% | Hard-Hit%: 25.7%
-å¯¾å·¦æŠ•æ‰‹: 0.226 (OPS 0.665) | å¯¾å³æŠ•æ‰‹: 0.251 (OPS 0.767)
-éå»5è©¦åˆOPS: 0.902 | éå»10è©¦åˆOPS: 0.931
+Barrel%: 12.7% | Hard-Hit%: 28.3%
+‘Î¶“Šè: 0.226 (OPS 0.664) | ‘Î‰E“Šè: 0.251 (OPS 0.768)
+‰ß‹5‡OPS: 0.902 | ‰ß‹10‡OPS: 0.931
 
-ã€Washington Nationalsã€‘
-**å…ˆç™º**: MacKenzie Gore (5å‹12æ•—)
-ERA: 4.09 | FIP: 3.54 | xFIP: 3.49 | WHIP: 1.33 | K-BB%: 19.9% | GB%: 37.4% | FB%: 31.4% | QSç‡: 54.2%
+yWashington Nationalsz
+**æ”­**: MacKenzie Gore (5Ÿ12”s)
+ERA: 4.09 | FIP: 3.54 | xFIP: 3.49 | WHIP: 1.33 | K-BB%: 19.9% | GB%: 37.4% | FB%: 31.4% | QS—¦: 54.2%
 SwStr%: 30.6% | BABIP: 0.338
-å¯¾å·¦: 0.241 (OPS 0.690) | å¯¾å³: 0.264 (OPS 0.744)
+‘Î¶: 0.241 (OPS 0.690) | ‘Î‰E: 0.264 (OPS 0.744)
 
-**ä¸­ç¶™ãé™£** (9å):
+**’†Œp‚¬w** (9–¼):
 ERA: 4.66 | FIP: 4.29 | xFIP: 2.96 | WHIP: 1.36 | K-BB%: 11.6%
 SU: Brad Lord (FIP: 3.55), Cole Henry (FIP: 5.04)
-ç–²åŠ´åº¦: ä¸»åŠ›4åãŒé€£æŠ•ä¸­
-2025-08-21 02:24:03,646 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 120
+”æ˜J“x: å—Í4–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:24:03,647 - src.mlb_api_client - INFO - Using cached OPS for team 120 last 5 games
-2025-08-21 02:24:03,647 - src.mlb_api_client - INFO - Using cached OPS for team 120 last 10 games
-AVG: 0.244 | OPS: 0.695 | å¾—ç‚¹: 532 | æœ¬å¡æ‰“: 118
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.244 | OPS: 0.696 | “¾“_: 537 | –{—Û‘Å: 119
 wOBA: 0.305 | xwOBA: 0.310
-Barrel%: 9.3% | Hard-Hit%: 23.7%
-å¯¾å·¦æŠ•æ‰‹: 0.232 (OPS 0.657) | å¯¾å³æŠ•æ‰‹: 0.248 (OPS 0.711)
-éå»5è©¦åˆOPS: 0.643 | éå»10è©¦åˆOPS: 0.766
+Barrel%: 10.2% | Hard-Hit%: 25.3%
+‘Î¶“Šè: 0.232 (OPS 0.657) | ‘Î‰E“Šè: 0.248 (OPS 0.712)
+‰ß‹5‡OPS: 0.643 | ‰ß‹10‡OPS: 0.766
 
 ============================================================
 
 ============================================================
 **San Francisco Giants @ San Diego Padres**
-é–‹å§‹æ™‚åˆ»: 08/22 05:10 (æ—¥æœ¬æ™‚é–“)
+ŠJn: 08/22 05:10 (“ú–{ŠÔ)
 ==================================================
 
-ã€San Francisco Giantsã€‘
-**å…ˆç™º**: Justin Verlander (1å‹9æ•—)
-ERA: 4.53 | FIP: 4.16 | xFIP: 4.71 | WHIP: 1.50 | K-BB%: 11.5% | GB%: 34.2% | FB%: 32.3% | QSç‡: 30.0%
+ySan Francisco Giantsz
+**æ”­**: Justin Verlander (1Ÿ9”s)
+ERA: 4.53 | FIP: 4.16 | xFIP: 4.71 | WHIP: 1.50 | K-BB%: 11.5% | GB%: 34.2% | FB%: 32.3% | QS—¦: 30.0%
 SwStr%: 24.7% | BABIP: 0.332
-å¯¾å·¦: 0.292 (OPS 0.832) | å¯¾å³: 0.277 (OPS 0.773)
+‘Î¶: 0.292 (OPS 0.832) | ‘Î‰E: 0.277 (OPS 0.773)
 
-**ä¸­ç¶™ãé™£** (8å):
+**’†Œp‚¬w** (8–¼):
 ERA: 3.45 | FIP: 3.20 | xFIP: 2.78 | WHIP: 1.22 | K-BB%: 13.7%
 CL: Ryan Walker (FIP: 3.14)
-SU: Randy RodrÃ­guez (FIP: 2.13)
-ç–²åŠ´åº¦: ä¸»åŠ›4åãŒé€£æŠ•ä¸­
-2025-08-21 02:24:09,144 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 137
+SU: Randy Rodriguez (FIP: 2.13)
+”æ˜J“x: å—Í4–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:24:09,145 - src.mlb_api_client - INFO - Using cached OPS for team 137 last 5 games
-2025-08-21 02:24:09,145 - src.mlb_api_client - INFO - Using cached OPS for team 137 last 10 games
-AVG: 0.232 | OPS: 0.684 | å¾—ç‚¹: 510 | æœ¬å¡æ‰“: 120
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.232 | OPS: 0.682 | “¾“_: 510 | –{—Û‘Å: 120
 wOBA: 0.301 | xwOBA: 0.309
-Barrel%: 11.0% | Hard-Hit%: 25.0%
-å¯¾å·¦æŠ•æ‰‹: 0.212 (OPS 0.617) | å¯¾å³æŠ•æ‰‹: 0.240 (OPS 0.708)
-éå»5è©¦åˆOPS: 0.704 | éå»10è©¦åˆOPS: 0.596
+Barrel%: 10.5% | Hard-Hit%: 24.6%
+‘Î¶“Šè: 0.212 (OPS 0.617) | ‘Î‰E“Šè: 0.240 (OPS 0.708)
+‰ß‹5‡OPS: 0.704 | ‰ß‹10‡OPS: 0.596
 
-ã€San Diego Padresã€‘
-**å…ˆç™º**: Dylan Cease (5å‹10æ•—)
-ERA: 4.52 | FIP: 3.42 | xFIP: 3.30 | WHIP: 1.28 | K-BB%: 21.6% | GB%: 37.3% | FB%: 30.0% | QSç‡: 29.2%
+ySan Diego Padresz
+**æ”­**: Dylan Cease (5Ÿ10”s)
+ERA: 4.52 | FIP: 3.42 | xFIP: 3.30 | WHIP: 1.28 | K-BB%: 21.6% | GB%: 37.3% | FB%: 30.0% | QS—¦: 29.2%
 SwStr%: 34.4% | BABIP: 0.321
-å¯¾å·¦: 0.226 (OPS 0.705) | å¯¾å³: 0.247 (OPS 0.709)
+‘Î¶: 0.226 (OPS 0.705) | ‘Î‰E: 0.247 (OPS 0.709)
 
-**ä¸­ç¶™ãé™£** (9å):
+**’†Œp‚¬w** (9–¼):
 ERA: 2.71 | FIP: 2.92 | xFIP: 2.42 | WHIP: 1.09 | K-BB%: 19.0%
 CL: Mason Miller (FIP: 2.66)
 SU: Adrian Morejon (FIP: 1.88), Jason Adam (FIP: 2.92)
-ç–²åŠ´åº¦: ä¸»åŠ›7åãŒé€£æŠ•ä¸­
-2025-08-21 02:24:14,777 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 135
+”æ˜J“x: å—Í7–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:24:14,778 - src.mlb_api_client - INFO - Using cached OPS for team 135 last 5 games
-2025-08-21 02:24:14,779 - src.mlb_api_client - INFO - Using cached OPS for team 135 last 10 games
-AVG: 0.251 | OPS: 0.704 | å¾—ç‚¹: 523 | æœ¬å¡æ‰“: 106
-wOBA: 0.310 | xwOBA: 0.312
-Barrel%: 10.5% | Hard-Hit%: 25.6%
-å¯¾å·¦æŠ•æ‰‹: 0.244 (OPS 0.681) | å¯¾å³æŠ•æ‰‹: 0.254 (OPS 0.715)
-éå»5è©¦åˆOPS: 0.621 | éå»10è©¦åˆOPS: 0.737
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.252 | OPS: 0.706 | “¾“_: 526 | –{—Û‘Å: 108
+wOBA: 0.311 | xwOBA: 0.312
+Barrel%: 10.0% | Hard-Hit%: 23.4%
+‘Î¶“Šè: 0.244 (OPS 0.681) | ‘Î‰E“Šè: 0.254 (OPS 0.715)
+‰ß‹5‡OPS: 0.621 | ‰ß‹10‡OPS: 0.737
 
 ============================================================
 
 ============================================================
 **Houston Astros @ Baltimore Orioles**
-é–‹å§‹æ™‚åˆ»: 08/22 08:15 (æ—¥æœ¬æ™‚é–“)
+ŠJn: 08/22 08:15 (“ú–{ŠÔ)
 ==================================================
 
-ã€Houston Astrosã€‘
-**å…ˆç™º**: Jason Alexander (3å‹1æ•—)
-ERA: 5.02 | FIP: 4.80 | xFIP: 4.69 | WHIP: 1.46 | K-BB%: 6.5% | GB%: 46.7% | FB%: 24.2% | QSç‡: 60.0%
+yHouston Astrosz
+**æ”­**: Jason Alexander (3Ÿ1”s)
+ERA: 5.02 | FIP: 4.80 | xFIP: 4.69 | WHIP: 1.46 | K-BB%: 6.5% | GB%: 46.7% | FB%: 24.2% | QS—¦: 60.0%
 SwStr%: 23.7% | BABIP: 0.278
-å¯¾å·¦: 0.253 (OPS 0.814) | å¯¾å³: 0.250 (OPS 0.694)
+‘Î¶: 0.253 (OPS 0.814) | ‘Î‰E: 0.250 (OPS 0.694)
 
-**ä¸­ç¶™ãé™£** (8å):
+**’†Œp‚¬w** (8–¼):
 ERA: 3.35 | FIP: 3.28 | xFIP: 2.41 | WHIP: 1.13 | K-BB%: 18.7%
 SU: Bennett Sousa (FIP: 2.69), Bryan Abreu (FIP: 2.31)
-ç–²åŠ´åº¦: ä¸»åŠ›6åãŒé€£æŠ•ä¸­
-2025-08-21 02:24:20,473 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 117
+”æ˜J“x: å—Í6–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:24:20,474 - src.mlb_api_client - INFO - Using cached OPS for team 117 last 5 games
-2025-08-21 02:24:20,475 - src.mlb_api_client - INFO - Using cached OPS for team 117 last 10 games
-AVG: 0.253 | OPS: 0.717 | å¾—ç‚¹: 530 | æœ¬å¡æ‰“: 136
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.253 | OPS: 0.716 | “¾“_: 532 | –{—Û‘Å: 137
 wOBA: 0.314 | xwOBA: 0.313
-Barrel%: 10.3% | Hard-Hit%: 22.9%
-å¯¾å·¦æŠ•æ‰‹: 0.258 (OPS 0.758) | å¯¾å³æŠ•æ‰‹: 0.252 (OPS 0.708)
-éå»5è©¦åˆOPS: 0.393 | éå»10è©¦åˆOPS: 0.571
+Barrel%: 9.7% | Hard-Hit%: 21.8%
+‘Î¶“Šè: 0.258 (OPS 0.758) | ‘Î‰E“Šè: 0.251 (OPS 0.706)
+‰ß‹5‡OPS: 0.463 | ‰ß‹10‡OPS: 0.554
 
-ã€Baltimore Oriolesã€‘
-**å…ˆç™º**: Brandon Young (0å‹6æ•—)
-ERA: 6.70 | FIP: 5.58 | xFIP: 4.53 | WHIP: 1.74 | K-BB%: 9.8% | GB%: 41.7% | FB%: 28.5% | QSç‡: 10.0%
+yBaltimore Oriolesz
+**æ”­**: Brandon Young (0Ÿ6”s)
+ERA: 6.70 | FIP: 5.58 | xFIP: 4.53 | WHIP: 1.74 | K-BB%: 9.8% | GB%: 41.7% | FB%: 28.5% | QS—¦: 10.0%
 SwStr%: 23.2% | BABIP: 0.356
-å¯¾å·¦: 0.319 (OPS 0.973) | å¯¾å³: 0.313 (OPS 0.918)
+‘Î¶: 0.319 (OPS 0.973) | ‘Î‰E: 0.313 (OPS 0.918)
 
-**ä¸­ç¶™ãé™£** (8å):
+**’†Œp‚¬w** (8–¼):
 ERA: 4.42 | FIP: 4.09 | xFIP: 2.88 | WHIP: 1.43 | K-BB%: 13.3%
 SU: Keegan Akin (FIP: 4.60), Yennier Cano (FIP: 4.14)
-ç–²åŠ´åº¦: ä¸»åŠ›2åãŒé€£æŠ•ä¸­
-2025-08-21 02:24:26,061 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 110
+”æ˜J“x: å—Í2–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:24:26,068 - src.mlb_api_client - INFO - Using cached OPS for team 110 last 5 games
-2025-08-21 02:24:26,076 - src.mlb_api_client - INFO - Using cached OPS for team 110 last 10 games
-AVG: 0.240 | OPS: 0.709 | å¾—ç‚¹: 547 | æœ¬å¡æ‰“: 151
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.240 | OPS: 0.709 | “¾“_: 547 | –{—Û‘Å: 151
 wOBA: 0.309 | xwOBA: 0.312
-Barrel%: 11.8% | Hard-Hit%: 25.9%
-å¯¾å·¦æŠ•æ‰‹: 0.231 (OPS 0.658) | å¯¾å³æŠ•æ‰‹: 0.244 (OPS 0.730)
-éå»5è©¦åˆOPS: 0.745 | éå»10è©¦åˆOPS: 0.670
+Barrel%: 12.8% | Hard-Hit%: 27.8%
+‘Î¶“Šè: 0.231 (OPS 0.658) | ‘Î‰E“Šè: 0.244 (OPS 0.730)
+‰ß‹5‡OPS: 0.745 | ‰ß‹10‡OPS: 0.670
 
 ============================================================
 
 ============================================================
 **Boston Red Sox @ New York Yankees**
-é–‹å§‹æ™‚åˆ»: 08/22 08:15 (æ—¥æœ¬æ™‚é–“)
+ŠJn: 08/22 08:15 (“ú–{ŠÔ)
 ==================================================
 
-ã€Boston Red Soxã€‘
-**å…ˆç™º**: Lucas Giolito (8å‹2æ•—)
-ERA: 3.77 | FIP: 4.43 | xFIP: 4.41 | WHIP: 1.25 | K-BB%: 11.8% | GB%: 37.3% | FB%: 27.7% | QSç‡: 61.1%
+yBoston Red Soxz
+**æ”­**: Lucas Giolito (8Ÿ2”s)
+ERA: 3.77 | FIP: 4.43 | xFIP: 4.41 | WHIP: 1.25 | K-BB%: 11.8% | GB%: 37.3% | FB%: 27.7% | QS—¦: 61.1%
 SwStr%: 22.6% | BABIP: 0.272
-å¯¾å·¦: 0.221 (OPS 0.708) | å¯¾å³: 0.263 (OPS 0.708)
+‘Î¶: 0.221 (OPS 0.708) | ‘Î‰E: 0.263 (OPS 0.708)
 
-**ä¸­ç¶™ãé™£** (7å):
+**’†Œp‚¬w** (7–¼):
 ERA: 3.35 | FIP: 3.02 | xFIP: 2.67 | WHIP: 1.19 | K-BB%: 15.3%
 CL: Aroldis Chapman (FIP: 1.91)
 SU: Garrett Whitlock (FIP: 2.56), Greg Weissert (FIP: 4.14)
-ç–²åŠ´åº¦: ä¸»åŠ›6åãŒé€£æŠ•ä¸­
-2025-08-21 02:24:31,239 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 111
+”æ˜J“x: å—Í6–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:24:31,247 - src.mlb_api_client - INFO - Using cached OPS for team 111 last 5 games
-2025-08-21 02:24:31,254 - src.mlb_api_client - INFO - Using cached OPS for team 111 last 10 games
-AVG: 0.252 | OPS: 0.748 | å¾—ç‚¹: 632 | æœ¬å¡æ‰“: 152
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.252 | OPS: 0.748 | “¾“_: 632 | –{—Û‘Å: 152
 wOBA: 0.326 | xwOBA: 0.317
-Barrel%: 11.4% | Hard-Hit%: 26.3%
-å¯¾å·¦æŠ•æ‰‹: 0.263 (OPS 0.764) | å¯¾å³æŠ•æ‰‹: 0.247 (OPS 0.742)
-éå»5è©¦åˆOPS: 0.574 | éå»10è©¦åˆOPS: 0.663
+Barrel%: 11.2% | Hard-Hit%: 26.9%
+‘Î¶“Šè: 0.263 (OPS 0.764) | ‘Î‰E“Šè: 0.247 (OPS 0.742)
+‰ß‹5‡OPS: 0.574 | ‰ß‹10‡OPS: 0.663
 
-ã€New York Yankeesã€‘
-**å…ˆç™º**: æœªå®š
+yNew York Yankeesz
+**æ”­**: Luis Gil (0Ÿ1”s)
+ERA: 7.27 | FIP: 4.02 | xFIP: 4.62 | WHIP: 1.85 | K-BB%: 12.2% | GB%: 26.9% | FB%: 23.1% | QS—¦: 0.0%
+SwStr%: 28.6% | BABIP: 0.400
+‘Î¶: 0.357 (OPS 0.944) | ‘Î‰E: 0.286 (OPS 0.824)
 
-**ä¸­ç¶™ãé™£** (7å):
+**’†Œp‚¬w** (7–¼):
 ERA: 3.33 | FIP: 3.23 | xFIP: 2.60 | WHIP: 1.17 | K-BB%: 16.4%
 CL: Camilo Doval (FIP: 3.51)
 SU: Devin Williams (FIP: 3.29), Luke Weaver (FIP: 3.74)
-ç–²åŠ´åº¦: ä¸»åŠ›6åãŒé€£æŠ•ä¸­
-2025-08-21 02:24:36,050 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 147
+”æ˜J“x: å—Í6–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:24:36,051 - src.mlb_api_client - INFO - Using cached OPS for team 147 last 5 games
-2025-08-21 02:24:36,051 - src.mlb_api_client - INFO - Using cached OPS for team 147 last 10 games
-AVG: 0.251 | OPS: 0.784 | å¾—ç‚¹: 649 | æœ¬å¡æ‰“: 204
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.251 | OPS: 0.785 | “¾“_: 655 | –{—Û‘Å: 209
 wOBA: 0.341 | xwOBA: 0.322
-Barrel%: 11.9% | Hard-Hit%: 27.9%
-å¯¾å·¦æŠ•æ‰‹: 0.264 (OPS 0.804) | å¯¾å³æŠ•æ‰‹: 0.247 (OPS 0.777)
-éå»5è©¦åˆOPS: 0.957 | éå»10è©¦åˆOPS: 0.871
+Barrel%: 12.6% | Hard-Hit%: 28.7%
+‘Î¶“Šè: 0.264 (OPS 0.804) | ‘Î‰E“Šè: 0.247 (OPS 0.777)
+‰ß‹5‡OPS: 0.957 | ‰ß‹10‡OPS: 0.871
 
 ============================================================
 
 ============================================================
 **St. Louis Cardinals @ Tampa Bay Rays**
-é–‹å§‹æ™‚åˆ»: 08/22 08:35 (æ—¥æœ¬æ™‚é–“)
+ŠJn: 08/22 08:35 (“ú–{ŠÔ)
 ==================================================
 
-ã€St. Louis Cardinalsã€‘
-**å…ˆç™º**: Sonny Gray (11å‹5æ•—)
-ERA: 4.06 | FIP: 3.10 | xFIP: 2.94 | WHIP: 1.15 | K-BB%: 22.8% | GB%: 42.3% | FB%: 23.4% | QSç‡: 45.8%
+ySt. Louis Cardinalsz
+**æ”­**: Sonny Gray (11Ÿ5”s)
+ERA: 4.06 | FIP: 3.10 | xFIP: 2.94 | WHIP: 1.15 | K-BB%: 22.8% | GB%: 42.3% | FB%: 23.4% | QS—¦: 45.8%
 SwStr%: 26.4% | BABIP: 0.326
-å¯¾å·¦: 0.233 (OPS 0.623) | å¯¾å³: 0.282 (OPS 0.791)
+‘Î¶: 0.233 (OPS 0.623) | ‘Î‰E: 0.282 (OPS 0.791)
 
-**ä¸­ç¶™ãé™£** (8å):
+**’†Œp‚¬w** (8–¼):
 ERA: 3.61 | FIP: 3.67 | xFIP: 2.89 | WHIP: 1.28 | K-BB%: 13.1%
 SU: JoJo Romero (FIP: 3.35), Kyle Leahy (FIP: 3.03)
-ç–²åŠ´åº¦: ä¸»åŠ›3åãŒé€£æŠ•ä¸­
-2025-08-21 02:24:41,609 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 138
+”æ˜J“x: å—Í3–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:24:41,610 - src.mlb_api_client - INFO - Using cached OPS for team 138 last 5 games
-2025-08-21 02:24:41,611 - src.mlb_api_client - INFO - Using cached OPS for team 138 last 10 games
-AVG: 0.250 | OPS: 0.706 | å¾—ç‚¹: 556 | æœ¬å¡æ‰“: 120
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.249 | OPS: 0.704 | “¾“_: 558 | –{—Û‘Å: 121
 wOBA: 0.310 | xwOBA: 0.312
-Barrel%: 9.0% | Hard-Hit%: 26.0%
-å¯¾å·¦æŠ•æ‰‹: 0.249 (OPS 0.694) | å¯¾å³æŠ•æ‰‹: 0.251 (OPS 0.710)
-éå»5è©¦åˆOPS: 0.726 | éå»10è©¦åˆOPS: 0.659
+Barrel%: 9.6% | Hard-Hit%: 26.4%
+‘Î¶“Šè: 0.249 (OPS 0.694) | ‘Î‰E“Šè: 0.250 (OPS 0.708)
+‰ß‹5‡OPS: 0.726 | ‰ß‹10‡OPS: 0.659
 
-ã€Tampa Bay Raysã€‘
-**å…ˆç™º**: æœªå®š
+yTampa Bay Raysz
+**æ”­**: Joe Boyle (1Ÿ2”s)
+ERA: 3.82 | FIP: 4.96 | xFIP: 4.87 | WHIP: 1.08 | K-BB%: 11.8% | GB%: 35.9% | FB%: 33.3% | QS—¦: 0.0%
+SwStr%: 30.1% | BABIP: 0.164
+‘Î¶: 0.145 (OPS 0.639) | ‘Î‰E: 0.170 (OPS 0.562)
 
-**ä¸­ç¶™ãé™£** (8å):
+**’†Œp‚¬w** (8–¼):
 ERA: 3.87 | FIP: 3.29 | xFIP: 2.09 | WHIP: 1.20 | K-BB%: 22.0%
 CL: Pete Fairbanks (FIP: 2.73)
 SU: Bryan Baker (FIP: 4.04), Edwin Uceta (FIP: 3.84)
-ç–²åŠ´åº¦: ä¸»åŠ›6åãŒé€£æŠ•ä¸­
-2025-08-21 02:24:47,010 - scripts.batting_quality_stats - INFO - Using cached quality stats for team 139
+”æ˜J“x: å—Í6–¼‚ª˜A“Š’†
 
-**ãƒãƒ¼ãƒ æ‰“æ’ƒ**:
-2025-08-21 02:24:47,011 - src.mlb_api_client - INFO - Using cached OPS for team 139 last 5 games
-2025-08-21 02:24:47,012 - src.mlb_api_client - INFO - Using cached OPS for team 139 last 10 games
-AVG: 0.250 | OPS: 0.710 | å¾—ç‚¹: 559 | æœ¬å¡æ‰“: 137
+**ƒ`[ƒ€‘ÅŒ‚**:
+AVG: 0.249 | OPS: 0.708 | “¾“_: 563 | –{—Û‘Å: 138
 wOBA: 0.310 | xwOBA: 0.312
-Barrel%: 7.8% | Hard-Hit%: 21.5%
-å¯¾å·¦æŠ•æ‰‹: 0.229 (OPS 0.651) | å¯¾å³æŠ•æ‰‹: 0.259 (OPS 0.735)
-éå»5è©¦åˆOPS: 0.596 | éå»10è©¦åˆOPS: 0.646
+Barrel%: 8.3% | Hard-Hit%: 22.9%
+‘Î¶“Šè: 0.229 (OPS 0.651) | ‘Î‰E“Šè: 0.259 (OPS 0.735)
+‰ß‹5‡OPS: 0.596 | ‰ß‹10‡OPS: 0.646
 
 ============================================================
+
+Traceback (most recent call last):
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 515, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\yfuku\Desktop\mlb-data-analysis\scripts\mlb_complete_report_real.py", line 503, in main
+    print(f"\n\u2705 ƒŒƒ|[ƒg‚ğ¶¬‚µ‚Ü‚µ‚½:")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'cp932' codec can't encode character '\u2705' in position 2: illegal multibyte sequence
