@@ -171,4 +171,11 @@ logs/
 
 # 繝�繧ｹ繝医ョ繝ｼ繧ｿ
 test_data/
-*.test
+*.test# 個別レポートファイル 
+MLB_Report_*.txt 
+mlb_report_output.txt 
+test_*.py 
+*_base64.txt 
+*.log 
+test_upload.txt 
+update_pitcher_cache.py 

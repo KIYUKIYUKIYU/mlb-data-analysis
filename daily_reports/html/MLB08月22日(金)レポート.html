@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB試合レポート</title>
+    
+    <style>
+        @media print {
+            @page { 
+                size: A4 portrait; 
+                margin: 15mm; 
+            }
+            .page { 
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+            .page:last-child { 
+                page-break-after: avoid; 
+            }
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Yu Gothic', 'Meiryo', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: white;
+            color: #333;
+        }
+        
+        .page {
+            background: white;
+            max-width: 210mm;
+            margin: 0 auto 30px;
+            padding: 30px;
+        }
+        
+        /* ヘッダー部分 */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #333;
+            margin-bottom: 25px;
+        }
+        
+        .team-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .team-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        
+        .team-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            color: #1f2937;
+        }
+        
+        .vs-section {
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .game-time {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 2px;
+        }
+        
+        .game-time-label {
+            font-size: 11px;
+            color: #666;
+        }
+        
+        /* 統計部分 */
+        .stats-container {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 25px;
+        }
+        
+        .team-stats {
+            flex: 1;
+        }
+        
+        .stat-section {
+            margin-bottom: 20px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2563eb;
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        
+        .pitcher-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1f2937;
+        }
+        
+        .pitcher-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 12px;
+        }
+        
+        .stat-label {
+            color: #6b7280;
+        }
+        
+        .stat-value {
+            color: #1f2937;
+            font-weight: bold;
+        }
+        
+        .stat-value.good {
+            color: #059669;
+        }
+        
+        .stat-value.warning {
+            color: #dc2626;
+        }
+        
+        /* 総括部分 */
+        .summary-box {
+            padding-top: 20px;
+            border-top: 2px solid #333;
+        }
+        
+        .summary-header {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1f2937;
+            margin: 0 0 10px 0;
+        }
+        
+        .summary-content {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #374151;
+            margin: 0;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            .page {
+                margin: 0;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <div class="page">
+        <!-- ヘッダー部分 -->
+        <div class="header-section">
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/133.svg" alt="Athletics" class="team-logo">
+                <h2 class="team-name">Athletics</h2>
+            </div>
+            
+            <div class="vs-section">
+                <div class="game-time">08/22 02:10</div>
+                <div class="game-time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/142.svg" alt="Minnesota Twins" class="team-logo">
+                <h2 class="team-name">Minnesota Twins</h2>
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="stats-container">
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Jack Perkins (1勝2敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.08 / 3.76 / 4.20</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.05</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">14.7%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">44.7% / 32.9%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">50.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.624 / 0.519</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (8名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.79 / 3.75 / 2.97</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.33</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">12.7%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力4名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.254 / 0.753</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.326 / 0.318</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.754 / 0.754</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value good">0.899</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">0.794</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">José Ureña (0勝0敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.06 / 5.58 / 5.19</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.42</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">4.5%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">35.2% / 24.8%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">0.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.800 / 0.819</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (9名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.27 / 4.10 / 3.06</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.34</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">10.2%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力2名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.238 / 0.705</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.309 / 0.312</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.682 / 0.714</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">0.692</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value warning">0.595</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-box">
+            <h3 class="summary-header">総括</h3>
+            <p class="summary-content">先発投手ではAthleticsのJack Perkins（xFIP 4.20）がMinnesota TwinsのJosé Ureña（xFIP 5.19）を上回る。ブルペンはAthletics（FIP 3.75）がMinnesota Twins（FIP 4.10）より優秀。打線の勢いはAthletics（過去10試合OPS 0.794）がMinnesota Twins（0.595）を大きく上回る。 これらの要因を総合的に判断すると、Athleticsが有利と予想される。 特に投手力の差が大きく、試合の主導権を握る可能性が高い。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー部分 -->
+        <div class="header-section">
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/140.svg" alt="Texas Rangers" class="team-logo">
+                <h2 class="team-name">Texas Rangers</h2>
+            </div>
+            
+            <div class="vs-section">
+                <div class="game-time">08/22 03:10</div>
+                <div class="game-time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/118.svg" alt="Kansas City Royals" class="team-logo">
+                <h2 class="team-name">Kansas City Royals</h2>
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="stats-container">
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Patrick Corbin (6勝8敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.00 / 4.25 / 4.21</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.32</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">11.9%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">38.7% / 29.1%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">22.7%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.699 / 0.754</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (8名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">2.98 / 3.11 / 2.60</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.11</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">16.6%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力5名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.233 / 0.680</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.299 / 0.308</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.634 / 0.698</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">0.789</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">0.713</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Michael Lorenzen (5勝8敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.61 / 4.54 / 4.37</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.30</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">13.2%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">38.0% / 27.9%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">38.9%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.739 / 0.820</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (7名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.36 / 3.80 / 2.95</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.22</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">11.9%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力6名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.246 / 0.698</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.305 / 0.311</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.657 / 0.709</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value good">0.831</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value good">0.830</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-box">
+            <h3 class="summary-header">総括</h3>
+            <p class="summary-content">ブルペンはTexas Rangers（FIP 3.11）がKansas City Royals（FIP 3.80）より優秀。打線の勢いはKansas City Royals（過去10試合OPS 0.830）がTexas Rangers（0.713）を大きく上回る。 両チームの戦力は拮抗しており、接戦が予想される。 ホームアドバンテージを考慮すると、わずかにKansas City Royalsが有利かもしれない。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー部分 -->
+        <div class="header-section">
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/158.svg" alt="Milwaukee Brewers" class="team-logo">
+                <h2 class="team-name">Milwaukee Brewers</h2>
+            </div>
+            
+            <div class="vs-section">
+                <div class="game-time">08/22 03:20</div>
+                <div class="game-time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/112.svg" alt="Chicago Cubs" class="team-logo">
+                <h2 class="team-name">Chicago Cubs</h2>
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="stats-container">
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Quinn Priester (11勝2敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.49 / 4.20 / 3.80</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.24</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">11.4%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">57.6% / 19.7%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">41.2%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.687 / 0.735</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (7名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">2.55 / 3.12 / 2.49</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.09</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">18.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力6名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.258 / 0.737</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.323 / 0.316</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.737 / 0.737</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">0.682</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value good">0.800</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Shota Imanaga (8勝5敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.19 / 4.32 / 4.45</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">0.97</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">16.4%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">28.9% / 39.6%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">41.2%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.482 / 0.705</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (7名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">2.49 / 2.99 / 2.48</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.05</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">17.8%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力6名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.249 / 0.747</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.324 / 0.317</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.743 / 0.749</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value warning">0.629</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value warning">0.614</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-box">
+            <h3 class="summary-header">総括</h3>
+            <p class="summary-content">先発投手ではMilwaukee BrewersのQuinn Priester（xFIP 3.80）がChicago CubsのShota Imanaga（xFIP 4.45）を上回る。打線の勢いはMilwaukee Brewers（過去10試合OPS 0.800）がChicago Cubs（0.614）を大きく上回る。 これらの要因を総合的に判断すると、Milwaukee Brewersが有利と予想される。 特に投手力の差が大きく、試合の主導権を握る可能性が高い。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー部分 -->
+        <div class="header-section">
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/119.svg" alt="Los Angeles Dodgers" class="team-logo">
+                <h2 class="team-name">Los Angeles Dodgers</h2>
+            </div>
+            
+            <div class="vs-section">
+                <div class="game-time">08/22 04:10</div>
+                <div class="game-time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/115.svg" alt="Colorado Rockies" class="team-logo">
+                <h2 class="team-name">Colorado Rockies</h2>
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="stats-container">
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Clayton Kershaw (6勝2敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.14 / 3.78 / 4.26</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.26</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">9.1%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">49.8% / 21.8%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">35.7%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.797 / 0.683</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (8名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.74 / 3.67 / 2.62</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.19</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">15.8%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力4名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.254 / 0.771</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.335 / 0.320</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.770 / 0.771</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">0.754</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">0.766</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Chase Dollander (2勝9敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">6.35 / 5.75 / 4.89</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.56</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">6.3%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">43.0% / 25.7%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">18.8%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.816 / 0.800</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (8名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.20 / 4.02 / 2.89</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.38</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">12.5%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力3名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.240 / 0.694</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.301 / 0.310</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.684 / 0.697</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">0.787</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">0.726</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-box">
+            <h3 class="summary-header">総括</h3>
+            <p class="summary-content">先発投手ではLos Angeles DodgersのClayton Kershaw（xFIP 4.26）がColorado RockiesのChase Dollander（xFIP 4.89）を上回る。ブルペンはLos Angeles Dodgers（FIP 3.67）がColorado Rockies（FIP 4.02）より優秀。 これらの要因を総合的に判断すると、Los Angeles Dodgersが有利と予想される。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー部分 -->
+        <div class="header-section">
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/121.svg" alt="New York Mets" class="team-logo">
+                <h2 class="team-name">New York Mets</h2>
+            </div>
+            
+            <div class="vs-section">
+                <div class="game-time">08/22 05:05</div>
+                <div class="game-time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/120.svg" alt="Washington Nationals" class="team-logo">
+                <h2 class="team-name">Washington Nationals</h2>
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="stats-container">
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Sean Manaea (1勝1敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.33 / 3.80 / 3.56</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.11</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">21.1%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">41.3% / 24.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">0.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.594 / 0.694</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (7名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.00 / 3.02 / 2.51</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.20</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">17.3%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力6名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.244 / 0.739</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.323 / 0.316</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.664 / 0.768</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value good">0.930</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value good">0.937</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">MacKenzie Gore (5勝12敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.09 / 3.54 / 3.49</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.33</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">19.9%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">37.4% / 31.4%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">54.2%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.690 / 0.744</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (9名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.66 / 4.29 / 2.96</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.36</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">11.6%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力4名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.244 / 0.696</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.305 / 0.310</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.657 / 0.712</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">0.674</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">0.744</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-box">
+            <h3 class="summary-header">総括</h3>
+            <p class="summary-content">ブルペンはNew York Mets（FIP 3.02）がWashington Nationals（FIP 4.29）より優秀。打線の勢いはNew York Mets（過去10試合OPS 0.937）がWashington Nationals（0.744）を大きく上回る。 これらの要因を総合的に判断すると、New York Metsが有利と予想される。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー部分 -->
+        <div class="header-section">
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/137.svg" alt="San Francisco Giants" class="team-logo">
+                <h2 class="team-name">San Francisco Giants</h2>
+            </div>
+            
+            <div class="vs-section">
+                <div class="game-time">08/22 05:10</div>
+                <div class="game-time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/135.svg" alt="San Diego Padres" class="team-logo">
+                <h2 class="team-name">San Diego Padres</h2>
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="stats-container">
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Justin Verlander (1勝9敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.53 / 4.16 / 4.71</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.50</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">11.5%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">34.2% / 32.3%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">30.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.832 / 0.773</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (8名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.45 / 3.20 / 2.78</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.22</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">13.7%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力4名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.232 / 0.682</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.300 / 0.309</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.615 / 0.707</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value warning">0.642</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value warning">0.574</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Dylan Cease (5勝10敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.52 / 3.42 / 3.30</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.28</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">21.6%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">37.3% / 30.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">29.2%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.705 / 0.709</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (9名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">2.71 / 2.92 / 2.42</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.09</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">19.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力7名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.251 / 0.707</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.311 / 0.312</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.682 / 0.718</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">0.734</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">0.773</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-box">
+            <h3 class="summary-header">総括</h3>
+            <p class="summary-content">先発投手ではSan Diego PadresのDylan Cease（xFIP 3.30）がSan Francisco GiantsのJustin Verlander（xFIP 4.71）を上回る。打線の勢いはSan Diego Padres（過去10試合OPS 0.773）がSan Francisco Giants（0.574）を大きく上回る。 これらの要因を総合的に判断すると、San Diego Padresが有利と予想される。 ホームアドバンテージも含め、優位性は明確だ。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー部分 -->
+        <div class="header-section">
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/117.svg" alt="Houston Astros" class="team-logo">
+                <h2 class="team-name">Houston Astros</h2>
+            </div>
+            
+            <div class="vs-section">
+                <div class="game-time">08/22 08:15</div>
+                <div class="game-time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/110.svg" alt="Baltimore Orioles" class="team-logo">
+                <h2 class="team-name">Baltimore Orioles</h2>
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="stats-container">
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Jason Alexander (3勝1敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">5.02 / 4.80 / 4.69</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.46</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">6.5%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">46.7% / 24.2%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">60.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.814 / 0.694</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (8名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.35 / 3.28 / 2.41</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.13</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">18.7%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力6名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.253 / 0.716</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.314 / 0.313</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.758 / 0.706</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value warning">0.463</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value warning">0.554</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Brandon Young (0勝6敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">6.70 / 5.58 / 4.53</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.74</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">9.8%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">41.7% / 28.5%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">10.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.973 / 0.918</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (8名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.42 / 4.09 / 2.88</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.43</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">13.3%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力2名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.240 / 0.709</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.309 / 0.312</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.658 / 0.730</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">0.745</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">0.670</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-box">
+            <h3 class="summary-header">総括</h3>
+            <p class="summary-content">ブルペンはHouston Astros（FIP 3.28）がBaltimore Orioles（FIP 4.09）より優秀。打線の勢いはBaltimore Orioles（過去10試合OPS 0.670）がHouston Astros（0.554）を大きく上回る。 両チームの戦力は拮抗しており、接戦が予想される。 ホームアドバンテージを考慮すると、わずかにBaltimore Oriolesが有利かもしれない。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー部分 -->
+        <div class="header-section">
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/111.svg" alt="Boston Red Sox" class="team-logo">
+                <h2 class="team-name">Boston Red Sox</h2>
+            </div>
+            
+            <div class="vs-section">
+                <div class="game-time">08/22 08:15</div>
+                <div class="game-time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/147.svg" alt="New York Yankees" class="team-logo">
+                <h2 class="team-name">New York Yankees</h2>
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="stats-container">
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Lucas Giolito (8勝2敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.77 / 4.43 / 4.41</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.25</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">11.8%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">37.3% / 27.7%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">61.1%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.708 / 0.708</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (7名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.35 / 3.02 / 2.67</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.19</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">15.3%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力6名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.252 / 0.748</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.326 / 0.317</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.764 / 0.742</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value warning">0.574</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">0.663</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Luis Gil (0勝1敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">7.27 / 4.02 / 4.62</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.85</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">12.2%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">26.9% / 23.1%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">0.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.944 / 0.824</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (7名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.33 / 3.23 / 2.60</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.17</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">16.4%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力6名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.251 / 0.785</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.341 / 0.322</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.804 / 0.778</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value good">1.027</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value good">0.926</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-box">
+            <h3 class="summary-header">総括</h3>
+            <p class="summary-content">打線の勢いはNew York Yankees（過去10試合OPS 0.926）がBoston Red Sox（0.663）を大きく上回る。 これらの要因を総合的に判断すると、New York Yankeesが有利と予想される。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー部分 -->
+        <div class="header-section">
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/138.svg" alt="St. Louis Cardinals" class="team-logo">
+                <h2 class="team-name">St. Louis Cardinals</h2>
+            </div>
+            
+            <div class="vs-section">
+                <div class="game-time">08/22 08:35</div>
+                <div class="game-time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="https://www.mlbstatic.com/team-logos/team-cap-on-light/139.svg" alt="Tampa Bay Rays" class="team-logo">
+                <h2 class="team-name">Tampa Bay Rays</h2>
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="stats-container">
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Sonny Gray (11勝5敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">4.06 / 3.10 / 2.94</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.15</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">22.8%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">42.3% / 23.4%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">45.8%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.623 / 0.791</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (8名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.61 / 3.67 / 2.89</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.28</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">13.1%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力3名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.249 / 0.704</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.310 / 0.312</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.694 / 0.708</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">0.687</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value warning">0.646</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-stats">
+                
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">Joe Boyle (1勝2敗)</span>
+            <span class="pitcher-badge" style="background-color: #ef4444">右</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.82 / 4.96 / 4.87</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.08</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">11.8%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">35.9% / 33.3%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">0.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.639 / 0.562</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ (8名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">3.87 / 3.29 / 2.09</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">1.20</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">22.0%</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value warning">主力6名が連投中</span>
+        </div>
+    </div>
+    
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">0.249 / 0.708</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">0.310 / 0.312</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">0.651 / 0.733</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value warning">0.513</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value warning">0.645</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-box">
+            <h3 class="summary-header">総括</h3>
+            <p class="summary-content">先発投手ではSt. Louis CardinalsのSonny Gray（xFIP 2.94）がTampa Bay RaysのJoe Boyle（xFIP 4.87）を上回る。ブルペンはTampa Bay Rays（FIP 3.29）がSt. Louis Cardinals（FIP 3.67）より優秀。 両チームの戦力は拮抗しており、接戦が予想される。 ホームアドバンテージを考慮すると、わずかにTampa Bay Raysが有利かもしれない。</p>
+        </div>
+    </div>
+    
+</body>
+</html>

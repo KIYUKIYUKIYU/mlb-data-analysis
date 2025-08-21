@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB レポート</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 10mm auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            page-break-after: always;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #e0e0e0;
+        }
+        
+        .team-header {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .game-info {
+            flex: 0.5;
+            text-align: center;
+        }
+        
+        .team-logo-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+        
+        .team-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 5px 0;
+        }
+        
+        .pitcher-name {
+            font-size: 16px;
+            color: #555;
+            margin: 5px 0;
+        }
+        
+        .badge-right {
+            display: inline-block;
+            background: #ef4444;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        
+        .badge-left {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        
+        .date-time {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .time-label {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            flex-grow: 1;
+            margin: 20px 0;
+        }
+        
+        .team-column {
+            padding: 0 10px;
+        }
+        
+        .stats-category {
+            margin-bottom: 25px;
+        }
+        
+        .stats-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1e3a8a;
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #93c5fd;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+        }
+        
+        .stat-label {
+            color: #666;
+        }
+        
+        .stat-value {
+            font-weight: bold;
+            color: #2c3e50;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .stat-value.highlight {
+            color: #ef4444;
+            font-size: 15px;
+        }
+        
+        .summary-section {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 3px solid #333;
+        }
+        
+        .summary-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .summary-text {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .fatigue-warning {
+            color: #ef4444;
+            font-weight: bold;
+        }
+        
+        @media print {
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+            
+            body {
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Milwaukee Brewers" class="team-logo-img">
+                <h2 class="team-name">Milwaukee Brewers</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 03:20</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Chicago Cubs" class="team-logo-img">
+                <h2 class="team-name">Chicago Cubs</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのChicago Cubsにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Milwaukee Brewers" class="team-logo-img">
+                <h2 class="team-name">Milwaukee Brewers</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 09:05</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Chicago Cubs" class="team-logo-img">
+                <h2 class="team-name">Chicago Cubs</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのChicago Cubsにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Houston Astros" class="team-logo-img">
+                <h2 class="team-name">Houston Astros</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 07:40</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Detroit Tigers" class="team-logo-img">
+                <h2 class="team-name">Detroit Tigers</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのDetroit Tigersにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Toronto Blue Jays" class="team-logo-img">
+                <h2 class="team-name">Toronto Blue Jays</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 07:40</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Pittsburgh Pirates" class="team-logo-img">
+                <h2 class="team-name">Pittsburgh Pirates</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのPittsburgh Piratesにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="St. Louis Cardinals" class="team-logo-img">
+                <h2 class="team-name">St. Louis Cardinals</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 07:40</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Miami Marlins" class="team-logo-img">
+                <h2 class="team-name">Miami Marlins</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのMiami Marlinsにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="New York Mets" class="team-logo-img">
+                <h2 class="team-name">New York Mets</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 07:45</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Washington Nationals" class="team-logo-img">
+                <h2 class="team-name">Washington Nationals</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのWashington Nationalsにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Seattle Mariners" class="team-logo-img">
+                <h2 class="team-name">Seattle Mariners</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 07:45</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Philadelphia Phillies" class="team-logo-img">
+                <h2 class="team-name">Philadelphia Phillies</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのPhiladelphia Philliesにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Baltimore Orioles" class="team-logo-img">
+                <h2 class="team-name">Baltimore Orioles</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 08:10</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Boston Red Sox" class="team-logo-img">
+                <h2 class="team-name">Boston Red Sox</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのBoston Red Soxにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Chicago White Sox" class="team-logo-img">
+                <h2 class="team-name">Chicago White Sox</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 08:15</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Atlanta Braves" class="team-logo-img">
+                <h2 class="team-name">Atlanta Braves</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのAtlanta Bravesにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="New York Yankees" class="team-logo-img">
+                <h2 class="team-name">New York Yankees</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 08:35</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Tampa Bay Rays" class="team-logo-img">
+                <h2 class="team-name">Tampa Bay Rays</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのTampa Bay Raysにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Texas Rangers" class="team-logo-img">
+                <h2 class="team-name">Texas Rangers</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 08:40</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Kansas City Royals" class="team-logo-img">
+                <h2 class="team-name">Kansas City Royals</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのKansas City Royalsにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Athletics" class="team-logo-img">
+                <h2 class="team-name">Athletics</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 08:40</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Minnesota Twins" class="team-logo-img">
+                <h2 class="team-name">Minnesota Twins</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのMinnesota Twinsにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Los Angeles Dodgers" class="team-logo-img">
+                <h2 class="team-name">Los Angeles Dodgers</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 09:40</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Colorado Rockies" class="team-logo-img">
+                <h2 class="team-name">Colorado Rockies</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのColorado Rockiesにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Cincinnati Reds" class="team-logo-img">
+                <h2 class="team-name">Cincinnati Reds</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 10:38</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Los Angeles Angels" class="team-logo-img">
+                <h2 class="team-name">Los Angeles Angels</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのLos Angeles Angelsにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="Cleveland Guardians" class="team-logo-img">
+                <h2 class="team-name">Cleveland Guardians</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 10:40</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="Arizona Diamondbacks" class="team-logo-img">
+                <h2 class="team-name">Arizona Diamondbacks</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのArizona Diamondbacksにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <!-- ヘッダー -->
+        <div class="header-top">
+            <div class="team-header">
+                <img src="" alt="San Francisco Giants" class="team-logo-img">
+                <h2 class="team-name">San Francisco Giants</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+            
+            <div class="game-info">
+                <div class="date-time">08/20 10:40</div>
+                <div class="time-label">日本時間</div>
+            </div>
+            
+            <div class="team-header">
+                <img src="" alt="San Diego Padres" class="team-logo-img">
+                <h2 class="team-name">San Diego Padres</h2>
+                <div class="pitcher-name">未定 </div>
+                
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="main-content">
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+            
+            <div class="team-column">
+                
+    <div class="stats-category">
+        <h3 class="stats-title">中継ぎ陣 (?名)</h3>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">--- / --- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">疲労度</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+    <div class="stats-category">
+        <h3 class="stats-title">攻撃</h3>
+        <div class="stat-row">
+            <span class="stat-label">AVG / OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">wOBA / xwOBA</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">--- / ---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去5試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">過去10試合 OPS</span>
+            <span class="stat-value ">---</span>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+        
+        <!-- 総括 -->
+        <div class="summary-section">
+            <h3 class="summary-title">総括</h3>
+            <p class="summary-text">両チームが拮抗しており、接戦が予想される。ホームのSan Diego Padresにわずかながらアドバンテージがある。</p>
+        </div>
+    </div>
+    
+</body>
+</html>

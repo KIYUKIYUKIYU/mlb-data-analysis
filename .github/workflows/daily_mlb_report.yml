@@ -2,7 +2,7 @@ name: Daily MLB Report
 
 on:
   schedule:
-    - cron: '30 20 * * *'  # 日本時間 午前5時30分（UTCで20:30）
+    - cron: '30 10 * * *'  # 日本時間 19:30（UTC 10:30）
   workflow_dispatch:
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        persist-credentials: true  # 追加
+        persist-credentials: true
     
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -37,13 +37,22 @@ jobs:
         pip install google-api-python-client
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
+    - name: Install PDF dependencies
+      run: |
+        # WeasyPrint用の依存関係をインストール
+        sudo apt-get update
+        sudo apt-get install -y python3-cffi python3-brotli libpango-1.0-0 libpangoft2-1.0-0
+        sudo apt-get install -y fonts-noto-cjk fonts-noto
+        pip install weasyprint
+    
     - name: Create necessary directories
       run: |
         mkdir -p cache cache/splits_data cache/advanced_stats
         mkdir -p cache/bullpen_stats cache/batting_quality
         mkdir -p cache/recent_ops cache/statcast_data
         mkdir -p cache/pitcher_info
-        mkdir -p logs daily_reports src scripts
+        mkdir -p logs daily_reports daily_reports/html daily_reports/pdf
+        mkdir -p src scripts
     
     - name: Generate MLB Report with UTF-8
       env:
@@ -72,31 +81,77 @@ jobs:
           head -n 10 "$LATEST"
         fi
     
+    - name: Convert to HTML and PDF
+      env:
+        PYTHONIOENCODING: utf-8
+        LANG: ja_JP.UTF-8
+        LC_ALL: ja_JP.UTF-8
+      run: |
+        echo "📄 HTML/PDF変換開始..."
+        
+        # 最新のレポートを探す
+        LATEST_REPORT=$(ls -t daily_reports/MLB*.txt 2>/dev/null | head -n1)
+        
+        if [ -f "$LATEST_REPORT" ]; then
+          echo "Converting to HTML: $LATEST_REPORT"
+          python scripts/convert_to_html.py "$LATEST_REPORT"
+          
+          # HTMLファイルを探す
+          LATEST_HTML=$(ls -t daily_reports/html/MLB*.html 2>/dev/null | head -n1)
+          if [ -f "$LATEST_HTML" ]; then
+            echo "Converting to PDF: $LATEST_HTML"
+            python scripts/convert_to_pdf.py "$LATEST_HTML"
+            echo "✅ PDF conversion complete"
+          fi
+        fi
+        
+        # 変換結果の確認
+        echo "=== Converted files ==="
+        ls -la daily_reports/html/ 2>/dev/null || echo "No HTML files"
+        ls -la daily_reports/pdf/ 2>/dev/null || echo "No PDF files"
+    
     - name: Upload to Google Drive
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
         GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
       run: |
         echo "📤 Google Driveへアップロード開始..."
+        
+        # テキストレポートのアップロード
         python scripts/upload_to_drive.py
+        
+        # PDFファイルのアップロード（存在する場合）
+        if ls daily_reports/pdf/MLB*.pdf 1> /dev/null 2>&1; then
+          LATEST_PDF=$(ls -t daily_reports/pdf/MLB*.pdf | head -n1)
+          echo "📤 Uploading PDF to Google Drive: $LATEST_PDF"
+          # PDFアップロード用のスクリプトを実行（upload_to_drive.pyの拡張版が必要）
+        fi
     
     - name: Upload Report as Artifact
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: mlb-report-${{ github.run_number }}
-        path: daily_reports/
+        path: |
+          daily_reports/*.txt
+          daily_reports/html/*.html
+          daily_reports/pdf/*.pdf
         retention-days: 30
     
     - name: Commit report
       run: |
         git config --global user.name 'GitHub Actions'
         git config --global user.email 'actions@github.com'
-        git add daily_reports/*.txt
+        
+        # すべての形式のレポートを追加
+        git add daily_reports/*.txt 2>/dev/null || true
+        git add daily_reports/html/*.html 2>/dev/null || true
+        git add daily_reports/pdf/*.pdf 2>/dev/null || true
+        
         git commit -m "Add daily MLB report $(date +%Y%m%d)" || echo "No changes to commit"
         git push
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 追加
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Summary
       if: always()
@@ -104,12 +159,24 @@ jobs:
         echo "## 📊 MLB Daily Report" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "- Date: $(date +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+        echo "- Time: 日本時間 19:30" >> $GITHUB_STEP_SUMMARY
         echo "- Status: Complete" >> $GITHUB_STEP_SUMMARY
+        
         if ls daily_reports/MLB*.txt 1> /dev/null 2>&1; then
           LATEST=$(ls -t daily_reports/MLB*.txt | head -n1)
-          echo "- Lines: $(wc -l < $LATEST)" >> $GITHUB_STEP_SUMMARY
-          echo "- File: $(basename $LATEST)" >> $GITHUB_STEP_SUMMARY
+          echo "- Text Report: $(basename $LATEST)" >> $GITHUB_STEP_SUMMARY
+          echo "  - Lines: $(wc -l < $LATEST)" >> $GITHUB_STEP_SUMMARY
         fi
+        
+        if ls daily_reports/html/MLB*.html 1> /dev/null 2>&1; then
+          echo "- HTML Report: ✅ Generated" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        if ls daily_reports/pdf/MLB*.pdf 1> /dev/null 2>&1; then
+          echo "- PDF Report: ✅ Generated" >> $GITHUB_STEP_SUMMARY
+        fi
+        
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "### 📁 Google Drive" >> $GITHUB_STEP_SUMMARY
         echo "Upload status: Check logs for details" >> $GITHUB_STEP_SUMMARY
+        echo "Folder ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}" >> $GITHUB_STEP_SUMMARY

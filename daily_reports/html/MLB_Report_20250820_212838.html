@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB レポート</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 10mm auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            page-break-after: always;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #002D72;
+        }
+        
+        .header h1 {
+            color: #002D72;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .date-time {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .teams-header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            border-radius: 10px;
+        }
+        
+        .team-logo {
+            text-align: center;
+        }
+        
+        .team-logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        
+        .team-logo h2 {
+            color: #333;
+            font-size: 20px;
+        }
+        
+        .vs {
+            font-size: 24px;
+            font-weight: bold;
+            color: #666;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .team-section {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        
+        .team-title {
+            color: #002D72;
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #002D72;
+        }
+        
+        .pitcher-info {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+        }
+        
+        .pitcher-info h4 {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .pitcher-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .pitcher-record {
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .stats-section {
+            margin-bottom: 20px;
+        }
+        
+        .stats-section h4 {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        
+        .stat-item {
+            padding: 5px;
+            background: white;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-weight: bold;
+        }
+        
+        .stat-value {
+            color: #333;
+        }
+        
+        @media print {
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+            
+            body {
+                background: white;
+            }
+        }
+        
+        .page-break {
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 01:35</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="Toronto Blue Jays" onerror="this.style.display='none'">
+                <h2>Toronto Blue Jays</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Pittsburgh Pirates" onerror="this.style.display='none'">
+                <h2>Pittsburgh Pirates</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">Toronto Blue Jays</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Pittsburgh Pirates</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 02:05</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="Seattle Mariners" onerror="this.style.display='none'">
+                <h2>Seattle Mariners</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Philadelphia Phillies" onerror="this.style.display='none'">
+                <h2>Philadelphia Phillies</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">Seattle Mariners</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Philadelphia Phillies</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 02:10</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="Houston Astros" onerror="this.style.display='none'">
+                <h2>Houston Astros</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Detroit Tigers" onerror="this.style.display='none'">
+                <h2>Detroit Tigers</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">Houston Astros</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Detroit Tigers</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 04:40</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="Cleveland Guardians" onerror="this.style.display='none'">
+                <h2>Cleveland Guardians</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Arizona Diamondbacks" onerror="this.style.display='none'">
+                <h2>Arizona Diamondbacks</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">Cleveland Guardians</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Arizona Diamondbacks</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 07:40</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="St. Louis Cardinals" onerror="this.style.display='none'">
+                <h2>St. Louis Cardinals</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Miami Marlins" onerror="this.style.display='none'">
+                <h2>Miami Marlins</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">St. Louis Cardinals</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Miami Marlins</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 07:45</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="New York Mets" onerror="this.style.display='none'">
+                <h2>New York Mets</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Washington Nationals" onerror="this.style.display='none'">
+                <h2>Washington Nationals</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">New York Mets</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Washington Nationals</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 08:15</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="Chicago White Sox" onerror="this.style.display='none'">
+                <h2>Chicago White Sox</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Atlanta Braves" onerror="this.style.display='none'">
+                <h2>Atlanta Braves</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">Chicago White Sox</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Atlanta Braves</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 08:35</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="New York Yankees" onerror="this.style.display='none'">
+                <h2>New York Yankees</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Tampa Bay Rays" onerror="this.style.display='none'">
+                <h2>Tampa Bay Rays</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">New York Yankees</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Tampa Bay Rays</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 08:40</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="Texas Rangers" onerror="this.style.display='none'">
+                <h2>Texas Rangers</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Kansas City Royals" onerror="this.style.display='none'">
+                <h2>Kansas City Royals</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">Texas Rangers</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Kansas City Royals</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 08:40</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="Athletics" onerror="this.style.display='none'">
+                <h2>Athletics</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Minnesota Twins" onerror="this.style.display='none'">
+                <h2>Minnesota Twins</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">Athletics</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Minnesota Twins</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 09:05</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="Milwaukee Brewers" onerror="this.style.display='none'">
+                <h2>Milwaukee Brewers</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Chicago Cubs" onerror="this.style.display='none'">
+                <h2>Chicago Cubs</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">Milwaukee Brewers</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Chicago Cubs</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 09:40</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="Los Angeles Dodgers" onerror="this.style.display='none'">
+                <h2>Los Angeles Dodgers</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Colorado Rockies" onerror="this.style.display='none'">
+                <h2>Colorado Rockies</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">Los Angeles Dodgers</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Colorado Rockies</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 10:38</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="Cincinnati Reds" onerror="this.style.display='none'">
+                <h2>Cincinnati Reds</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="Los Angeles Angels" onerror="this.style.display='none'">
+                <h2>Los Angeles Angels</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">Cincinnati Reds</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">Los Angeles Angels</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+    <div class="page">
+        <div class="header">
+            <h1>MLB 試合予想レポート</h1>
+            <div class="date-time">08/21 10:40</div>
+        </div>
+        
+        <div class="teams-header">
+            <div class="team-logo">
+                <img src="" alt="San Francisco Giants" onerror="this.style.display='none'">
+                <h2>San Francisco Giants</h2>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team-logo">
+                <img src="" alt="San Diego Padres" onerror="this.style.display='none'">
+                <h2>San Diego Padres</h2>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="team-section away">
+                <h3 class="team-title">San Francisco Giants</h3>
+                
+        
+        
+        
+    
+            </div>
+            
+            <div class="team-section home">
+                <h3 class="team-title">San Diego Padres</h3>
+                
+        
+        
+        
+    
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+    </div>
+    
+</body>
+</html>
