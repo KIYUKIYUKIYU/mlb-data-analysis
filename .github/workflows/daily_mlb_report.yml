@@ -1,4 +1,3 @@
-# .github/workflows/daily_mlb_report.yml
 name: Daily MLB Report
 
 on:
@@ -13,6 +12,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        persist-credentials: true  # 追加
     
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -40,6 +42,7 @@ jobs:
         mkdir -p cache cache/splits_data cache/advanced_stats
         mkdir -p cache/bullpen_stats cache/batting_quality
         mkdir -p cache/recent_ops cache/statcast_data
+        mkdir -p cache/pitcher_info
         mkdir -p logs daily_reports src scripts
     
     - name: Generate MLB Report with UTF-8
@@ -92,6 +95,8 @@ jobs:
         git add daily_reports/*.txt
         git commit -m "Add daily MLB report $(date +%Y%m%d)" || echo "No changes to commit"
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 追加
     
     - name: Summary
       if: always()
