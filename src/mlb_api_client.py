@@ -56,7 +56,7 @@ class MLBApiClient:
             return None
     
     def get_player_info(self, player_id):
-        """選手の基本情報を取得"""
+        """選手の基本情報を取得（利き腕情報を含む）"""
         try:
             response = self.session.get(
                 f"{self.base_url}/api/v1/people/{player_id}",
@@ -64,7 +64,30 @@ class MLBApiClient:
             )
             response.raise_for_status()
             data = response.json()
-            return data.get('people', [{}])[0] if data.get('people') else None
+            
+            if data.get('people') and len(data['people']) > 0:
+                player_data = data['people'][0]
+                
+                # pitchHandとbatSideを含めて返す
+                return {
+                    'id': player_data.get('id'),
+                    'fullName': player_data.get('fullName'),
+                    'firstName': player_data.get('firstName'),
+                    'lastName': player_data.get('lastName'),
+                    'primaryNumber': player_data.get('primaryNumber', ''),
+                    'birthDate': player_data.get('birthDate'),
+                    'currentAge': player_data.get('currentAge'),
+                    'birthCity': player_data.get('birthCity'),
+                    'birthCountry': player_data.get('birthCountry'),
+                    'height': player_data.get('height'),
+                    'weight': player_data.get('weight'),
+                    'primaryPosition': player_data.get('primaryPosition', {}),
+                    'pitchHand': player_data.get('pitchHand', {}),  # 追加
+                    'batSide': player_data.get('batSide', {})  # 追加
+                }
+            
+            return None
+            
         except Exception as e:
             self.logger.error(f"Error fetching player info: {str(e)}")
             return None
@@ -305,16 +328,7 @@ class MLBApiClient:
             }
     
     def calculate_team_recent_ops(self, team_id, games=5):
-        """
-        チームの過去N試合のOPSを計算
-        
-        Args:
-            team_id (int): チームID
-            games (int): 過去何試合分を計算するか（デフォルト5）
-        
-        Returns:
-            float: 過去N試合のOPS（計算できない場合は0.700）
-        """
+        """チームの過去N試合のOPSを計算"""
         try:
             # 現在の日付から過去の日付範囲を計算
             end_date = datetime.now()

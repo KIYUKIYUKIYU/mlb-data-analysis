@@ -5,6 +5,7 @@ MLBレポート生成スクリプト（実データ版）- 完全版
 - ログ出力抑制（クリーンな出力）
 - エンコーディングエラー対策済み
 - 自動ファイル保存機能付き
+- 投手の利き腕表示機能付き
 ※重要：必ず2025年のデータのみを使用すること
 """
 
@@ -34,7 +35,7 @@ logging.getLogger('src.mlb_api_client').setLevel(logging.WARNING)
 logging.getLogger('scripts.batting_quality_stats').setLevel(logging.WARNING)
 logging.getLogger('scripts.enhanced_stats_collector').setLevel(logging.WARNING)
 logging.getLogger('scripts.bullpen_enhanced_stats').setLevel(logging.WARNING)
-logging.getLogger('scripts.savant_statcast_fetcher').setLevel(logging.CRITICAL)  # CRITICALに変更
+logging.getLogger('scripts.savant_statcast_fetcher').setLevel(logging.CRITICAL)
 
 class DataReliabilityChecker:
     """データ信頼性チェッククラス"""
@@ -92,7 +93,8 @@ class DataReliabilityChecker:
             "bullpen_stats": ("MLB API", "ブルペン"),
             "recent_ops": ("MLB API", "直近成績"),
             "splits_data": ("MLB API", "対左右"),
-            "statcast_data": ("Statcast", "Barrel%/Hard-Hit%")
+            "statcast_data": ("Statcast", "Barrel%/Hard-Hit%"),
+            "pitcher_info": ("MLB API", "投手情報")  # 追加
         }
         
         for dir_name, (source, desc) in cache_info.items():
@@ -126,7 +128,7 @@ class DataReliabilityChecker:
         print("-" * 60)
 
 class MLBCompleteReport:
-    """完全版MLBレポート生成クラス（データ信頼性表示付き）"""
+    """完全版MLBレポート生成クラス（データ信頼性表示付き、利き腕表示対応）"""
     
     def __init__(self):
         self.client = MLBApiClient()
@@ -135,6 +137,56 @@ class MLBCompleteReport:
         self.batting_quality = BattingQualityStats()
         self.reliability_checker = DataReliabilityChecker()
         self.logger = logging.getLogger(__name__)
+        
+        # 投手情報キャッシュディレクトリを作成
+        Path("cache/pitcher_info").mkdir(parents=True, exist_ok=True)
+    
+    def _get_pitcher_hand(self, pitcher_id):
+        """投手の利き腕を取得（キャッシュ付き）"""
+        try:
+            # キャッシュを確認
+            cache_file = Path(f"cache/pitcher_info/{pitcher_id}.json")
+            
+            # キャッシュが存在し、24時間以内なら使用
+            if cache_file.exists():
+                cache_age = datetime.now() - datetime.fromtimestamp(cache_file.stat().st_mtime)
+                if cache_age.total_seconds() < 86400:  # 24時間
+                    with open(cache_file, 'r', encoding='utf-8') as f:
+                        cache_data = json.load(f)
+                        return cache_data.get('hand', '')
+            
+            # APIから取得
+            player_info = self.client.get_player_info(pitcher_id)
+            
+            hand = ''
+            if player_info and 'pitchHand' in player_info:
+                pitch_hand = player_info.get('pitchHand', {})
+                code = pitch_hand.get('code', '')
+                
+                # 日本語表記に変換
+                if code == 'R':
+                    hand = '右'
+                elif code == 'L':
+                    hand = '左'
+                elif code == 'S':
+                    hand = '両'
+            
+            # キャッシュに保存
+            if player_info:
+                cache_data = {
+                    'pitcher_id': pitcher_id,
+                    'name': player_info.get('fullName', ''),
+                    'hand': hand,
+                    'updated': datetime.now().isoformat()
+                }
+                with open(cache_file, 'w', encoding='utf-8') as f:
+                    json.dump(cache_data, f, ensure_ascii=False, indent=2)
+            
+            return hand
+            
+        except Exception as e:
+            self.logger.error(f"Error getting pitcher hand: {str(e)}")
+            return ''
     
     def generate_report(self, target_date=None):
         """指定日のレポートを生成"""
@@ -156,9 +208,7 @@ class MLBCompleteReport:
         print(f"{'='*60}")
         
         # データ信頼性を表示
-        print()
         self.reliability_checker.display_simple_reliability()
-        print()
         
         # スケジュール取得
         schedule = self.client.get_schedule(target_date)
@@ -186,8 +236,8 @@ class MLBCompleteReport:
             game_time_utc = datetime.fromisoformat(game['gameDate'].replace('Z', '+00:00'))
             game_time_jst = game_time_utc + timedelta(hours=9)
             
-            print(f"\n{'='*60}")
-            print(f"**{away_team['name']} @ {home_team['name']}**")
+            print(f"{'='*60}")
+            print(f"{away_team['name']} @ {home_team['name']}")
             print(f"開始時刻: {game_time_jst.strftime('%m/%d %H:%M')} (日本時間)")
             print(f"{'='*50}")
             
@@ -200,7 +250,7 @@ class MLBCompleteReport:
             if away_pitcher_id:
                 self._display_pitcher_stats(away_pitcher_id)
             else:
-                print("**先発**: 未定")
+                print("先発: 未定")
             
             # ブルペン統計
             self._display_bullpen_stats(away_team['id'])
@@ -213,7 +263,7 @@ class MLBCompleteReport:
             if home_pitcher_id:
                 self._display_pitcher_stats(home_pitcher_id)
             else:
-                print("**先発**: 未定")
+                print("先発: 未定")
             
             # ブルペン統計
             self._display_bullpen_stats(home_team['id'])
@@ -260,7 +310,7 @@ class MLBCompleteReport:
             return name
     
     def _display_pitcher_stats(self, pitcher_id):
-        """投手統計を表示"""
+        """投手統計を表示（利き腕付き）"""
         try:
             # 基本情報
             player_info = self.client.get_player_info(pitcher_id)
@@ -268,11 +318,22 @@ class MLBCompleteReport:
                 print("投手情報を取得できませんでした")
                 return
             
+            # 利き腕を取得
+            pitch_hand = self._get_pitcher_hand(pitcher_id)
+            
             # 強化統計を取得
             enhanced_stats = self.stats_collector.get_pitcher_enhanced_stats(pitcher_id)
             
-            # 基本情報表示
-            print(f"**先発**: {player_info['fullName']} ({enhanced_stats['wins']}勝{enhanced_stats['losses']}敗)")
+            # 基本情報表示（利き腕を追加）
+            pitcher_name = player_info['fullName']
+            wins = enhanced_stats['wins']
+            losses = enhanced_stats['losses']
+            
+            # 利き腕付きで表示
+            if pitch_hand:
+                print(f"先発: {pitcher_name} ({pitch_hand}) ({wins}勝{losses}敗)")
+            else:
+                print(f"先発: {pitcher_name} ({wins}勝{losses}敗)")
             
             # 統計表示 - 文字列を数値に変換
             era = self._safe_float(enhanced_stats.get('era', '0.00'))
@@ -318,7 +379,7 @@ class MLBCompleteReport:
             # active_relieversの数を使用
             reliever_count = len(bullpen_data.get('active_relievers', []))
             
-            print(f"\n**中継ぎ陣** ({reliever_count}名):")
+            print(f"\n中継ぎ陣 ({reliever_count}名):")
             print(f"ERA: {bullpen_data['era']} | FIP: {bullpen_data['fip']} | "
                   f"xFIP: {bullpen_data['xfip']} | WHIP: {bullpen_data['whip']} | "
                   f"K-BB%: {bullpen_data['k_bb_percent']}%")
@@ -362,7 +423,7 @@ class MLBCompleteReport:
             finally:
                 sys.stderr = old_stderr
             
-            print(f"\n**チーム打撃**:")
+            print(f"\nチーム打撃:")
             
             if not team_stats:
                 # シーズン統計がない場合でも表示できるものを表示
