@@ -1,376 +1,181 @@
-# 🏟️ MLB Data Analysis Project
+# MLB Data Analysis Project
 
-[![Daily Report](https://github.com/KIYUKIYUKIYU/mlb-data-analysis/actions/workflows/daily_mlb_report.yml/badge.svg)](https://github.com/KIYUKIYUKIYU/mlb-data-analysis/actions)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Last Updated](https://img.shields.io/badge/last%20updated-2025--08--25-green.svg)](https://github.com/KIYUKIYUKIYU/mlb-data-analysis)
+MLB試合データを自動収集・分析し、日本時間19:30に予想レポートを生成するシステムです。  
+本 README は **現状の実装・運用**に合わせて最新化しています。
 
-MLB試合データを自動収集・分析し、日本時間19:30に予想レポートを生成するシステム
+---
 
-## 📋 目次
+## 目次
+- プロジェクト概要
+- 開発ルール（⚠️厳守）
+- システム構成（データフロー）
+- セットアップ
+- 使い方（cmd.exe）
+- 出力物
+- データ契約 v0.1（現行出力準拠）
+- よくある質問 / トラブルシューティング
 
-- [プロジェクト概要](#プロジェクト概要)
-- [⚠️ 重要: 開発ルール](#️-重要-開発ルール)
-- [システム構成](#システム構成)
-- [セットアップ](#セットアップ)
-- [使用方法](#使用方法)
-- [API/データソース](#apiデータソース)
-- [トラブルシューティング](#トラブルシューティング)
+---
 
 ## プロジェクト概要
 
-### 🎯 主な機能
-- **自動データ収集**: MLB Stats APIから試合・選手データを取得
-- **統計分析**: ERA、FIP、xFIP、WHIP等の高度な指標を計算
-- **レポート生成**: テキスト/HTML/PDF形式で出力
-- **自動実行**: GitHub Actionsで毎日19:30（JST）に実行
-- **Google Drive連携**: レポートを自動保存
+### 主な機能
+- 自動データ収集: MLB Stats API から試合・選手データを取得
+- 統計分析: ERA, FIP, xFIP, WHIP 等の高度指標を **計算し、レポートに出力**（※JSON化では**再計算しません**）
+- レポート生成: **テキスト / HTML /（任意で PDF）** 形式で出力
+- 自動実行: GitHub Actions で毎日 **19:30（JST）** に実行（運用方針）
+- （任意）Google Drive 連携でレポートを保存
 
-### 📊 生成されるレポート内容
+> ここでいう「高度指標の計算」は、既存スクリプト群で実行・レポートに反映済みの値を指します。  
+> **JSON生成段階では再計算せず**、レポート/HTMLなど**既に確定している値をパススルー**します。
+
+### 生成されるレポート内容（例）
 - 試合予想と分析
-- 先発投手の詳細統計
-- チーム打撃成績
-- 中継ぎ陣の状態
+- 先発投手の詳細統計（ERA / FIP / xFIP / WHIP / K-BB% / GB% / FB% / QS% / SwStr% / BABIP / 対左右OPS など）
+- チーム打撃成績（シーズン、対左右、xwOBA、Barrel%、Hard-Hit%、**過去5/10試合OPS** など）
+- 中継ぎ陣の状態（人数、ERA、FIP、xFIP、WHIP、K-BB%、役割、疲労コメント）
 - データ信頼性スコア（0/4〜4/4）
 
 ---
 
-## ⚠️ **重要: 開発ルール**
+## ⚠️ 開発ルール（絶対遵守）
 
-### 🔴 **絶対的なルール: 既存コード確認の義務**
-
-**新しいコードを生成または修正する前に、必ず以下を実行すること：**
-
-```markdown
-1. 既存コードの確認 [必須]
-   - 関連するファイルのURLを提供
-   - または関連コードを貼り付け
-   
-2. 影響範囲の特定 [必須]
-   - 修正が影響する他のファイルをリストアップ
-   - 依存関係を明確化
-   
-3. 整合性の確認 [必須]
-   - 既存の命名規則に従う
-   - 既存のデータ構造を維持
-   - 既存のエラーハンドリングパターンを踏襲
-```
-
-### 📝 **AIアシスタント（Claude等）への指示テンプレート**
-
-```markdown
-## コード修正依頼
-
-### 1. 確認してほしい既存コード
-- メインファイル: https://raw.githubusercontent.com/KIYUKIYUKIYU/mlb-data-analysis/main/scripts/mlb_complete_report_real.py
-- 関連ファイル: https://raw.githubusercontent.com/KIYUKIYUKIYU/mlb-data-analysis/main/src/mlb_api_client.py
-
-### 2. 修正内容
-[具体的な修正内容を記載]
-
-### 3. 注意事項
-- 既存コードとの整合性を保つこと
-- 他のモジュールへの影響を考慮すること
-- エラーハンドリングを適切に行うこと
-```
-
-### ✅ **開発チェックリスト**
-
-新規開発・修正時は以下を確認：
-
-- [ ] 既存コードを確認した
-- [ ] 影響範囲を特定した
-- [ ] 既存の命名規則に従っている
-- [ ] エラーハンドリングを実装した
-- [ ] ログ出力を適切に設定した
-- [ ] キャッシュへの影響を確認した
-- [ ] テストを実行した（ローカル）
-- [ ] ドキュメントを更新した
+1. **既存コード確認** → 影響範囲を列挙  
+2. **ファイルは全文提示**（部分差分ではなく、丸ごと貼れる形）  
+3. **Windows 11 / cmd.exe 前提**（PowerShell/Unix系コマンド禁止）  
+4. **実行手順は cmd.exe でコピペ可**にする  
+5. **“ないなら出さない”**（未取得の項目は無理に生成しない）
 
 ---
 
-## 🏗️ システム構成
+## システム構成（データフロー）
 
-### ディレクトリ構造
-```
-mlb-data-analysis/
-├── .github/workflows/
-│   └── daily_mlb_report.yml    # GitHub Actions設定（19:30 JST実行）
-├── src/
-│   └── mlb_api_client.py       # MLB Stats API クライアント
-├── scripts/
-│   ├── mlb_complete_report_real.py  # メインレポート生成
-│   ├── convert_to_html.py          # HTML変換
-│   ├── convert_to_pdf.py           # PDF変換
-│   ├── fetch_all_mlb_pitchers.py   # 投手データ一括取得
-│   └── upload_to_drive.py          # Google Drive アップロード
-├── cache/
-│   └── pitcher_info/            # 投手情報キャッシュ（JSON）
-├── daily_reports/
-│   ├── *.txt                    # テキストレポート
-│   ├── html/*.html              # HTMLレポート
-│   └── pdf/*.pdf                # PDFレポート
-├── core/                        # コアモジュール（開発中）
-│   └── data_freshness_checker.py   # データ更新チェック
-├── requirements.txt             # 依存パッケージ
-└── README.md                    # このファイル
-```
+curated/_meta
+└──（既存レポートが利用する生データ一式）
 
-### 主要ファイルの役割
+build_model.py
+└── models/mlb_daily_YYYYMMDD.json を生成
+（※数値は再計算せず、既存のレポート/HTML 等「確実に更新済みの値」を
+そのままデータ化する＝パススルー）
 
-| ファイル | 役割 | 依存関係 |
-|---------|------|----------|
-| `mlb_complete_report_real.py` | レポート生成のメインロジック | `mlb_api_client.py` |
-| `mlb_api_client.py` | MLB APIとの通信 | なし |
-| `convert_to_html.py` | テキスト→HTML変換 | なし |
-| `convert_to_pdf.py` | HTML→PDF変換（Chrome経由） | なし |
-| `fetch_all_mlb_pitchers.py` | 全投手データ取得・キャッシュ | `mlb_api_client.py` |
+render_report.py + templates/mlb_daily.txt.j2
+└── daily_reports/MLBYYYY-MM-DD.txt を出力
 
----
-
-## 🚀 セットアップ
-
-### 前提条件
-- Python 3.10以上
-- Git
-- Google Chrome（PDF生成用）
-
-### インストール手順
-
-```bash
-# 1. リポジトリをクローン
-git clone https://github.com/KIYUKIYUKIYU/mlb-data-analysis.git
-cd mlb-data-analysis
-
-# 2. 仮想環境を作成
-python -m venv venv
-
-# 3. 仮想環境を有効化
-# Windows:
-.\venv\Scripts\activate
-# Mac/Linux:
-source venv/bin/activate
-
-# 4. 依存パッケージをインストール
-pip install -r requirements.txt
-
-# 5. 投手データのキャッシュを作成
-python scripts/fetch_all_mlb_pitchers.py
-```
-
-### 環境変数設定（Google Drive連携用）
-
-```bash
-# Google認証情報
-export GOOGLE_CREDENTIALS='{"type":"service_account",...}'
-export GOOGLE_DRIVE_FOLDER_ID='1vL6tVcGclh7yLtBuKknZMn0cdsVloRph'
-```
-
----
-
-## 📖 使用方法
-
-### 基本的な使用方法
-
-```bash
-# レポート生成
-python scripts/mlb_complete_report_real.py
-
-# HTML変換
-python scripts/convert_to_html.py "daily_reports/MLB08月25日(月)レポート.txt"
-
-# PDF変換（Chromeで開く）
-python scripts/convert_to_pdf.py "daily_reports/html/MLB08月25日(月)レポート.html"
-```
-
-### 自動実行
-GitHub Actionsにより毎日19:30（JST）に自動実行されます。
-
-手動実行：
-1. [Actions](https://github.com/KIYUKIYUKIYU/mlb-data-analysis/actions)ページへ
-2. "Daily MLB Report"を選択
-3. "Run workflow"をクリック
-
----
-
-## 📊 API/データソース
-
-### 1. MLB Stats API
-- **エンドポイント**: `https://statsapi.mlb.com/api/v1/`
-- **取得データ**: 
-  - 試合スケジュール
-  - 投手・打者統計
-  - チーム成績
-  - リアルタイム試合データ
-
-### 2. FanGraphs（計画中）
-- **取得予定データ**: FIP、xFIP、K-BB%、GB%、FB%
-- **現状**: 実装待ち（現在はダミーデータ）
-
-### 3. ローカルキャッシュ
-- **場所**: `cache/pitcher_info/`
-- **形式**: JSON
-- **更新頻度**: 24時間
-
----
-
-## 🔧 トラブルシューティング
-
-### よくある問題と解決方法
-
-#### 1. データ信頼性が「0/4」と表示される
-```bash
-# 投手キャッシュを更新
-python scripts/fetch_all_mlb_pitchers.py
-
-# データ更新状況を確認
-python core/data_freshness_checker.py
-```
-
-#### 2. PDF変換でエラー
-```bash
-# Chromeで手動保存
-python scripts/convert_to_pdf.py [HTMLファイル]
-# メニューで「2」を選択 → Ctrl+P → PDFとして保存
-```
-
-#### 3. 文字化け
-- ファイルエンコーディングをUTF-8に統一
-- BOMなしで保存
-
-#### 4. Google Drive連携エラー
-- 事前にファイルを手動作成
-- サービスアカウントに編集権限を付与
-
----
-
-## 🤝 貢献方法
-
-### コード修正の手順
-
-1. **既存コードの確認**
-   ```bash
-   # 関連ファイルを確認
-   cat scripts/mlb_complete_report_real.py
-   cat src/mlb_api_client.py
-   ```
-
-2. **ブランチ作成**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-3. **修正実施**
-   - 既存コードとの整合性を保つ
-   - エラーハンドリングを追加
-   - ログを適切に出力
-
-4. **テスト**
-   ```bash
-   python scripts/mlb_complete_report_real.py
-   ```
-
-5. **プルリクエスト**
-   - 変更内容を明記
-   - 影響範囲を説明
-   - テスト結果を記載
-
----
-
-## 📝 今後の計画
-
-### 優先度: 高
-- [ ] FanGraphs APIの実装
-- [ ] データ更新チェック機能の改善
-- [ ] エラーハンドリングの強化
-
-### 優先度: 中
-- [ ] NPBデータ統合
-- [ ] モジュール化（core/models/services分離）
-- [ ] 非同期処理の導入
-
-### 優先度: 低
-- [ ] Baseball Reference統合
-- [ ] Statcastデータ追加
-- [ ] 機械学習による予測モデル
-
----
-
-## 📄 ライセンス
-
-このプロジェクトはMITライセンスの下で公開されています。
-
----
-
-## 👥 コントリビューター
-
-- [@KIYUKIYUKIYU](https://github.com/KIYUKIYUKIYU) - プロジェクトオーナー
-
----
-
-## 📞 お問い合わせ
-
-問題や提案がある場合は、[Issues](https://github.com/KIYUKIYUKIYU/mlb-data-analysis/issues)でお知らせください。
-
----
-
-## 🔗 関連リンク
-
-- [MLB Stats API Documentation](https://statsapi.mlb.com/docs/)
-- [FanGraphs](https://www.fangraphs.com/)
-- [Baseball Reference](https://www.baseball-reference.com/)
-
----
-
-**最終更新**: 2025年8月25日
-
-# MLB Data Analysis - 進行記録 (2025-08-25時点)
-
-## 新規実装・整備したフロー
-
-### 共通データモデル生成
-- **scripts/build_model.py**
-  - curated JSON + _meta.json を統合し、1日分の共通モデル (`models/mlb_daily_YYYYMMDD.json`) を生成。
-  - 入力探索パス: `data/curated/{ymd}/mlb_curated.json` など。
-  - 出力: `models/mlb_daily_{ymd}.json`
-  - 出力内容: `games[]`, `meta.freshness`, `meta.tbd_rate`, `summary.game_count`, 生成時刻など。
-
-### レポート描画
-- **templates/mlb_daily.txt.j2**
-  - TXTレポートのJinja2テンプレート（combined_data.txtの体裁に寄せて順次拡張予定）。
-  - 現在は試合ヘッダー・対戦カード・先発投手（TBD対応）を出力。
-
-- **scripts/render_report.py**
-  - 共通モデルをJinja2で描画し、TXT/HTMLを生成。
-  - 入力: `models/mlb_daily_{ymd}.json`
-  - 出力: `daily_reports/MLB{date}.txt` など。
-
-### 実行シーケンス（JST固定）
-python scripts\build_model.py --date 2025-08-25 --curated data\curated\20250825\mlb_curated.json --meta data\curated_meta_20250825.json
-python scripts\render_report.py --date 2025-08-25 --template templates\mlb_daily.txt.j2 --out daily_reports\MLB2025-08-25.txt
+convert_to_html.py（任意）
+└── 上記 TXT を HTML に変換（PDF 変換スクリプトも任意で利用可）
 
 yaml
 コピーする
 編集する
 
-### 成果物
-- `models/mlb_daily_20250825.json` → TBD率100%を含む共通モデル生成済み。
-- `daily_reports/MLB2025-08-25.txt` → 先発情報付きの最小TXTレポート生成済み。
+- **重要**：本ラインでは **“ないなら出さない”** を徹底。未取得の項目は **省略** します。  
+- 変換系スクリプト（`convert_to_html.py` など）はリポジトリに存在します。
 
 ---
 
-## 今後の課題
-- **combined_data.txt のフォーマット完全再現**  
-  - 先発詳細（ERA/FIP/WHIP/K-BB%/QS率など）  
-  - 中継ぎ陣の集計・主要投手表示  
-  - チーム打撃成績（AVG/OPS/wOBA 等）  
-  - 過去5試合・10試合の傾向  
+## セットアップ
 
-- **データソースとの接続**
-  - 先発・詳細 → `advanced_stats_collector.py` / `enhanced_stats_collector.py`
-  - ブルペン → `bullpen_enhanced_stats.py`
-  - 打撃 → `batting_quality_stats.py`
-  - 試合情報 → `collect_basic_data.py`, `mlb_complete_report_real.py`
-
-- `fetch → normalize → build_meta` の正式実装により、curated JSON と _meta を自動生成する導線を整える。
+- Python 3.10+ 推奨
+- 仮想環境（venv）
+- 依存関係: `pip install -r requirements.txt`
 
 ---
+
+## 使い方（cmd.exe）
+
+**例：2025-08-25 のレポートを作る場合**
+
+```bat
+:: 1) プロジェクトへ移動
+cd C:\path\to\mlb-data-analysis
+
+:: 2) 仮想環境アクティベート
+.\venv\Scripts\activate
+
+:: 3) 依存パッケージ（必要なら）
+pip install -r requirements.txt
+
+:: 4) JSONモデル生成（再計算なし／パススルー）
+python build_model.py --date 2025-08-25
+
+:: 5) テキストレポート出力（Jinja2 テンプレ使用）
+python render_report.py --date 2025-08-25
+
+:: 6) HTML 変換（任意）
+python convert_to_html.py --in daily_reports\MLB2025-08-25.txt --out reports\MLB2025-08-25.html
+スクリプト引数は環境に合わせて調整してください。
+
+出力物
+models/mlb_daily_YYYYMMDD.json … パススルー JSON（再計算なし）
+
+daily_reports/MLBYYYY-MM-DD.txt … テキストレポート
+
+reports/MLBYYYY-MM-DD.html … HTML（任意）
+
+PDF（任意）
+
+データ契約 v0.1（現行出力準拠）
+方針： 現在レポート／HTMLに実際に表示されている項目だけを JSON に載せる。
+“ないなら出さない（省略）”。再計算はしない。
+
+トップレベル
+generated_at (ISO8601), date (YYYY-MM-DD), timezone, games_count, source_meta, games[]
+
+games[]（抜粋）
+game_id, league, season, status, start_time_local, start_time_utc, venue
+
+matchup: away_team, home_team
+
+starters:
+
+away, home:
+
+name, hand, probable
+
+season: （レポートに出ている範囲の指標のみ）
+
+省略: last_5_starts
+
+vs_opponent: 今季のみ（出ていなければ省略）
+
+bullpens:
+
+away, home: count, era, fip, xfip, whip, kbb_pct, 役割メモ、疲労コメント など（出ている範囲のみ）
+
+key_relievers: 最大 5 名（出ていれば）
+
+batting:
+
+season 指標、vs_lhp / vs_rhp、xwOBA、Barrel%、Hard-Hit%
+
+last_5_games.ops / last_10_games.ops（出ていれば）
+
+form / notes：出ていれば
+
+表示フォーマット（テンプレ側の丸め）
+OPS/OBP/SLG/ISO：小数第3位
+
+ERA/FIP/xFIP/WHIP：小数第2位
+
+%系：小数1位 + %
+
+RPG：小数1位
+
+よくある質問 / トラブルシューティング
+高度指標はどこで計算している？
+→ 既存の解析スクリプト群で算出し、レポートに出力しています。JSON化では再計算しません。
+
+last_5_starts を入れない理由は？
+→ 現行レポートに項目が無いため。“ないなら出さない” ポリシーに従います。
+
+HTML/PDF 変換は？
+→ convert_to_html.py 等を利用してください（PDF は任意の変換スクリプトを使用可能）。
+
+yaml
+コピーする
+編集する
+
+---
+
+必要なら、この後 **`build_model.py` / `render_report.py`** の“パススルー実装（全文）”とコマンドも続けて出します。
+::contentReference[oaicite:0]{index=0}

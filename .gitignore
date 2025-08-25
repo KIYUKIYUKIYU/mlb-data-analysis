@@ -181,3 +181,4 @@ test_upload.txt
 update_pitcher_cache.py 
 *_backup.py 
 *.log 
+README.backup.md
