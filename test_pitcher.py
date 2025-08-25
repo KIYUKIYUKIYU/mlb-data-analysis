@@ -1,20 +1,26 @@
- 
-from src.mlb_api_client import MLBApiClient
-import json
+# デバッグ用スクリプト - test_pitcher.py として保存
+with open('daily_reports/MLB08月22日(金)レポート.txt', 'r', encoding='utf-8') as f:
+    content = f.read()
+    
+# 最初の試合部分を取得
+import re
+game_pattern = r'\*\*([^*]+) @ ([^*]+)\*\*'
+matches = list(re.finditer(game_pattern, content))
 
-client = MLBApiClient()
-
-# Kevin Gausmanの例（実際のIDに置き換え）
-pitcher_id = 592332  # 仮のID
-
-# 基本情報
-info = client.get_player_info(pitcher_id)
-print("Player Info:", json.dumps(info, indent=2))
-
-# 2025年の統計
-stats = client.get_player_stats_by_season(pitcher_id, 2025, "pitching")
-print("\n2025 Stats:", json.dumps(stats, indent=2))
-
-# 2024年の統計（比較用）
-stats_2024 = client.get_player_stats_by_season(pitcher_id, 2024, "pitching")
-print("\n2024 Stats:", json.dumps(stats_2024, indent=2))
+if matches:
+    # 最初の試合のデータを表示
+    start = matches[0].start()
+    end = matches[1].start() if len(matches) > 1 else start + 2000
+    
+    game_section = content[start:end]
+    
+    # 先発投手に関する行を探す
+    lines = game_section.split('\n')
+    for i, line in enumerate(lines):
+        if '先発' in line:
+            print(f"Line {i}: {line}")
+            # 前後の行も表示
+            if i > 0:
+                print(f"Line {i-1}: {lines[i-1]}")
+            if i < len(lines) - 1:
+                print(f"Line {i+1}: {lines[i+1]}")

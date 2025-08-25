@@ -4,6 +4,8 @@ MLBレポート生成スクリプト（実データ版）- 完全版
 - データ信頼性表示付き
 - ログ出力抑制（クリーンな出力）
 - エンコーディングエラー対策済み
+- 自動ファイル保存機能付き
+- 投手の利き腕表示機能付き
 ※重要：必ず2025年のデータのみを使用すること
 """
 
@@ -33,7 +35,7 @@ logging.getLogger('src.mlb_api_client').setLevel(logging.WARNING)
 logging.getLogger('scripts.batting_quality_stats').setLevel(logging.WARNING)
 logging.getLogger('scripts.enhanced_stats_collector').setLevel(logging.WARNING)
 logging.getLogger('scripts.bullpen_enhanced_stats').setLevel(logging.WARNING)
-logging.getLogger('scripts.savant_statcast_fetcher').setLevel(logging.CRITICAL)  # CRITICALに変更
+logging.getLogger('scripts.savant_statcast_fetcher').setLevel(logging.CRITICAL)
 
 class DataReliabilityChecker:
     """データ信頼性チェッククラス"""
@@ -91,7 +93,8 @@ class DataReliabilityChecker:
             "bullpen_stats": ("MLB API", "ブルペン"),
             "recent_ops": ("MLB API", "直近成績"),
             "splits_data": ("MLB API", "対左右"),
-            "statcast_data": ("Statcast", "Barrel%/Hard-Hit%")
+            "statcast_data": ("Statcast", "Barrel%/Hard-Hit%"),
+            "pitcher_info": ("MLB API", "投手情報")  # 追加
         }
         
         for dir_name, (source, desc) in cache_info.items():
@@ -125,7 +128,7 @@ class DataReliabilityChecker:
         print("-" * 60)
 
 class MLBCompleteReport:
-    """完全版MLBレポート生成クラス（データ信頼性表示付き）"""
+    """完全版MLBレポート生成クラス（データ信頼性表示付き、利き腕表示対応）"""
     
     def __init__(self):
         self.client = MLBApiClient()
@@ -134,6 +137,56 @@ class MLBCompleteReport:
         self.batting_quality = BattingQualityStats()
         self.reliability_checker = DataReliabilityChecker()
         self.logger = logging.getLogger(__name__)
+        
+        # 投手情報キャッシュディレクトリを作成
+        Path("cache/pitcher_info").mkdir(parents=True, exist_ok=True)
+    
+    def _get_pitcher_hand(self, pitcher_id):
+        """投手の利き腕を取得（キャッシュ付き）"""
+        try:
+            # キャッシュを確認
+            cache_file = Path(f"cache/pitcher_info/{pitcher_id}.json")
+            
+            # キャッシュが存在し、24時間以内なら使用
+            if cache_file.exists():
+                cache_age = datetime.now() - datetime.fromtimestamp(cache_file.stat().st_mtime)
+                if cache_age.total_seconds() < 86400:  # 24時間
+                    with open(cache_file, 'r', encoding='utf-8') as f:
+                        cache_data = json.load(f)
+                        return cache_data.get('hand', '')
+            
+            # APIから取得
+            player_info = self.client.get_player_info(pitcher_id)
+            
+            hand = ''
+            if player_info and 'pitchHand' in player_info:
+                pitch_hand = player_info.get('pitchHand', {})
+                code = pitch_hand.get('code', '')
+                
+                # 日本語表記に変換
+                if code == 'R':
+                    hand = '右'
+                elif code == 'L':
+                    hand = '左'
+                elif code == 'S':
+                    hand = '両'
+            
+            # キャッシュに保存
+            if player_info:
+                cache_data = {
+                    'pitcher_id': pitcher_id,
+                    'name': player_info.get('fullName', ''),
+                    'hand': hand,
+                    'updated': datetime.now().isoformat()
+                }
+                with open(cache_file, 'w', encoding='utf-8') as f:
+                    json.dump(cache_data, f, ensure_ascii=False, indent=2)
+            
+            return hand
+            
+        except Exception as e:
+            self.logger.error(f"Error getting pitcher hand: {str(e)}")
+            return ''
     
     def generate_report(self, target_date=None):
         """指定日のレポートを生成"""
@@ -155,9 +208,7 @@ class MLBCompleteReport:
         print(f"{'='*60}")
         
         # データ信頼性を表示
-        print()
         self.reliability_checker.display_simple_reliability()
-        print()
         
         # スケジュール取得
         schedule = self.client.get_schedule(target_date)
@@ -185,8 +236,8 @@ class MLBCompleteReport:
             game_time_utc = datetime.fromisoformat(game['gameDate'].replace('Z', '+00:00'))
             game_time_jst = game_time_utc + timedelta(hours=9)
             
-            print(f"\n{'='*60}")
-            print(f"**{away_team['name']} @ {home_team['name']}**")
+            print(f"{'='*60}")
+            print(f"{away_team['name']} @ {home_team['name']}")
             print(f"開始時刻: {game_time_jst.strftime('%m/%d %H:%M')} (日本時間)")
             print(f"{'='*50}")
             
@@ -199,7 +250,7 @@ class MLBCompleteReport:
             if away_pitcher_id:
                 self._display_pitcher_stats(away_pitcher_id)
             else:
-                print("**先発**: 未定")
+                print("先発: 未定")
             
             # ブルペン統計
             self._display_bullpen_stats(away_team['id'])
@@ -212,7 +263,7 @@ class MLBCompleteReport:
             if home_pitcher_id:
                 self._display_pitcher_stats(home_pitcher_id)
             else:
-                print("**先発**: 未定")
+                print("先発: 未定")
             
             # ブルペン統計
             self._display_bullpen_stats(home_team['id'])
@@ -259,7 +310,7 @@ class MLBCompleteReport:
             return name
     
     def _display_pitcher_stats(self, pitcher_id):
-        """投手統計を表示"""
+        """投手統計を表示（利き腕付き）"""
         try:
             # 基本情報
             player_info = self.client.get_player_info(pitcher_id)
@@ -267,11 +318,22 @@ class MLBCompleteReport:
                 print("投手情報を取得できませんでした")
                 return
             
+            # 利き腕を取得
+            pitch_hand = self._get_pitcher_hand(pitcher_id)
+            
             # 強化統計を取得
             enhanced_stats = self.stats_collector.get_pitcher_enhanced_stats(pitcher_id)
             
-            # 基本情報表示
-            print(f"**先発**: {player_info['fullName']} ({enhanced_stats['wins']}勝{enhanced_stats['losses']}敗)")
+            # 基本情報表示（利き腕を追加）
+            pitcher_name = player_info['fullName']
+            wins = enhanced_stats['wins']
+            losses = enhanced_stats['losses']
+            
+            # 利き腕付きで表示
+            if pitch_hand:
+                print(f"先発: {pitcher_name} ({pitch_hand}) ({wins}勝{losses}敗)")
+            else:
+                print(f"先発: {pitcher_name} ({wins}勝{losses}敗)")
             
             # 統計表示 - 文字列を数値に変換
             era = self._safe_float(enhanced_stats.get('era', '0.00'))
@@ -287,8 +349,6 @@ class MLBCompleteReport:
             qs_rate = self._safe_float(enhanced_stats.get('qs_rate', '0'))
             swstr_pct = self._safe_float(enhanced_stats.get('swstr_percent', '0'))
             babip = self._safe_float(enhanced_stats.get('babip', '0'))
-            
-            # デバッグ出力を削除（コメントアウト）
             
             print(f"ERA: {era:.2f} | FIP: {fip:.2f} | "
                   f"xFIP: {xfip:.2f} | WHIP: {whip:.2f} | "
@@ -319,7 +379,7 @@ class MLBCompleteReport:
             # active_relieversの数を使用
             reliever_count = len(bullpen_data.get('active_relievers', []))
             
-            print(f"\n**中継ぎ陣** ({reliever_count}名):")
+            print(f"\n中継ぎ陣 ({reliever_count}名):")
             print(f"ERA: {bullpen_data['era']} | FIP: {bullpen_data['fip']} | "
                   f"xFIP: {bullpen_data['xfip']} | WHIP: {bullpen_data['whip']} | "
                   f"K-BB%: {bullpen_data['k_bb_percent']}%")
@@ -363,7 +423,7 @@ class MLBCompleteReport:
             finally:
                 sys.stderr = old_stderr
             
-            print(f"\n**チーム打撃**:")
+            print(f"\nチーム打撃:")
             
             if not team_stats:
                 # シーズン統計がない場合でも表示できるものを表示
@@ -420,13 +480,16 @@ class MLBCompleteReport:
             print(f"チーム打撃統計の表示エラー: {str(e)}")
 
 def main():
-    """メイン関数"""
+    """メイン関数（自動ファイル保存機能付き）"""
     import argparse
     
-    parser = argparse.ArgumentParser(description='MLB試合予想レポート生成（データ信頼性表示付き）')
+    parser = argparse.ArgumentParser(description='MLB試合予想レポート生成（自動保存対応）')
     parser.add_argument('--date', type=str, help='対象日付 (YYYY-MM-DD形式)')
+    parser.add_argument('--output', type=str, help='出力ファイル名（指定しない場合は自動生成）')
     parser.add_argument('--check-data', action='store_true', 
                        help='データ信頼性の詳細チェック')
+    parser.add_argument('--console', action='store_true',
+                       help='コンソールにも出力（デバッグ用）')
     args = parser.parse_args()
     
     # データチェックモード
@@ -438,14 +501,76 @@ def main():
         checker.display_detailed_reliability()
         sys.exit(0)
     
-    # 通常のレポート生成
-    report = MLBCompleteReport()
-    
-    if args.date:
-        report.generate_report(args.date)
+    # 出力ファイル名を決定
+    if args.output:
+        output_file = args.output
     else:
-        # デフォルトは明日の試合
-        report.generate_report()
+        # daily_reportsディレクトリを作成
+        Path("daily_reports").mkdir(exist_ok=True)
+        
+        # 日本語の曜日
+        weekdays = ['月', '火', '水', '木', '金', '土', '日']
+        now = datetime.now()
+        tomorrow = now + timedelta(days=1)
+        weekday_jp = weekdays[tomorrow.weekday()]
+        
+        # ファイル名を生成（例：MLB08月21日(木)レポート.txt）
+        output_file = f"daily_reports/MLB{tomorrow.strftime('%m月%d日')}({weekday_jp})レポート.txt"
+    
+    # コンソール出力の処理
+    if args.console:
+        # コンソールとファイルの両方に出力
+        import io
+        
+        # StringIOでキャプチャ
+        string_buffer = io.StringIO()
+        original_stdout = sys.stdout
+        sys.stdout = string_buffer
+        
+        # レポート生成
+        report = MLBCompleteReport()
+        if args.date:
+            report.generate_report(args.date)
+        else:
+            report.generate_report()
+        
+        # 出力を取得
+        output_content = string_buffer.getvalue()
+        sys.stdout = original_stdout
+        
+        # コンソールに表示
+        print(output_content)
+        
+        # ファイルに保存
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(output_content)
+    else:
+        # ファイルのみに出力
+        original_stdout = sys.stdout
+        with open(output_file, 'w', encoding='utf-8') as f:
+            sys.stdout = f
+            
+            # レポート生成
+            report = MLBCompleteReport()
+            if args.date:
+                report.generate_report(args.date)
+            else:
+                report.generate_report()
+            
+            sys.stdout = original_stdout
+    
+    # 完了メッセージ
+    file_size = Path(output_file).stat().st_size / 1024  # KB単位
+    print(f"\n✅ レポートを生成しました:")
+    print(f"   ファイル: {output_file}")
+    print(f"   サイズ: {file_size:.1f} KB")
+    print(f"   時刻: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    
+    # HTML変換の提案
+    if output_file.endswith('.txt'):
+        html_file = output_file.replace('.txt', '.html')
+        print(f"\n💡 HTML変換するには:")
+        print(f"   python scripts/convert_to_html.py \"{output_file}\"")
 
 if __name__ == "__main__":
     main()

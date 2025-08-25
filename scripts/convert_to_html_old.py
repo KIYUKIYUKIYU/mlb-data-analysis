@@ -1,628 +1,884 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-MLB レポート HTML変換スクリプト
-テキストレポートを美しいHTML形式（A4サイズ1試合1ページ）に変換
+MLB試合レポートをHTMLに変換するスクリプト（完全版）
+PDF最適化版 - 1試合1ページ - キャッシュから投手利き腕取得
 """
 
 import re
 import sys
+import json
 import os
-from datetime import datetime
 from pathlib import Path
+from datetime import datetime
 
-def get_team_logo(team_name):
-    """チーム名からロゴURLを取得（MLB公式API）"""
-    # チーム名とチームIDのマッピング
-    team_ids = {
-        'Yankees': '147', 'Red Sox': '111', 'Blue Jays': '141', 'Rays': '139', 'Orioles': '110',
-        'White Sox': '145', 'Guardians': '114', 'Tigers': '116', 'Royals': '118', 'Twins': '142',
-        'Astros': '117', 'Athletics': '133', 'Mariners': '136', 'Angels': '108', 'Rangers': '140',
-        'Braves': '144', 'Marlins': '146', 'Mets': '121', 'Phillies': '143', 'Nationals': '120',
-        'Brewers': '158', 'Cardinals': '138', 'Cubs': '112', 'Reds': '113', 'Pirates': '134',
-        'Dodgers': '119', 'Diamondbacks': '109', 'Rockies': '115', 'Padres': '135', 'Giants': '137'
-    }
+def get_pitcher_hand_from_cache(pitcher_name):
+    """キャッシュから投手の利き腕情報を取得"""
+    cache_dir = Path("cache/pitcher_info")
     
-    # MLB公式のロゴURL（高品質SVG）
-    team_id = team_ids.get(team_name)
-    if team_id:
-        return f"https://www.mlbstatic.com/team-logos/{team_id}.svg"
-    else:
-        # フォールバック：ESPNのロゴ
-        team_abbr = {
-            'Yankees': 'nyy', 'Red Sox': 'bos', 'Blue Jays': 'tor', 'Rays': 'tb', 'Orioles': 'bal',
-            'White Sox': 'cws', 'Guardians': 'cle', 'Tigers': 'det', 'Royals': 'kc', 'Twins': 'min',
-            'Astros': 'hou', 'Athletics': 'oak', 'Mariners': 'sea', 'Angels': 'laa', 'Rangers': 'tex',
-            'Braves': 'atl', 'Marlins': 'mia', 'Mets': 'nym', 'Phillies': 'phi', 'Nationals': 'wsh',
-            'Brewers': 'mil', 'Cardinals': 'stl', 'Cubs': 'chc', 'Reds': 'cin', 'Pirates': 'pit',
-            'Dodgers': 'lad', 'Diamondbacks': 'ari', 'Rockies': 'col', 'Padres': 'sd', 'Giants': 'sf'
-        }
-        abbr = team_abbr.get(team_name, 'mlb')
-        return f"https://a.espncdn.com/i/teamlogos/mlb/500/{abbr}.png"
+    if not cache_dir.exists():
+        print(f"  警告: キャッシュディレクトリが存在しません: {cache_dir}")
+        return 'R'  # デフォルト
+    
+    # 投手名を正規化（スペースの違いなどに対応）
+    normalized_name = pitcher_name.strip()
+    
+    # キャッシュファイルを検索
+    for cache_file in cache_dir.glob("*.json"):
+        try:
+            with open(cache_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+                # JSONオブジェクトが複数連結している場合の対処
+                # 各JSONオブジェクトを個別に処理
+                json_objects = content.split('}{')
+                for i, obj in enumerate(json_objects):
+                    if i > 0:
+                        obj = '{' + obj
+                    if i < len(json_objects) - 1:
+                        obj = obj + '}'
+                    
+                    try:
+                        data = json.loads(obj)
+                        if data.get('name', '').strip() == normalized_name:
+                            hand = data.get('hand', '')
+                            # 文字化け対応と判定
+                            if '左' in hand or 'left' in hand.lower() or hand == '蟾ｦ' or 'L' in hand:
+                                print(f"  {normalized_name}: 左投げ（キャッシュから）")
+                                return 'L'
+                            elif '右' in hand or 'right' in hand.lower() or hand == '蜿ｳ' or 'R' in hand:
+                                print(f"  {normalized_name}: 右投げ（キャッシュから）")
+                                return 'R'
+                    except json.JSONDecodeError:
+                        continue
+        except Exception as e:
+            print(f"  警告: キャッシュファイル読み込みエラー {cache_file}: {e}")
+            continue
+    
+    print(f"  {normalized_name}: キャッシュに見つからず（デフォルト右）")
+    return 'R'  # デフォルト
 
-def parse_game_section(section_text):
-    """試合セクションをパース（改良版）"""
-    game_data = {
-        'teams': {},
-        'time': '',
-        'date': ''
-    }
+def parse_report(file_path):
+    """レポートをパースして試合データを抽出（修正版）"""
+    import re
     
-    lines = section_text.strip().split('\n')
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
     
-    # チーム名と開始時刻を抽出
-    for line in lines:
-        if ' @ ' in line or ' vs ' in line:
-            teams = re.split(r' @ | vs ', line)
-            if len(teams) >= 2:
-                game_data['away_team'] = teams[0].strip().replace('**', '').strip()
-                game_data['home_team'] = teams[1].strip().replace('**', '').strip()
-        elif '開始時刻:' in line or '開始時間:' in line:
-            time_match = re.search(r'(\d+/\d+ \d+:\d+)', line)
-            if time_match:
-                game_data['time'] = time_match.group(1)
+    # セクションごとに分割
+    sections = re.split(r'={50,}', content)
     
-    # 各チームのデータを抽出
-    team_sections = re.split(r'【(.+?)】', section_text)
+    games = []
+    current_game = None
     
-    for i in range(1, len(team_sections), 2):
-        if i < len(team_sections):
-            team_name = team_sections[i].strip()
-            team_data = team_sections[i + 1] if i + 1 < len(team_sections) else ''
+    for section in sections:
+        # 試合情報を探す（チーム名のパターンを改善）
+        match = re.search(r'([A-Za-z\s.]+?)\s*@\s*([A-Za-z\s.]+)', section)
+        if match:
+            if current_game:
+                games.append(current_game)
             
-            # 投手データ
-            pitcher_info = {}
-            pitcher_match = re.search(r'(?:\*\*)?先発(?:\*\*)?[:：]\s*(.+?)\s*\((\d+勝\d+敗)\)', team_data)
-            
-            if pitcher_match:
-                pitcher_info['name'] = pitcher_match.group(1)
-                pitcher_info['record'] = pitcher_match.group(2)
-            elif '先発: 未定' in team_data or '先発投手 未定' in team_data:
-                pitcher_info['name'] = '未定'
-                pitcher_info['record'] = ''
-            
-            # 統計データを詳細に抽出
-            stats = {}
-            
-            # 投手統計
-            for pattern, key in [
-                (r'ERA:\s*([\d.]+)', 'ERA'),
-                (r'FIP:\s*([\d.]+)', 'FIP'),
-                (r'xFIP:\s*([\d.]+)', 'xFIP'),
-                (r'WHIP:\s*([\d.]+)', 'WHIP'),
-                (r'K-BB%:\s*([\d.]+)%?', 'K-BB%'),
-                (r'GB%:\s*([\d.]+)%?', 'GB%'),
-                (r'FB%:\s*([\d.]+)%?', 'FB%'),
-                (r'QS率:\s*([\d.]+)%?', 'QS率'),
-                (r'SwStr%:\s*([\d.]+)%?', 'SwStr%'),
-                (r'BABIP:\s*([\d.]+)', 'BABIP')
-            ]:
-                match = re.search(pattern, team_data)
-                if match:
-                    stats[key] = match.group(1)
-            
-            # 対左右成績
-            vs_match = re.search(r'対左:\s*([\d.]+)\s*\(OPS\s*([\d.]+)\)\s*\|\s*対右:\s*([\d.]+)\s*\(OPS\s*([\d.]+)\)', team_data)
-            if vs_match:
-                stats['対左OPS'] = vs_match.group(2)
-                stats['対右OPS'] = vs_match.group(4)
-            
-            # ブルペン統計
-            bp_match = re.search(r'中継ぎ陣\s*\((\d+)名\)', team_data)
-            if bp_match:
-                stats['bp_count'] = bp_match.group(1)
-                
-            # ブルペンのERA/FIP/xFIP（別の行にある場合）
-            bp_stats_lines = team_data.split('\n')
-            in_bullpen = False
-            for line in bp_stats_lines:
-                if '中継ぎ陣' in line:
-                    in_bullpen = True
-                elif in_bullpen and 'ERA:' in line:
-                    bp_era_match = re.search(r'ERA:\s*([\d.]+)\s*\|\s*FIP:\s*([\d.]+)\s*\|\s*xFIP:\s*([\d.]+)', line)
-                    if bp_era_match:
-                        stats['bp_ERA'] = bp_era_match.group(1)
-                        stats['bp_FIP'] = bp_era_match.group(2)
-                        stats['bp_xFIP'] = bp_era_match.group(3)
-                elif in_bullpen and 'WHIP:' in line:
-                    bp_whip_match = re.search(r'WHIP:\s*([\d.]+)', line)
-                    if bp_whip_match:
-                        stats['bp_WHIP'] = bp_whip_match.group(1)
-                elif in_bullpen and '疲労度:' in line:
-                    stats['bp_fatigue'] = line.split('疲労度:')[1].strip()
-                elif 'チーム打撃' in line or '攻撃' in line:
-                    in_bullpen = False
-            
-            # チーム打撃データ
-            for pattern, key in [
-                (r'AVG:\s*([\d.]+)', 'AVG'),
-                (r'OPS:\s*([\d.]+)', 'OPS'),
-                (r'wOBA:\s*([\d.]+)', 'wOBA'),
-                (r'xwOBA:\s*([\d.]+)', 'xwOBA'),
-                (r'Barrel%:\s*([\d.]+)%?', 'Barrel%'),
-                (r'Hard-Hit%:\s*([\d.]+)%?', 'Hard-Hit%')
-            ]:
-                match = re.search(pattern, team_data)
-                if match:
-                    stats[key] = match.group(1)
-            
-            # 過去試合OPS
-            for days in [5, 10]:
-                pattern = rf'過去{days}試合OPS:\s*([\d.]+)'
-                match = re.search(pattern, team_data)
-                if match:
-                    stats[f'過去{days}試合OPS'] = match.group(1)
-            
-            # 対左右投手成績
-            bat_vs_match = re.search(r'対左投手:\s*([\d.]+)\s*\(OPS\s*([\d.]+)\)\s*\|\s*対右投手:\s*([\d.]+)\s*\(OPS\s*([\d.]+)\)', team_data)
-            if bat_vs_match:
-                stats['bat_vs_L'] = bat_vs_match.group(2)
-                stats['bat_vs_R'] = bat_vs_match.group(4)
-            
-            game_data['teams'][team_name] = {
-                'pitcher': pitcher_info,
-                'stats': stats,
-                'logo': get_team_logo(team_name)
+            current_game = {
+                'away_team': match.group(1).strip(),
+                'home_team': match.group(2).strip(),
+                'away_pitcher': {},
+                'home_pitcher': {},
+                'away_bullpen': {},
+                'home_bullpen': {},
+                'away_batting': {},
+                'home_batting': {}
             }
+            
+            # 開始時刻を探す
+            time_match = re.search(r'開始時刻:\s*(\d+/\d+\s+\d+:\d+)', section)
+            if time_match:
+                current_game['start_time'] = time_match.group(1)
     
-    # 総括を生成
-    if game_data.get('away_team') and game_data.get('home_team'):
-        game_data['summary'] = generate_summary(game_data)
+    if current_game:
+        games.append(current_game)
     
-    return game_data
+    # 各試合のデータを詳細にパース
+    for i, game in enumerate(games):
+        # 次の試合のインデックスを取得
+        next_index = i + 1
+        
+        # 該当セクションを探す
+        game_content = ""
+        found = False
+        for section in sections:
+            if f"{game['away_team']} @ {game['home_team']}" in section:
+                found = True
+                game_content = section
+                # 次の区切りまでのセクションも含める
+                idx = sections.index(section)
+                if idx + 1 < len(sections):
+                    # 次のセクションに別の試合がなければ追加
+                    next_section = sections[idx + 1]
+                    if not re.search(r'([A-Za-z\s.]+?)\s*@\s*([A-Za-z\s.]+)', next_section):
+                        game_content += "\n" + next_section
+                break
+        
+        if not found:
+            continue
+        
+        # チームデータをパース
+        teams = re.split(r'【(.+?)】', game_content)
+        
+        for j in range(1, len(teams), 2):
+            if j >= len(teams):
+                break
+                
+            team_name = teams[j]
+            team_data = teams[j+1] if j+1 < len(teams) else ""
+            
+            # どちらのチームか判定
+            is_away = game['away_team'] in team_name or team_name in game['away_team']
+            team_prefix = 'away' if is_away else 'home'
+            
+            # 先発投手情報
+            pitcher_match = re.search(r'先発:\s*(.+?)\s*\(([左右両])\)\s*\((\d+)勝(\d+)敗\)', team_data)
+            if pitcher_match:
+                game[f'{team_prefix}_pitcher'] = {
+                    'name': pitcher_match.group(1),
+                    'hand': pitcher_match.group(2),
+                    'wins': pitcher_match.group(3),
+                    'losses': pitcher_match.group(4)
+                }
+                
+                # ERA, FIP等の統計
+                stats_match = re.search(r'ERA:\s*([\d.]+).*?FIP:\s*([\d.]+).*?xFIP:\s*([\d.]+).*?WHIP:\s*([\d.]+)', team_data)
+                if stats_match:
+                    game[f'{team_prefix}_pitcher'].update({
+                        'era': stats_match.group(1),
+                        'fip': stats_match.group(2),
+                        'xfip': stats_match.group(3),
+                        'whip': stats_match.group(4)
+                    })
+                
+                # K-BB%等
+                kbb_match = re.search(r'K-BB%:\s*([\d.]+)%', team_data)
+                if kbb_match:
+                    game[f'{team_prefix}_pitcher']['k_bb'] = kbb_match.group(1)
+            
+            # 中継ぎ陣情報
+            bullpen_match = re.search(r'中継ぎ陣.*?ERA:\s*([\d.]+).*?FIP:\s*([\d.]+).*?xFIP:\s*([\d.]+).*?WHIP:\s*([\d.]+)', team_data, re.DOTALL)
+            if bullpen_match:
+                game[f'{team_prefix}_bullpen'] = {
+                    'era': bullpen_match.group(1),
+                    'fip': bullpen_match.group(2),
+                    'xfip': bullpen_match.group(3),
+                    'whip': bullpen_match.group(4)
+                }
+            
+            # チーム打撃情報
+            batting_match = re.search(r'AVG:\s*([\d.]+).*?OPS:\s*([\d.]+)', team_data)
+            if batting_match:
+                game[f'{team_prefix}_batting'] = {
+                    'avg': batting_match.group(1),
+                    'ops': batting_match.group(2)
+                }
+                
+                # wOBA
+                woba_match = re.search(r'wOBA:\s*([\d.]+).*?xwOBA:\s*([\d.]+)', team_data)
+                if woba_match:
+                    game[f'{team_prefix}_batting']['woba'] = woba_match.group(1)
+                    game[f'{team_prefix}_batting']['xwoba'] = woba_match.group(2)
+                
+                # 過去試合OPS
+                recent_match = re.search(r'過去5試合OPS:\s*([\d.]+).*?過去10試合OPS:\s*([\d.]+)', team_data)
+                if recent_match:
+                    game[f'{team_prefix}_batting']['ops_5'] = recent_match.group(1)
+                    game[f'{team_prefix}_batting']['ops_10'] = recent_match.group(2)
+    
+    return games
 
-def generate_summary(game_data):
-    """試合の総括を生成"""
-    away_team = game_data.get('away_team')
-    home_team = game_data.get('home_team')
+def parse_team_data(section, team_name):
+    """チームセクションからデータを抽出"""
+    data = {}
     
-    if not away_team or not home_team:
-        return "データ不足のため分析できません。"
+    # チームセクションを抽出（【チーム名】から次の【まで）
+    team_pattern = f'【{re.escape(team_name)}】([^【]+)'
+    team_match = re.search(team_pattern, section, re.DOTALL)
     
-    away_data = game_data['teams'].get(away_team, {})
-    home_data = game_data['teams'].get(home_team, {})
+    if not team_match:
+        print(f"  警告: {team_name}のセクションが見つかりません")
+        return data
     
-    away_stats = away_data.get('stats', {})
-    home_stats = home_data.get('stats', {})
+    team_section = team_match.group(1)
     
-    # スコア計算（簡易版）
-    score_factors = []
+    # 先発投手
+    pitcher_match = re.search(r'\*\*先発\*\*[:：]\s*(.+?)\s*\((\d+勝\d+敗)\)', team_section)
+    if pitcher_match:
+        data['pitcher_name'] = pitcher_match.group(1).strip()
+        data['pitcher_record'] = pitcher_match.group(2)
+        
+        # キャッシュから利き腕を取得
+        data['pitcher_hand'] = get_pitcher_hand_from_cache(data['pitcher_name'])
+        
+    elif '先発**: 未定' in team_section or '先発' in team_section and '未定' in team_section:
+        data['pitcher_name'] = '未定'
+        data['pitcher_record'] = ''
+        data['pitcher_hand'] = 'R'
     
-    # 先発投手の比較
-    try:
-        away_xfip = float(away_stats.get('xFIP', 99))
-        home_xfip = float(home_stats.get('xFIP', 99))
-        if away_xfip < home_xfip - 0.5:
-            score_factors.append(f"先発投手では{away_team}が優位")
-        elif home_xfip < away_xfip - 0.5:
-            score_factors.append(f"先発投手では{home_team}が優位")
-    except:
-        pass
+    # 投手統計（ERA行）- 先発が未定でない場合のみ
+    if data.get('pitcher_name') != '未定':
+        era_line = re.search(r'ERA:\s*([\d.]+)\s*\|\s*FIP:\s*([\d.]+)\s*\|\s*xFIP:\s*([\d.]+)\s*\|\s*WHIP:\s*([\d.]+)', team_section)
+        if era_line:
+            data['ERA'] = era_line.group(1)
+            data['FIP'] = era_line.group(2)
+            data['xFIP'] = era_line.group(3)
+            data['WHIP'] = era_line.group(4)
+        
+        # 追加の投手統計
+        kbb_match = re.search(r'K-BB%:\s*([\d.]+)%', team_section)
+        if kbb_match:
+            data['K-BB%'] = kbb_match.group(1) + '%'
+        
+        gb_match = re.search(r'GB%:\s*([\d.]+)%', team_section)
+        if gb_match:
+            data['GB%'] = gb_match.group(1) + '%'
+        
+        fb_match = re.search(r'FB%:\s*([\d.]+)%', team_section)
+        if fb_match:
+            data['FB%'] = fb_match.group(1) + '%'
+        
+        qs_match = re.search(r'QS率:\s*([\d.]+)%', team_section)
+        if qs_match:
+            data['QS_rate'] = qs_match.group(1) + '%'
+        
+        swstr_match = re.search(r'SwStr%:\s*([\d.]+)%', team_section)
+        if swstr_match:
+            data['SwStr%'] = swstr_match.group(1) + '%'
+        
+        babip_match = re.search(r'BABIP:\s*([\d.]+)', team_section)
+        if babip_match:
+            data['BABIP'] = babip_match.group(1)
     
-    # ブルペンの比較
-    try:
-        away_bp_fip = float(away_stats.get('bp_FIP', 99))
-        home_bp_fip = float(home_stats.get('bp_FIP', 99))
-        if away_bp_fip < home_bp_fip - 0.3:
-            score_factors.append(f"ブルペンは{away_team}が質で上回る")
-        elif home_bp_fip < away_bp_fip - 0.3:
-            score_factors.append(f"ブルペンは{home_team}が質で上回る")
-    except:
-        pass
+    # 対左右成績
+    vs_left = re.search(r'対左:\s*([\d.]+)\s*\(OPS\s*([\d.]+)\)', team_section)
+    if vs_left:
+        data['vs_left_avg'] = vs_left.group(1)
+        data['vs_left_ops'] = vs_left.group(2)
     
-    # 打線の勢いを比較
-    try:
-        away_ops = float(away_stats.get('過去10試合OPS', 0))
-        home_ops = float(home_stats.get('過去10試合OPS', 0))
-        if away_ops > home_ops + 0.05:
-            score_factors.append(f"{away_team}打線が好調（OPS {away_ops:.3f}）")
-        elif home_ops > away_ops + 0.05:
-            score_factors.append(f"{home_team}打線が好調（OPS {home_ops:.3f}）")
-    except:
-        pass
+    vs_right = re.search(r'対右:\s*([\d.]+)\s*\(OPS\s*([\d.]+)\)', team_section)
+    if vs_right:
+        data['vs_right_avg'] = vs_right.group(1)
+        data['vs_right_ops'] = vs_right.group(2)
     
-    # 疲労度チェック
-    if '連投中' in str(away_stats.get('bp_fatigue', '')):
-        score_factors.append(f"{away_team}のブルペンに疲労が見られる")
-    if '連投中' in str(home_stats.get('bp_fatigue', '')):
-        score_factors.append(f"{home_team}のブルペンに疲労が見られる")
+    # 中継ぎ陣
+    bullpen_match = re.search(r'\*\*中継ぎ陣\*\*\s*\((\d+)名\)', team_section)
+    if bullpen_match:
+        data['bullpen_count'] = bullpen_match.group(1)
     
-    if score_factors:
-        summary = "。".join(score_factors) + "。"
-    else:
-        summary = "両チームが拮抗しており、接戦が予想される。"
+    bullpen_era = re.search(r'中継ぎ陣.*?\nERA:\s*([\d.]+)\s*\|\s*FIP:\s*([\d.]+)\s*\|\s*xFIP:\s*([\d.]+)', team_section, re.DOTALL)
+    if bullpen_era:
+        data['bullpen_ERA'] = bullpen_era.group(1)
+        data['bullpen_FIP'] = bullpen_era.group(2)
+        data['bullpen_xFIP'] = bullpen_era.group(3)
     
-    # ホームアドバンテージを追加
-    summary += f"ホームの{home_team}にわずかながらアドバンテージがある。"
+    bullpen_whip = re.search(r'中継ぎ陣.*?WHIP:\s*([\d.]+)', team_section, re.DOTALL)
+    if bullpen_whip:
+        data['bullpen_WHIP'] = bullpen_whip.group(1)
     
-    return summary
+    bullpen_kbb = re.search(r'中継ぎ陣.*?K-BB%:\s*([\d.]+)%', team_section, re.DOTALL)
+    if bullpen_kbb:
+        data['bullpen_KBB'] = bullpen_kbb.group(1) + '%'
+    
+    # 疲労度
+    fatigue_match = re.search(r'疲労度:\s*(.+)', team_section)
+    if fatigue_match:
+        data['fatigue'] = fatigue_match.group(1).strip()
+    
+    # チーム打撃
+    team_avg = re.search(r'AVG:\s*([\d.]+)\s*\|\s*OPS:\s*([\d.]+)', team_section)
+    if team_avg:
+        data['AVG'] = team_avg.group(1)
+        data['OPS'] = team_avg.group(2)
+    
+    # 得点と本塁打
+    runs_hr = re.search(r'得点:\s*(\d+)\s*\|\s*本塁打:\s*(\d+)', team_section)
+    if runs_hr:
+        data['runs'] = runs_hr.group(1)
+        data['homeruns'] = runs_hr.group(2)
+    
+    woba_match = re.search(r'wOBA:\s*([\d.]+)\s*\|\s*xwOBA:\s*([\d.]+)', team_section)
+    if woba_match:
+        data['wOBA'] = woba_match.group(1)
+        data['xwOBA'] = woba_match.group(2)
+    
+    # Barrel%とHard-Hit%
+    barrel_match = re.search(r'Barrel%:\s*([\d.]+)%', team_section)
+    if barrel_match:
+        data['Barrel%'] = barrel_match.group(1) + '%'
+    
+    hardhit_match = re.search(r'Hard-Hit%:\s*([\d.]+)%', team_section)
+    if hardhit_match:
+        data['Hard-Hit%'] = hardhit_match.group(1) + '%'
+    
+    # 対左右投手
+    vs_left_pitcher = re.search(r'対左投手:\s*([\d.]+)\s*\(OPS\s*([\d.]+)\)', team_section)
+    if vs_left_pitcher:
+        data['vs_left_pitcher_avg'] = vs_left_pitcher.group(1)
+        data['vs_left_pitcher_ops'] = vs_left_pitcher.group(2)
+    
+    vs_right_pitcher = re.search(r'対右投手:\s*([\d.]+)\s*\(OPS\s*([\d.]+)\)', team_section)
+    if vs_right_pitcher:
+        data['vs_right_pitcher_avg'] = vs_right_pitcher.group(1)
+        data['vs_right_pitcher_ops'] = vs_right_pitcher.group(2)
+    
+    # 過去の成績
+    past5_match = re.search(r'過去5試合OPS:\s*([\d.]+)', team_section)
+    if past5_match:
+        data['past5_OPS'] = past5_match.group(1)
+    
+    past10_match = re.search(r'過去10試合OPS:\s*([\d.]+)', team_section)
+    if past10_match:
+        data['past10_OPS'] = past10_match.group(1)
+    
+    return data
 
-def create_team_section_improved(team_data, title='先発投手'):
-    """改良版チームセクションのHTML生成"""
-    pitcher = team_data.get('pitcher', {})
-    stats = team_data.get('stats', {})
+def get_team_logo_url(team_name):
+    """チーム名からロゴURLを生成"""
+    # MLB公式APIのロゴURL形式
+    team_logos = {
+        'Athletics': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/133.svg',
+        'Minnesota Twins': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/142.svg',
+        'Texas Rangers': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/140.svg',
+        'Kansas City Royals': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/118.svg',
+        'Milwaukee Brewers': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/158.svg',
+        'Chicago Cubs': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/112.svg',
+        'Los Angeles Dodgers': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/119.svg',
+        'Colorado Rockies': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/115.svg',
+        'New York Mets': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/121.svg',
+        'Washington Nationals': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/120.svg',
+        'San Francisco Giants': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/137.svg',
+        'San Diego Padres': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/135.svg',
+        'Houston Astros': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/117.svg',
+        'Baltimore Orioles': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/110.svg',
+        'Boston Red Sox': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/111.svg',
+        'New York Yankees': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/147.svg',
+        'St. Louis Cardinals': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/138.svg',
+        'Tampa Bay Rays': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/139.svg',
+        'Seattle Mariners': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/136.svg',
+        'Philadelphia Phillies': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/143.svg',
+        'Cincinnati Reds': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/113.svg',
+        'Miami Marlins': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/146.svg',
+        'Detroit Tigers': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/116.svg',
+        'Toronto Blue Jays': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/141.svg',
+        'Arizona Diamondbacks': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/109.svg',
+        'Pittsburgh Pirates': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/134.svg',
+        'Cleveland Guardians': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/114.svg',
+        'Atlanta Braves': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/144.svg',
+        'Chicago White Sox': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/145.svg',
+        'Los Angeles Angels': 'https://www.mlbstatic.com/team-logos/team-cap-on-light/108.svg',
+    }
     
-    html = ''
+    return team_logos.get(team_name, 'https://www.mlbstatic.com/team-logos/league-on-light/1.svg')
+
+def get_fatigue_class(fatigue_text):
+    """疲労度に応じたCSSクラスを返す"""
+    if '連投中' in fatigue_text:
+        return 'warning'
+    return ''
+
+def get_ops_class(ops):
+    """OPSに応じたCSSクラスを返す"""
+    try:
+        ops_val = float(ops)
+        if ops_val >= 0.800:
+            return 'good'
+        elif ops_val <= 0.650:
+            return 'warning'
+    except:
+        pass
+    return ''
+
+def create_team_stats(data):
+    """チームの統計セクションを生成"""
+    
+    # 投手の利き腕を判定
+    pitcher_hand = data.get('pitcher_hand', 'R')
+    hand_color = '#ef4444' if pitcher_hand == 'R' else '#3b82f6'
+    hand_text = '右' if pitcher_hand == 'R' else '左'
     
     # 先発投手セクション
-    if pitcher.get('name') and pitcher.get('name') != '未定':
-        html += f'''
-        <div class="stats-category">
-            <h3 class="stats-title">先発投手</h3>
-            <div class="stat-row">
-                <span class="stat-label">ERA / FIP / xFIP</span>
-                <span class="stat-value">{stats.get('ERA', '---')} / {stats.get('FIP', '---')} / {stats.get('xFIP', '---')}</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">WHIP</span>
-                <span class="stat-value">{stats.get('WHIP', '---')}</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">K-BB%</span>
-                <span class="stat-value">{stats.get('K-BB%', '---')}%</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">GB% / FB%</span>
-                <span class="stat-value">{stats.get('GB%', '---')}% / {stats.get('FB%', '---')}%</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">QS率</span>
-                <span class="stat-value">{stats.get('QS率', '---')}%</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">対左/右 OPS</span>
-                <span class="stat-value">{stats.get('対左OPS', '---')} / {stats.get('対右OPS', '---')}</span>
-            </div>
-        </div>
-        '''
+    pitcher_name = data.get('pitcher_name', '未定')
+    pitcher_record = data.get('pitcher_record', '')
     
-    # 中継ぎ陣セクション
-    html += f'''
-    <div class="stats-category">
-        <h3 class="stats-title">中継ぎ陣 ({stats.get('bp_count', '?')}名)</h3>
+    pitcher_html = f'''
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">先発投手</span>
+            <span class="pitcher-name">{pitcher_name} {f'({pitcher_record})' if pitcher_record else ''}</span>
+            {f'<span class="pitcher-badge" style="background-color: {hand_color}">{hand_text}</span>' if pitcher_name != '未定' else ''}
+        </div>'''
+    
+    if pitcher_name != '未定':
+        pitcher_html += f'''
         <div class="stat-row">
             <span class="stat-label">ERA / FIP / xFIP</span>
-            <span class="stat-value">{stats.get('bp_ERA', '---')} / {stats.get('bp_FIP', '---')} / {stats.get('bp_xFIP', '---')}</span>
+            <span class="stat-value">{data.get('ERA', '---')} / {data.get('FIP', '---')} / {data.get('xFIP', '---')}</span>
         </div>
         <div class="stat-row">
             <span class="stat-label">WHIP</span>
-            <span class="stat-value">{stats.get('bp_WHIP', '---')}</span>
+            <span class="stat-value">{data.get('WHIP', '---')}</span>
         </div>
         <div class="stat-row">
             <span class="stat-label">K-BB%</span>
-            <span class="stat-value">{stats.get('bp_K-BB%', '---')}</span>
+            <span class="stat-value">{data.get('K-BB%', '---')}</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">GB% / FB%</span>
+            <span class="stat-value">{data.get('GB%', '---')} / {data.get('FB%', '---')}</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">QS率</span>
+            <span class="stat-value">{data.get('QS_rate', '---')}</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">対左/右 OPS</span>
+            <span class="stat-value">{data.get('vs_left_ops', '---')} / {data.get('vs_right_ops', '---')}</span>
+        </div>'''
+    
+    pitcher_html += '''
+    </div>
+    '''
+    
+    # 中継ぎ陣セクション
+    bullpen_html = f'''
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">中継ぎ ({data.get('bullpen_count', '?')}名)</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">ERA / FIP / xFIP</span>
+            <span class="stat-value">{data.get('bullpen_ERA', '---')} / {data.get('bullpen_FIP', '---')} / {data.get('bullpen_xFIP', '---')}</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">WHIP</span>
+            <span class="stat-value">{data.get('bullpen_WHIP', '---')}</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">K-BB%</span>
+            <span class="stat-value">{data.get('bullpen_KBB', '---')}</span>
         </div>
         <div class="stat-row">
             <span class="stat-label">疲労度</span>
-            <span class="stat-value {'fatigue-warning' if '連投中' in str(stats.get('bp_fatigue', '')) else ''}">{stats.get('bp_fatigue', '---')}</span>
+            <span class="stat-value {get_fatigue_class(data.get('fatigue', ''))}">{data.get('fatigue', '---')}</span>
         </div>
     </div>
     '''
     
     # 攻撃セクション
-    html += f'''
-    <div class="stats-category">
-        <h3 class="stats-title">攻撃</h3>
+    batting_html = f'''
+    <div class="stat-section">
+        <div class="section-header">
+            <span class="section-title">攻撃</span>
+        </div>
         <div class="stat-row">
             <span class="stat-label">AVG / OPS</span>
-            <span class="stat-value">{stats.get('AVG', '---')} / {stats.get('OPS', '---')}</span>
+            <span class="stat-value">{data.get('AVG', '---')} / {data.get('OPS', '---')}</span>
         </div>
         <div class="stat-row">
             <span class="stat-label">wOBA / xwOBA</span>
-            <span class="stat-value">{stats.get('wOBA', '---')} / {stats.get('xwOBA', '---')}</span>
+            <span class="stat-value">{data.get('wOBA', '---')} / {data.get('xwOBA', '---')}</span>
         </div>
         <div class="stat-row">
             <span class="stat-label">対左/右 OPS</span>
-            <span class="stat-value">{stats.get('bat_vs_L', '---')} / {stats.get('bat_vs_R', '---')}</span>
+            <span class="stat-value">{data.get('vs_left_pitcher_ops', '---')} / {data.get('vs_right_pitcher_ops', '---')}</span>
         </div>
         <div class="stat-row">
             <span class="stat-label">過去5試合 OPS</span>
-            <span class="stat-value {'highlight' if stats.get('過去5試合OPS') and float(stats.get('過去5試合OPS', 0)) >= 0.8 else ''}">{stats.get('過去5試合OPS', '---')}</span>
+            <span class="stat-value {get_ops_class(data.get('past5_OPS', 0))}">{data.get('past5_OPS', '---')}</span>
         </div>
         <div class="stat-row">
             <span class="stat-label">過去10試合 OPS</span>
-            <span class="stat-value {'highlight' if stats.get('過去10試合OPS') and float(stats.get('過去10試合OPS', 0)) >= 0.8 else ''}">{stats.get('過去10試合OPS', '---')}</span>
+            <span class="stat-value {get_ops_class(data.get('past10_OPS', 0))}">{data.get('past10_OPS', '---')}</span>
         </div>
     </div>
     '''
     
-    return html
+    return pitcher_html + bullpen_html + batting_html
+
+def generate_summary(game_data):
+    """試合の総括を生成（元のロジックを維持）"""
+    away_data = game_data['away_data']
+    home_data = game_data['home_data']
+    away_name = game_data['away_team']
+    home_name = game_data['home_team']
+    
+    # 先発投手が未定の場合
+    if away_data.get('pitcher_name') == '未定' or home_data.get('pitcher_name') == '未定':
+        return "先発投手が未定またはデータが不足しているため、詳細な予想は困難です。最新の情報を確認してください。"
+    
+    # 各種統計値を取得（デフォルト値付き）
+    try:
+        away_sp_xfip = float(away_data.get('xFIP', 99))
+    except:
+        away_sp_xfip = 99
+    
+    try:
+        home_sp_xfip = float(home_data.get('xFIP', 99))
+    except:
+        home_sp_xfip = 99
+    
+    try:
+        away_bp_fip = float(away_data.get('bullpen_FIP', 99))
+    except:
+        away_bp_fip = 99
+    
+    try:
+        home_bp_fip = float(home_data.get('bullpen_FIP', 99))
+    except:
+        home_bp_fip = 99
+    
+    try:
+        away_ops_10g = float(away_data.get('past10_OPS', 0))
+    except:
+        away_ops_10g = 0
+    
+    try:
+        home_ops_10g = float(home_data.get('past10_OPS', 0))
+    except:
+        home_ops_10g = 0
+    
+    # スコア計算
+    score = 0
+    analysis_points = []
+    
+    # 先発投手の比較（xFIPが低い方が良い）
+    if away_sp_xfip != 99 and home_sp_xfip != 99:
+        xfip_diff = home_sp_xfip - away_sp_xfip
+        if abs(xfip_diff) > 0.5:
+            if xfip_diff > 0:
+                score += 1.5
+                analysis_points.append(f"先発投手では{away_name}の{away_data.get('pitcher_name', '')}（xFIP {away_sp_xfip:.2f}）が{home_name}の{home_data.get('pitcher_name', '')}（xFIP {home_sp_xfip:.2f}）を上回る")
+            else:
+                score -= 1.5
+                analysis_points.append(f"先発投手では{home_name}の{home_data.get('pitcher_name', '')}（xFIP {home_sp_xfip:.2f}）が{away_name}の{away_data.get('pitcher_name', '')}（xFIP {away_sp_xfip:.2f}）を上回る")
+    
+    # ブルペンの比較（FIPが低い方が良い）
+    if away_bp_fip != 99 and home_bp_fip != 99:
+        bp_diff = home_bp_fip - away_bp_fip
+        if abs(bp_diff) > 0.3:
+            if bp_diff > 0:
+                score += 1
+                analysis_points.append(f"ブルペンは{away_name}（FIP {away_bp_fip:.2f}）が{home_name}（FIP {home_bp_fip:.2f}）より優秀")
+            else:
+                score -= 1
+                analysis_points.append(f"ブルペンは{home_name}（FIP {home_bp_fip:.2f}）が{away_name}（FIP {away_bp_fip:.2f}）より優秀")
+    
+    # 打線の勢い比較（OPSが高い方が良い）
+    if away_ops_10g > 0 and home_ops_10g > 0:
+        ops_diff = away_ops_10g - home_ops_10g
+        if abs(ops_diff) > 0.050:
+            if ops_diff > 0:
+                score += 1.2
+                analysis_points.append(f"打線の勢いは{away_name}（過去10試合OPS {away_ops_10g:.3f}）が{home_name}（{home_ops_10g:.3f}）を大きく上回る")
+            else:
+                score -= 1.2
+                analysis_points.append(f"打線の勢いは{home_name}（過去10試合OPS {home_ops_10g:.3f}）が{away_name}（{away_ops_10g:.3f}）を大きく上回る")
+    
+    # 疲労度の分析
+    away_fatigue = away_data.get('fatigue', '')
+    home_fatigue = home_data.get('fatigue', '')
+    if '連投中' in away_fatigue and '連投中' not in home_fatigue:
+        analysis_points.append(f"{away_name}のブルペンに疲労の懸念あり（{away_fatigue}）")
+        score -= 0.5
+    elif '連投中' in home_fatigue and '連投中' not in away_fatigue:
+        analysis_points.append(f"{home_name}のブルペンに疲労の懸念あり（{home_fatigue}）")
+        score += 0.5
+    
+    # 詳細な総括を生成
+    summary_parts = []
+    
+    # 分析ポイントを追加
+    if analysis_points:
+        summary_parts.append("。".join(analysis_points) + "。")
+    
+    # 最終判定
+    if score > 1.0:
+        summary_parts.append(f"これらの要因を総合的に判断すると、{away_name}が有利と予想される。")
+        if score > 2.5:
+            summary_parts.append("特に投手力の差が大きく、試合の主導権を握る可能性が高い。")
+    elif score < -1.0:
+        summary_parts.append(f"これらの要因を総合的に判断すると、{home_name}が有利と予想される。")
+        if score < -2.5:
+            summary_parts.append("ホームアドバンテージも含め、優位性は明確だ。")
+    else:
+        summary_parts.append("両チームの戦力は拮抗しており、接戦が予想される。")
+        summary_parts.append(f"ホームアドバンテージを考慮すると、わずかに{home_name}が有利かもしれない。")
+    
+    return " ".join(summary_parts)
 
 def create_html_page(game_data):
     """1試合分のHTMLページを生成"""
-    away_team = game_data.get('away_team', 'Away')
-    home_team = game_data.get('home_team', 'Home')
-    
-    away_data = game_data['teams'].get(away_team, {})
-    home_data = game_data['teams'].get(home_team, {})
-    
-    # 投手の利き腕を取得
-    away_pitcher = away_data.get('pitcher', {})
-    home_pitcher = home_data.get('pitcher', {})
-    
-    # 利き腕の表示（右=赤、左=青）
-    def get_hand_badge(pitcher_name):
-        if not pitcher_name or pitcher_name == '未定':
-            return ''
-        # デフォルトは右投げ（実際のデータから取得する必要がある）
-        hand = 'R'
-        if hand == 'L':
-            return '<span class="badge-left">左</span>'
-        else:
-            return '<span class="badge-right">右</span>'
+    away_logo = get_team_logo_url(game_data['away_team'])
+    home_logo = get_team_logo_url(game_data['home_team'])
     
     html = f'''
     <div class="page">
-        <!-- ヘッダー -->
-        <div class="header-top">
+        <!-- ヘッダー部分 -->
+        <div class="header-section">
             <div class="team-header">
-                <img src="{away_data.get('logo', '')}" alt="{away_team}" class="team-logo-img">
-                <h2 class="team-name">{away_team}</h2>
-                <div class="pitcher-name">{away_pitcher.get('name', '未定')} {away_pitcher.get('record', '')}</div>
-                {get_hand_badge(away_pitcher.get('name'))}
+                <img src="{away_logo}" alt="{game_data['away_team']}" class="team-logo">
+                <h2 class="team-name">{game_data['away_team']}</h2>
             </div>
             
-            <div class="game-info">
-                <div class="date-time">{game_data.get('time', '')}</div>
-                <div class="time-label">日本時間</div>
+            <div class="vs-section">
+                <div class="game-time">{game_data.get('time', '時刻不明')}</div>
+                <div class="game-time-label">日本時間</div>
             </div>
             
             <div class="team-header">
-                <img src="{home_data.get('logo', '')}" alt="{home_team}" class="team-logo-img">
-                <h2 class="team-name">{home_team}</h2>
-                <div class="pitcher-name">{home_pitcher.get('name', '未定')} {home_pitcher.get('record', '')}</div>
-                {get_hand_badge(home_pitcher.get('name'))}
+                <img src="{home_logo}" alt="{game_data['home_team']}" class="team-logo">
+                <h2 class="team-name">{game_data['home_team']}</h2>
             </div>
         </div>
         
         <!-- メインコンテンツ -->
-        <div class="main-content">
-            <div class="team-column">
-                {create_team_section_improved(away_data, '先発投手')}
+        <div class="stats-container">
+            <div class="team-stats">
+                {create_team_stats(game_data['away_data'])}
             </div>
             
-            <div class="team-column">
-                {create_team_section_improved(home_data, '先発投手')}
+            <div class="team-stats">
+                {create_team_stats(game_data['home_data'])}
             </div>
         </div>
         
         <!-- 総括 -->
-        <div class="summary-section">
-            <h3 class="summary-title">総括</h3>
-            <p class="summary-text">{game_data.get('summary', '分析中...')}</p>
+        <div class="summary-box">
+            <h3 class="summary-header">総括</h3>
+            <p class="summary-content">{generate_summary(game_data)}</p>
         </div>
     </div>
     '''
-    
     return html
 
-def convert_to_html(text_file, output_file=None):
-    """メイン変換関数"""
-    # ファイル読み込み
-    with open(text_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # 出力ファイル名の決定
+def convert_to_html(input_file, output_file=None):
+    """メイン変換処理"""
+    # 出力ファイル名を決定
     if not output_file:
-        base_name = Path(text_file).stem
-        output_file = f"daily_reports/html/{base_name}.html"
+        input_path = Path(input_file)
+        output_dir = Path("daily_reports/html")
+        output_dir.mkdir(parents=True, exist_ok=True)
+        output_file = output_dir / f"{input_path.stem}.html"
     
-    # 出力ディレクトリ作成
-    os.makedirs(os.path.dirname(output_file) if os.path.dirname(output_file) else '.', exist_ok=True)
+    # レポートをパース
+    games = parse_report(input_file)
     
-    # 試合セクションを分割
-    game_sections = re.split(r'={40,}', content)
+    if not games:
+        print("エラー: 試合データが見つかりませんでした")
+        return False
+    
+    # HTMLスタイル
+    css = '''
+    <style>
+        @media print {
+            @page { 
+                size: A4 portrait; 
+                margin: 15mm; 
+            }
+            .page { 
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+            .page:last-child { 
+                page-break-after: avoid; 
+            }
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Yu Gothic', 'Meiryo', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: white;
+            color: #333;
+        }
+        
+        .page {
+            background: white;
+            max-width: 210mm;
+            margin: 0 auto 30px;
+            padding: 30px;
+        }
+        
+        /* ヘッダー部分 */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #333;
+            margin-bottom: 25px;
+        }
+        
+        .team-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .team-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        
+        .team-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            color: #1f2937;
+        }
+        
+        .vs-section {
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .game-time {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 2px;
+        }
+        
+        .game-time-label {
+            font-size: 11px;
+            color: #666;
+        }
+        
+        /* 統計部分 */
+        .stats-container {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 25px;
+        }
+        
+        .team-stats {
+            flex: 1;
+        }
+        
+        .stat-section {
+            margin-bottom: 20px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2563eb;
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        
+        .pitcher-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1f2937;
+        }
+        
+        .pitcher-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 12px;
+        }
+        
+        .stat-label {
+            color: #6b7280;
+        }
+        
+        .stat-value {
+            color: #1f2937;
+            font-weight: bold;
+        }
+        
+        .stat-value.good {
+            color: #059669;
+        }
+        
+        .stat-value.warning {
+            color: #dc2626;
+        }
+        
+        /* 総括部分 */
+        .summary-box {
+            padding-top: 20px;
+            border-top: 2px solid #333;
+        }
+        
+        .summary-header {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1f2937;
+            margin: 0 0 10px 0;
+        }
+        
+        .summary-content {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #374151;
+            margin: 0;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            .page {
+                margin: 0;
+            }
+        }
+    </style>
+    '''
+    
+    # HTMLコンテンツ生成
     games_html = []
+    for game_data in games:
+        games_html.append(create_html_page(game_data))
     
-    for section in game_sections:
-        if '@' in section or ' vs ' in section:
-            game_data = parse_game_section(section)
-            if game_data.get('away_team') and game_data.get('home_team'):
-                games_html.append(create_html_page(game_data))
-    
-    # 完全なHTML文書を生成
-    html_document = f'''<!DOCTYPE html>
+    # 完全なHTML生成
+    html_content = f'''<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLB レポート</title>
-    <style>
-        * {{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }}
-        
-        body {{
-            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            background: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }}
-        
-        .page {{
-            width: 210mm;
-            min-height: 297mm;
-            padding: 15mm 20mm;
-            margin: 10mm auto;
-            background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            page-break-after: always;
-            display: flex;
-            flex-direction: column;
-        }}
-        
-        .header-top {{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #e0e0e0;
-        }}
-        
-        .team-header {{
-            flex: 1;
-            text-align: center;
-        }}
-        
-        .game-info {{
-            flex: 0.5;
-            text-align: center;
-        }}
-        
-        .team-logo-img {{
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            margin-bottom: 8px;
-        }}
-        
-        .team-name {{
-            font-size: 24px;
-            font-weight: bold;
-            color: #2c3e50;
-            margin: 5px 0;
-        }}
-        
-        .pitcher-name {{
-            font-size: 16px;
-            color: #555;
-            margin: 5px 0;
-        }}
-        
-        .badge-right {{
-            display: inline-block;
-            background: #ef4444;
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-left: 5px;
-        }}
-        
-        .badge-left {{
-            display: inline-block;
-            background: #3b82f6;
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-left: 5px;
-        }}
-        
-        .date-time {{
-            font-size: 28px;
-            font-weight: bold;
-            color: #2c3e50;
-        }}
-        
-        .time-label {{
-            font-size: 14px;
-            color: #666;
-        }}
-        
-        .main-content {{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            flex-grow: 1;
-            margin: 20px 0;
-        }}
-        
-        .team-column {{
-            padding: 0 10px;
-        }}
-        
-        .stats-category {{
-            margin-bottom: 25px;
-        }}
-        
-        .stats-title {{
-            font-size: 16px;
-            font-weight: bold;
-            color: #1e3a8a;
-            padding-bottom: 8px;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #93c5fd;
-        }}
-        
-        .stat-row {{
-            display: flex;
-            justify-content: space-between;
-            padding: 6px 0;
-            border-bottom: 1px solid #f0f0f0;
-            font-size: 14px;
-        }}
-        
-        .stat-label {{
-            color: #666;
-        }}
-        
-        .stat-value {{
-            font-weight: bold;
-            color: #2c3e50;
-            font-family: 'Courier New', monospace;
-        }}
-        
-        .stat-value.highlight {{
-            color: #ef4444;
-            font-size: 15px;
-        }}
-        
-        .summary-section {{
-            margin-top: auto;
-            padding-top: 20px;
-            border-top: 3px solid #333;
-        }}
-        
-        .summary-title {{
-            font-size: 18px;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }}
-        
-        .summary-text {{
-            font-size: 14px;
-            line-height: 1.8;
-            color: #444;
-        }}
-        
-        .fatigue-warning {{
-            color: #ef4444;
-            font-weight: bold;
-        }}
-        
-        @media print {{
-            .page {{
-                margin: 0;
-                box-shadow: none;
-                page-break-after: always;
-            }}
-            
-            body {{
-                background: white;
-            }}
-        }}
-    </style>
+    <title>MLB試合レポート</title>
+    {css}
 </head>
 <body>
     {''.join(games_html)}
 </body>
 </html>'''
     
-    # HTMLファイル書き込み
+    # ファイル保存
     with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(html_document)
+        f.write(html_content)
     
     print(f"✅ HTML レポートを生成しました: {output_file}")
-    print(f"   - {len(games_html)} 試合を処理")
+    print(f"   - {len(games)} 試合を処理")
     
-    return output_file
+    return True
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -631,9 +887,5 @@ if __name__ == "__main__":
     
     input_file = sys.argv[1]
     output_file = sys.argv[2] if len(sys.argv) > 2 else None
-    
-    if not os.path.exists(input_file):
-        print(f"エラー: ファイルが見つかりません: {input_file}")
-        sys.exit(1)
     
     convert_to_html(input_file, output_file)
