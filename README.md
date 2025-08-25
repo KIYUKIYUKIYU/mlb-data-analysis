@@ -322,3 +322,55 @@ python scripts/convert_to_pdf.py [HTMLファイル]
 ---
 
 **最終更新**: 2025年8月25日
+
+# MLB Data Analysis - 進行記録 (2025-08-25時点)
+
+## 新規実装・整備したフロー
+
+### 共通データモデル生成
+- **scripts/build_model.py**
+  - curated JSON + _meta.json を統合し、1日分の共通モデル (`models/mlb_daily_YYYYMMDD.json`) を生成。
+  - 入力探索パス: `data/curated/{ymd}/mlb_curated.json` など。
+  - 出力: `models/mlb_daily_{ymd}.json`
+  - 出力内容: `games[]`, `meta.freshness`, `meta.tbd_rate`, `summary.game_count`, 生成時刻など。
+
+### レポート描画
+- **templates/mlb_daily.txt.j2**
+  - TXTレポートのJinja2テンプレート（combined_data.txtの体裁に寄せて順次拡張予定）。
+  - 現在は試合ヘッダー・対戦カード・先発投手（TBD対応）を出力。
+
+- **scripts/render_report.py**
+  - 共通モデルをJinja2で描画し、TXT/HTMLを生成。
+  - 入力: `models/mlb_daily_{ymd}.json`
+  - 出力: `daily_reports/MLB{date}.txt` など。
+
+### 実行シーケンス（JST固定）
+python scripts\build_model.py --date 2025-08-25 --curated data\curated\20250825\mlb_curated.json --meta data\curated_meta_20250825.json
+python scripts\render_report.py --date 2025-08-25 --template templates\mlb_daily.txt.j2 --out daily_reports\MLB2025-08-25.txt
+
+yaml
+コピーする
+編集する
+
+### 成果物
+- `models/mlb_daily_20250825.json` → TBD率100%を含む共通モデル生成済み。
+- `daily_reports/MLB2025-08-25.txt` → 先発情報付きの最小TXTレポート生成済み。
+
+---
+
+## 今後の課題
+- **combined_data.txt のフォーマット完全再現**  
+  - 先発詳細（ERA/FIP/WHIP/K-BB%/QS率など）  
+  - 中継ぎ陣の集計・主要投手表示  
+  - チーム打撃成績（AVG/OPS/wOBA 等）  
+  - 過去5試合・10試合の傾向  
+
+- **データソースとの接続**
+  - 先発・詳細 → `advanced_stats_collector.py` / `enhanced_stats_collector.py`
+  - ブルペン → `bullpen_enhanced_stats.py`
+  - 打撃 → `batting_quality_stats.py`
+  - 試合情報 → `collect_basic_data.py`, `mlb_complete_report_real.py`
+
+- `fetch → normalize → build_meta` の正式実装により、curated JSON と _meta を自動生成する導線を整える。
+
+---

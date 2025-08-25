@@ -1,0 +1,27 @@
+============================================================
+MLB試合予想レポート - 日本時間 {{ model.date }} の試合
+============================================================
+[{% if model.meta.freshness.four_of_four %}高{% else %}低{% endif %}] データ信頼性: {% if model.meta.freshness.today_updated %}本日更新{% else %}要確認{% endif %} (rows>0: {{ "Yes" if model.meta.freshness.rows_gt_zero else "No" }}) | 生成: {{ model.generated_at }}
+------------------------------------------------------------
+
+{% if model.summary.game_count == 0 %}
+本日の試合は見つかりませんでした。
+{% else %}
+{% for g in model.games %}
+============================================================
+{{ (g.away.name or "Away") }} @ {{ (g.home.name or "Home") }}
+開始時刻: {{ g.start_time_jst or "不明" }}{% if g.venue %} ({{ g.venue }}){% endif %}
+==================================================
+
+【{{ g.away.name or "Away" }}】
+先発: {{ (g.pitchers.away.name or "TBD") }}
+
+【{{ g.home.name or "Home" }}】
+先発: {{ (g.pitchers.home.name or "TBD") }}
+
+{% if not loop.last -%}
+------------------------------------------------------------
+{%- endif %}
+
+{% endfor %}
+{% endif %}
