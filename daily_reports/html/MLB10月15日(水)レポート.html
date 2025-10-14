@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB試合予想レポート - 日本時間 2025/10/14 の試合</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+        .game-page {
+            width: 210mm;
+            height: 297mm;
+            padding: 12mm 10mm;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        .data-font {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+        }
+        header {
+            flex-shrink: 0;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-content: start;
+        }
+        .team-stats {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            align-content: start;
+        }
+        .team-stats section {
+            min-height: 165px;
+            display: flex;
+            flex-direction: column;
+        }
+        .team-stats section:first-child {
+            min-height: 200px;
+        }
+        .team-stats section:nth-child(2) {
+            min-height: 120px;
+        }
+        .team-stats section:last-child {
+            min-height: 120px;
+        }
+        footer {
+            flex-shrink: 0;
+            padding-top: 1rem;
+            margin-top: auto;
+        }
+        .team-info h1 {
+            font-size: 1.75rem !important;
+            margin: 0.5rem 0;
+        }
+        .team-info p {
+            font-size: 1rem !important;
+            margin: 0.25rem 0;
+        }
+        .game-time p {
+            margin: 0.25rem 0;
+        }
+        .game-time .text-4xl {
+            font-size: 2.25rem !important;
+        }
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            border-bottom: 2px solid #93c5fd;
+            padding-bottom: 0.25rem;
+            margin-bottom: 0.75rem;
+            display: block;
+            width: 100%;
+        }
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .stat-item .label {
+            color: #4b5563;
+            font-size: 0.85rem;
+        }
+        .stat-item .value {
+            font-weight: 700;
+            color: #111827;
+            font-size: 0.85rem;
+        }
+        .team-stats section {
+            margin-bottom: 1.5rem !important;
+            min-height: 165px;
+            display: flex;
+            flex-direction: column;
+        }
+        .team-stats section:first-child {
+            min-height: 200px;
+        }
+        .team-stats section:nth-child(2) {
+            min-height: 120px;
+        }
+        .team-stats section:last-child {
+            min-height: 120px;
+            margin-bottom: 0 !important;
+        }
+        .handedness-rhp {
+            background-color: #ef4444;
+            color: white;
+            padding: 0.1rem 0.4rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+        .handedness-lhp {
+            background-color: #3b82f6;
+            color: white;
+            padding: 0.1rem 0.4rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+        .no-sp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            background-color: #f9fafb;
+            color: #6b7280;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-radius: 0.375rem;
+            margin-top: 0.75rem;
+        }
+        footer h3 {
+            font-size: 1.25rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        footer p {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+            margin: 0 !important;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+            .game-page {
+                margin: 0;
+                padding: 10mm;
+                box-shadow: none;
+                page-break-after: always;
+                page-break-inside: avoid;
+                height: 297mm;
+                width: 210mm;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-200">
+
+    <div class="game-page">
+        <header class="flex justify-between items-center pb-3 border-b-2 border-gray-400">
+            <div class="team-info text-center w-1/3">
+                <img src="https://a.espncdn.com/i/teamlogos/mlb/500/lad.png" alt="Los Angeles Dodgers Logo" class="w-14 h-14 mx-auto mb-2">
+                <h1 class="text-2xl font-black">Los Angeles Dodgers</h1>
+                
+            <p class="text-lg font-bold">Yoshinobu Yamamoto <span class="handedness-rhp">右</span></p>
+            <p class="text-gray-600 data-font">12勝8敗</p>
+        
+            </div>
+            <div class="game-time text-center w-1/3">
+                <p class="text-sm text-gray-500 mb-1">日本時間</p>
+                <p class="text-4xl font-bold">10/15 09:08</p>
+                <p class="text-base font-bold mt-1">試合開始</p>
+            </div>
+            <div class="team-info text-center w-1/3">
+                <img src="https://a.espncdn.com/i/teamlogos/mlb/500/mil.png" alt="Milwaukee Brewers Logo" class="w-14 h-14 mx-auto mb-2">
+                <h1 class="text-2xl font-black">Milwaukee Brewers</h1>
+                
+            <p class="text-lg font-bold">Freddy Peralta <span class="handedness-rhp">右</span></p>
+            <p class="text-gray-600 data-font">17勝6敗</p>
+        
+            </div>
+        </header>
+        <main class="flex-grow mt-4 grid grid-cols-2 gap-6">
+            <div class="team-stats">
+                <section class="mb-4">
+                    <h2 class="section-title">先発投手: Yoshinobu Yamamoto</h2>
+                    <div class="stat-item"><span class="label">ERA/FIP/xFIP</span><span class="value data-font">2.49/2.90/3.05</span></div>
+                    <div class="stat-item"><span class="label">WHIP/K-BB%</span><span class="value data-font">0.99/20.8%</span></div>
+                    <div class="stat-item"><span class="label">QS率/GB%</span><span class="value data-font">60.0%/53.7%</span></div>
+                    <div class="stat-item"><span class="label">SwStr%/BABIP</span><span class="value data-font">29.0%/0.244</span></div>
+                    <div class="stat-item"><span class="label">対左/右 OPS</span><span class="value data-font">0.485/0.591</span></div>
+                </section>
+                <section class="mb-4">
+                    <h2 class="section-title">中継ぎ陣 (6名)</h2>
+                    <div class="stat-item"><span class="label">ERA/FIP/xFIP</span><span class="value data-font">3.78/3.43/2.57</span></div>
+                    <div class="stat-item"><span class="label">CL FIP</span><span class="value data-font">--- (A)</span></div>
+                    <div class="stat-item"><span class="label">疲労度</span><span class="value">主力5名が連投中</span></div>
+                </section>
+                <section>
+                    <h2 class="section-title">攻撃 (vs RHP)</h2>
+                    <div class="stat-item"><span class="label">AVG/OPS</span><span class="value data-font">0.253/0.768</span></div>
+                    <div class="stat-item"><span class="label">wOBA/xwOBA</span><span class="value data-font">0.334/0.320</span></div>
+                    <div class="stat-item"><span class="label">過去10試合 OPS</span><span class="value data-font text-red-600 font-bold">0.747</span></div>
+                </section>
+            </div>
+            <div class="team-stats">
+                <section class="mb-4">
+                    <h2 class="section-title">先発投手: Freddy Peralta</h2>
+                    <div class="stat-item"><span class="label">ERA/FIP/xFIP</span><span class="value data-font">2.70/3.61/3.85</span></div>
+                    <div class="stat-item"><span class="label">WHIP/K-BB%</span><span class="value data-font">1.08/19.1%</span></div>
+                    <div class="stat-item"><span class="label">QS率/GB%</span><span class="value data-font">39.4%/37.4%</span></div>
+                    <div class="stat-item"><span class="label">SwStr%/BABIP</span><span class="value data-font">30.1%/0.246</span></div>
+                    <div class="stat-item"><span class="label">対左/右 OPS</span><span class="value data-font">0.615/0.592</span></div>
+                </section>
+                <section class="mb-4">
+                    <h2 class="section-title">中継ぎ陣 (6名)</h2>
+                    <div class="stat-item"><span class="label">ERA/FIP/xFIP</span><span class="value data-font">2.61/3.00/2.49</span></div>
+                    <div class="stat-item"><span class="label">CL FIP</span><span class="value data-font">--- (A)</span></div>
+                    <div class="stat-item"><span class="label">疲労度</span><span class="value">主力5名が連投中</span></div>
+                </section>
+                <section>
+                    <h2 class="section-title">攻撃 (vs RHP)</h2>
+                    <div class="stat-item"><span class="label">AVG/OPS</span><span class="value data-font">0.258/0.735</span></div>
+                    <div class="stat-item"><span class="label">wOBA/xwOBA</span><span class="value data-font">0.323/0.316</span></div>
+                    <div class="stat-item"><span class="label">過去10試合 OPS</span><span class="value data-font text-blue-600">0.641</span></div>
+                </section>
+            </div>
+        </main>
+        <footer class="mt-auto pt-3 border-t-3 border-black">
+            <h3 class="text-xl font-bold mb-2">総括</h3>
+            <p class="text-base leading-relaxed">先発投手でLos Angeles Dodgersが優位（xFIP 3.05 vs 3.85）。ブルペンでMilwaukee Brewersが優勢（FIP 3.00 vs 3.43）。直近10試合の打線はLos Angeles Dodgersが好調（OPS 0.747 vs 0.641）。総合的にLos Angeles Dodgersが有利と予想されます。</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
